@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SUnit</name>
+    </assembly>
+    <members>
+        <member name="T:SUnit.Discovery.Finder">
+            <summary>
+            Contains methods for finding tests.
+            </summary>
+        </member>
+        <member name="M:SUnit.Discovery.Finder.IsValidTestMethod(System.Reflection.MethodInfo)">
+            <summary>
+            Indicates whether the specified <see cref="T:System.Reflection.MethodInfo"/> is a valid test method.
+            </summary>
+            <param name="method">The <see cref="T:System.Reflection.MethodInfo"/> to inspect.</param>
+            <returns>True if the specified <see cref="T:System.Reflection.MethodInfo"/> is valid.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="method"/> is null.
+            </exception>
+        </member>
+        <member name="M:SUnit.Discovery.Finder.FindAllValidTestMethods(System.Type)">
+            <summary>
+            Finds all the methods on the specified type that are valid test methods.
+            </summary>
+            <param name="type">The type to search.</param>
+            <returns>All methods defined on the type that are valid test methods.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="type"/> is null.
+            </exception>
+        </member>
+        <member name="T:SUnit.FixtureFactory">
+            <summary>
+            A method that is responsible for instantiating a Fixture.
+            </summary>
+        </member>
+        <member name="M:SUnit.FixtureFactory.Build">
+            <summary>
+            Instantiates the fixture.
+            </summary>
+            <returns>A newly-instantiated fixture.</returns>
+        </member>
+        <member name="T:SUnit.Test">
+            <summary>
+            Unit tests report their results by returning <see cref="T:SUnit.Test"/> instances.
+            </summary>
+        </member>
+        <member name="P:SUnit.Test.Result">
+            <summary>
+            Gets the result of the test.
+            </summary>
+        </member>
+        <member name="M:SUnit.Test.ToString">
+            <summary>
+            Overridden to display the result.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Test.Fail">
+            <summary>
+            Produces a failed <see cref="T:SUnit.Test"/>.
+            </summary>
+            <returns>A <see cref="T:SUnit.Test"/> with a <see cref="P:SUnit.Test.Result"/> of <see cref="F:SUnit.TestResult.Fail"/>.</returns>
+        </member>
+        <member name="F:SUnit.TestResult.Error">
+            <summary>
+            The test did not run successfully.
+            </summary>
+        </member>
+        <member name="F:SUnit.TestResult.Fail">
+            <summary>
+            The test ran successfully, and the result is a FAIL. 
+            </summary>
+        </member>
+        <member name="F:SUnit.TestResult.Pass">
+            <summary>
+            The test ran successfully, and the result is a PASS.
+            </summary>
+        </member>
+    </members>
+</doc>
