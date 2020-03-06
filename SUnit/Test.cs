@@ -14,23 +14,25 @@ namespace SUnit
         /// <summary>
         /// Gets the result of the test.
         /// </summary>
-        public abstract TestResult Result { get; }
+        public abstract bool Passed { get; }
 
         /// <summary>
         /// Overridden to display the result.
         /// </summary>
         /// <returns></returns>
-        public override string ToString() => Result.ToString();
+        public override string ToString() => Passed ? "Pass" : "Fail";
 
-        private sealed class FailTest : Test
+        private class ResultTest : Test
         {
-            public override TestResult Result => TestResult.Fail;
+            private readonly bool passed;
+
+            public ResultTest(bool passed) => this.passed = passed;
+
+            public override bool Passed => passed;
         }
 
-        /// <summary>
-        /// Produces a failed <see cref="Test"/>.
-        /// </summary>
-        /// <returns>A <see cref="Test"/> with a <see cref="Result"/> of <see cref="TestResult.Fail"/>.</returns>
-        internal static Test Fail() => new FailTest();
+        internal static Test Fail() => new ResultTest(false);
+
+        internal static Test Pass() => new ResultTest(true);
     }
 }

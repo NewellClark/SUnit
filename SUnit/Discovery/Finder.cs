@@ -58,7 +58,6 @@ namespace SUnit.Discovery
                 .Where(IsValidTestMethod);
         }
 
-
         public static IEnumerable<FixtureFactory> FindAllFactories(Type type)
         {
             var namedCtors = FindAllNamedConstructors(type)

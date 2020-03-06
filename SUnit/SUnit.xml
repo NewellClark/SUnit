@@ -4,6 +4,26 @@
         <name>SUnit</name>
     </assembly>
     <members>
+        <member name="T:SUnit.Assert">
+            <summary>
+            Contains methods for performing assertions.
+            </summary>
+        </member>
+        <member name="M:SUnit.Assert.That``1(``0)">
+            <summary>
+            Just like every other unit test framework. You say <code>Assert.That(actual).Is.EqualTo(expected);</code>.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Boolean)">
+            <summary>
+            Asserts an actual value for a boolean expression.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
         <member name="T:SUnit.Discovery.Finder">
             <summary>
             Contains methods for finding tests.
@@ -40,12 +60,65 @@
             </summary>
             <returns>A newly-instantiated fixture.</returns>
         </member>
+        <member name="M:SUnit.IsBase.EqualityTest``1(``0,``0)">
+            <summary>
+            Creates an equality test for the two specified arguments.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="expected"></param>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SUnit.Is`1">
+            <summary>
+            It's the return type of <code>Assert.That(whatever).Is</code>. It has methods like <c>EqualTo(...)</c>, 
+            <c>Null</c>, etc. 
+            </summary>
+            <typeparam name="TActual"></typeparam>
+        </member>
+        <member name="P:SUnit.Is`1.Not">
+            <summary>
+            Inverts the test.
+            </summary>
+        </member>
+        <member name="M:SUnit.Is`1.EqualTo(`0)">
+            <summary>
+            Tests if the actual value is equal to the specified expected value.
+            </summary>
+            <param name="expected"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SUnit.Is`1.Null">
+            <summary>
+            Tests if the actual value is null.
+            </summary>
+        </member>
+        <member name="T:SUnit.IsBool">
+            <summary>
+            Allows code like <code>Assert.That(boolean expression).Is.True;</code>.
+            </summary>
+        </member>
+        <member name="P:SUnit.IsBool.Not">
+            <summary>
+            Inverts the test.
+            </summary>
+        </member>
+        <member name="P:SUnit.IsBool.True">
+            <summary>
+            Test if the actual value is <see langword="true"/>.
+            </summary>
+        </member>
+        <member name="P:SUnit.IsBool.False">
+            <summary>
+            Test if the actual value is <see langword="false"/>.
+            </summary>
+        </member>
         <member name="T:SUnit.Test">
             <summary>
             Unit tests report their results by returning <see cref="T:SUnit.Test"/> instances.
             </summary>
         </member>
-        <member name="P:SUnit.Test.Result">
+        <member name="P:SUnit.Test.Passed">
             <summary>
             Gets the result of the test.
             </summary>
@@ -56,25 +129,9 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:SUnit.Test.Fail">
+        <member name="P:SUnit.That`1.Is">
             <summary>
-            Produces a failed <see cref="T:SUnit.Test"/>.
-            </summary>
-            <returns>A <see cref="T:SUnit.Test"/> with a <see cref="P:SUnit.Test.Result"/> of <see cref="F:SUnit.TestResult.Fail"/>.</returns>
-        </member>
-        <member name="F:SUnit.TestResult.Error">
-            <summary>
-            The test did not run successfully.
-            </summary>
-        </member>
-        <member name="F:SUnit.TestResult.Fail">
-            <summary>
-            The test ran successfully, and the result is a FAIL. 
-            </summary>
-        </member>
-        <member name="F:SUnit.TestResult.Pass">
-            <summary>
-            The test ran successfully, and the result is a PASS.
+            The class that makes "Is" work.
             </summary>
         </member>
     </members>

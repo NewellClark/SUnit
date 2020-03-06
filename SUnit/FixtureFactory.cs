@@ -9,7 +9,7 @@ namespace SUnit
     /// <summary>
     /// A method that is responsible for instantiating a Fixture.
     /// </summary>
-    public abstract class FixtureFactory
+    internal abstract class FixtureFactory
     {
         protected private FixtureFactory() { }
 

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
+using static NUnit.Framework.Assert;
 
 namespace SUnit.Discovery.FinderTests
 {
@@ -11,7 +12,7 @@ namespace SUnit.Discovery.FinderTests
     {
         private class TestSubclass : Test
         {
-            public override TestResult Result => TestResult.Error;
+            public override bool Passed => false;
         }
 
         private class Mock
@@ -28,9 +29,9 @@ namespace SUnit.Discovery.FinderTests
         [Test]
         public void TestReturningInstanceMethod_IsValid()
         {
-            var info = typeof(Mock).GetMethod(nameof(Mock.InstanceMethod));
+            MethodInfo info = typeof(Mock).GetMethod(nameof(Mock.InstanceMethod));
 
-            Assert.That(Finder.IsValidTestMethod(info), Is.True);
+            That(Finder.IsValidTestMethod(info), Is.True);
         }
 
         [Test]
@@ -38,7 +39,7 @@ namespace SUnit.Discovery.FinderTests
         {
             var info = typeof(Mock).GetMethod(nameof(Mock.StaticMethod));
 
-            Assert.That(Finder.IsValidTestMethod(info), Is.False);
+            That(Finder.IsValidTestMethod(info), Is.False);
         }
 
         [Test]
@@ -46,7 +47,7 @@ namespace SUnit.Discovery.FinderTests
         {
             var info = typeof(Mock).GetMethod(nameof(Mock.VoidMethod));
 
-            Assert.That(Finder.IsValidTestMethod(info), Is.False);
+            That(Finder.IsValidTestMethod(info), Is.False);
         }
 
         [Test]
@@ -56,7 +57,7 @@ namespace SUnit.Discovery.FinderTests
                 nameof(Mock.InternalMethod),
                 BindingFlags.Instance | BindingFlags.NonPublic);
 
-            Assert.That(Finder.IsValidTestMethod(info), Is.False);
+            That(Finder.IsValidTestMethod(info), Is.False);
         }
 
         [Test]
@@ -64,7 +65,7 @@ namespace SUnit.Discovery.FinderTests
         {
             var info = typeof(Mock).GetMethod(nameof(Mock.HasArguments));
 
-            Assert.That(Finder.IsValidTestMethod(info), Is.False);
+            That(Finder.IsValidTestMethod(info), Is.False);
         }
 
         [Test]
@@ -72,7 +73,7 @@ namespace SUnit.Discovery.FinderTests
         {
             var info = typeof(Mock).GetMethod(nameof(Mock.GenericMethod));
 
-            Assert.That(Finder.IsValidTestMethod(info), Is.False);
+            That(Finder.IsValidTestMethod(info), Is.False);
         }
 
         [Test]
@@ -81,7 +82,7 @@ namespace SUnit.Discovery.FinderTests
             var info = typeof(Mock).GetMethod(nameof(Mock.GenericMethod))
                 .MakeGenericMethod(typeof(int));
 
-            Assert.That(Finder.IsValidTestMethod(info), Is.True);
+            That(Finder.IsValidTestMethod(info), Is.True);
         }
 
         [Test]
@@ -89,7 +90,7 @@ namespace SUnit.Discovery.FinderTests
         {
             var info = typeof(Mock).GetMethod(nameof(Mock.ReturnsTestSubclass));
 
-            Assert.That(Finder.IsValidTestMethod(info), Is.True);
+            That(Finder.IsValidTestMethod(info), Is.True);
         }
     }
     partial class FinderTests
