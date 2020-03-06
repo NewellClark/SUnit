@@ -6,7 +6,6 @@
     <IsPackable>false</IsPackable>
 
     <RootNamespace>SUnit</RootNamespace>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>

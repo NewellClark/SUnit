@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
+using static NUnit.Framework.Assert;
 
 namespace SUnit.Discovery.FinderTests
 {
@@ -22,7 +23,7 @@ namespace SUnit.Discovery.FinderTests
             [Test]
             public void IsIncluded()
             {
-                Assert.That(Factories.Count(), Is.EqualTo(1));
+                That(Factories.Count(), Is.EqualTo(1));
             }
 
             [Test]
@@ -30,7 +31,7 @@ namespace SUnit.Discovery.FinderTests
             {
                 var result = Factories.Single().Build();
 
-                Assert.That(result, Is.InstanceOf<Mock>());
+                That(result, Is.InstanceOf<Mock>());
             }
         }
 
@@ -43,7 +44,7 @@ namespace SUnit.Discovery.FinderTests
             [Test]
             public void IsNotIncluded()
             {
-                Assert.That(Factories, Is.Empty);
+                That(Factories, Is.Empty);
             }
         }
 
@@ -76,7 +77,7 @@ namespace SUnit.Discovery.FinderTests
                 var result = Factories.Select(f => f.Build().ToString());
                 string[] expected = { nameof(Mock.Alpha), nameof(Mock.Bravo), nameof(Mock.Charlie) };
 
-                Assert.That(result, Is.EquivalentTo(expected));
+                That(result, Is.EquivalentTo(expected));
             }
         }
 
@@ -93,7 +94,7 @@ namespace SUnit.Discovery.FinderTests
             [Test]
             public void IsNotIncluded()
             {
-                Assert.That(Factories, Is.Empty);
+                That(Factories, Is.Empty);
             }
         }
 
@@ -110,7 +111,7 @@ namespace SUnit.Discovery.FinderTests
             [Test]
             public void IsNotIncluded()
             {
-                Assert.That(Factories, Is.Empty);
+                That(Factories, Is.Empty);
             }
         }
     }
