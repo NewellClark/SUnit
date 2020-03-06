@@ -39,8 +39,9 @@ namespace SUnit
         {
             return modifier(new EqualityTestClass<T>(expected, actual));
         }
+        
         protected private static Test NonInverted(Test inner) => inner;
-        protected private static Test Inverted(Test inner) => new InvertedTest(inner);
+        protected private static Test Inverted(Test inner) => inner.Inverted;
     }
 
     //  The only purpose of this class is to provide the type of the Is property 
