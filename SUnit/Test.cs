@@ -35,7 +35,7 @@ namespace SUnit
 
         internal static Test Pass() => new ResultTest(true);
 
-        internal class InvertedTest : Test
+        private class InvertedTest : Test
         {
             protected private readonly Test inner;
 
@@ -46,8 +46,6 @@ namespace SUnit
 
             public override bool Passed => !inner.Passed;
         }
-
-
         public Test Inverted => new InvertedTest(this);
     }
 }

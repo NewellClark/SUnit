@@ -76,5 +76,53 @@ namespace SUnit
         {
             assert.That(Assert.That(false).Is.False.Passed, Is.True);
         }
+
+        [Test]
+        public void LessThan_LesserValue_Pass()
+        {
+            assert.That(Assert.That(5).Is.LessThan(6).Passed, Is.True);
+        }
+
+        [Test]
+        public void LessThan_EqualValues_Fails()
+        {
+            assert.That(Assert.That(5).Is.LessThan(5).Passed, Is.False);
+        }
+
+        [Test]
+        public void LessThanOrEqualTo_EqualValues_Passes()
+        {
+            assert.That(Assert.That(5).Is.LessThanOrEqualTo(5).Passed, Is.True);
+        }
+
+        [Test]
+        public void LessThanOrEqualTo_GreaterValue_Fails()
+        {
+            assert.That(Assert.That(5).Is.LessThanOrEqualTo(4).Passed, Is.False);
+        }
+
+        [Test]
+        public void GreaterThan_GreaterValue_Pass()
+        {
+            assert.That(Assert.That(-1.4).Is.GreaterThan(-1.5).Passed, Is.True);
+        }
+
+        [Test]
+        public void GreaterThan_EqualValue_Fails()
+        {
+            assert.That(Assert.That(16.3).Is.GreaterThan(19.001).Passed, Is.False);
+        }
+
+        [Test]
+        public void GreaterThanOrEqualTo_EqualValue_Pass()
+        {
+            assert.That(Assert.That(5).Is.GreaterThanOrEqualTo(5).Passed, Is.True);
+        }
+
+        [Test]
+        public void GreaterThanOrEqualTo_LesserValue_Fails()
+        {
+            assert.That(Assert.That(-123).Is.GreaterThanOrEqualTo(11).Passed, Is.False);
+        }
     }
 }

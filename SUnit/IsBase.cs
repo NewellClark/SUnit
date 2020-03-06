@@ -42,6 +42,8 @@ namespace SUnit
         
         protected private static Test NonInverted(Test inner) => inner;
         protected private static Test Inverted(Test inner) => inner.Inverted;
+
+        internal Test Create(Test inner) => modifier(inner);
     }
 
     //  The only purpose of this class is to provide the type of the Is property 
@@ -108,5 +110,50 @@ namespace SUnit
         /// Test if the actual value is <see langword="false"/>.
         /// </summary>
         public Test False => EqualityTest(false, Actual);
+    }
+
+    public static class IsExtensions
+    {
+        private class CompareTest<T> : Test
+        {
+            private readonly T actual;
+            private readonly T expected;
+            private readonly int sign;
+
+            public CompareTest(T actual, T expected, int sign)
+            {
+                this.actual = actual;
+                this.expected = expected;
+                this.sign = sign;
+            }
+
+            public override bool Passed => Math.Sign(Comparer<T>.Default.Compare(actual, expected)) == Math.Sign(sign);
+        }
+
+        public static Test LessThan<T>(this Is<T> @this, T expected) where T : IComparable<T>
+        {
+            if (@this is null) throw new ArgumentNullException(nameof(@this));
+
+            return @this.Create(new CompareTest<T>(@this.Actual, expected, -1));
+        }
+
+        public static Test GreaterThan<T>(this Is<T> @this, T expected) where T : IComparable<T>
+        {
+            if (@this is null) throw new ArgumentNullException(nameof(@this));
+
+            return @this.Create(new CompareTest<T>(@this.Actual, expected, 1));
+        }
+
+        public static Test LessThanOrEqualTo<T>(this Is<T> @this, T expected) where T : IComparable<T>
+        {
+            return @this.Not.GreaterThan(expected);
+        }
+
+        public static Test GreaterThanOrEqualTo<T>(this Is<T> @this, T expected) where T : IComparable<T>
+        {
+            if (@this is null) throw new ArgumentNullException(nameof(@this));
+
+            return @this.Not.LessThan(expected);
+        }
     }
 }
