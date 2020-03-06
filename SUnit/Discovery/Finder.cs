@@ -5,14 +5,14 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
-[assembly:InternalsVisibleTo("SUnitTests")]
+[assembly: InternalsVisibleTo("SUnitTests")]
 
 namespace SUnit.Discovery
 {
     /// <summary>
     /// Contains methods for finding tests.
     /// </summary>
-    internal static class Finder
+    public static class Finder
     {
         /// <summary>
         /// Indicates whether the specified <see cref="MethodInfo"/> is a valid test method.
@@ -58,7 +58,7 @@ namespace SUnit.Discovery
                 .Where(IsValidTestMethod);
         }
 
-        public static IEnumerable<FixtureFactory> FindAllFactories(Type type)
+        internal static IEnumerable<FixtureFactory> FindAllFactories(Type type)
         {
             var namedCtors = FindAllNamedConstructors(type)
                 .Select(method => FixtureFactory.FromNamedConstructor(method));
@@ -69,7 +69,7 @@ namespace SUnit.Discovery
                 namedCtors;
         }
 
-        private static ConstructorInfo? GetDefaultConstructor(Type type)
+        private static ConstructorInfo GetDefaultConstructor(Type type)
         {
             return type.GetConstructors()
                 .Where(ctor => ctor.GetParameters().Length == 0)
@@ -91,6 +91,23 @@ namespace SUnit.Discovery
 
             return type.GetRuntimeMethods()
                 .Where(predicate);
+        }
+        
+        public static IEnumerable<TestCase> FindAllTestCases(IEnumerable<Type> types)
+        {
+            var validTypes = types
+                .Where(type => type.IsPublic)
+                .Where(type => !type.ContainsGenericParameters);
+
+            (Type type, IEnumerable<MethodInfo> methods, IEnumerable<FixtureFactory> factories) findEverything(Type type)
+            {
+                return (type, FindAllValidTestMethods(type), FindAllFactories(type));
+            }
+
+            var cases = validTypes.Select(type => findEverything(type))
+                .SelectMany(t => t.methods.SelectMany(m => t.factories.Select(f => new TestCase(m, f, t.type))));
+
+            return cases;
         }
     }
 }

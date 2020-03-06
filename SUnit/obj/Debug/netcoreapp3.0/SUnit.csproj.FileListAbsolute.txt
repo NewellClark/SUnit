@@ -1,6 +1,5 @@
 D:\LocalRepositories\SUnit\SUnit\bin\Debug\netcoreapp3.0\SUnit.deps.json
 D:\LocalRepositories\SUnit\SUnit\bin\Debug\netcoreapp3.0\SUnit.dll
-D:\LocalRepositories\SUnit\SUnit\obj\Debug\netcoreapp3.0\SUnit.csprojAssemblyReference.cache
 D:\LocalRepositories\SUnit\SUnit\obj\Debug\netcoreapp3.0\SUnit.AssemblyInfoInputs.cache
 D:\LocalRepositories\SUnit\SUnit\obj\Debug\netcoreapp3.0\SUnit.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\SUnit\bin\Debug\netcoreapp3.0\SUnit.pdb

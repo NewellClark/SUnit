@@ -49,16 +49,31 @@
             <paramref name="type"/> is null.
             </exception>
         </member>
-        <member name="T:SUnit.FixtureFactory">
+        <member name="T:SUnit.Discovery.FixtureFactory">
             <summary>
             A method that is responsible for instantiating a Fixture.
             </summary>
         </member>
-        <member name="M:SUnit.FixtureFactory.Build">
+        <member name="M:SUnit.Discovery.FixtureFactory.Build">
             <summary>
             Instantiates the fixture.
             </summary>
             <returns>A newly-instantiated fixture.</returns>
+        </member>
+        <member name="P:SUnit.Discovery.TestCase.Name">
+            <summary>
+            Gets the name of the test method.
+            </summary>
+        </member>
+        <member name="P:SUnit.Discovery.TestCase.Fixture">
+            <summary>
+            Gets the type that the test method was declared on.
+            </summary>
+        </member>
+        <member name="P:SUnit.Discovery.TestCase.Factory">
+            <summary>
+            Gets the name of the factory method that will instantiate the fixture that the test will be called on.
+            </summary>
         </member>
         <member name="M:SUnit.IsBase.EqualityTest``1(``0,``0)">
             <summary>
