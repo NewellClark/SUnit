@@ -29,7 +29,7 @@ namespace SUnit.Discovery.FinderTests
         [Test]
         public void TestReturningInstanceMethod_IsValid()
         {
-            MethodInfo? info = typeof(Mock).GetMethod(nameof(Mock.InstanceMethod));
+            MethodInfo info = typeof(Mock).GetMethod(nameof(Mock.InstanceMethod));
 
             That(Finder.IsValidTestMethod(info), Is.True);
         }

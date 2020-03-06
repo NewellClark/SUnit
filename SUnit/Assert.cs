@@ -17,6 +17,11 @@ namespace SUnit
         /// <returns></returns>
         public static That<T> That<T>(T actual) => new That<T>(actual);
 
+        /// <summary>
+        /// Asserts an actual value for a boolean expression.
+        /// </summary>
+        /// <param name="actual"></param>
+        /// <returns></returns>
         public static ThatBool That(bool actual) => new ThatBool(actual);
     }
 }

@@ -53,6 +53,49 @@
             </summary>
             <returns>A newly-instantiated fixture.</returns>
         </member>
+        <member name="M:SUnit.IsBase.EqualityTest``1(``0,``0)">
+            <summary>
+            Creates an equality test for the two specified arguments.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="expected"></param>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SUnit.Is`1">
+            <summary>
+            It's the return type of <code>Assert.That(whatever).Is</code>. It has methods like <c>EqualTo(...)</c>, 
+            <c>Null</c>, etc. 
+            </summary>
+            <typeparam name="TActual"></typeparam>
+        </member>
+        <member name="P:SUnit.Is`1.Not">
+            <summary>
+            Inverts the test.
+            </summary>
+        </member>
+        <member name="M:SUnit.Is`1.EqualTo(`0)">
+            <summary>
+            Tests if the actual value is equal to the specified expected value.
+            </summary>
+            <param name="expected"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SUnit.Is`1.Null">
+            <summary>
+            Tests if the actual value is null.
+            </summary>
+        </member>
+        <member name="P:SUnit.IsBool.True">
+            <summary>
+            Test if the actual value is <see langword="true"/>.
+            </summary>
+        </member>
+        <member name="P:SUnit.IsBool.False">
+            <summary>
+            Test if the actual value is <see langword="false"/>.
+            </summary>
+        </member>
         <member name="T:SUnit.Test">
             <summary>
             Unit tests report their results by returning <see cref="T:SUnit.Test"/> instances.
