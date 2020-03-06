@@ -17,6 +17,13 @@
             <param name="actual"></param>
             <returns></returns>
         </member>
+        <member name="M:SUnit.Assert.That(System.Boolean)">
+            <summary>
+            Asserts an actual value for a boolean expression.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
         <member name="T:SUnit.Discovery.Finder">
             <summary>
             Contains methods for finding tests.
@@ -84,6 +91,16 @@
         <member name="P:SUnit.Is`1.Null">
             <summary>
             Tests if the actual value is null.
+            </summary>
+        </member>
+        <member name="T:SUnit.IsBool">
+            <summary>
+            Allows code like <code>Assert.That(boolean expression).Is.True;</code>.
+            </summary>
+        </member>
+        <member name="P:SUnit.IsBool.Not">
+            <summary>
+            Inverts the test.
             </summary>
         </member>
         <member name="P:SUnit.IsBool.True">
