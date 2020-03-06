@@ -34,5 +34,20 @@ namespace SUnit
         internal static Test Fail() => new ResultTest(false);
 
         internal static Test Pass() => new ResultTest(true);
+
+        internal class InvertedTest : Test
+        {
+            protected private readonly Test inner;
+
+            public InvertedTest(Test inner)
+            {
+                this.inner = inner;
+            }
+
+            public override bool Passed => !inner.Passed;
+        }
+
+
+        public Test Inverted => new InvertedTest(this);
     }
 }
