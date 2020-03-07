@@ -4,6 +4,12 @@
         <name>SUnit</name>
     </assembly>
     <members>
+        <member name="T:SUnit.Constraints.EqualToConstraint`1">
+            <summary>
+            Constraint that tests whether a value is equal to an expected value.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
         <member name="T:SUnit.Discovery.Finder">
             <summary>
             Contains methods for finding tests.
@@ -54,6 +60,31 @@
             <summary>
             Gets the name of the factory method that will instantiate the fixture that the test will be called on.
             </summary>
+        </member>
+        <member name="T:SUnit.IConstraint`1">
+            <summary>
+            A constraint that can be applied to value. 
+            </summary>
+            <typeparam name="T">The type of value the constraint can be applied to.</typeparam>
+        </member>
+        <member name="M:SUnit.IConstraint`1.Apply(`0)">
+            <summary>
+            Applies the constraint to the specified value.
+            </summary>
+            <param name="value">The value to apply the constraint to.</param>
+            <returns>Whether the value satisfies the constraint.</returns>
+        </member>
+        <member name="P:SUnit.Is`1.Not">
+            <summary>
+            Inverts any <see cref="T:SUnit.Test"/> that is applied to the current actual value.
+            </summary>
+        </member>
+        <member name="M:SUnit.Is`1.EqualTo(`0)">
+            <summary>
+            Tests that the expression is equal to the specified actual value.
+            </summary>
+            <param name="expected">The</param>
+            <returns></returns>
         </member>
     </members>
 </doc>
