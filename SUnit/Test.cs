@@ -14,6 +14,12 @@ namespace SUnit
         /// </summary>
         public abstract bool Passed { get; }
 
+        /// <summary>
+        /// Overridden to indicate test status.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString() => Passed ? "PASS" : "FAIL";
+
         private sealed class NotTest : Test
         {
             private readonly Test inner;
@@ -50,7 +56,7 @@ namespace SUnit
         {
             public AndTest(Test left, Test right) : base(left, right) { }
 
-            public override bool Passed => Left.Passed & Right.Passed;
+            public override bool Passed => Left.Passed && Right.Passed;
         }
         /// <summary>
         /// Creates a <see cref="Test"/> that only passes if both operands pass.
@@ -70,7 +76,7 @@ namespace SUnit
         {
             public OrTest(Test left, Test right) : base(left, right) { }
 
-            public override bool Passed => Left.Passed | Right.Passed;
+            public override bool Passed => Left.Passed || Right.Passed;
         }
         /// <summary>
         /// Creates a <see cref="Test"/> that passes if either or both operands pass.
@@ -123,5 +129,36 @@ namespace SUnit
         /// Gets a test that always fails.
         /// </summary>
         public static Test Fail { get; } = new PassFailTest(false);
+
+        /// <summary>
+        /// Creates a new <see cref="Test"/> that passes when the operand fails.
+        /// </summary>
+        /// <param name="operand"></param>
+        /// <returns></returns>
+        public static Test LogicalNot(Test operand) => !operand;
+
+        /// <summary>
+        /// Named alias for operator AND.
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
+        public static Test BitwiseAnd(Test left, Test right) => left & right;
+
+        /// <summary>
+        /// Named alias for operator |.
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
+        public static Test BitwiseOr(Test left, Test right) => left | right;
+
+        /// <summary>
+        /// Named alias for operator XOR.
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
+        public static Test Xor(Test left, Test right) => left ^ right;
     }
 }

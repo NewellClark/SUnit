@@ -30,10 +30,12 @@ namespace SUnit
         /// Allows multiple constraints to be chained to the same value using boolean AND.
         /// </summary>
         public Is<TActual> And => new Is<TActual>(actual, c => constraint & c);
+
         /// <summary>
         /// Allows chaining multiple constraints to the same value using boolean OR.
         /// </summary>
         public Is<TActual> Or => new Is<TActual>(actual, c => constraint | c);
+
         /// <summary>
         /// Allows chaining multiple constraints to the same value using boolean XOR.
         /// </summary>
