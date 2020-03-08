@@ -39,7 +39,8 @@ namespace SUnit.Fixtures
         /// <returns>The result of executing the test.</returns>
         public Test Execute(object fixture)
         {
-            return (Test)method.Invoke(fixture, Array.Empty<object>());
+            var func = (Func<Test>)method.CreateDelegate(typeof(Func<Test>), fixture);
+            return func();
         }
 
         /// <summary>

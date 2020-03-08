@@ -75,6 +75,70 @@
             Gets the name of the factory method that will instantiate the fixture that the test will be called on.
             </summary>
         </member>
+        <member name="T:SUnit.Fixtures.Factory">
+            <summary>
+            An object that can be used to instantiate a <see cref="T:SUnit.Fixtures.Fixture"/>.
+            </summary>
+        </member>
+        <member name="P:SUnit.Fixtures.Factory.Fixture">
+            <summary>
+            Gets the <see cref="T:SUnit.Fixtures.Fixture"/> that the <see cref="T:SUnit.Fixtures.Factory"/> instantiates.
+            </summary>
+        </member>
+        <member name="M:SUnit.Fixtures.Factory.Build">
+            <summary>
+            Instantiates the <see cref="T:SUnit.Fixtures.Fixture"/>.
+            </summary>
+            <returns>An instantiated <see cref="T:SUnit.Fixtures.Fixture"/>.</returns>
+        </member>
+        <member name="T:SUnit.Fixtures.Fixture">
+            <summary>
+            A class that defines unit tests.
+            </summary>
+        </member>
+        <member name="P:SUnit.Fixtures.Fixture.Name">
+            <summary>
+            Gets the unqualified name of the class that the fixture represents.
+            </summary>
+        </member>
+        <member name="P:SUnit.Fixtures.Fixture.Tests">
+            <summary>
+            Gets all the test methods on the fixture.
+            </summary>
+        </member>
+        <member name="P:SUnit.Fixtures.Fixture.Factories">
+            <summary>
+            Gets all the methods that can be used to instantiate the fixture.
+            </summary>
+        </member>
+        <member name="T:SUnit.Fixtures.TestMethod">
+            <summary>
+            A unit test method.
+            </summary>
+        </member>
+        <member name="P:SUnit.Fixtures.TestMethod.Fixture">
+            <summary>
+            Gets the <see cref="T:SUnit.Fixtures.Fixture"/> that defines the <see cref="T:SUnit.Fixtures.TestMethod"/>.
+            </summary>
+        </member>
+        <member name="P:SUnit.Fixtures.TestMethod.Name">
+            <summary>
+            Gets the name of the method.
+            </summary>
+        </member>
+        <member name="M:SUnit.Fixtures.TestMethod.Execute(System.Object)">
+            <summary>
+            Executes the <see cref="T:SUnit.Fixtures.TestMethod"/> for the specified fixture instance.
+            </summary>
+            <param name="fixture">An instance of the class that defines the <see cref="T:SUnit.Fixtures.TestMethod"/>.</param>
+            <returns>The result of executing the test.</returns>
+        </member>
+        <member name="M:SUnit.Fixtures.TestMethod.ToString">
+            <summary>
+            Overridden to display the method name.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:SUnit.Fixtures.ResultKind">
             <summary>
             The kind of result.
@@ -94,6 +158,33 @@
             <summary>
             The test ran, and it passed.
             </summary>
+        </member>
+        <member name="T:SUnit.Fixtures.UnitTest">
+            <summary>
+            A single unit test that can be executed.
+            </summary>
+        </member>
+        <member name="P:SUnit.Fixtures.UnitTest.Fixture">
+            <summary>
+            Gets the <see cref="T:SUnit.Fixtures.Fixture"/> that defines the test.
+            </summary>
+        </member>
+        <member name="P:SUnit.Fixtures.UnitTest.Name">
+            <summary>
+            Gets the name of the test method.
+            </summary>
+        </member>
+        <member name="M:SUnit.Fixtures.UnitTest.ToString">
+            <summary>
+            Overridden to display the name of the method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Fixtures.UnitTest.Run">
+            <summary>
+            Runs the unit test, returning a <see cref="T:SUnit.Fixtures.TestResult"/>.
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:SUnit.IConstraint`1">
             <summary>

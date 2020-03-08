@@ -26,6 +26,9 @@ namespace SUnit.Fixtures
         Pass
     }
     
+    /// <summary>
+    /// The result of running a <see cref="UnitTest"/>.
+    /// </summary>
     public abstract class TestResult
     {
         protected private TestResult(ResultKind kind) => this.Kind = kind;
@@ -35,19 +38,23 @@ namespace SUnit.Fixtures
         private sealed class UnexpectedExceptionResult : TestResult
         {
             private readonly Exception exception;
-            public UnexpectedExceptionResult(Exception exception) : base(ResultKind.Error)
+            private readonly UnitTest test;
+
+            public UnexpectedExceptionResult(UnitTest test, Exception exception) : base(ResultKind.Error)
             {
+                Debug.Assert(test != null);
                 Debug.Assert(exception != null);
 
                 this.exception = exception;
+                this.test = test;
             }
 
             public override string ToString()
             {
-                return $"Unexpected {exception.GetType().Name}";
+                return $"{test.Name}\n   Unexpected {exception.GetType().Name}";
             }
         }
 
-        public static TestResult UnexpectedException(Exception exception) => new UnexpectedExceptionResult(exception);
+        public static TestResult UnexpectedException(UnitTest test, Exception exception) => new UnexpectedExceptionResult(test, exception);
     }
 }
