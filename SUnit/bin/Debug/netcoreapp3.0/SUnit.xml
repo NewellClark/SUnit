@@ -200,6 +200,12 @@
             Indicates whether the test passed.
             </summary>
         </member>
+        <member name="M:SUnit.IsTest`1.ToString">
+            <summary>
+            Overridden to output the constraint, and the actual value.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="P:SUnit.IsTest`1.And">
             <summary>
             Allows multiple constraints to be chained to the same value using boolean AND.
