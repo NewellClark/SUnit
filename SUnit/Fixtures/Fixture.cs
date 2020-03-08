@@ -15,7 +15,7 @@ namespace SUnit.Fixtures
     {
         private readonly Type type;
 
-        internal Fixture(Type type)
+        public Fixture(Type type)
         {
             Debug.Assert(type != null);
 

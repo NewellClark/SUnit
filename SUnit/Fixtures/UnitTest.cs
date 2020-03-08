@@ -7,14 +7,20 @@ using System.Text;
 namespace SUnit.Fixtures
 {
     /// <summary>
-    /// A single unit test that can be executed.
+    /// A single unit test that is ready to be executed.
     /// </summary>
     public class UnitTest
     {
         private readonly TestMethod method;
         private readonly Factory factory;
 
-        internal UnitTest(TestMethod method, Factory factory)
+        /// <summary>
+        /// Creates a new <see cref="UnitTest"/> from the specified <see cref="TestMethod"/> and
+        /// the specified <see cref="Factory"/>.
+        /// </summary>
+        /// <param name="method"></param>
+        /// <param name="factory"></param>
+        public UnitTest(TestMethod method, Factory factory)
         {
             Debug.Assert(method != null);
             Debug.Assert(factory != null);
@@ -58,11 +64,10 @@ namespace SUnit.Fixtures
             catch (Exception ex)
 #pragma warning restore CA1031 // Do not catch general exception types
             {
-                return TestResult.UnexpectedException(ex);
+                return TestResult.UnexpectedException(this, ex);
             }
         }
-
-
+        
         private sealed class PassResult : TestResult
         {
             private readonly string testName;
@@ -71,7 +76,7 @@ namespace SUnit.Fixtures
 
             public override string ToString()
             {
-                return $"PASS {testName}";
+                return $"{testName}";
             }
         }
 
@@ -96,9 +101,10 @@ namespace SUnit.Fixtures
                 sb.AppendLine(testName);
                 var details = test.ToString().Split("\n")
                     .Select(line => $"{indent}{line}");
-                sb.AppendJoin(string.Empty, details);
+                foreach (var line in details)
+                    sb.AppendLine(line);
 
-                return sb.ToString();
+                return sb.ToString().TrimEnd();
             }
         }
     }

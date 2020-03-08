@@ -12,6 +12,8 @@ namespace SUnit
             public NotTest(Test inner) => this.inner = inner;
 
             public override bool Passed => !inner.Passed;
+
+            public override string ToString() => $"NOT {inner}";
         }
 
         /// <summary>
@@ -43,6 +45,8 @@ namespace SUnit
             public AndTest(Test left, Test right) : base(left, right) { }
 
             public override bool Passed => Left.Passed && Right.Passed;
+
+            public override string ToString() => $"{Left}\nAND {Right}";
         }
 
         /// <summary>
@@ -64,7 +68,10 @@ namespace SUnit
             public OrTest(Test left, Test right) : base(left, right) { }
 
             public override bool Passed => Left.Passed || Right.Passed;
+
+            public override string ToString() => $"{Left}\nOR {Right}";
         }
+
         /// <summary>
         /// Creates a <see cref="Test"/> that passes if either or both operands pass.
         /// </summary>
@@ -84,6 +91,8 @@ namespace SUnit
             public XorTest(Test left, Test right) : base(left, right) { }
 
             public override bool Passed => Left.Passed ^ Right.Passed;
+
+            public override string ToString() => $"{Left}\nXOR {Right}";
         }
 
         /// <summary>

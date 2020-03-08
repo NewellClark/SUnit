@@ -1,4 +1,5 @@
 ﻿using SUnit.Discovery;
+using SUnit.Fixtures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,43 +10,76 @@ namespace SUnit.Runners
 {
     internal class Runner
     {
-        private readonly IEnumerable<IGrouping<string, TestCase>> groups;
         private const string indent = "   ";
+        private readonly IEnumerable<Fixture> fixtures;
+        private readonly ConsoleColor passColor = ConsoleColor.Green;
+        private readonly ConsoleColor failColor = ConsoleColor.Red;
+        private readonly ConsoleColor errorColor = ConsoleColor.Magenta;
 
         public Runner(string path)
         {
             Assembly assembly = Assembly.LoadFrom(path);
-            var cases = Finder.FindAllTestCases(assembly.GetTypes());
-            groups = cases
-                .GroupBy(test => $"{test.Fixture.Name}${test.Factory}");
+            fixtures = assembly.GetExportedTypes()
+                .Select(type => new Fixture(type))
+                .Where(fixture => fixture.Tests.Count > 0)
+                .Where(fixture => fixture.Factories.Count > 0);
         }
-
 
         public void Run()
         {
-            static void printTestCase(TestCase test)
+            foreach (var fixture in fixtures)
             {
-                var result = test.Run();
-                var color = result.Passed ? ConsoleColor.Green : ConsoleColor.Red;
-                string passFailText = result.Passed ? "PASS" : "FAIL";
-
-                Console.ForegroundColor = color;
-                Console.WriteLine($"{indent}{passFailText} {test.Name}");
-                if (result.Passed)
-                    return;
-                var details = result.ToString().Split("\n");
-                foreach (var line in details)
-                    Console.WriteLine($"{indent}{indent}{line}");
+                PrintFixtureName(fixture);
+                RunAndPrintFixtureTests(fixture);
             }
+        }
 
-            foreach (var group in groups)
+        private void PrintFixtureName(Fixture fixture)
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(fixture.Name);
+
+        }
+
+        private void RunAndPrintFixtureTests(Fixture fixture)
+        {
+            if (fixture.Factories.Count == 1)
+                PrintFactoryGroup(fixture.Factories.Single(), string.Empty);
+            else
             {
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine(group.Key);
-                foreach (var test in group)
-                    printTestCase(test);
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine();
+                foreach (var factory in fixture.Factories)
+                    PrintFactoryGroup(factory, indent);
+            }
+        }
+
+        private void PrintFactoryGroup(Factory factory, string margin)
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"{margin}{factory.ToString()}");
+
+            foreach (var method in factory.Fixture.Tests)
+            {
+                var test = new UnitTest(method, factory);
+                var result = test.Run();
+                Console.ForegroundColor = GetColorForResult(result.Kind);
+                var resultLines = $"{result.Kind.ToString().ToUpper()} {result}".Split("\n");
+                foreach (var line in resultLines)
+                    Console.WriteLine($"{indent}{margin}{line}");
+            }
+        }
+
+        private ConsoleColor GetColorForResult(ResultKind result)
+        {
+            switch (result)
+            {
+                case ResultKind.Pass:
+                    return passColor;
+                case ResultKind.Fail:
+                    return failColor;
+                case ResultKind.Error:
+                    return errorColor;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(result), "Unexpected enum value");
             }
         }
     }
