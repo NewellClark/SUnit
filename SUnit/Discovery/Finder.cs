@@ -58,18 +58,7 @@ namespace SUnit.Discovery
                 .Where(IsValidTestMethod);
         }
 
-        internal static IEnumerable<FixtureFactory> FindAllFactories(Type type)
-        {
-            var namedCtors = FindAllNamedConstructors(type)
-                .Select(method => FixtureFactory.FromNamedConstructor(method));
-            var ctor = GetDefaultConstructor(type);
-
-            return ctor != null ?
-                namedCtors.Prepend(FixtureFactory.FromDefaultConstructor(ctor)) :
-                namedCtors;
-        }
-
-        private static ConstructorInfo GetDefaultConstructor(Type type)
+        internal static ConstructorInfo GetDefaultConstructor(Type type)
         {
             return type.GetConstructors()
                 .Where(ctor => ctor.GetParameters().Length == 0)
@@ -77,7 +66,7 @@ namespace SUnit.Discovery
                 .SingleOrDefault();
         }
 
-        private static IEnumerable<MethodInfo> FindAllNamedConstructors(Type type)
+        internal static IEnumerable<MethodInfo> FindAllNamedConstructors(Type type)
         {
             Debug.Assert(type != null);
 
@@ -86,28 +75,12 @@ namespace SUnit.Discovery
                 return method.IsStatic &&
                     method.IsPublic &&
                     type.IsAssignableFrom(method.ReturnType) &&
+                    !method.ContainsGenericParameters &&
                     method.GetParameters().Length == 0;
             }
 
             return type.GetRuntimeMethods()
                 .Where(predicate);
-        }
-        
-        public static IEnumerable<TestCase> FindAllTestCases(IEnumerable<Type> types)
-        {
-            var validTypes = types
-                .Where(type => type.IsPublic)
-                .Where(type => !type.ContainsGenericParameters);
-
-            (Type type, IEnumerable<MethodInfo> methods, IEnumerable<FixtureFactory> factories) findEverything(Type type)
-            {
-                return (type, FindAllValidTestMethods(type), FindAllFactories(type));
-            }
-
-            var cases = validTypes.Select(type => findEverything(type))
-                .SelectMany(t => t.methods.SelectMany(m => t.factories.Select(f => new TestCase(m, f, t.type))));
-
-            return cases;
         }
     }
 }
