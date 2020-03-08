@@ -69,7 +69,7 @@ namespace SUnit.Discovery
                 namedCtors;
         }
 
-        private static ConstructorInfo GetDefaultConstructor(Type type)
+        internal static ConstructorInfo GetDefaultConstructor(Type type)
         {
             return type.GetConstructors()
                 .Where(ctor => ctor.GetParameters().Length == 0)
@@ -77,7 +77,7 @@ namespace SUnit.Discovery
                 .SingleOrDefault();
         }
 
-        private static IEnumerable<MethodInfo> FindAllNamedConstructors(Type type)
+        internal static IEnumerable<MethodInfo> FindAllNamedConstructors(Type type)
         {
             Debug.Assert(type != null);
 
@@ -86,6 +86,7 @@ namespace SUnit.Discovery
                 return method.IsStatic &&
                     method.IsPublic &&
                     type.IsAssignableFrom(method.ReturnType) &&
+                    !method.ContainsGenericParameters &&
                     method.GetParameters().Length == 0;
             }
 
