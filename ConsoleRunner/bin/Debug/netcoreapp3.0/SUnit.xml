@@ -75,6 +75,26 @@
             Gets the name of the factory method that will instantiate the fixture that the test will be called on.
             </summary>
         </member>
+        <member name="T:SUnit.Fixtures.ResultKind">
+            <summary>
+            The kind of result.
+            </summary>
+        </member>
+        <member name="F:SUnit.Fixtures.ResultKind.Error">
+            <summary>
+            The test did not run due to an error.
+            </summary>
+        </member>
+        <member name="F:SUnit.Fixtures.ResultKind.Fail">
+            <summary>
+            The test ran, and it failed.
+            </summary>
+        </member>
+        <member name="F:SUnit.Fixtures.ResultKind.Pass">
+            <summary>
+            The test ran, and it passed.
+            </summary>
+        </member>
         <member name="T:SUnit.IConstraint`1">
             <summary>
             A constraint that can be applied to value. 
