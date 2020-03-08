@@ -33,6 +33,9 @@ namespace SUnit.Fixtures
     {
         protected private TestResult(ResultKind kind) => this.Kind = kind;
 
+        /// <summary>
+        /// Whether the result was a pass, fail, or error.
+        /// </summary>
         public ResultKind Kind { get; }
 
         private sealed class UnexpectedExceptionResult : TestResult
@@ -55,6 +58,12 @@ namespace SUnit.Fixtures
             }
         }
 
+        /// <summary>
+        /// Creates a <see cref="TestResult"/> for when an unexpected exception is thrown while running the test.
+        /// </summary>
+        /// <param name="test"></param>
+        /// <param name="exception"></param>
+        /// <returns></returns>
         public static TestResult UnexpectedException(UnitTest test, Exception exception) => new UnexpectedExceptionResult(test, exception);
     }
 }

@@ -29,6 +29,26 @@ namespace SUnit.Fixtures
         /// <returns>An instantiated <see cref="SUnit.Fixtures.Fixture"/>.</returns>
         public abstract object Build();
 
+        /// <summary>
+        /// Indicates whether the current <see cref="Factory"/> is a default constructor.
+        /// </summary>
+        public abstract bool IsDefaultConstructor { get; }
+
+        /// <summary>
+        /// Indicates whether the current <see cref="Factory"/> is a named constructor.
+        /// </summary>
+        public abstract bool IsNamedConstructor { get; }
+
+        /// <summary>
+        /// Gets the name of the constructor. For named constructors, this will be the name of the method.
+        /// </summary>
+        public abstract string Name { get; }
+
+        /// <summary>
+        /// Overridden to display the name.
+        /// </summary>
+        /// <returns>The name.</returns>
+        public override string ToString() => Name;
 
         private sealed class DefaultConstructorFactory : Factory
         {
@@ -40,7 +60,9 @@ namespace SUnit.Fixtures
             }
 
             public override object Build() => ctor.Invoke(Array.Empty<object>());
-            public override string ToString() => "<default ctor>";
+            public override bool IsDefaultConstructor => true;
+            public override bool IsNamedConstructor => false;
+            public override string Name => "<default ctor>";
         }
 
         internal static Factory FromDefaultCtor(Fixture fixture, ConstructorInfo ctor)
@@ -61,8 +83,10 @@ namespace SUnit.Fixtures
                 this.method = method;
             }
 
+            public override bool IsDefaultConstructor => false;
+            public override bool IsNamedConstructor => true;
             public override object Build() => method.Invoke(null, Array.Empty<object>());
-            public override string ToString() => method.Name;
+            public override string Name => method.Name;
         }
 
         internal static Factory FromNamedCtor(Fixture fixture, MethodInfo method)

@@ -6,3 +6,4 @@ D:\LocalRepositories\SUnit\SUnit\bin\Debug\netcoreapp3.0\SUnit.pdb
 D:\LocalRepositories\SUnit\SUnit\obj\Debug\netcoreapp3.0\SUnit.dll
 D:\LocalRepositories\SUnit\SUnit\obj\Debug\netcoreapp3.0\SUnit.pdb
 D:\LocalRepositories\SUnit\SUnit\bin\Debug\netcoreapp3.0\SUnit.xml
+D:\LocalRepositories\SUnit\SUnit\obj\Debug\netcoreapp3.0\SUnit.csprojAssemblyReference.cache
