@@ -7,3 +7,4 @@
 /.vs/SUnit/v16/Server/sqlite3/storage.ide-wal
 
 .vs/SUnit/v16/.suo
+*.testlog
