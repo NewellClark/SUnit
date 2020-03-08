@@ -58,17 +58,6 @@ namespace SUnit.Discovery
                 .Where(IsValidTestMethod);
         }
 
-        internal static IEnumerable<FixtureFactory> FindAllFactories(Type type)
-        {
-            var namedCtors = FindAllNamedConstructors(type)
-                .Select(method => FixtureFactory.FromNamedConstructor(method));
-            var ctor = GetDefaultConstructor(type);
-
-            return ctor != null ?
-                namedCtors.Prepend(FixtureFactory.FromDefaultConstructor(ctor)) :
-                namedCtors;
-        }
-
         internal static ConstructorInfo GetDefaultConstructor(Type type)
         {
             return type.GetConstructors()
@@ -92,23 +81,6 @@ namespace SUnit.Discovery
 
             return type.GetRuntimeMethods()
                 .Where(predicate);
-        }
-        
-        public static IEnumerable<TestCase> FindAllTestCases(IEnumerable<Type> types)
-        {
-            var validTypes = types
-                .Where(type => type.IsPublic)
-                .Where(type => !type.ContainsGenericParameters);
-
-            (Type type, IEnumerable<MethodInfo> methods, IEnumerable<FixtureFactory> factories) findEverything(Type type)
-            {
-                return (type, FindAllValidTestMethods(type), FindAllFactories(type));
-            }
-
-            var cases = validTypes.Select(type => findEverything(type))
-                .SelectMany(t => t.methods.SelectMany(m => t.factories.Select(f => new TestCase(m, f, t.type))));
-
-            return cases;
         }
     }
 }

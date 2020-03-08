@@ -49,32 +49,6 @@
             <paramref name="type"/> is null.
             </exception>
         </member>
-        <member name="T:SUnit.Discovery.FixtureFactory">
-            <summary>
-            A method that is responsible for instantiating a Fixture.
-            </summary>
-        </member>
-        <member name="M:SUnit.Discovery.FixtureFactory.Build">
-            <summary>
-            Instantiates the fixture.
-            </summary>
-            <returns>A newly-instantiated fixture.</returns>
-        </member>
-        <member name="P:SUnit.Discovery.TestCase.Name">
-            <summary>
-            Gets the name of the test method.
-            </summary>
-        </member>
-        <member name="P:SUnit.Discovery.TestCase.Fixture">
-            <summary>
-            Gets the type that the test method was declared on.
-            </summary>
-        </member>
-        <member name="P:SUnit.Discovery.TestCase.Factory">
-            <summary>
-            Gets the name of the factory method that will instantiate the fixture that the test will be called on.
-            </summary>
-        </member>
         <member name="T:SUnit.Fixtures.Factory">
             <summary>
             An object that can be used to instantiate a <see cref="T:SUnit.Fixtures.Fixture"/>.
@@ -159,10 +133,23 @@
             The test ran, and it passed.
             </summary>
         </member>
+        <member name="T:SUnit.Fixtures.TestResult">
+            <summary>
+            The result of running a <see cref="T:SUnit.Fixtures.UnitTest"/>.
+            </summary>
+        </member>
         <member name="T:SUnit.Fixtures.UnitTest">
             <summary>
-            A single unit test that can be executed.
+            A single unit test that is ready to be executed.
             </summary>
+        </member>
+        <member name="M:SUnit.Fixtures.UnitTest.#ctor(SUnit.Fixtures.TestMethod,SUnit.Fixtures.Factory)">
+            <summary>
+            Creates a new <see cref="T:SUnit.Fixtures.UnitTest"/> from the specified <see cref="T:SUnit.Fixtures.TestMethod"/> and
+            the specified <see cref="T:SUnit.Fixtures.Factory"/>.
+            </summary>
+            <param name="method"></param>
+            <param name="factory"></param>
         </member>
         <member name="P:SUnit.Fixtures.UnitTest.Fixture">
             <summary>
