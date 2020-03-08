@@ -4,25 +4,24 @@ using System.Text;
 
 namespace SUnit
 {
-    public class That<TValue>
+    /// <summary>
+    /// Specifies the actual value that was returned from whatever it is you are testing.
+    /// Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
+    /// </summary>
+    /// <typeparam name="TActual">The type of the actual value.</typeparam>
+    public class That<TActual>
     {
-        internal That(TValue actual)
+        private readonly TActual actual;
+
+        internal That(TActual actual)
         {
-            this.Actual = actual;
+            this.actual = actual;
         }
-        
-        protected private TValue Actual { get; }
 
         /// <summary>
-        /// The class that makes "Is" work.
+        /// Contains methods and properties for applying contstraints to the actual value specified in the 
+        /// <see cref="Assert.That{TActual}(TActual)"/> method.
         /// </summary>
-        public Is<TValue> Is => new Is<TValue>(Actual);
-    }
-
-    public class ThatBool : That<bool>
-    {
-        internal ThatBool(bool actual) : base(actual) { }
-
-        public new IsBool Is => new IsBool(Actual);
+        public Is<TActual> Is => new Is<TActual>(actual);
     }
 }
