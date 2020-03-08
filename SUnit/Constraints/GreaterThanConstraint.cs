@@ -11,5 +11,7 @@ namespace SUnit.Constraints
         public GreaterThanConstraint(T expected) => this.expected = expected;
 
         public bool Apply(T actual) => Comparer<T>.Default.Compare(actual, expected) > 0;
+
+        public override string ToString() => $"> {expected}";
     }
 }

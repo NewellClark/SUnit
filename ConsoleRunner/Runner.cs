@@ -31,6 +31,11 @@ namespace SUnit.Runners
 
                 Console.ForegroundColor = color;
                 Console.WriteLine($"{indent}{passFailText} {test.Name}");
+                if (result.Passed)
+                    return;
+                var details = result.ToString().Split("\n");
+                foreach (var line in details)
+                    Console.WriteLine($"{indent}{indent}{line}");
             }
 
             foreach (var group in groups)

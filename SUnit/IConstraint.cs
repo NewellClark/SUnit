@@ -27,6 +27,8 @@ namespace SUnit
             }
 
             public bool Apply(T value) => !inner.Apply(value);
+
+            public override string ToString() => $"NOT {inner}";
         }
 
         /// <summary>
@@ -48,18 +50,18 @@ namespace SUnit
 
         private abstract class BinaryConstraint : IConstraint<T>
         {
-            private readonly IConstraint<T> left;
-            private readonly IConstraint<T> right;
+            protected IConstraint<T> Left { get; }
+            protected IConstraint<T> Right { get; }
 
             public BinaryConstraint(IConstraint<T> left, IConstraint<T> right)
             {
-                this.left = left;
-                this.right = right;
+                this.Left = left;
+                this.Right = right;
             }
 
             protected abstract bool ApplyToBoth(T value, IConstraint<T> left, IConstraint<T> right);
 
-            public bool Apply(T value) => ApplyToBoth(value, left, right);
+            public bool Apply(T value) => ApplyToBoth(value, Left, Right);
         }
 
         private sealed class AndConstraint : BinaryConstraint
@@ -69,6 +71,8 @@ namespace SUnit
             {
                 return left.Apply(value) & right.Apply(value);
             }
+
+            public override string ToString() => $"{Left} AND {Right}";
         }
         
         /// <summary>
@@ -92,6 +96,8 @@ namespace SUnit
             {
                 return left.Apply(value) | right.Apply(value);
             }
+
+            public override string ToString() => $"{Left} OR {Right}";
         }
 
         /// <summary>
@@ -116,6 +122,8 @@ namespace SUnit
             {
                 return left.Apply(value) ^ right.Apply(value);
             }
+
+            public override string ToString() => $"{Left} XOR {Right}";
         }
 
         /// <summary>

@@ -9,7 +9,7 @@ namespace SUnit
     /// A test produced from applying a constraint to an Is value.
     /// </summary>
     /// <typeparam name="TActual">The type of the actual value under test.</typeparam>
-    public class IsTest<TActual> : Test
+    public sealed class IsTest<TActual> : Test
     {
         private readonly TActual actual;
         private readonly IConstraint<TActual> constraint;
@@ -21,11 +21,23 @@ namespace SUnit
             this.actual = actual;
             this.constraint = constraint;
         }
+
         /// <summary>
         /// Indicates whether the test passed.
         /// </summary>
         public override bool Passed => constraint.Apply(actual);
-        
+
+        /// <summary>
+        /// Overridden to output the constraint, and the actual value.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString() => $"Expected {constraint}\nWas {PrintActualValue(actual)}";
+
+        private static string PrintActualValue(TActual actual)
+        {
+            return actual == null ? "<null>" : actual.ToString();
+        }
+
         /// <summary>
         /// Allows multiple constraints to be chained to the same value using boolean AND.
         /// </summary>
@@ -39,6 +51,6 @@ namespace SUnit
         /// <summary>
         /// Allows chaining multiple constraints to the same value using boolean XOR.
         /// </summary>
-        public Is<TActual> Xor => new Is<TActual>(actual, c => constraint ^ c);
+        public new Is<TActual> Xor => new Is<TActual>(actual, c => constraint ^ c);
     }
 }

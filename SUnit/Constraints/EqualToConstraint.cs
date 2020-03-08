@@ -20,5 +20,7 @@ namespace SUnit.Constraints
         {
             return EqualityComparer<T>.Default.Equals(expected, value);
         }
+
+        public override string ToString() => $"{expected}";
     }
 }
