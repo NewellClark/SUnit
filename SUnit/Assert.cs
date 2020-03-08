@@ -4,20 +4,18 @@ using System.Text;
 
 namespace SUnit
 {
+    /// <summary>
+    /// Contains methods for performing assertions. Every unit test framework has a class like this.
+    /// </summary>
     public static class Assert
     {
+        /// <summary>
+        /// Used to specify the actual value when writing assertions. For example,
+        /// <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+        /// </summary>
+        /// <typeparam name="TActual"></typeparam>
+        /// <param name="actual"></param>
+        /// <returns></returns>
         public static That<TActual> That<TActual>(TActual actual) => new That<TActual>(actual);
-    }
-
-    public class That<TActual>
-    {
-        private readonly TActual actual;
-
-        internal That(TActual actual)
-        {
-            this.actual = actual;
-        }
-
-        public Is<TActual> Is => new Is<TActual>(actual);
     }
 }
