@@ -15,6 +15,10 @@ namespace SUnit.Fixtures
     {
         private readonly Type type;
 
+        /// <summary>
+        /// Creates a new <see cref="Fixture"/> for the specified <see cref="Type"/>.
+        /// </summary>
+        /// <param name="type"></param>
         public Fixture(Type type)
         {
             Debug.Assert(type != null);
@@ -26,12 +30,7 @@ namespace SUnit.Fixtures
                 .ToList()
                 .AsReadOnly();
 
-            var factories = Finder.FindAllNamedConstructors(type)
-                .Select(method => Factory.FromNamedCtor(this, method));
-            var ctor = Finder.GetDefaultConstructor(type);
-            if (ctor != null)
-                factories = factories.Prepend(Factory.FromDefaultCtor(this, ctor));
-            this.Factories = factories.ToList().AsReadOnly();
+            Factories = FindAllFactories(this);
         }
 
         /// <summary>
@@ -48,6 +47,23 @@ namespace SUnit.Fixtures
         /// Gets all the methods that can be used to instantiate the fixture.
         /// </summary>
         public IReadOnlyCollection<Factory> Factories { get; }
+
+        private static IReadOnlyCollection<Factory> FindAllFactories(Fixture fixture)
+        {
+            Debug.Assert(fixture != null);
+
+            var results = new List<Factory>();
+
+            var @default = Finder.GetDefaultConstructor(fixture.type);
+            if (@default != null)
+                results.Add(Factory.FromDefaultCtor(fixture, @default));
+
+            var named = Finder.FindAllNamedConstructors(fixture.type)
+                .Select(method => Factory.FromNamedCtor(fixture, method));
+            results.AddRange(named);
+
+            return results.AsReadOnly();
+        }
     }
 
 
