@@ -11,6 +11,7 @@
           "Microsoft.NET.Test.Sdk": "16.2.0",
           "NUnit3TestAdapter": "3.13.0",
           "SUnit": "1.0.0",
+          "SUnit.Discovery": "1.0.0",
           "NUnit": "3.12.0"
         },
         "runtime": {
@@ -1013,6 +1014,14 @@
         "runtime": {
           "SUnit.dll": {}
         }
+      },
+      "SUnit.Discovery/1.0.0": {
+        "dependencies": {
+          "SUnit": "1.0.0"
+        },
+        "runtime": {
+          "SUnit.Discovery.dll": {}
+        }
       }
     }
   },
@@ -1527,6 +1536,11 @@
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
     "SUnit/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SUnit.Discovery/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

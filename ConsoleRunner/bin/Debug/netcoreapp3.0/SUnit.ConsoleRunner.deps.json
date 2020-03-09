@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v3.0": {
       "SUnit.ConsoleRunner/1.0.0": {
         "dependencies": {
-          "SUnit": "1.0.0"
+          "SUnit": "1.0.0",
+          "SUnit.Discovery": "1.0.0"
         },
         "runtime": {
           "SUnit.ConsoleRunner.dll": {}
@@ -17,6 +18,14 @@
       "SUnit/1.0.0": {
         "runtime": {
           "SUnit.dll": {}
+        }
+      },
+      "SUnit.Discovery/1.0.0": {
+        "dependencies": {
+          "SUnit": "1.0.0"
+        },
+        "runtime": {
+          "SUnit.Discovery.dll": {}
         }
       }
     }
@@ -28,6 +37,11 @@
       "sha512": ""
     },
     "SUnit/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SUnit.Discovery/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

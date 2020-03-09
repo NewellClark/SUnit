@@ -11,17 +11,6 @@ namespace SUnit.Assertions
     /// </summary>
     public interface IIsExpressionLong : IIsExpression<long?, IIsExpressionLong, IsTestLong>
     {
-        private IsTestLong FailWhenNull(Predicate<long> predicate)
-        {
-            bool lifted(long? value)
-            {
-                if (!value.HasValue)
-                    return false;
-                return predicate(value.Value);
-            }
-
-            return ApplyConstraint(lifted);
-        }
 
         /// <summary>
         /// Tests that the actual value is zero.

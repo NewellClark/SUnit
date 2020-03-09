@@ -1,0 +1,12 @@
+D:\LocalRepositories\SUnit\SUnit.Discovery\bin\Debug\netcoreapp3.0\SUnit.Discovery.deps.json
+D:\LocalRepositories\SUnit\SUnit.Discovery\bin\Debug\netcoreapp3.0\SUnit.Discovery.dll
+D:\LocalRepositories\SUnit\SUnit.Discovery\bin\Debug\netcoreapp3.0\SUnit.Discovery.pdb
+D:\LocalRepositories\SUnit\SUnit.Discovery\bin\Debug\netcoreapp3.0\SUnit.dll
+D:\LocalRepositories\SUnit\SUnit.Discovery\bin\Debug\netcoreapp3.0\SUnit.pdb
+D:\LocalRepositories\SUnit\SUnit.Discovery\bin\Debug\netcoreapp3.0\SUnit.xml
+D:\LocalRepositories\SUnit\SUnit.Discovery\obj\Debug\netcoreapp3.0\SUnit.Discovery.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\SUnit.Discovery\obj\Debug\netcoreapp3.0\SUnit.Discovery.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\SUnit.Discovery\obj\Debug\netcoreapp3.0\SUnit.Discovery.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\SUnit.Discovery\obj\Debug\netcoreapp3.0\SUnit.Discovery.csproj.CopyComplete
+D:\LocalRepositories\SUnit\SUnit.Discovery\obj\Debug\netcoreapp3.0\SUnit.Discovery.dll
+D:\LocalRepositories\SUnit\SUnit.Discovery\obj\Debug\netcoreapp3.0\SUnit.Discovery.pdb

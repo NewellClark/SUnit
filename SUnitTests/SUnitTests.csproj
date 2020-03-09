@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SUnit.Discovery\SUnit.Discovery.csproj" />
     <ProjectReference Include="..\SUnit\SUnit.csproj" />
   </ItemGroup>
 

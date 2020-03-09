@@ -11,17 +11,6 @@ namespace SUnit.Assertions
     /// </summary>
     public interface IIsExpressionDecimal : IIsExpression<decimal?, IIsExpressionDecimal, IsTestDecimal>
     {
-        private IsTestDecimal FailWhenNull(Predicate<decimal> predicate)
-        {
-            bool lifted(decimal? value)
-            {
-                if (!value.HasValue)
-                    return false;
-                return predicate(value.Value);
-            }
-
-            return ApplyConstraint(lifted);
-        }
 
         /// <summary>
         /// Tests if the decimal is exactly zero.

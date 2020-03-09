@@ -93,3 +93,5 @@ D:\LocalRepositories\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.csprojA
 D:\LocalRepositories\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.csproj.CopyComplete
 D:\LocalRepositories\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.dll
 D:\LocalRepositories\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.pdb
+D:\LocalRepositories\SUnit\SUnitTests\bin\Debug\netcoreapp3.0\SUnit.Discovery.dll
+D:\LocalRepositories\SUnit\SUnitTests\bin\Debug\netcoreapp3.0\SUnit.Discovery.pdb
