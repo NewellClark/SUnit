@@ -27,9 +27,9 @@ namespace SUnit
         public IIsExpression<TActual> Is => new IsExpression<TActual>(Actual);
     }
 
-    public class ThatDouble : That<double>
+    public class ThatDouble : That<double?>
     {
-        internal ThatDouble(double actual) : base(actual) { }
+        internal ThatDouble(double? actual) : base(actual) { }
         public new IIsExpressionDouble Is => new IsExpressionDouble(Actual);
     }
 }

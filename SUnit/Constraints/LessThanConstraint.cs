@@ -14,4 +14,29 @@ namespace SUnit.Constraints
 
         public override string ToString() => $"< {expected}";
     }
+
+    internal sealed class NullableLessThanConstraint<T> : IConstraint<T?>
+        where T : struct, IComparable<T>
+    {
+        private readonly T? expected;
+
+        public NullableLessThanConstraint(T? expected) => this.expected = expected;
+
+        public bool Apply(T? actual)
+        {
+            if (actual is null)
+                return false;
+            return Comparer<T?>.Default.Compare(actual, expected) < 0;
+        }
+    }
+
+    internal sealed class NullableLessThanOrEqualToConstraint<T> : IConstraint<T?>
+        where T : struct, IComparable<T>
+    {
+        private readonly T? expected;
+
+        public NullableLessThanOrEqualToConstraint(T? expected) => this.expected = expected;
+
+        public bool Apply(T? actual) => Comparer<T?>.Default.Compare(actual, expected) <= 0;
+    }
 }
