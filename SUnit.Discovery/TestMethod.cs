@@ -11,7 +11,7 @@ namespace SUnit.Discovery
     /// </summary>
     public class TestMethod
     {
-        private readonly MethodInfo method;
+        public MethodInfo Method { get; }
 
         internal TestMethod(Fixture fixture, MethodInfo method)
         {
@@ -19,7 +19,7 @@ namespace SUnit.Discovery
             Debug.Assert(method != null);
 
             Fixture = fixture;
-            this.method = method;
+            this.Method = method;
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace SUnit.Discovery
         /// <summary>
         /// Gets the name of the method.
         /// </summary>
-        public string Name => method.Name;
+        public string Name => Method.Name;
 
         /// <summary>
         /// Executes the <see cref="TestMethod"/> for the specified fixture instance.
@@ -39,7 +39,7 @@ namespace SUnit.Discovery
         /// <returns>The result of executing the test.</returns>
         internal Test Execute(object fixture)
         {
-            var func = (Func<Test>)method.CreateDelegate(typeof(Func<Test>), fixture);
+            var func = (Func<Test>)Method.CreateDelegate(typeof(Func<Test>), fixture);
             return func();
         }
 
@@ -47,6 +47,6 @@ namespace SUnit.Discovery
         /// Overridden to display the method name.
         /// </summary>
         /// <returns></returns>
-        public override string ToString() => method.Name;
+        public override string ToString() => Method.Name;
     }
 }

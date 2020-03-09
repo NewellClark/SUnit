@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SUnit.TestAdapter\SUnit.TestAdapter.csproj" />
     <ProjectReference Include="..\SUnit\SUnit.csproj" />
   </ItemGroup>
 

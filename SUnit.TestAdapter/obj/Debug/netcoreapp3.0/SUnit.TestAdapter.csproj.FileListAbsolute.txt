@@ -1,0 +1,15 @@
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netcoreapp3.0\SUnit.TestAdapter.deps.json
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netcoreapp3.0\SUnit.TestAdapter.dll
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netcoreapp3.0\SUnit.Discovery.dll
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netcoreapp3.0\SUnit.dll
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netcoreapp3.0\SUnit.Discovery.pdb
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netcoreapp3.0\SUnit.Discovery.xml
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netcoreapp3.0\SUnit.pdb
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netcoreapp3.0\SUnit.xml
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\obj\Debug\netcoreapp3.0\SUnit.TestAdapter.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\obj\Debug\netcoreapp3.0\SUnit.TestAdapter.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\obj\Debug\netcoreapp3.0\SUnit.TestAdapter.csproj.CopyComplete
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netcoreapp3.0\SUnit.TestAdapter.pdb
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\obj\Debug\netcoreapp3.0\SUnit.TestAdapter.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\obj\Debug\netcoreapp3.0\SUnit.TestAdapter.dll
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\obj\Debug\netcoreapp3.0\SUnit.TestAdapter.pdb

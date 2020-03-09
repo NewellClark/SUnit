@@ -120,6 +120,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.TestPlatform.ObjectModel": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
