@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using assert = NUnit.Framework.Assert;
 
-namespace SUnit.Fixtures
+namespace SUnit.Discovery
 {
     [TestFixture]
     public class FixtureTests

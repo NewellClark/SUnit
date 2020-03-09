@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace SUnit.Fixtures
+namespace SUnit.Discovery
 {
     /// <summary>
     /// The kind of result.
@@ -25,13 +25,13 @@ namespace SUnit.Fixtures
         /// </summary>
         Pass
     }
-    
+
     /// <summary>
     /// The result of running a <see cref="UnitTest"/>.
     /// </summary>
     public abstract class TestResult
     {
-        protected private TestResult(ResultKind kind) => this.Kind = kind;
+        protected private TestResult(ResultKind kind) => Kind = kind;
 
         /// <summary>
         /// Whether the result was a pass, fail, or error.

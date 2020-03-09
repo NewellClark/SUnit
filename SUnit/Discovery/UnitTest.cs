@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-namespace SUnit.Fixtures
+namespace SUnit.Discovery
 {
     /// <summary>
     /// A single unit test that is ready to be executed.
@@ -30,7 +30,7 @@ namespace SUnit.Fixtures
         }
 
         /// <summary>
-        /// Gets the <see cref="SUnit.Fixtures.Fixture"/> that defines the test.
+        /// Gets the <see cref="Discovery.Fixture"/> that defines the test.
         /// </summary>
         public Fixture Fixture => factory.Fixture;
 
@@ -67,7 +67,7 @@ namespace SUnit.Fixtures
                 return TestResult.UnexpectedException(this, ex);
             }
         }
-        
+
         private sealed class PassResult : TestResult
         {
             private readonly string testName;

@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Text;
 
-namespace SUnit.Fixtures
+namespace SUnit.Discovery
 {
     /// <summary>
     /// A unit test method.
@@ -18,12 +18,12 @@ namespace SUnit.Fixtures
             Debug.Assert(fixture != null);
             Debug.Assert(method != null);
 
-            this.Fixture = fixture;
+            Fixture = fixture;
             this.method = method;
         }
 
         /// <summary>
-        /// Gets the <see cref="SUnit.Fixtures.Fixture"/> that defines the <see cref="TestMethod"/>.
+        /// Gets the <see cref="Discovery.Fixture"/> that defines the <see cref="TestMethod"/>.
         /// </summary>
         public Fixture Fixture { get; }
 
