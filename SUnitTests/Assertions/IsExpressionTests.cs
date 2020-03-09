@@ -27,8 +27,8 @@ namespace SUnit.Assertions
         {
             get
             {
-                return Enumerable.Range(0, 10)
-                    .SelectMany(left => Enumerable.Range(0, 10).Select(right => (left, right)));
+                return Enumerable.Range(0, 5)
+                    .SelectMany(left => Enumerable.Range(0, 5).Select(right => (left, right)));
             }
         }
 

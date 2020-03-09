@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 
@@ -43,6 +44,16 @@ namespace SUnit.Discovery
         /// Gets the name of the constructor. For named constructors, this will be the name of the method.
         /// </summary>
         public abstract string Name { get; }
+
+        /// <summary>
+        /// Uses the current <see cref="Factory"/> to instantiate all the <see cref="UnitTest"/>s
+        /// on the <see cref="SUnit.Discovery.Fixture"/>.
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<UnitTest> CreateTests()
+        {
+            return Fixture.Tests.Select(method => new UnitTest(method, this));
+        }
 
         /// <summary>
         /// Overridden to display the name.

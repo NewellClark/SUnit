@@ -82,17 +82,25 @@ namespace SUnit.Discovery
         /// Finds all the valid named constructors on the specified type.
         /// </summary>
         /// <param name="type"></param>
-        /// <returns></returns>
-        public static IEnumerable<MethodInfo> FindAllNamedConstructors(Type type)
+        /// <returns>All the valid named constructor methods on the specified fixture type.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="type"/> is <see langword="null"/>.</exception>
+        public static IEnumerable<MethodInfo> FindNamedConstructors(Type type)
         {
             if (type is null) throw new ArgumentNullException(nameof(type));
 
             return type.ContainsGenericParameters ?
-                FindGenericNamedConstructors(type) :
-                FindNonGenericConstructors(type);
+                FindNamedConstructorsOnGenericType(type) :
+                FindNamedConstructorsOnNonGenericType(type);
         }
 
-        private static IEnumerable<MethodInfo> FindNonGenericConstructors(Type type)
+        /// <summary>
+        /// Finds all the valid named constructors on a non generic, or constructed generic, fixture type.
+        /// </summary>
+        /// <param name="type">The type of the fixture. Must be either non-generic or a fully-constructed
+        /// generic type. In other words, <see cref="Type.ContainsGenericParameters"/> 
+        /// must be <see langword="false"/>.</param>
+        /// <returns>All valid named constructor methods found on the fixture type.</returns>
+        private static IEnumerable<MethodInfo> FindNamedConstructorsOnNonGenericType(Type type)
         {
             Debug.Assert(!type.ContainsGenericParameters);
 
@@ -110,7 +118,15 @@ namespace SUnit.Discovery
                 .Where(predicate);
         }
 
-        private static IEnumerable<MethodInfo> FindGenericNamedConstructors(Type type)
+        /// <summary>
+        /// Finds all the valid named constructors on an unconstructed generic fixture type.
+        /// On an unconstructed generic fixture type, a valid named constructor returns a constructed version
+        /// of the fixture, or a subclass of a constructed version of the fixture.
+        /// </summary>
+        /// <param name="type">The type of the fixture. Must be a not-fully-constructed generic type. In other
+        /// words, <see cref="Type.ContainsGenericParameters"/> must be <see langword="true"/>.</param>
+        /// <returns>All valid named constructor methods found on the fixture type.</returns>
+        private static IEnumerable<MethodInfo> FindNamedConstructorsOnGenericType(Type type)
         {
             Debug.Assert(type.ContainsGenericParameters);
 
