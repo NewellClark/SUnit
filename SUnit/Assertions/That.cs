@@ -32,4 +32,11 @@ namespace SUnit
         internal ThatDouble(double? actual) : base(actual) { }
         public new IIsExpressionDouble Is => new IsExpressionDouble(Actual);
     }
+
+    public class ThatDecimal : That<decimal?>
+    {
+        internal ThatDecimal(decimal? actual) : base(actual) { }
+
+        public new IIsExpressionDecimal Is => new IsExpressionDecimal(Actual);
+    }
 }

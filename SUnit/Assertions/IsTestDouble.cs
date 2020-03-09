@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SUnit.Assertions
 {
-    public class IsTestDouble : ActualValueTest<double?, IIsExpressionDouble, IsTestDouble>
+    public sealed class IsTestDouble : ActualValueTest<double?, IIsExpressionDouble, IsTestDouble>
     {
         internal IsTestDouble(double? actual, IConstraint<double?> constraint) 
             : base(actual, constraint) { }

@@ -11,6 +11,15 @@ namespace SUnit
     /// </summary>
     public static class IsComparableExtensions
     {
+        /// <summary>
+        /// Tests whether the actual value is less than the specified expected value.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TIs"></typeparam>
+        /// <typeparam name="TTest"></typeparam>
+        /// <param name="this"></param>
+        /// <param name="expected">The value we should be less than.</param>
+        /// <returns>A test that checks whether the actual value is less than <paramref name="expected"/>.</returns>
         public static TTest LessThan<T, TIs, TTest>(this IIsExpression<T, TIs, TTest> @this, T expected)
             where T : IComparable<T>
             where TIs : IIsExpression<T, TIs, TTest>
