@@ -1,4 +1,5 @@
-﻿using SUnit.Constraints;
+﻿using SUnit.Assertions;
+using SUnit.Constraints;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +9,7 @@ namespace SUnit
     /// <summary>
     /// Extension methods for <see cref="IIsExpression{TActual}"/>.
     /// </summary>
-    public static class IsExtensions
+    public static class IsComparableExtensions
     {
         /// <summary>
         /// Tests whether the actual value is less than the specified <paramref name="expected"/> value.

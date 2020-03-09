@@ -1,9 +1,10 @@
-﻿using System;
+﻿using SUnit.Constraints;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace SUnit
+namespace SUnit.Assertions
 {
     /// <summary>
     /// A function that produces a new <see cref="IConstraint{T}"/> by modifying an existing <see cref="IConstraint{T}"/>.
@@ -34,6 +35,11 @@ namespace SUnit
         /// <param name="constraint">The constraint to apply.</param>
         /// <returns>A <see cref="Test"/> that passes if the constraint is satisfied.</returns>
         public abstract TTest ApplyConstraint(IConstraint<T> constraint);
+
+        public TTest ApplyConstraint(Predicate<T> predicate)
+        {
+            return ApplyConstraint(Constraint.Create(predicate));
+        }
 
         /// <summary>
         /// Applies a constraint modifier to the current <see cref="IActualValueExpression{T, TExpression, TTest}"/>. Any

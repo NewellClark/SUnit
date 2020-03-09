@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace SUnit
+namespace SUnit.Assertions
 {
     /// <summary>
     /// A base class for implementing <see cref="IActualValueExpression{T, TExpression, TTest}"/>.

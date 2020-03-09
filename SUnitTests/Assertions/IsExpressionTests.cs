@@ -5,10 +5,10 @@ using System.Text;
 using static NUnit.Framework.Assert;
 using System.Linq;
 
-namespace SUnit
+namespace SUnit.Assertions
 {
     [TestFixture]
-    public class IsTests
+    public class IsExpressionTests
     {
         [DatapointSource]
         public IEnumerable<(Test normal, Test inverted)> InvertedTestPairs
@@ -31,9 +31,9 @@ namespace SUnit
                     .SelectMany(left => Enumerable.Range(0, 10).Select(right => (left, right)));
             }
         }
-        
+
         [TestFixture]
-        public class EqualTo : IsTests
+        public class EqualTo : IsExpressionTests
         {
             [Test]
             public void EqualValues_Passes()
@@ -68,7 +68,7 @@ namespace SUnit
         }
 
         [TestFixture]
-        public class Null : IsTests
+        public class Null : IsExpressionTests
         {
             [Test]
             public void ValueType_IsNotNull()
@@ -92,7 +92,7 @@ namespace SUnit
         }
 
         [TestFixture]
-        public class LessThan : IsTests
+        public class LessThan : IsExpressionTests
         {
             [Test]
             public void ActualSmaller_Passes()
@@ -123,7 +123,7 @@ namespace SUnit
         }
 
         [TestFixture]
-        public class GreaterThan : IsTests
+        public class GreaterThan : IsExpressionTests
         {
             [Test]
             public void ActualSmaller_Fails()

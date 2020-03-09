@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SUnit
+namespace SUnit.Assertions
 {
     /// <summary>
     /// The return type of <see cref="That{TActual}.Is"/>. Contains methods and properties for
@@ -37,7 +37,7 @@ namespace SUnit
     }
 
 
-    
+
 
 
 }

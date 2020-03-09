@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace SUnit
+namespace SUnit.Assertions
 {
     /// <summary>
     /// Base class for a <see cref="Test"/> that is created by applying a <see cref="IConstraint{T}"/> to
@@ -40,7 +40,7 @@ namespace SUnit
             this.actual = actual;
             this.constraint = constraint;
         }
-        
+
         /// <summary>
         /// Creates a new <see cref="IActualValueExpression{T, TExpression, TTest}"/> by applying a constraint modifier
         /// to the current constraint. This is used to implement <see cref="And"/>, <see cref="Or"/>, etc.

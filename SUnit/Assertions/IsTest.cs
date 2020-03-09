@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SUnit
+namespace SUnit.Assertions
 {
     /// <summary>
     /// The type of <see cref="Test"/> that is returned when test methods are called on 

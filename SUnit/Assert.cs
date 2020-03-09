@@ -17,5 +17,7 @@ namespace SUnit
         /// <param name="actual"></param>
         /// <returns></returns>
         public static That<TActual> That<TActual>(TActual actual) => new That<TActual>(actual);
+
+        public static ThatDouble That(double actual) => new ThatDouble(actual);
     }
 }

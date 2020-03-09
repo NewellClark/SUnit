@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using SUnit.Fixtures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using assert = NUnit.Framework.Assert;
 
-namespace SUnit
+namespace SUnit.Fixtures
 {
     [TestFixture]
     public class FixtureTests
@@ -37,10 +36,10 @@ namespace SUnit
                 .Select(fact => fact.Build())
                 .Cast<Mock>()
                 .Select(mock => mock.CtorName);
-            var expected = new string[] 
-            { 
+            var expected = new string[]
+            {
                 nameof(Mock.AlphaCtor), nameof(Mock.BravoCtor),
-                nameof(Mock.CharlieCtor), nameof(Mock) 
+                nameof(Mock.CharlieCtor), nameof(Mock)
             };
 
             assert.That(actualNames, Is.EquivalentTo(expected));

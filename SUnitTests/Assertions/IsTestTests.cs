@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using assert = NUnit.Framework.Assert;
 
-namespace SUnit
+namespace SUnit.Assertions
 {
     [TestFixture]
     public class IsTestTests

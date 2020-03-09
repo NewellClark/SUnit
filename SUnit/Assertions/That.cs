@@ -1,4 +1,5 @@
 ﻿
+using SUnit.Assertions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,17 +13,23 @@ namespace SUnit
     /// <typeparam name="TActual">The type of the actual value.</typeparam>
     public class That<TActual>
     {
-        private readonly TActual actual;
+        protected private TActual Actual { get; }
 
         internal That(TActual actual)
         {
-            this.actual = actual;
+            this.Actual = actual;
         }
 
         /// <summary>
         /// Contains methods and properties for applying contstraints to the actual value specified in the 
         /// <see cref="Assert.That{TActual}(TActual)"/> method.
         /// </summary>
-        public IIsExpression<TActual> Is => new IsExpression<TActual>(actual);
+        public IIsExpression<TActual> Is => new IsExpression<TActual>(Actual);
+    }
+
+    public class ThatDouble : That<double>
+    {
+        internal ThatDouble(double actual) : base(actual) { }
+        public new IIsExpressionDouble Is => new IsExpressionDouble(Actual);
     }
 }
