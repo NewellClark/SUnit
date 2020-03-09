@@ -7,7 +7,7 @@ namespace SUnit.Assertions
 {
     public interface IIsExpressionDouble : IIsExpression<double?, IIsExpressionDouble, IsTestDouble>
     {
-        private IsTestDouble NullFails(Predicate<double> predicate)
+        private IsTestDouble FailWhenNull(Predicate<double> predicate)
         {
             bool lifted(double? value)
             {
@@ -18,10 +18,11 @@ namespace SUnit.Assertions
 
             return ApplyConstraint(lifted);
         }
-        public IsTestDouble Zero => NullFails(n => n == 0.0);
-        public IsTestDouble Negative => NullFails(n => double.IsNegative(n));
-        public IsTestDouble Positive => NullFails(n => n > 0.0);
-        public IsTestDouble NaN => NullFails(n => double.IsNaN(n));
+
+        public IsTestDouble Zero => FailWhenNull(n => n == 0.0);
+        public IsTestDouble Negative => FailWhenNull(n => double.IsNegative(n));
+        public IsTestDouble Positive => FailWhenNull(n => n > 0.0);
+        public IsTestDouble NaN => FailWhenNull(n => double.IsNaN(n));
     }
 
     internal class IsExpressionDouble : ActualValueExpression<double?, IIsExpressionDouble, IsTestDouble>, IIsExpressionDouble

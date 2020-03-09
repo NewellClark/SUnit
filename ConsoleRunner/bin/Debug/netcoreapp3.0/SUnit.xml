@@ -18,6 +18,22 @@
             <param name="actual"></param>
             <returns></returns>
         </member>
+        <member name="M:SUnit.Assert.That(System.Double)">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Nullable{System.Double})">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
         <member name="T:SUnit.Assertions.ActualValueExpression`3">
             <summary>
             A base class for implementing <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>.
@@ -493,6 +509,29 @@
             Extension methods for <see cref="T:SUnit.Assertions.IIsExpression`3"/>.
             </summary>
         </member>
+        <member name="M:SUnit.IsComparableExtensions.LessThan``3(SUnit.Assertions.IIsExpression{``0,``1,``2},``0)">
+            <summary>
+            Tests whether the actual value is less than the specified expected value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <param name="this"></param>
+            <param name="expected">The value we should be less than.</param>
+            <returns>A test that checks whether the actual value is less than <paramref name="expected"/>.</returns>
+        </member>
+        <member name="M:SUnit.IsComparableExtensions.LessThan``3(SUnit.Assertions.IIsExpression{System.Nullable{``0},``1,``2},System.Nullable{``0})">
+            <summary>
+            Tests whether the actual value is less than the specified expected value. <see langword="null"/> is not 
+            less than anything.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <param name="this"></param>
+            <param name="expected">The value that we should be less than.</param>
+            <returns>A test that checks whether the actual value is less than <paramref name="expected"/>.</returns>
+        </member>
         <member name="M:SUnit.IsComparableExtensions.GreaterThan``3(SUnit.Assertions.IIsExpression{``0,``1,``2},``0)">
             <summary>
             Tests whether the actual value is greater than the specified <paramref name="expected"/> value.
@@ -503,6 +542,18 @@
             <param name="this"></param>
             <param name="expected">The value that we should be greater than.</param>
             <returns>A test that tests whether the actual value is greater than the expected value.</returns>
+        </member>
+        <member name="M:SUnit.IsComparableExtensions.GreaterThan``3(SUnit.Assertions.IIsExpression{System.Nullable{``0},``1,``2},System.Nullable{``0})">
+            <summary>
+            Tests whether the actual value is greater than the specified expected value. <see langword="null"/> is not
+            greater than anything.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <param name="this"></param>
+            <param name="expected"></param>
+            <returns>A test that tests whether the actual value is greater than <paramref name="expected"/>.</returns>
         </member>
         <member name="M:SUnit.IsComparableExtensions.LessThanOrEqualTo``3(SUnit.Assertions.IIsExpression{``0,``1,``2},``0)">
             <summary>
@@ -515,6 +566,18 @@
             <param name="expected"></param>
             <returns>A test that tests whether the actual value is less than or equal to the specified expected value.</returns>
         </member>
+        <member name="M:SUnit.IsComparableExtensions.LessThanOrEqualTo``3(SUnit.Assertions.IIsExpression{System.Nullable{``0},``1,``2},System.Nullable{``0})">
+            <summary>
+            Tests whether the actual value is less than or equal to the specified expected value. <see langword="null"/> is 
+            not less than anything and only equal to itself.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <param name="this"></param>
+            <param name="expected">The value we should be less than or equal to.</param>
+            <returns>A test that indicates if the actual value is less than or equal to the specified expected value.</returns>
+        </member>
         <member name="M:SUnit.IsComparableExtensions.GreaterThanOrEqualTo``3(SUnit.Assertions.IIsExpression{``0,``1,``2},``0)">
             <summary>
             Tests whether the actual value is greater than or equal to the specified <paramref name="expected"/> value.
@@ -525,6 +588,18 @@
             <param name="this"></param>
             <param name="expected"></param>
             <returns></returns>
+        </member>
+        <member name="M:SUnit.IsComparableExtensions.GreaterThanOrEqualTo``3(SUnit.Assertions.IIsExpression{System.Nullable{``0},``1,``2},System.Nullable{``0})">
+            <summary>
+            Tests whether the actual value is greater than or equal to the specified expected value. <see langword="null"/> is not
+            greater than anything and is only equal to itself.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <param name="this"></param>
+            <param name="expected">The value we should be greater than or equal to.</param>
+            <returns>A test that indicates whether the actual value is greater than or equal to <paramref name="expected"/>.</returns>
         </member>
         <member name="T:SUnit.Test">
             <summary>

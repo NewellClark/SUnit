@@ -33,5 +33,13 @@ namespace SUnit
         /// <param name="actual"></param>
         /// <returns></returns>
         public static ThatDouble That(double? actual) => new ThatDouble(actual);
+
+        public static ThatDouble That(float actual) => new ThatDouble(actual);
+
+        public static ThatDouble That(float? actual) => new ThatDouble(actual);
+
+        public static ThatDecimal That(decimal actual) => new ThatDecimal(actual);
+
+        public static ThatDecimal That(decimal? actual) => new ThatDecimal(actual);
     }
 }
