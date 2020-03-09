@@ -20,16 +20,16 @@ namespace SUnit.ActualValues
         }
     }
 
-    public interface IIsThing<T> : IIsThing<T, IIsThing<T>, IIsThingTest<T>> { }
+    public interface IIsThing<T> : IIsThing<T, IIsThing<T>, IsThingTest<T>> { }
 
-    internal class IsThing<T> : ThingBase<T, IIsThing<T>, IIsThingTest<T>>, IIsThing<T>
+    internal class IsThing<T> : ThingBase<T, IIsThing<T>, IsThingTest<T>>, IIsThing<T>
     {
         internal IsThing(T actual, ConstraintModifier<T> constraintModifier) 
             : base(actual, constraintModifier) { }
 
         internal IsThing(T actual) : this(actual, c => c) { }
 
-        private protected override IIsThingTest<T> CreateThingTest(T actual, IConstraint<T> constraint)
+        private protected override IsThingTest<T> CreateThingTest(T actual, IConstraint<T> constraint)
         {
             return new IsThingTest<T>(actual, constraint);
         }
@@ -40,9 +40,7 @@ namespace SUnit.ActualValues
         }
     }
 
-    public interface IIsThingTest<T> : IThingTest<T, IIsThing<T>, IIsThingTest<T>> { }
-
-    public class IsThingTest<T> : ThingTestBase<T, IIsThing<T>, IIsThingTest<T>>, IIsThingTest<T>
+    public class IsThingTest<T> : ThingTestBase<T, IIsThing<T>, IsThingTest<T>>
     {
         internal IsThingTest(T actual, IConstraint<T> constraint) : base(actual, constraint) { } 
 

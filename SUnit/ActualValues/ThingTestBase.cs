@@ -31,10 +31,10 @@ namespace SUnit.ActualValues
             return CreateThing(actual, constraintModifier);
         }
 
-        private IThingTest<T, TThing, TTest> Casted => (IThingTest<T, TThing, TTest>)this;
+        private IThingTest<T, TThing, TTest> Casted => this;
 
         public TThing And => Casted.And;
         public TThing Or => Casted.Or;
-        public TThing Xor => Casted.Xor;
+        public new TThing Xor => Casted.Xor;
     }
 }
