@@ -121,7 +121,7 @@
             <typeparam name="T"></typeparam>
             <typeparam name="TExpression">This should be set to your own type, or an interface you implement.</typeparam>
             <typeparam name="TTest">The type of <see cref="T:SUnit.Test"/> that is created by calling 
-            <see cref="M:SUnit.Assertions.ActualValueExpression`3.ApplyConstraint(SUnit.IConstraint{`0})"/>. Must be derived from 
+            <see cref="M:SUnit.Assertions.ActualValueExpression`3.ApplyConstraint(SUnit.Constraints.IConstraint{`0})"/>. Must be derived from 
             <see cref="T:SUnit.Assertions.ActualValueTest`3"/>.</typeparam>
             <remarks>
             Subclassing is very straightforward. Derived classes will have almost no logic in them. The main reason for subclassing
@@ -138,7 +138,7 @@
             <param name="constraintModifier">A function to modify any constraints that are applied
             to the actual value.</param>
         </member>
-        <member name="M:SUnit.Assertions.ActualValueExpression`3.CreateTest(`0,SUnit.IConstraint{`0})">
+        <member name="M:SUnit.Assertions.ActualValueExpression`3.CreateTest(`0,SUnit.Constraints.IConstraint{`0})">
             <summary>
             When overridden in a derived class, creates a new <see cref="T:SUnit.Assertions.ActualValueTest`3"/>
             by applying the specified constraint to the specified actual value.
@@ -168,7 +168,7 @@
         </member>
         <member name="T:SUnit.Assertions.ActualValueTest`3">
             <summary>
-            Base class for a <see cref="T:SUnit.Test"/> that is created by applying a <see cref="T:SUnit.IConstraint`1"/> to
+            Base class for a <see cref="T:SUnit.Test"/> that is created by applying a <see cref="T:SUnit.Constraints.IConstraint`1"/> to
             given actual value.
             </summary>
             <typeparam name="T">The type of the actual value under test.</typeparam>
@@ -183,13 +183,13 @@
             Indicates whether the test passed. 
             </summary>
         </member>
-        <member name="M:SUnit.Assertions.ActualValueTest`3.#ctor(`0,SUnit.IConstraint{`0})">
+        <member name="M:SUnit.Assertions.ActualValueTest`3.#ctor(`0,SUnit.Constraints.IConstraint{`0})">
             <summary>
             Creates a new <see cref="T:SUnit.Assertions.ActualValueTest`3"/> by applying the specified 
-            <see cref="T:SUnit.IConstraint`1"/> to the specified actual value. The test passes if the constraint passes.
+            <see cref="T:SUnit.Constraints.IConstraint`1"/> to the specified actual value. The test passes if the constraint passes.
             </summary>
             <param name="actual">The actual value to test.</param>
-            <param name="constraint">The <see cref="T:SUnit.IConstraint`1"/> to apply to the actual value.</param>
+            <param name="constraint">The <see cref="T:SUnit.Constraints.IConstraint`1"/> to apply to the actual value.</param>
         </member>
         <member name="M:SUnit.Assertions.ActualValueTest`3.CreateExpression(`0,SUnit.Assertions.ConstraintModifier{`0})">
             <summary>
@@ -225,11 +225,11 @@
         </member>
         <member name="T:SUnit.Assertions.ConstraintModifier`1">
             <summary>
-            A function that produces a new <see cref="T:SUnit.IConstraint`1"/> by modifying an existing <see cref="T:SUnit.IConstraint`1"/>.
+            A function that produces a new <see cref="T:SUnit.Constraints.IConstraint`1"/> by modifying an existing <see cref="T:SUnit.Constraints.IConstraint`1"/>.
             </summary>
-            <typeparam name="T">The type of value that the <see cref="T:SUnit.IConstraint`1"/> applies to.</typeparam>
+            <typeparam name="T">The type of value that the <see cref="T:SUnit.Constraints.IConstraint`1"/> applies to.</typeparam>
             <param name="constraint">The input constraint.</param>
-            <returns>A new <see cref="T:SUnit.IConstraint`1"/> produced by modifying the existing one.</returns>
+            <returns>A new <see cref="T:SUnit.Constraints.IConstraint`1"/> produced by modifying the existing one.</returns>
         </member>
         <member name="T:SUnit.Assertions.IActualValueExpression`3">
             <summary>
@@ -243,7 +243,7 @@
             <typeparam name="TTest">The type of <see cref="T:SUnit.Test"/> that is returned when a constraint is applied
             to the current <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>.</typeparam>
         </member>
-        <member name="M:SUnit.Assertions.IActualValueExpression`3.ApplyConstraint(SUnit.IConstraint{`0})">
+        <member name="M:SUnit.Assertions.IActualValueExpression`3.ApplyConstraint(SUnit.Constraints.IConstraint{`0})">
             <summary>
             Applies a constraint to the current <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>, producing
             a <see cref="T:SUnit.Test"/>.
@@ -253,10 +253,10 @@
         </member>
         <member name="M:SUnit.Assertions.IActualValueExpression`3.ApplyConstraint(System.Predicate{`0})">
             <summary>
-            Creates a <see cref="T:SUnit.IConstraint`1"/> from the specified <see cref="T:System.Predicate`1"/> and
+            Creates a <see cref="T:SUnit.Constraints.IConstraint`1"/> from the specified <see cref="T:System.Predicate`1"/> and
             applies it to the current <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>.
             </summary>
-            <param name="predicate">The <see cref="T:System.Predicate`1"/> to use to build the <see cref="T:SUnit.IConstraint`1"/>.</param>
+            <param name="predicate">The <see cref="T:System.Predicate`1"/> to use to build the <see cref="T:SUnit.Constraints.IConstraint`1"/>.</param>
             <returns>A <see cref="T:SUnit.Test"/> created by applying the specified constraint to the actual value.</returns>
         </member>
         <member name="M:SUnit.Assertions.IActualValueExpression`3.ApplyModifier(SUnit.Assertions.ConstraintModifier{`0})">
@@ -264,7 +264,7 @@
             Applies a constraint modifier to the current <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>. Any
             constraint that gets applied will be modified by the specified modifier.
             </summary>
-            <param name="modifier">A function that modifies a <see cref="T:SUnit.IConstraint`1"/>.</param>
+            <param name="modifier">A function that modifies a <see cref="T:SUnit.Constraints.IConstraint`1"/>.</param>
             <returns>
             A new <see cref="T:SUnit.Assertions.IActualValueExpression`3"/> with the specified 
             constraint modifier applied.
@@ -272,7 +272,7 @@
         </member>
         <member name="P:SUnit.Assertions.IActualValueExpression`3.Not">
             <summary>
-            Inverts any <see cref="T:SUnit.IConstraint`1"/> that is applied to the current 
+            Inverts any <see cref="T:SUnit.Constraints.IConstraint`1"/> that is applied to the current 
             <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>.
             </summary>
         </member>
@@ -305,9 +305,17 @@
             </summary>
             <typeparam name="T">The type of the actual value that is under test.</typeparam>
         </member>
+        <member name="T:SUnit.Assertions.IsExpression`1">
+            <summary>
+            Provides an implementation of <see cref="T:SUnit.Assertions.IIsExpression`1"/> for actual value types that have
+            not been "special-cased" in any way.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
         <member name="T:SUnit.Assertions.IIsExpressionDecimal">
             <summary>
-            Contains assertions specific to decimals.
+            The return type of <see cref="P:SUnit.ThatDecimal.Is"/>. Used to apply constraints to decimals 
+            and nullable decimals.
             </summary>
         </member>
         <member name="P:SUnit.Assertions.IIsExpressionDecimal.Zero">
@@ -323,6 +331,11 @@
         <member name="P:SUnit.Assertions.IIsExpressionDecimal.Negative">
             <summary>
             Tests if the decimal is negative.
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.IsExpressionDecimal">
+            <summary>
+            The implementation of <see cref="T:SUnit.Assertions.IIsExpressionDecimal"/> that is used by SUnit.
             </summary>
         </member>
         <member name="T:SUnit.Assertions.IIsExpressionDouble">
@@ -350,10 +363,15 @@
             Tests that the actual value is NaN (basically you divided zero by zero or something crazy like that).
             </summary>
         </member>
+        <member name="T:SUnit.Assertions.IsExpressionDouble">
+            <summary>
+            The implementation of <see cref="T:SUnit.Assertions.IIsExpressionDouble"/> that is used by SUnit.
+            </summary>
+        </member>
         <member name="T:SUnit.Assertions.IIsExpressionLong">
             <summary>
-            The return type of <see cref="P:SUnit.ThatLong.Is"/>. Contains members for applying assertions 
-            to <see cref="T:System.Int64"/>.
+            The return type of <see cref="P:SUnit.ThatLong.Is"/>. Contains members for applying assertions to longs and
+            nullable longs.
             </summary>
         </member>
         <member name="P:SUnit.Assertions.IIsExpressionLong.Zero">
@@ -385,7 +403,7 @@
         </member>
         <member name="T:SUnit.Assertions.IsTestDouble">
             <summary>
-            A <see cref="T:SUnit.Test"/> that applies a <see cref="T:SUnit.IConstraint`1"/> to an actual nullable double.
+            A <see cref="T:SUnit.Test"/> that applies a <see cref="T:SUnit.Constraints.IConstraint`1"/> to an actual nullable double.
             </summary>
         </member>
         <member name="T:SUnit.Assertions.IsTestLong">
@@ -444,11 +462,11 @@
         </member>
         <member name="M:SUnit.Constraints.Constraint.FromPredicate``1(System.Predicate{``0})">
             <summary>
-            Creates a new <see cref="T:SUnit.IConstraint`1"/> from the specified <see cref="T:System.Predicate`1"/>.
+            Creates a new <see cref="T:SUnit.Constraints.IConstraint`1"/> from the specified <see cref="T:System.Predicate`1"/>.
             </summary>
             <typeparam name="T">The type of value that the constraint applies to.</typeparam>
             <param name="predicate">The predicate to apply to values that the constraint is applied to.</param>
-            <returns>A new <see cref="T:SUnit.IConstraint`1"/> that uses the specified <see cref="T:System.Predicate`1"/>.</returns>
+            <returns>A new <see cref="T:SUnit.Constraints.IConstraint`1"/> that uses the specified <see cref="T:System.Predicate`1"/>.</returns>
         </member>
         <member name="T:SUnit.Constraints.EqualToConstraint`1">
             <summary>
@@ -456,258 +474,55 @@
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="T:SUnit.Discovery.Finder">
-            <summary>
-            Contains methods for finding tests.
-            </summary>
-        </member>
-        <member name="M:SUnit.Discovery.Finder.IsValidTestMethod(System.Reflection.MethodInfo)">
-            <summary>
-            Indicates whether the specified <see cref="T:System.Reflection.MethodInfo"/> is a valid test method.
-            </summary>
-            <param name="method">The <see cref="T:System.Reflection.MethodInfo"/> to inspect.</param>
-            <returns>True if the specified <see cref="T:System.Reflection.MethodInfo"/> is valid.</returns>
-            <exception cref="T:System.ArgumentNullException">
-            <paramref name="method"/> is null.
-            </exception>
-        </member>
-        <member name="M:SUnit.Discovery.Finder.FindAllValidTestMethods(System.Type)">
-            <summary>
-            Finds all the methods on the specified type that are valid test methods.
-            </summary>
-            <param name="type">The type to search.</param>
-            <returns>All methods defined on the type that are valid test methods.</returns>
-            <exception cref="T:System.ArgumentNullException">
-            <paramref name="type"/> is null.
-            </exception>
-        </member>
-        <member name="M:SUnit.Discovery.Finder.GetDefaultConstructor(System.Type)">
-            <summary>
-            Gets the eligible default constructor for the specified type, if one exists.
-            </summary>
-            <param name="type">The type to search.</param>
-            <returns>The eligible default constructor, if one exists. <see langword="null"/> if none is found.</returns>
-        </member>
-        <member name="M:SUnit.Discovery.Finder.FindAllNamedConstructors(System.Type)">
-            <summary>
-            Finds all the valid named constructors on the specified type.
-            </summary>
-            <param name="type"></param>
-            <returns></returns>
-        </member>
-        <member name="T:SUnit.Fixtures.Factory">
-            <summary>
-            An object that can be used to instantiate a <see cref="T:SUnit.Fixtures.Fixture"/>.
-            </summary>
-        </member>
-        <member name="P:SUnit.Fixtures.Factory.Fixture">
-            <summary>
-            Gets the <see cref="T:SUnit.Fixtures.Fixture"/> that the <see cref="T:SUnit.Fixtures.Factory"/> instantiates.
-            </summary>
-        </member>
-        <member name="M:SUnit.Fixtures.Factory.Build">
-            <summary>
-            Instantiates the <see cref="T:SUnit.Fixtures.Fixture"/>.
-            </summary>
-            <returns>An instantiated <see cref="T:SUnit.Fixtures.Fixture"/>.</returns>
-        </member>
-        <member name="P:SUnit.Fixtures.Factory.IsDefaultConstructor">
-            <summary>
-            Indicates whether the current <see cref="T:SUnit.Fixtures.Factory"/> is a default constructor.
-            </summary>
-        </member>
-        <member name="P:SUnit.Fixtures.Factory.IsNamedConstructor">
-            <summary>
-            Indicates whether the current <see cref="T:SUnit.Fixtures.Factory"/> is a named constructor.
-            </summary>
-        </member>
-        <member name="P:SUnit.Fixtures.Factory.Name">
-            <summary>
-            Gets the name of the constructor. For named constructors, this will be the name of the method.
-            </summary>
-        </member>
-        <member name="M:SUnit.Fixtures.Factory.ToString">
-            <summary>
-            Overridden to display the name.
-            </summary>
-            <returns>The name.</returns>
-        </member>
-        <member name="T:SUnit.Fixtures.Fixture">
-            <summary>
-            A class that defines unit tests.
-            </summary>
-        </member>
-        <member name="M:SUnit.Fixtures.Fixture.#ctor(System.Type)">
-            <summary>
-            Creates a new <see cref="T:SUnit.Fixtures.Fixture"/> for the specified <see cref="T:System.Type"/>.
-            </summary>
-            <param name="type"></param>
-        </member>
-        <member name="P:SUnit.Fixtures.Fixture.Name">
-            <summary>
-            Gets the unqualified name of the class that the fixture represents.
-            </summary>
-        </member>
-        <member name="P:SUnit.Fixtures.Fixture.Tests">
-            <summary>
-            Gets all the test methods on the fixture.
-            </summary>
-        </member>
-        <member name="P:SUnit.Fixtures.Fixture.Factories">
-            <summary>
-            Gets all the methods that can be used to instantiate the fixture.
-            </summary>
-        </member>
-        <member name="T:SUnit.Fixtures.TestMethod">
-            <summary>
-            A unit test method.
-            </summary>
-        </member>
-        <member name="P:SUnit.Fixtures.TestMethod.Fixture">
-            <summary>
-            Gets the <see cref="T:SUnit.Fixtures.Fixture"/> that defines the <see cref="T:SUnit.Fixtures.TestMethod"/>.
-            </summary>
-        </member>
-        <member name="P:SUnit.Fixtures.TestMethod.Name">
-            <summary>
-            Gets the name of the method.
-            </summary>
-        </member>
-        <member name="M:SUnit.Fixtures.TestMethod.Execute(System.Object)">
-            <summary>
-            Executes the <see cref="T:SUnit.Fixtures.TestMethod"/> for the specified fixture instance.
-            </summary>
-            <param name="fixture">An instance of the class that defines the <see cref="T:SUnit.Fixtures.TestMethod"/>.</param>
-            <returns>The result of executing the test.</returns>
-        </member>
-        <member name="M:SUnit.Fixtures.TestMethod.ToString">
-            <summary>
-            Overridden to display the method name.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:SUnit.Fixtures.ResultKind">
-            <summary>
-            The kind of result.
-            </summary>
-        </member>
-        <member name="F:SUnit.Fixtures.ResultKind.Error">
-            <summary>
-            The test did not run due to an error.
-            </summary>
-        </member>
-        <member name="F:SUnit.Fixtures.ResultKind.Fail">
-            <summary>
-            The test ran, and it failed.
-            </summary>
-        </member>
-        <member name="F:SUnit.Fixtures.ResultKind.Pass">
-            <summary>
-            The test ran, and it passed.
-            </summary>
-        </member>
-        <member name="T:SUnit.Fixtures.TestResult">
-            <summary>
-            The result of running a <see cref="T:SUnit.Fixtures.UnitTest"/>.
-            </summary>
-        </member>
-        <member name="P:SUnit.Fixtures.TestResult.Kind">
-            <summary>
-            Whether the result was a pass, fail, or error.
-            </summary>
-        </member>
-        <member name="M:SUnit.Fixtures.TestResult.UnexpectedException(SUnit.Fixtures.UnitTest,System.Exception)">
-            <summary>
-            Creates a <see cref="T:SUnit.Fixtures.TestResult"/> for when an unexpected exception is thrown while running the test.
-            </summary>
-            <param name="test"></param>
-            <param name="exception"></param>
-            <returns></returns>
-        </member>
-        <member name="T:SUnit.Fixtures.UnitTest">
-            <summary>
-            A single unit test that is ready to be executed.
-            </summary>
-        </member>
-        <member name="M:SUnit.Fixtures.UnitTest.#ctor(SUnit.Fixtures.TestMethod,SUnit.Fixtures.Factory)">
-            <summary>
-            Creates a new <see cref="T:SUnit.Fixtures.UnitTest"/> from the specified <see cref="T:SUnit.Fixtures.TestMethod"/> and
-            the specified <see cref="T:SUnit.Fixtures.Factory"/>.
-            </summary>
-            <param name="method"></param>
-            <param name="factory"></param>
-        </member>
-        <member name="P:SUnit.Fixtures.UnitTest.Fixture">
-            <summary>
-            Gets the <see cref="T:SUnit.Fixtures.Fixture"/> that defines the test.
-            </summary>
-        </member>
-        <member name="P:SUnit.Fixtures.UnitTest.Name">
-            <summary>
-            Gets the name of the test method.
-            </summary>
-        </member>
-        <member name="M:SUnit.Fixtures.UnitTest.ToString">
-            <summary>
-            Overridden to display the name of the method.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:SUnit.Fixtures.UnitTest.Run">
-            <summary>
-            Runs the unit test, returning a <see cref="T:SUnit.Fixtures.TestResult"/>.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:SUnit.IConstraint`1">
+        <member name="T:SUnit.Constraints.IConstraint`1">
             <summary>
             A constraint that can be applied to value. 
             </summary>
             <typeparam name="T">The type of value the constraint can be applied to.</typeparam>
         </member>
-        <member name="M:SUnit.IConstraint`1.Apply(`0)">
+        <member name="M:SUnit.Constraints.IConstraint`1.Apply(`0)">
             <summary>
             Applies the constraint to the specified value.
             </summary>
             <param name="value">The value to apply the constraint to.</param>
             <returns>Whether the value satisfies the constraint.</returns>
         </member>
-        <member name="M:SUnit.IConstraint`1.op_LogicalNot(SUnit.IConstraint{`0})">
+        <member name="M:SUnit.Constraints.IConstraint`1.op_LogicalNot(SUnit.Constraints.IConstraint{`0})">
             <summary>
-            Creates a new <see cref="T:SUnit.IConstraint`1"/> that passes if its operand fails.
+            Creates a new <see cref="T:SUnit.Constraints.IConstraint`1"/> that passes if its operand fails.
             </summary>
             <param name="operand"></param>
-            <returns>A <see cref="T:SUnit.IConstraint`1"/> that passes if the operand fails.</returns>
+            <returns>A <see cref="T:SUnit.Constraints.IConstraint`1"/> that passes if the operand fails.</returns>
         </member>
-        <member name="P:SUnit.IConstraint`1.Inverted">
+        <member name="P:SUnit.Constraints.IConstraint`1.Inverted">
             <summary>
-            Creates a new <see cref="T:SUnit.IConstraint`1"/> that passes when the current <see cref="T:SUnit.IConstraint`1"/> fails.
+            Creates a new <see cref="T:SUnit.Constraints.IConstraint`1"/> that passes when the current <see cref="T:SUnit.Constraints.IConstraint`1"/> fails.
             </summary>
         </member>
-        <member name="M:SUnit.IConstraint`1.op_BitwiseAnd(SUnit.IConstraint{`0},SUnit.IConstraint{`0})">
+        <member name="M:SUnit.Constraints.IConstraint`1.op_BitwiseAnd(SUnit.Constraints.IConstraint{`0},SUnit.Constraints.IConstraint{`0})">
             <summary>
-            Creates a <see cref="T:SUnit.IConstraint`1"/> that passes if both operands pass.
-            </summary>
-            <param name="left"></param>
-            <param name="right"></param>
-            <returns>A new <see cref="T:SUnit.IConstraint`1"/> that passes if both operands pass.</returns>
-        </member>
-        <member name="M:SUnit.IConstraint`1.op_BitwiseOr(SUnit.IConstraint{`0},SUnit.IConstraint{`0})">
-            <summary>
-            Creates a <see cref="T:SUnit.IConstraint`1"/> that passes if either or both operands passes.
+            Creates a <see cref="T:SUnit.Constraints.IConstraint`1"/> that passes if both operands pass.
             </summary>
             <param name="left"></param>
             <param name="right"></param>
-            <returns>A new <see cref="T:SUnit.IConstraint`1"/> that passes if either or both operands pass.</returns>
+            <returns>A new <see cref="T:SUnit.Constraints.IConstraint`1"/> that passes if both operands pass.</returns>
         </member>
-        <member name="M:SUnit.IConstraint`1.op_ExclusiveOr(SUnit.IConstraint{`0},SUnit.IConstraint{`0})">
+        <member name="M:SUnit.Constraints.IConstraint`1.op_BitwiseOr(SUnit.Constraints.IConstraint{`0},SUnit.Constraints.IConstraint{`0})">
             <summary>
-            Creates a <see cref="T:SUnit.IConstraint`1"/> that passes if exactly one operand passes, but fails if both 
+            Creates a <see cref="T:SUnit.Constraints.IConstraint`1"/> that passes if either or both operands passes.
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns>A new <see cref="T:SUnit.Constraints.IConstraint`1"/> that passes if either or both operands pass.</returns>
+        </member>
+        <member name="M:SUnit.Constraints.IConstraint`1.op_ExclusiveOr(SUnit.Constraints.IConstraint{`0},SUnit.Constraints.IConstraint{`0})">
+            <summary>
+            Creates a <see cref="T:SUnit.Constraints.IConstraint`1"/> that passes if exactly one operand passes, but fails if both 
             operands pass or if both operands fail.
             </summary>
             <param name="left"></param>
             <param name="right"></param>
-            <returns>A new <see cref="T:SUnit.IConstraint`1"/> that passes if exactly one operand passes.</returns>
+            <returns>A new <see cref="T:SUnit.Constraints.IConstraint`1"/> that passes if exactly one operand passes.</returns>
         </member>
         <member name="T:SUnit.IsComparableExtensions">
             <summary>

@@ -1448,6 +1448,19 @@
         "runtime": {
           "bin/placeholder/SUnit.dll": {}
         }
+      },
+      "SUnit.Discovery/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "SUnit": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SUnit.Discovery.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SUnit.Discovery.dll": {}
+        }
       }
     }
   },
@@ -5202,6 +5215,11 @@
       "type": "project",
       "path": "../SUnit/SUnit.csproj",
       "msbuildProject": "../SUnit/SUnit.csproj"
+    },
+    "SUnit.Discovery/1.0.0": {
+      "type": "project",
+      "path": "../SUnit.Discovery/SUnit.Discovery.csproj",
+      "msbuildProject": "../SUnit.Discovery/SUnit.Discovery.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5209,6 +5227,7 @@
       "Microsoft.NET.Test.Sdk >= 16.2.0",
       "NUnit3TestAdapter >= 3.13.0",
       "SUnit >= 1.0.0",
+      "SUnit.Discovery >= 1.0.0",
       "nunit >= 3.12.0"
     ]
   },
@@ -5247,6 +5266,9 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
+            "D:\\LocalRepositories\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj": {
+              "projectPath": "D:\\LocalRepositories\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj"
+            },
             "D:\\LocalRepositories\\SUnit\\SUnit\\SUnit.csproj": {
               "projectPath": "D:\\LocalRepositories\\SUnit\\SUnit\\SUnit.csproj"
             }

@@ -1,26 +1,16 @@
-﻿using System;
+﻿using SUnit.Constraints;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SUnit.Assertions
 {
     /// <summary>
-    /// The return type of <see cref="ThatLong.Is"/>. Contains members for applying assertions 
-    /// to <see cref="long"/>.
+    /// The return type of <see cref="ThatLong.Is"/>. Contains members for applying assertions to longs and
+    /// nullable longs.
     /// </summary>
     public interface IIsExpressionLong : IIsExpression<long?, IIsExpressionLong, IsTestLong>
     {
-        private IsTestLong FailWhenNull(Predicate<long> predicate)
-        {
-            bool lifted(long? value)
-            {
-                if (!value.HasValue)
-                    return false;
-                return predicate(value.Value);
-            }
-
-            return ApplyConstraint(lifted);
-        }
 
         /// <summary>
         /// Tests that the actual value is zero.

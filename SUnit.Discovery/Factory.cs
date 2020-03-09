@@ -4,10 +4,10 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Text;
 
-namespace SUnit.Fixtures
+namespace SUnit.Discovery
 {
     /// <summary>
-    /// An object that can be used to instantiate a <see cref="SUnit.Fixtures.Fixture"/>.
+    /// An object that can be used to instantiate a <see cref="Discovery.Fixture"/>.
     /// </summary>
     public abstract class Factory
     {
@@ -15,18 +15,18 @@ namespace SUnit.Fixtures
         {
             Debug.Assert(fixture != null);
 
-            this.Fixture = fixture;
+            Fixture = fixture;
         }
 
         /// <summary>
-        /// Gets the <see cref="SUnit.Fixtures.Fixture"/> that the <see cref="Factory"/> instantiates.
+        /// Gets the <see cref="Discovery.Fixture"/> that the <see cref="Factory"/> instantiates.
         /// </summary>
         public Fixture Fixture { get; }
 
         /// <summary>
-        /// Instantiates the <see cref="SUnit.Fixtures.Fixture"/>.
+        /// Instantiates the <see cref="Discovery.Fixture"/>.
         /// </summary>
-        /// <returns>An instantiated <see cref="SUnit.Fixtures.Fixture"/>.</returns>
+        /// <returns>An instantiated <see cref="Discovery.Fixture"/>.</returns>
         public abstract object Build();
 
         /// <summary>

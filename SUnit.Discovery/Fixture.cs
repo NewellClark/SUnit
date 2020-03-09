@@ -1,12 +1,11 @@
-﻿using SUnit.Discovery;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace SUnit.Fixtures
+namespace SUnit.Discovery
 {
     /// <summary>
     /// A class that defines unit tests.
@@ -65,6 +64,4 @@ namespace SUnit.Fixtures
             return results.AsReadOnly();
         }
     }
-
-
 }

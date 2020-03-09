@@ -1,25 +1,16 @@
-﻿using System;
+﻿using SUnit.Constraints;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SUnit.Assertions
 {
     /// <summary>
-    /// Contains assertions specific to decimals.
+    /// The return type of <see cref="ThatDecimal.Is"/>. Used to apply constraints to decimals 
+    /// and nullable decimals.
     /// </summary>
     public interface IIsExpressionDecimal : IIsExpression<decimal?, IIsExpressionDecimal, IsTestDecimal>
     {
-        private IsTestDecimal FailWhenNull(Predicate<decimal> predicate)
-        {
-            bool lifted(decimal? value)
-            {
-                if (!value.HasValue)
-                    return false;
-                return predicate(value.Value);
-            }
-
-            return ApplyConstraint(lifted);
-        }
 
         /// <summary>
         /// Tests if the decimal is exactly zero.
@@ -37,6 +28,9 @@ namespace SUnit.Assertions
         public IsTestDecimal Negative => this.LessThan(0m);
     }
 
+    /// <summary>
+    /// The implementation of <see cref="IIsExpressionDecimal"/> that is used by SUnit.
+    /// </summary>
     internal sealed class IsExpressionDecimal : ActualValueExpression<decimal?, IIsExpressionDecimal, IsTestDecimal>, IIsExpressionDecimal
     {
         internal IsExpressionDecimal(decimal? actual, ConstraintModifier<decimal?> constraintModifier)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SUnit.Constraints;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,6 +12,11 @@ namespace SUnit.Assertions
     /// <typeparam name="T">The type of the actual value that is under test.</typeparam>
     public interface IIsExpression<T> : IIsExpression<T, IIsExpression<T>, IsTest<T>> { }
 
+    /// <summary>
+    /// Provides an implementation of <see cref="IIsExpression{T}"/> for actual value types that have
+    /// not been "special-cased" in any way.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     internal sealed class IsExpression<T> : ActualValueExpression<T, IIsExpression<T>, IsTest<T>>, IIsExpression<T>
     {
         internal IsExpression(T actual, ConstraintModifier<T> constraintModifier)

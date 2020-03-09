@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnit", "SUnit\SUnit.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnitTests", "SUnitTests\SUnitTests.csproj", "{03A7BB81-0817-4D94-9C73-DBFC8615D5A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleRunner", "ConsoleRunner\ConsoleRunner.csproj", "{BFE024D5-84EA-46C7-9EC1-40C916700E87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleRunner", "ConsoleRunner\ConsoleRunner.csproj", "{BFE024D5-84EA-46C7-9EC1-40C916700E87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTestLibrary", "SampleTestLibrary\SampleTestLibrary.csproj", "{47DDCD10-5160-417E-B326-5DE8712305C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleTestLibrary", "SampleTestLibrary\SampleTestLibrary.csproj", "{47DDCD10-5160-417E-B326-5DE8712305C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SUnit.Discovery", "SUnit.Discovery\SUnit.Discovery.csproj", "{533C747D-18BE-4A90-8994-896E3A872328}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{47DDCD10-5160-417E-B326-5DE8712305C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47DDCD10-5160-417E-B326-5DE8712305C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47DDCD10-5160-417E-B326-5DE8712305C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{533C747D-18BE-4A90-8994-896E3A872328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{533C747D-18BE-4A90-8994-896E3A872328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{533C747D-18BE-4A90-8994-896E3A872328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{533C747D-18BE-4A90-8994-896E3A872328}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
