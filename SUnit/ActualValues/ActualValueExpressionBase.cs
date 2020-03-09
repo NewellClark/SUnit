@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace SUnit.ActualValues
+namespace SUnit
 {
-    internal abstract class ThingBase<T, TThing, TTest> : IThing<T, TThing, TTest>
-        where TThing : IThing<T, TThing, TTest>
-        where TTest : IThingTest<T, TThing, TTest>
+    internal abstract class ActualValueExpressionBase<T, TExpression, TTest> : IActualValueExpression<T, TExpression, TTest>
+        where TExpression : IActualValueExpression<T, TExpression, TTest>
+        where TTest : ActualValueTest<T, TExpression, TTest>
     {
         private readonly T actual;
         private readonly ConstraintModifier<T> constraintModifier;
 
-        protected private ThingBase(T actual, ConstraintModifier<T> constraintModifier)
+        protected private ActualValueExpressionBase(T actual, ConstraintModifier<T> constraintModifier)
         {
             Debug.Assert(constraintModifier != null);
 
@@ -20,16 +20,16 @@ namespace SUnit.ActualValues
             this.constraintModifier = constraintModifier;
         }
 
-        protected private abstract TTest CreateThingTest(T actual, IConstraint<T> constraint);
-        protected private abstract TThing CreateNewThing(T actual, ConstraintModifier<T> constraintModifier);
+        protected private abstract TTest CreateTest(T actual, IConstraint<T> constraint);
+        protected private abstract TExpression CreateExpression(T actual, ConstraintModifier<T> constraintModifier);
 
         public TTest ApplyConstraint(IConstraint<T> constraint)
         {
             if (constraint is null) throw new ArgumentNullException(nameof(constraint));
 
-            return CreateThingTest(actual, constraintModifier(constraint));
+            return CreateTest(actual, constraintModifier(constraint));
         }
-        public TThing ApplyModifier(ConstraintModifier<T> constraintModifier)
+        public TExpression ApplyModifier(ConstraintModifier<T> constraintModifier)
         {
             if (constraintModifier is null) throw new ArgumentNullException(nameof(constraintModifier));
 
@@ -41,7 +41,7 @@ namespace SUnit.ActualValues
                 return existing(@new(constraint));
             }
 
-            return CreateNewThing(actual, combinedConstraintModifier);
+            return CreateExpression(actual, combinedConstraintModifier);
         }
     }
 }
