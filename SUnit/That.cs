@@ -23,6 +23,6 @@ namespace SUnit
         /// Contains methods and properties for applying contstraints to the actual value specified in the 
         /// <see cref="Assert.That{TActual}(TActual)"/> method.
         /// </summary>
-        public IIsThing<TActual> Is => new IsThing<TActual>(actual);
+        public Is<TActual> Is => new IsThing<TActual>(actual);
     }
 }

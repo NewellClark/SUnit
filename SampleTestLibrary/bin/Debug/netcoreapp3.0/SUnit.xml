@@ -277,29 +277,6 @@
             <param name="right"></param>
             <returns>A new <see cref="T:SUnit.IConstraint`1"/> that passes if exactly one operand passes.</returns>
         </member>
-        <member name="T:SUnit.Is`1">
-            <summary>
-            Contains methods and properties for applying tests to an actual value.
-            </summary>
-            <typeparam name="TActual"></typeparam>
-        </member>
-        <member name="P:SUnit.Is`1.Not">
-            <summary>
-            Inverts any <see cref="T:SUnit.Test"/> that is applied to the current actual value.
-            </summary>
-        </member>
-        <member name="M:SUnit.Is`1.EqualTo(`0)">
-            <summary>
-            Tests if the actual value is equal to the expected value.
-            </summary>
-            <param name="expected">The value that we expect the actual value to be equal to.</param>
-            <returns></returns>
-        </member>
-        <member name="P:SUnit.Is`1.Null">
-            <summary>
-            Tests whether the actual value is <see langword="null"/>.
-            </summary>
-        </member>
         <member name="T:SUnit.IsExtensions">
             <summary>
             Extension methods for <see cref="T:SUnit.Is`1"/>.
@@ -340,38 +317,6 @@
             <param name="this"></param>
             <param name="expected"></param>
             <returns></returns>
-        </member>
-        <member name="T:SUnit.IsTest`1">
-            <summary>
-            A test produced from applying a constraint to an Is value.
-            </summary>
-            <typeparam name="TActual">The type of the actual value under test.</typeparam>
-        </member>
-        <member name="P:SUnit.IsTest`1.Passed">
-            <summary>
-            Indicates whether the test passed.
-            </summary>
-        </member>
-        <member name="M:SUnit.IsTest`1.ToString">
-            <summary>
-            Overridden to output the constraint, and the actual value.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:SUnit.IsTest`1.And">
-            <summary>
-            Allows multiple constraints to be chained to the same value using boolean AND.
-            </summary>
-        </member>
-        <member name="P:SUnit.IsTest`1.Or">
-            <summary>
-            Allows chaining multiple constraints to the same value using boolean OR.
-            </summary>
-        </member>
-        <member name="P:SUnit.IsTest`1.Xor">
-            <summary>
-            Allows chaining multiple constraints to the same value using boolean XOR.
-            </summary>
         </member>
         <member name="T:SUnit.Test">
             <summary>
