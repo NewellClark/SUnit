@@ -6,7 +6,7 @@ using System.Text;
 namespace SUnit
 {
     /// <summary>
-    /// Extension methods for <see cref="Is{TActual}"/>.
+    /// Extension methods for <see cref="IIsExpression{TActual}"/>.
     /// </summary>
     public static class IsExtensions
     {
@@ -17,7 +17,7 @@ namespace SUnit
         /// <param name="this"></param>
         /// <param name="expected">The value that we should be less than.</param>
         /// <returns></returns>
-        public static IsTest<T> LessThan<T>(this Is<T> @this, T expected)
+        public static IsTest<T> LessThan<T>(this IIsExpression<T> @this, T expected)
             where T : IComparable<T>
         {
             if (@this is null) throw new ArgumentNullException(nameof(@this));
@@ -32,7 +32,7 @@ namespace SUnit
         /// <param name="this"></param>
         /// <param name="expected">The value that we should be greater than.</param>
         /// <returns>A test that tests whether the actual value is greater than the expected value.</returns>
-        public static IsTest<T> GreaterThan<T>(this Is<T> @this, T expected)
+        public static IsTest<T> GreaterThan<T>(this IIsExpression<T> @this, T expected)
             where T : IComparable<T>
         {
             if (@this is null) throw new ArgumentNullException(nameof(@this));
@@ -47,7 +47,7 @@ namespace SUnit
         /// <param name="this"></param>
         /// <param name="expected"></param>
         /// <returns>A test that tests whether the actual value is less than or equal to the specified expected value.</returns>
-        public static IsTest<T> LessThanOrEqualTo<T>(this Is<T> @this, T expected)
+        public static IsTest<T> LessThanOrEqualTo<T>(this IIsExpression<T> @this, T expected)
             where T : IComparable<T>
         {
             if (@this is null) throw new ArgumentNullException(nameof(@this));
@@ -62,7 +62,7 @@ namespace SUnit
         /// <param name="this"></param>
         /// <param name="expected"></param>
         /// <returns></returns>
-        public static IsTest<T> GreaterThanOrEqualTo<T>(this Is<T> @this, T expected)
+        public static IsTest<T> GreaterThanOrEqualTo<T>(this IIsExpression<T> @this, T expected)
             where T : IComparable<T>
         {
             if (@this is null) throw new ArgumentNullException(nameof(@this));
