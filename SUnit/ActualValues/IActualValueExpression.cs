@@ -14,7 +14,7 @@ namespace SUnit
         public abstract TTest ApplyConstraint(IConstraint<T> constraint);
         public abstract TExpression ApplyModifier(ConstraintModifier<T> modifier);
 
-        public sealed TExpression Not => ApplyModifier(constraint => !constraint);
+        public TExpression Not => ApplyModifier(constraint => !constraint);
     }
 
 
