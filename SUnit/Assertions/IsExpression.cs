@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SUnit
+namespace SUnit.Assertions
 {
     /// <summary>
     /// The return value of <see cref="That{TActual}.Is"/>, for values of <typeparamref name="T"/> that 

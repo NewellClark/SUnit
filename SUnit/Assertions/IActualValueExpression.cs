@@ -1,9 +1,10 @@
-﻿using System;
+﻿using SUnit.Constraints;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace SUnit
+namespace SUnit.Assertions
 {
     /// <summary>
     /// A function that produces a new <see cref="IConstraint{T}"/> by modifying an existing <see cref="IConstraint{T}"/>.
@@ -36,6 +37,17 @@ namespace SUnit
         public abstract TTest ApplyConstraint(IConstraint<T> constraint);
 
         /// <summary>
+        /// Creates a <see cref="IConstraint{T}"/> from the specified <see cref="Predicate{T}"/> and
+        /// applies it to the current <see cref="IActualValueExpression{T, TExpression, TTest}"/>.
+        /// </summary>
+        /// <param name="predicate">The <see cref="Predicate{T}"/> to use to build the <see cref="IConstraint{T}"/>.</param>
+        /// <returns>A <see cref="Test"/> created by applying the specified constraint to the actual value.</returns>
+        public TTest ApplyConstraint(Predicate<T> predicate)
+        {
+            return ApplyConstraint(Constraint.FromPredicate(predicate));
+        }
+
+        /// <summary>
         /// Applies a constraint modifier to the current <see cref="IActualValueExpression{T, TExpression, TTest}"/>. Any
         /// constraint that gets applied will be modified by the specified modifier.
         /// </summary>
@@ -46,8 +58,9 @@ namespace SUnit
         /// </returns>
         public abstract TExpression ApplyModifier(ConstraintModifier<T> modifier);
 
-        //  Sorry, "Not" is the best name for it. I'll consider putting in 
-        //  an alias if it becomes a pain point.
+        //  Sorry, "Not" is the best name for it. Unit test frameworks have traditionally been written 
+        //  to read as much like plain english as possible.
+        //  I'll consider putting in an alias if it becomes a pain point.
 #pragma warning disable CA1716 // Identifiers should not match keywords
         /// <summary>
         /// Inverts any <see cref="IConstraint{T}"/> that is applied to the current 

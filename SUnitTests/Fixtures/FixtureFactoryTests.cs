@@ -1,12 +1,12 @@
 ﻿using NUnit.Framework;
-using SUnit.Fixtures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using assert = NUnit.Framework.Assert;
-namespace SUnit
+
+namespace SUnit.Fixtures
 {
     [TestFixture]
     public abstract class FixtureFactoryTests
@@ -14,7 +14,7 @@ namespace SUnit
         private class MockBase
         {
             protected MockBase() { }
-            protected MockBase(string builder) => this.Builder = builder;
+            protected MockBase(string builder) => Builder = builder;
 
             public string Builder { get; private set; }
             public string LastExecuted { get; private set; } = "";
