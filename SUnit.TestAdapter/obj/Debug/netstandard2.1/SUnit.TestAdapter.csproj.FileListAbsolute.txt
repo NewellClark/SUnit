@@ -1,8 +1,8 @@
-D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netstandard2.1\SUnit.dll
 D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netstandard2.1\SUnit.TestAdapter.deps.json
 D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netstandard2.1\SUnit.TestAdapter.dll
 D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netstandard2.1\SUnit.TestAdapter.pdb
 D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netstandard2.1\SUnit.Discovery.dll
+D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netstandard2.1\SUnit.dll
 D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netstandard2.1\SUnit.Discovery.pdb
 D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netstandard2.1\SUnit.Discovery.xml
 D:\LocalRepositories\SUnit\SUnit.TestAdapter\bin\Debug\netstandard2.1\SUnit.pdb
