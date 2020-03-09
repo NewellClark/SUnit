@@ -1,0 +1,7 @@
+D:\LocalRepositories\SUnit\SUnit2\bin\Debug\netstandard2.0\SUnit2.deps.json
+D:\LocalRepositories\SUnit\SUnit2\bin\Debug\netstandard2.0\SUnit2.dll
+D:\LocalRepositories\SUnit\SUnit2\bin\Debug\netstandard2.0\SUnit2.pdb
+D:\LocalRepositories\SUnit\SUnit2\obj\Debug\netstandard2.0\SUnit2.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\SUnit2\obj\Debug\netstandard2.0\SUnit2.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\SUnit2\obj\Debug\netstandard2.0\SUnit2.dll
+D:\LocalRepositories\SUnit\SUnit2\obj\Debug\netstandard2.0\SUnit2.pdb

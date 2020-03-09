@@ -1477,7 +1477,7 @@
       },
       "SUnit/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.0",
+        "framework": ".NETStandard,Version=v2.1",
         "compile": {
           "bin/placeholder/SUnit.dll": {}
         },
@@ -1487,7 +1487,7 @@
       },
       "SUnit.Discovery/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.0",
+        "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
           "SUnit": "1.0.0"

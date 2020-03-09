@@ -23,7 +23,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -32,7 +32,7 @@
           "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netstandard2.1": {
             "projectReferences": {
               "D:\\LocalRepositories\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj": {
                 "projectPath": "D:\\LocalRepositories\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj"
@@ -50,7 +50,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netstandard2.1": {
           "imports": [
             "net461",
             "net462",
@@ -62,7 +62,7 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.NETCore.App": {
+            "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
@@ -89,7 +89,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -98,7 +98,7 @@
           "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netstandard2.1": {
             "projectReferences": {
               "D:\\LocalRepositories\\SUnit\\SUnit\\SUnit.csproj": {
                 "projectPath": "D:\\LocalRepositories\\SUnit\\SUnit\\SUnit.csproj"
@@ -113,7 +113,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netstandard2.1": {
           "dependencies": {
             "Microsoft.CodeAnalysis.FxCopAnalyzers": {
               "target": "Package",
@@ -131,7 +131,7 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.NETCore.App": {
+            "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
@@ -158,7 +158,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -167,7 +167,7 @@
           "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netstandard2.1": {
             "projectReferences": {
               "D:\\LocalRepositories\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj": {
                 "projectPath": "D:\\LocalRepositories\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj"
@@ -185,7 +185,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netstandard2.1": {
           "dependencies": {
             "Microsoft.TestPlatform.ObjectModel": {
               "target": "Package",
@@ -203,7 +203,7 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.NETCore.App": {
+            "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
@@ -230,7 +230,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -239,7 +239,7 @@
           "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netstandard2.1": {
             "projectReferences": {}
           }
         },
@@ -250,7 +250,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netstandard2.1": {
           "dependencies": {
             "Microsoft.CodeQuality.Analyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -270,7 +270,7 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.NETCore.App": {
+            "NETStandard.Library": {
               "privateAssets": "all"
             }
           },

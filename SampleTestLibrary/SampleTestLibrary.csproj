@@ -1,16 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SUnit.TestAdapter\SUnit.TestAdapter.csproj" />
     <ProjectReference Include="..\SUnit\SUnit.csproj" />
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="start &quot;&quot; &quot;D:\LocalRepositories\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.ConsoleRunner.exe&quot; &quot;D:\LocalRepositories\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\SampleTestLibrary.dll&quot;" />
-  </Target>
 
 </Project>
