@@ -34,6 +34,86 @@
             <param name="actual"></param>
             <returns></returns>
         </member>
+        <member name="M:SUnit.Assert.That(System.Single)">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Nullable{System.Single})">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Decimal)">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Nullable{System.Decimal})">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Int64)">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Nullable{System.Int64})">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Int32)">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Nullable{System.Int32})">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Int16)">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Nullable{System.Int16})">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns></returns>
+        </member>
         <member name="T:SUnit.Assertions.ActualValueExpression`3">
             <summary>
             A base class for implementing <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>.
@@ -171,6 +251,14 @@
             <param name="constraint">The constraint to apply.</param>
             <returns>A <see cref="T:SUnit.Test"/> that passes if the constraint is satisfied.</returns>
         </member>
+        <member name="M:SUnit.Assertions.IActualValueExpression`3.ApplyConstraint(System.Predicate{`0})">
+            <summary>
+            Creates a <see cref="T:SUnit.IConstraint`1"/> from the specified <see cref="T:System.Predicate`1"/> and
+            applies it to the current <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>.
+            </summary>
+            <param name="predicate">The <see cref="T:System.Predicate`1"/> to use to build the <see cref="T:SUnit.IConstraint`1"/>.</param>
+            <returns>A <see cref="T:SUnit.Test"/> created by applying the specified constraint to the actual value.</returns>
+        </member>
         <member name="M:SUnit.Assertions.IActualValueExpression`3.ApplyModifier(SUnit.Assertions.ConstraintModifier{`0})">
             <summary>
             Applies a constraint modifier to the current <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>. Any
@@ -237,6 +325,52 @@
             Tests if the decimal is negative.
             </summary>
         </member>
+        <member name="T:SUnit.Assertions.IIsExpressionDouble">
+            <summary>
+            The return type of <see cref="P:SUnit.ThatDouble.Is"/>. Used to apply constraints to nullable doubles.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpressionDouble.Zero">
+            <summary>
+            Tests that the actual value is zero.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpressionDouble.Negative">
+            <summary>
+            Tests that the actual value is negative.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpressionDouble.Positive">
+            <summary>
+            Tests that the actual value is positive. Zero is NOT positive!
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpressionDouble.NaN">
+            <summary>
+            Tests that the actual value is NaN (basically you divided zero by zero or something crazy like that).
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.IIsExpressionLong">
+            <summary>
+            The return type of <see cref="P:SUnit.ThatLong.Is"/>. Contains members for applying assertions 
+            to <see cref="T:System.Int64"/>.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpressionLong.Zero">
+            <summary>
+            Tests that the actual value is zero.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpressionLong.Positive">
+            <summary>
+            Tests that the actual value is positive. Zero is NOT positive!
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpressionLong.Negative">
+            <summary>
+            Tests that the actual value is negative. Zero is NOT negative!
+            </summary>
+        </member>
         <member name="T:SUnit.Assertions.IsTest`1">
             <summary>
             The type of <see cref="T:SUnit.Test"/> that is returned when test methods are called on 
@@ -247,6 +381,16 @@
         <member name="T:SUnit.Assertions.IsTestDecimal">
             <summary>
             A test created by applying a constraint to a nullable decimal.
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.IsTestDouble">
+            <summary>
+            A <see cref="T:SUnit.Test"/> that applies a <see cref="T:SUnit.IConstraint`1"/> to an actual nullable double.
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.IsTestLong">
+            <summary>
+            A <see cref="T:SUnit.Test"/> for applying constraints to actual <see cref="T:System.Int64"/> values.
             </summary>
         </member>
         <member name="T:SUnit.That`1">
@@ -260,6 +404,42 @@
             <summary>
             Contains methods and properties for applying contstraints to the actual value specified in the 
             <see cref="M:SUnit.Assert.That``1(``0)"/> method.
+            </summary>
+        </member>
+        <member name="T:SUnit.ThatDouble">
+            <summary>
+            Specifies the actual value that was returned from whatever it is you are testing.
+            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
+            </summary>
+        </member>
+        <member name="P:SUnit.ThatDouble.Is">
+            <summary>
+            Contains methods and properties for applying constraints to the actual value specified in
+            the <see cref="M:SUnit.Assert.That(System.Double)"/> method.
+            </summary>
+        </member>
+        <member name="T:SUnit.ThatDecimal">
+            <summary>
+            Specifies the actual value that was returned from whatever it is you are testing.
+            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
+            </summary>
+        </member>
+        <member name="P:SUnit.ThatDecimal.Is">
+            <summary>
+            Contains methods and properties for applying constraints to the actual value specified
+            in the <see cref="M:SUnit.Assert.That(System.Decimal)"/> method.
+            </summary>
+        </member>
+        <member name="T:SUnit.ThatLong">
+            <summary>
+            Specifies the actual value that was returned from whatever it is you are testing.
+            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
+            </summary>
+        </member>
+        <member name="P:SUnit.ThatLong.Is">
+            <summary>
+            Contains methods and properties for applying constraints to the actual value specified
+            in the <see cref="M:SUnit.Assert.That(System.Int64)"/> method.
             </summary>
         </member>
         <member name="M:SUnit.Constraints.Constraint.FromPredicate``1(System.Predicate{``0})">

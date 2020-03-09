@@ -24,17 +24,17 @@ namespace SUnit.Assertions
         /// <summary>
         /// Tests if the decimal is exactly zero.
         /// </summary>
-        public IsTestDecimal Zero => ApplyConstraint(n => n == decimal.Zero);
+        public IsTestDecimal Zero => EqualTo(0m);
 
         /// <summary>
         /// Tests if the decimal is positive. Zero is NOT positive.
         /// </summary>
-        public IsTestDecimal Positive => ApplyConstraint(n => n > 0);
+        public IsTestDecimal Positive => this.GreaterThan(0m);
 
         /// <summary>
         /// Tests if the decimal is negative.
         /// </summary>
-        public IsTestDecimal Negative => ApplyConstraint(n => n < 0);
+        public IsTestDecimal Negative => this.LessThan(0m);
     }
 
     internal sealed class IsExpressionDecimal : ActualValueExpression<decimal?, IIsExpressionDecimal, IsTestDecimal>, IIsExpressionDecimal

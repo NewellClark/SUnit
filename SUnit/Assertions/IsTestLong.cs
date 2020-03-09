@@ -4,6 +4,9 @@ using System.Text;
 
 namespace SUnit.Assertions
 {
+    /// <summary>
+    /// A <see cref="Test"/> for applying constraints to actual <see cref="long"/> values.
+    /// </summary>
     public class IsTestLong : ActualValueTest<long?, IIsExpressionLong, IsTestLong>
     {
         internal IsTestLong(long? actual, IConstraint<long?> constraint) 

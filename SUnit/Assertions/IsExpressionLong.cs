@@ -4,6 +4,10 @@ using System.Text;
 
 namespace SUnit.Assertions
 {
+    /// <summary>
+    /// The return type of <see cref="ThatLong.Is"/>. Contains members for applying assertions 
+    /// to <see cref="long"/>.
+    /// </summary>
     public interface IIsExpressionLong : IIsExpression<long?, IIsExpressionLong, IsTestLong>
     {
         private IsTestLong FailWhenNull(Predicate<long> predicate)
@@ -18,10 +22,19 @@ namespace SUnit.Assertions
             return ApplyConstraint(lifted);
         }
 
+        /// <summary>
+        /// Tests that the actual value is zero.
+        /// </summary>
         public IsTestLong Zero => EqualTo(0L);
 
+        /// <summary>
+        /// Tests that the actual value is positive. Zero is NOT positive!
+        /// </summary>
         public IsTestLong Positive => this.GreaterThan(0L);
 
+        /// <summary>
+        /// Tests that the actual value is negative. Zero is NOT negative!
+        /// </summary>
         public IsTestLong Negative => this.LessThan(0L);
     }
 
