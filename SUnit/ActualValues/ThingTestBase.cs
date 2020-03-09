@@ -5,12 +5,14 @@ using System.Text;
 
 namespace SUnit.ActualValues
 {
-    internal abstract class ThingTestBase<T, TThing, TTest> : IThingTest<T, TThing, TTest>
+    public abstract class ThingTestBase<T, TThing, TTest> : Test, IThingTest<T, TThing, TTest>
         where TThing : IThing<T, TThing, TTest>
         where TTest : IThingTest<T, TThing, TTest>
     {
         private readonly T actual;
         private readonly IConstraint<T> constraint;
+
+        public sealed override bool Passed => constraint.Apply(actual);
 
         protected private ThingTestBase(T actual, IConstraint<T> constraint)
         {
@@ -28,5 +30,11 @@ namespace SUnit.ActualValues
         {
             return CreateThing(actual, constraintModifier);
         }
+
+        private IThingTest<T, TThing, TTest> Casted => (IThingTest<T, TThing, TTest>)this;
+
+        public TThing And => Casted.And;
+        public TThing Or => Casted.Or;
+        public TThing Xor => Casted.Xor;
     }
 }
