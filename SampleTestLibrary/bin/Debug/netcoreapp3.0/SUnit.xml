@@ -49,6 +49,20 @@
             <paramref name="type"/> is null.
             </exception>
         </member>
+        <member name="M:SUnit.Discovery.Finder.GetDefaultConstructor(System.Type)">
+            <summary>
+            Gets the eligible default constructor for the specified type, if one exists.
+            </summary>
+            <param name="type">The type to search.</param>
+            <returns>The eligible default constructor, if one exists. <see langword="null"/> if none is found.</returns>
+        </member>
+        <member name="M:SUnit.Discovery.Finder.FindAllNamedConstructors(System.Type)">
+            <summary>
+            Finds all the valid named constructors on the specified type.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
         <member name="T:SUnit.Fixtures.Factory">
             <summary>
             An object that can be used to instantiate a <see cref="T:SUnit.Fixtures.Fixture"/>.
@@ -65,10 +79,37 @@
             </summary>
             <returns>An instantiated <see cref="T:SUnit.Fixtures.Fixture"/>.</returns>
         </member>
+        <member name="P:SUnit.Fixtures.Factory.IsDefaultConstructor">
+            <summary>
+            Indicates whether the current <see cref="T:SUnit.Fixtures.Factory"/> is a default constructor.
+            </summary>
+        </member>
+        <member name="P:SUnit.Fixtures.Factory.IsNamedConstructor">
+            <summary>
+            Indicates whether the current <see cref="T:SUnit.Fixtures.Factory"/> is a named constructor.
+            </summary>
+        </member>
+        <member name="P:SUnit.Fixtures.Factory.Name">
+            <summary>
+            Gets the name of the constructor. For named constructors, this will be the name of the method.
+            </summary>
+        </member>
+        <member name="M:SUnit.Fixtures.Factory.ToString">
+            <summary>
+            Overridden to display the name.
+            </summary>
+            <returns>The name.</returns>
+        </member>
         <member name="T:SUnit.Fixtures.Fixture">
             <summary>
             A class that defines unit tests.
             </summary>
+        </member>
+        <member name="M:SUnit.Fixtures.Fixture.#ctor(System.Type)">
+            <summary>
+            Creates a new <see cref="T:SUnit.Fixtures.Fixture"/> for the specified <see cref="T:System.Type"/>.
+            </summary>
+            <param name="type"></param>
         </member>
         <member name="P:SUnit.Fixtures.Fixture.Name">
             <summary>
@@ -137,6 +178,19 @@
             <summary>
             The result of running a <see cref="T:SUnit.Fixtures.UnitTest"/>.
             </summary>
+        </member>
+        <member name="P:SUnit.Fixtures.TestResult.Kind">
+            <summary>
+            Whether the result was a pass, fail, or error.
+            </summary>
+        </member>
+        <member name="M:SUnit.Fixtures.TestResult.UnexpectedException(SUnit.Fixtures.UnitTest,System.Exception)">
+            <summary>
+            Creates a <see cref="T:SUnit.Fixtures.TestResult"/> for when an unexpected exception is thrown while running the test.
+            </summary>
+            <param name="test"></param>
+            <param name="exception"></param>
+            <returns></returns>
         </member>
         <member name="T:SUnit.Fixtures.UnitTest">
             <summary>
@@ -223,35 +277,12 @@
             <param name="right"></param>
             <returns>A new <see cref="T:SUnit.IConstraint`1"/> that passes if exactly one operand passes.</returns>
         </member>
-        <member name="T:SUnit.Is`1">
-            <summary>
-            Contains methods and properties for applying tests to an actual value.
-            </summary>
-            <typeparam name="TActual"></typeparam>
-        </member>
-        <member name="P:SUnit.Is`1.Not">
-            <summary>
-            Inverts any <see cref="T:SUnit.Test"/> that is applied to the current actual value.
-            </summary>
-        </member>
-        <member name="M:SUnit.Is`1.EqualTo(`0)">
-            <summary>
-            Tests if the actual value is equal to the expected value.
-            </summary>
-            <param name="expected">The value that we expect the actual value to be equal to.</param>
-            <returns></returns>
-        </member>
-        <member name="P:SUnit.Is`1.Null">
-            <summary>
-            Tests whether the actual value is <see langword="null"/>.
-            </summary>
-        </member>
         <member name="T:SUnit.IsExtensions">
             <summary>
-            Extension methods for <see cref="T:SUnit.Is`1"/>.
+            Extension methods for <see cref="T:SUnit.IIsExpression`1"/>.
             </summary>
         </member>
-        <member name="M:SUnit.IsExtensions.LessThan``1(SUnit.Is{``0},``0)">
+        <member name="M:SUnit.IsExtensions.LessThan``1(SUnit.IIsExpression{``0},``0)">
             <summary>
             Tests whether the actual value is less than the specified <paramref name="expected"/> value.
             </summary>
@@ -260,7 +291,7 @@
             <param name="expected">The value that we should be less than.</param>
             <returns></returns>
         </member>
-        <member name="M:SUnit.IsExtensions.GreaterThan``1(SUnit.Is{``0},``0)">
+        <member name="M:SUnit.IsExtensions.GreaterThan``1(SUnit.IIsExpression{``0},``0)">
             <summary>
             Tests whether the actual value is greater than the specified <paramref name="expected"/> value.
             </summary>
@@ -269,7 +300,7 @@
             <param name="expected">The value that we should be greater than.</param>
             <returns>A test that tests whether the actual value is greater than the expected value.</returns>
         </member>
-        <member name="M:SUnit.IsExtensions.LessThanOrEqualTo``1(SUnit.Is{``0},``0)">
+        <member name="M:SUnit.IsExtensions.LessThanOrEqualTo``1(SUnit.IIsExpression{``0},``0)">
             <summary>
             Tests whether the actual value is less than or equal to the specified <paramref name="expected"/> value.
             </summary>
@@ -278,7 +309,7 @@
             <param name="expected"></param>
             <returns>A test that tests whether the actual value is less than or equal to the specified expected value.</returns>
         </member>
-        <member name="M:SUnit.IsExtensions.GreaterThanOrEqualTo``1(SUnit.Is{``0},``0)">
+        <member name="M:SUnit.IsExtensions.GreaterThanOrEqualTo``1(SUnit.IIsExpression{``0},``0)">
             <summary>
             Tests whether the actual value is greater than or equal to the specified <paramref name="expected"/> value.
             </summary>
@@ -286,38 +317,6 @@
             <param name="this"></param>
             <param name="expected"></param>
             <returns></returns>
-        </member>
-        <member name="T:SUnit.IsTest`1">
-            <summary>
-            A test produced from applying a constraint to an Is value.
-            </summary>
-            <typeparam name="TActual">The type of the actual value under test.</typeparam>
-        </member>
-        <member name="P:SUnit.IsTest`1.Passed">
-            <summary>
-            Indicates whether the test passed.
-            </summary>
-        </member>
-        <member name="M:SUnit.IsTest`1.ToString">
-            <summary>
-            Overridden to output the constraint, and the actual value.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:SUnit.IsTest`1.And">
-            <summary>
-            Allows multiple constraints to be chained to the same value using boolean AND.
-            </summary>
-        </member>
-        <member name="P:SUnit.IsTest`1.Or">
-            <summary>
-            Allows chaining multiple constraints to the same value using boolean OR.
-            </summary>
-        </member>
-        <member name="P:SUnit.IsTest`1.Xor">
-            <summary>
-            Allows chaining multiple constraints to the same value using boolean XOR.
-            </summary>
         </member>
         <member name="T:SUnit.Test">
             <summary>
