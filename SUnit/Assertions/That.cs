@@ -39,4 +39,11 @@ namespace SUnit
 
         public new IIsExpressionDecimal Is => new IsExpressionDecimal(Actual);
     }
+
+    public class ThatLong : That<long?>
+    {
+        internal ThatLong(long? actual) : base(actual) { }
+
+        public new IIsExpressionLong Is => new IsExpressionLong(Actual);
+    }
 }

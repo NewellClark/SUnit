@@ -217,12 +217,37 @@
             </summary>
             <typeparam name="T">The type of the actual value that is under test.</typeparam>
         </member>
+        <member name="T:SUnit.Assertions.IIsExpressionDecimal">
+            <summary>
+            Contains assertions specific to decimals.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpressionDecimal.Zero">
+            <summary>
+            Tests if the decimal is exactly zero.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpressionDecimal.Positive">
+            <summary>
+            Tests if the decimal is positive. Zero is NOT positive.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpressionDecimal.Negative">
+            <summary>
+            Tests if the decimal is negative.
+            </summary>
+        </member>
         <member name="T:SUnit.Assertions.IsTest`1">
             <summary>
             The type of <see cref="T:SUnit.Test"/> that is returned when test methods are called on 
             the <see cref="P:SUnit.That`1.Is"/> property when creating assertions.
             </summary>
             <typeparam name="T">The type of the actual value that is being tested.</typeparam>
+        </member>
+        <member name="T:SUnit.Assertions.IsTestDecimal">
+            <summary>
+            A test created by applying a constraint to a nullable decimal.
+            </summary>
         </member>
         <member name="T:SUnit.That`1">
             <summary>

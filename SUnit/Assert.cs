@@ -41,5 +41,14 @@ namespace SUnit
         public static ThatDecimal That(decimal actual) => new ThatDecimal(actual);
 
         public static ThatDecimal That(decimal? actual) => new ThatDecimal(actual);
+
+        public static ThatLong That(long actual) => new ThatLong(actual);
+
+        public static ThatLong That(long? actual) => new ThatLong(actual);
+
+        public static ThatLong That(int actual) => new ThatLong(actual);
+        public static ThatLong That(int? actual) => new ThatLong(actual);
+        public static ThatLong That(short actual) => new ThatLong(actual);
+        public static ThatLong That(short? actual) => new ThatLong(actual);
     }
 }
