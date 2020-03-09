@@ -38,7 +38,7 @@ namespace SUnit.Assertions
 
         public TTest ApplyConstraint(Predicate<T> predicate)
         {
-            return ApplyConstraint(Constraint.Create(predicate));
+            return ApplyConstraint(Constraint.FromPredicate(predicate));
         }
 
         /// <summary>

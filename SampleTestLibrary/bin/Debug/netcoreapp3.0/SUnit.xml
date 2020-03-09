@@ -221,7 +221,7 @@
             <see cref="M:SUnit.Assert.That``1(``0)"/> method.
             </summary>
         </member>
-        <member name="M:SUnit.Constraints.Constraint.Create``1(System.Predicate{``0})">
+        <member name="M:SUnit.Constraints.Constraint.FromPredicate``1(System.Predicate{``0})">
             <summary>
             Creates a new <see cref="T:SUnit.IConstraint`1"/> from the specified <see cref="T:System.Predicate`1"/>.
             </summary>
@@ -490,41 +490,38 @@
         </member>
         <member name="T:SUnit.IsComparableExtensions">
             <summary>
-            Extension methods for <see cref="T:SUnit.Assertions.IIsExpression`1"/>.
+            Extension methods for <see cref="T:SUnit.Assertions.IIsExpression`3"/>.
             </summary>
         </member>
-        <member name="M:SUnit.IsComparableExtensions.LessThan``1(SUnit.Assertions.IIsExpression{``0},``0)">
-            <summary>
-            Tests whether the actual value is less than the specified <paramref name="expected"/> value.
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="this"></param>
-            <param name="expected">The value that we should be less than.</param>
-            <returns></returns>
-        </member>
-        <member name="M:SUnit.IsComparableExtensions.GreaterThan``1(SUnit.Assertions.IIsExpression{``0},``0)">
+        <member name="M:SUnit.IsComparableExtensions.GreaterThan``3(SUnit.Assertions.IIsExpression{``0,``1,``2},``0)">
             <summary>
             Tests whether the actual value is greater than the specified <paramref name="expected"/> value.
             </summary>
             <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
             <param name="this"></param>
             <param name="expected">The value that we should be greater than.</param>
             <returns>A test that tests whether the actual value is greater than the expected value.</returns>
         </member>
-        <member name="M:SUnit.IsComparableExtensions.LessThanOrEqualTo``1(SUnit.Assertions.IIsExpression{``0},``0)">
+        <member name="M:SUnit.IsComparableExtensions.LessThanOrEqualTo``3(SUnit.Assertions.IIsExpression{``0,``1,``2},``0)">
             <summary>
             Tests whether the actual value is less than or equal to the specified <paramref name="expected"/> value.
             </summary>
             <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
             <param name="this"></param>
             <param name="expected"></param>
             <returns>A test that tests whether the actual value is less than or equal to the specified expected value.</returns>
         </member>
-        <member name="M:SUnit.IsComparableExtensions.GreaterThanOrEqualTo``1(SUnit.Assertions.IIsExpression{``0},``0)">
+        <member name="M:SUnit.IsComparableExtensions.GreaterThanOrEqualTo``3(SUnit.Assertions.IIsExpression{``0,``1,``2},``0)">
             <summary>
             Tests whether the actual value is greater than or equal to the specified <paramref name="expected"/> value.
             </summary>
             <typeparam name="T"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <typeparam name="TIs"></typeparam>
             <param name="this"></param>
             <param name="expected"></param>
             <returns></returns>

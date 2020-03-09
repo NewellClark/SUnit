@@ -18,6 +18,20 @@ namespace SUnit
         /// <returns></returns>
         public static That<TActual> That<TActual>(TActual actual) => new That<TActual>(actual);
 
+        /// <summary>
+        /// Used to specify the actual value when writing assertions. For example,
+        /// <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+        /// </summary>
+        /// <param name="actual"></param>
+        /// <returns></returns>
         public static ThatDouble That(double actual) => new ThatDouble(actual);
+
+        /// <summary>
+        /// Used to specify the actual value when writing assertions. For example,
+        /// <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+        /// </summary>
+        /// <param name="actual"></param>
+        /// <returns></returns>
+        public static ThatDouble That(double? actual) => new ThatDouble(actual);
     }
 }

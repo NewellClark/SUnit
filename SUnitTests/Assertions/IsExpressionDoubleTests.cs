@@ -86,5 +86,52 @@ namespace SUnit.Assertions
             AssertFailed(Assert.That(double.NaN).Is.Positive);
             AssertPassed(Assert.That(double.NaN).Is.Not.Positive);
         }
+
+        private readonly double? nothing = null;
+
+        [Test]
+        public void Null_IsNotPositive()
+        {
+            AssertPassed(Assert.That(nothing).Is.Not.Positive);
+        }
+
+        [Test]
+        public void Null_IsNotNegative()
+        {
+            AssertFailed(Assert.That(nothing).Is.Negative);
+        }
+
+        [Test]
+        public void Null_IsNotNaN()
+        {
+            AssertFailed(Assert.That(nothing).Is.NaN);
+        }
+
+        [Test]
+        public void FailOrPass_Passes()
+        {
+            AssertPassed(Assert.That(double.NaN).Is.Negative.Or.NaN);
+        }
+
+        [Test]
+        public void PassOrFail_Passes()
+        {
+            AssertPassed(Assert.That(double.PositiveInfinity).Is.Positive.Or.Negative);
+        }
+
+        [Test]
+        public void PassAndFail_Fails()
+        {
+            AssertFailed(Assert.That(double.NegativeInfinity).Is.Positive.And.Zero);
+        }
+
+        [Test]
+        public void ManyChainedAndsAllPass_Passes()
+        {
+            Assert.That(7.2).Is.LessThan(7.3)
+                .And.LessThan(7.4)
+                .And.LessThan(7.5)
+                .And.LessThan(7.6);
+        }
     }
 }
