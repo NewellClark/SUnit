@@ -12,4 +12,11 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_CodeQuality_Analyzers Condition=" '$(PkgMicrosoft_CodeQuality_Analyzers)' == '' ">C:\Users\Newell Clark\.nuget\packages\microsoft.codequality.analyzers\2.9.3</PkgMicrosoft_CodeQuality_Analyzers>
+    <PkgMicrosoft_NetFramework_Analyzers Condition=" '$(PkgMicrosoft_NetFramework_Analyzers)' == '' ">C:\Users\Newell Clark\.nuget\packages\microsoft.netframework.analyzers\2.9.3</PkgMicrosoft_NetFramework_Analyzers>
+    <PkgMicrosoft_NetCore_Analyzers Condition=" '$(PkgMicrosoft_NetCore_Analyzers)' == '' ">C:\Users\Newell Clark\.nuget\packages\microsoft.netcore.analyzers\2.9.3</PkgMicrosoft_NetCore_Analyzers>
+    <PkgMicrosoft_CodeAnalysis_VersionCheckAnalyzer Condition=" '$(PkgMicrosoft_CodeAnalysis_VersionCheckAnalyzer)' == '' ">C:\Users\Newell Clark\.nuget\packages\microsoft.codeanalysis.versioncheckanalyzer\2.9.3</PkgMicrosoft_CodeAnalysis_VersionCheckAnalyzer>
+    <PkgMicrosoft_CodeAnalysis_FxCopAnalyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_FxCopAnalyzers)' == '' ">C:\Users\Newell Clark\.nuget\packages\microsoft.codeanalysis.fxcopanalyzers\2.9.3</PkgMicrosoft_CodeAnalysis_FxCopAnalyzers>
+  </PropertyGroup>
 </Project>

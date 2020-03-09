@@ -37,7 +37,7 @@ namespace SUnit.Discovery
         /// </summary>
         /// <param name="fixture">An instance of the class that defines the <see cref="TestMethod"/>.</param>
         /// <returns>The result of executing the test.</returns>
-        public Test Execute(object fixture)
+        internal Test Execute(object fixture)
         {
             var func = (Func<Test>)method.CreateDelegate(typeof(Func<Test>), fixture);
             return func();

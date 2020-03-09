@@ -20,7 +20,7 @@ namespace SUnit.Discovery
         /// </summary>
         /// <param name="method"></param>
         /// <param name="factory"></param>
-        public UnitTest(TestMethod method, Factory factory)
+        internal UnitTest(TestMethod method, Factory factory)
         {
             Debug.Assert(method != null);
             Debug.Assert(factory != null);
@@ -84,7 +84,7 @@ namespace SUnit.Discovery
         {
             private readonly string testName;
             private readonly Test test;
-            private static readonly string indent = "   ";
+            private const string indent = "   ";
 
             public FailResult(string testName, Test test) : base(ResultKind.Fail)
             {

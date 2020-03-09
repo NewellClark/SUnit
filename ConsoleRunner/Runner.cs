@@ -56,9 +56,8 @@ namespace SUnit.Runners
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine($"{margin}{factory.ToString()}");
 
-            foreach (var method in factory.Fixture.Tests)
+            foreach (var test in factory.CreateTests())
             {
-                var test = new UnitTest(method, factory);
                 var result = test.Run();
                 Console.ForegroundColor = GetColorForResult(result.Kind);
                 var resultLines = $"{result.Kind.ToString().ToUpper()} {result}".Split("\n");
@@ -69,17 +68,13 @@ namespace SUnit.Runners
 
         private ConsoleColor GetColorForResult(ResultKind result)
         {
-            switch (result)
+            return result switch
             {
-                case ResultKind.Pass:
-                    return passColor;
-                case ResultKind.Fail:
-                    return failColor;
-                case ResultKind.Error:
-                    return errorColor;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(result), "Unexpected enum value");
-            }
+                ResultKind.Pass => passColor,
+                ResultKind.Fail => failColor,
+                ResultKind.Error => errorColor,
+                _ => throw new ArgumentOutOfRangeException(nameof(result), "Unexpected enum value"),
+            };
         }
     }
 }

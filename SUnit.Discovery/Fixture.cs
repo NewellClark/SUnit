@@ -57,7 +57,7 @@ namespace SUnit.Discovery
             if (@default != null)
                 results.Add(Factory.FromDefaultCtor(fixture, @default));
 
-            var named = Finder.FindAllNamedConstructors(fixture.type)
+            var named = Finder.FindNamedConstructors(fixture.type)
                 .Select(method => Factory.FromNamedCtor(fixture, method));
             results.AddRange(named);
 
