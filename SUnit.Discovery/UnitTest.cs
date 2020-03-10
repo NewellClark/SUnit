@@ -9,7 +9,7 @@ namespace SUnit.Discovery
     /// <summary>
     /// A single unit test that is ready to be executed.
     /// </summary>
-    public class UnitTest
+    internal class UnitTest
     {
         private readonly TestMethod method;
         private readonly Factory factory;

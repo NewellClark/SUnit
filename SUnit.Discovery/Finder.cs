@@ -5,14 +5,13 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
-[assembly: InternalsVisibleTo("SUnitTests")]
 
 namespace SUnit.Discovery
 {
     /// <summary>
     /// Contains methods for finding tests.
     /// </summary>
-    public static class Finder
+    internal static class Finder
     {
         /// <summary>
         /// Indicates whether the specified <see cref="MethodInfo"/> is a valid test method.

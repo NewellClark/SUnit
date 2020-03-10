@@ -10,7 +10,7 @@ namespace SUnit.Discovery
     /// <summary>
     /// An object that can be used to instantiate a <see cref="Discovery.Fixture"/>.
     /// </summary>
-    public abstract class Factory
+    internal abstract class Factory
     {
         protected private Factory(Fixture fixture)
         {

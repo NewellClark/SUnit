@@ -10,7 +10,7 @@ namespace SUnit.Discovery
     /// <summary>
     /// A class that defines unit tests.
     /// </summary>
-    public class Fixture
+    internal class Fixture
     {
 
         /// <summary>

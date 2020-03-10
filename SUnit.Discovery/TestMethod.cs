@@ -9,7 +9,7 @@ namespace SUnit.Discovery
     /// <summary>
     /// A unit test method.
     /// </summary>
-    public class TestMethod
+    internal class TestMethod
     {
         public MethodInfo Method { get; }
 

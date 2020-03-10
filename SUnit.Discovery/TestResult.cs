@@ -8,7 +8,7 @@ namespace SUnit.Discovery
     /// <summary>
     /// The kind of result.
     /// </summary>
-    public enum ResultKind
+    internal enum ResultKind
     {
         /// <summary>
         /// The test did not run due to an error.
@@ -29,7 +29,7 @@ namespace SUnit.Discovery
     /// <summary>
     /// The result of running a <see cref="UnitTest"/>.
     /// </summary>
-    public abstract class TestResult
+    internal abstract class TestResult
     {
         protected private TestResult(ResultKind kind) => Kind = kind;
 

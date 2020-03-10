@@ -12,7 +12,7 @@ namespace SUnit.Constraints
 
         public bool Apply(T actual) => Comparer<T>.Default.Compare(actual, expected) < 0;
 
-        public override string ToString() => $"< {expected}";
+        public override string ToString() => $"<{expected}";
     }
 
     internal sealed class NullableLessThanConstraint<T> : IConstraint<T?>
@@ -28,6 +28,8 @@ namespace SUnit.Constraints
                 return false;
             return Comparer<T?>.Default.Compare(actual, expected) < 0;
         }
+
+        public override string ToString() => $"<{expected}";
     }
 
     internal sealed class NullableLessThanOrEqualToConstraint<T> : IConstraint<T?>
@@ -38,5 +40,7 @@ namespace SUnit.Constraints
         public NullableLessThanOrEqualToConstraint(T? expected) => this.expected = expected;
 
         public bool Apply(T? actual) => Comparer<T?>.Default.Compare(actual, expected) <= 0;
+
+        public override string ToString() => $"<={expected}";
     }
 }
