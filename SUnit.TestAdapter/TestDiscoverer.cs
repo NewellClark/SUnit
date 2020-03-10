@@ -9,8 +9,9 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using VSResult = Microsoft.VisualStudio.TestPlatform.ObjectModel.TestResult;
-using SunitResult = SUnit.Discovery.TestResult;
+using SunitResult = SUnit.Discovery.Results.TestResult;
 using System.Threading;
+using SUnit.Discovery.Results;
 
 namespace SUnit.TestAdapter
 {

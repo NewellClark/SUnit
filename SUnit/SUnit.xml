@@ -229,6 +229,13 @@
             Boolean XOR operator.
             </summary>
         </member>
+        <member name="M:SUnit.Assertions.ActualValueTest`3.ToString">
+            <summary>
+            Overridden to display expected and actual values regardless of whether the test passed.
+            Expected and actual values are displayed on separate lines.
+            </summary>
+            <returns>"Expected (expected value)\nWas (actual value)".</returns>
+        </member>
         <member name="T:SUnit.Assertions.ConstraintModifier`1">
             <summary>
             A function that produces a new <see cref="T:SUnit.Constraints.IConstraint`1"/> by applying a function to 
@@ -729,6 +736,11 @@
             <param name="operand">The test to invert.</param>
             <returns>A new test that passes when the current test fails.</returns>
         </member>
+        <member name="T:SUnit.Test.BinaryOperatorTest">
+            <summary>
+            A <see cref="T:SUnit.Test"/> that applies a binary operator to two other <see cref="T:SUnit.Test"/>s. 
+            </summary>
+        </member>
         <member name="M:SUnit.Test.op_BitwiseAnd(SUnit.Test,SUnit.Test)">
             <summary>
             Creates a <see cref="T:SUnit.Test"/> that only passes if both operands pass.
@@ -794,6 +806,18 @@
             <param name="left"></param>
             <param name="right"></param>
             <returns></returns>
+        </member>
+        <member name="T:SUnit.Utilities">
+            <summary>
+            We need these methods, but we're not sure where they belong. 
+            </summary>
+        </member>
+        <member name="M:SUnit.Utilities.DisplayValue(System.Object)">
+            <summary>
+            Displays an actual value that can be null.
+            </summary>
+            <param name="value">The value to display. Can be null.</param>
+            <returns>The string representation for the value to display to the user.</returns>
         </member>
     </members>
 </doc>

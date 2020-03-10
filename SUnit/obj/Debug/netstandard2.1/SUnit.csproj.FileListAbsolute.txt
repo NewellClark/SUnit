@@ -6,3 +6,4 @@ D:\LocalRepositories\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.AssemblyInfoInpu
 D:\LocalRepositories\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.dll
 D:\LocalRepositories\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.pdb
+D:\LocalRepositories\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.csprojAssemblyReference.cache

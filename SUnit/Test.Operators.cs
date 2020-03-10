@@ -28,25 +28,36 @@ namespace SUnit
             return new NotTest(operand);
         }
 
-        private abstract class BinaryTest : Test
+        /// <summary>
+        /// A <see cref="Test"/> that applies a binary operator to two other <see cref="Test"/>s. 
+        /// </summary>
+        private abstract class BinaryOperatorTest : Test
         {
-            protected Test Left { get; }
-            protected Test Right { get; }
+            private readonly Test left;
+            private readonly Test right;
 
-            protected BinaryTest(Test left, Test right)
+            protected private BinaryOperatorTest(Test left, Test right)
             {
-                this.Left = left;
-                this.Right = right;
+                this.left = left;
+                this.right = right;
             }
+
+            protected private abstract bool BinaryOperator(Test left, Test right);
+
+            protected private abstract string OperatorName { get; }
+
+            public sealed override bool Passed => BinaryOperator(left, right);
+
+            public sealed override string ToString() => $"{left}\n{OperatorName}\n{right}";
         }
 
-        private sealed class AndTest : BinaryTest
+        private sealed class AndTest : BinaryOperatorTest
         {
             public AndTest(Test left, Test right) : base(left, right) { }
 
-            public override bool Passed => Left.Passed && Right.Passed;
+            protected private override bool BinaryOperator(Test left, Test right) => left.Passed & right.Passed;
 
-            public override string ToString() => $"{Left}\nAND {Right}";
+            protected private override string OperatorName => "AND";
         }
 
         /// <summary>
@@ -63,13 +74,13 @@ namespace SUnit
             return new AndTest(left, right);
         }
 
-        private sealed class OrTest : BinaryTest
+        private sealed class OrTest : BinaryOperatorTest
         {
             public OrTest(Test left, Test right) : base(left, right) { }
 
-            public override bool Passed => Left.Passed || Right.Passed;
+            protected private override bool BinaryOperator(Test left, Test right) => left.Passed | right.Passed;
 
-            public override string ToString() => $"{Left}\nOR {Right}";
+            protected private override string OperatorName => "OR";
         }
 
         /// <summary>
@@ -86,13 +97,13 @@ namespace SUnit
             return new OrTest(left, right);
         }
 
-        private sealed class XorTest : BinaryTest
+        private sealed class XorTest : BinaryOperatorTest
         {
             public XorTest(Test left, Test right) : base(left, right) { }
 
-            public override bool Passed => Left.Passed ^ Right.Passed;
+            protected private override bool BinaryOperator(Test left, Test right) => left.Passed ^ right.Passed;
 
-            public override string ToString() => $"{Left}\nXOR {Right}";
+            protected private override string OperatorName => "XOR";
         }
 
         /// <summary>
