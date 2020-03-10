@@ -8,13 +8,15 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
-using TestResult = Microsoft.VisualStudio.TestPlatform.ObjectModel.TestResult;
+using VSResult = Microsoft.VisualStudio.TestPlatform.ObjectModel.TestResult;
+using SunitResult = SUnit.Discovery.TestResult;
+using System.Threading;
 
 namespace SUnit.TestAdapter
 {
     internal static class Variables
     {
-        public static readonly Regex CompoundNamePattern = new Regex(@"(?<class>[^\|]*)\|\|(?<method>[^\|]*)");
+        public static readonly Regex CompoundNamePattern = new Regex(@"(?<class>[^\|]*)\|\|(?<method>.*)");
         public const string Uri = "executor://SUnitTestExecutor";
     }
 
@@ -66,13 +68,67 @@ namespace SUnit.TestAdapter
     {
         public void RunTests(IEnumerable<TestCase> tests, IRunContext runContext, IFrameworkHandle frameworkHandle)
         {
-            foreach (var testCase in tests)
-            {
-                var result = new TestResult(testCase);
+            cancelSource = new CancellationTokenSource();
 
-                frameworkHandle.RecordResult(result);
+            try
+            {
+                var assemblyLookup = new Dictionary<string, Assembly>();
+                var fixtureLookup = new Dictionary<(string assembly, string @class), Fixture>();
+                var testLookup = new Dictionary<(Fixture fixture, string methodName), UnitTest>();
+
+                static string getLookupName(Fixture fixture, string methodName)
+                {
+                    return $@"{fixture.Type.FullName}||{methodName}";
+                }
+                UnitTest getUnitTestFromTestCase(TestCase @case)
+                {
+                    if (!assemblyLookup.ContainsKey(@case.Source))
+                        assemblyLookup.Add(@case.Source, Assembly.LoadFrom(@case.Source));
+                    Assembly assembly = assemblyLookup[@case.Source];
+
+                    var match = Variables.CompoundNamePattern.Match(@case.FullyQualifiedName);
+
+                    (string source, string type) tuple = (@case.Source, match.Groups["class"].Value);
+                    if (!fixtureLookup.ContainsKey(tuple))
+                    {
+                        var newFixture = new Fixture(assembly.GetType(tuple.type));
+                        fixtureLookup.Add(tuple, newFixture);
+                        var factory = newFixture.Factories.First();
+
+                        foreach (var unitTest in factory.CreateTests())
+                        {
+                            cancelSource.Token.ThrowIfCancellationRequested();
+                            string lookupName = getLookupName(newFixture, unitTest.Name);
+                            testLookup.Add((newFixture, lookupName), unitTest);
+                        }
+                    }
+
+                    var fixture = fixtureLookup[tuple];
+                    return testLookup[(fixture, @case.FullyQualifiedName)];
+                }
+
+                foreach (var @case in tests)
+                {
+                    cancelSource.Token.ThrowIfCancellationRequested();
+
+                    UnitTest test = getUnitTestFromTestCase(@case);
+                    SunitResult sunitResult = test.Run();
+                    VSResult result = new VSResult(@case);
+                    result.DisplayName = test.Name;
+                    result.Outcome = FromSUnitResultKind(sunitResult.Kind);
+                    frameworkHandle.RecordResult(result);
+                }
             }
+            catch (OperationCanceledException) { }
         }
+
+        private static TestOutcome FromSUnitResultKind(ResultKind kind) => kind switch
+        {
+            ResultKind.Error => TestOutcome.Failed,
+            ResultKind.Fail => TestOutcome.Failed,
+            ResultKind.Pass => TestOutcome.Passed,
+            _ => TestOutcome.None
+        };
 
         public void RunTests(IEnumerable<string> sources, IRunContext runContext, IFrameworkHandle frameworkHandle)
         {
@@ -83,7 +139,9 @@ namespace SUnit.TestAdapter
 
         public void Cancel()
         {
-            //  Nope!
+            cancelSource?.Cancel();
         }
+
+        private CancellationTokenSource cancelSource;
     }
 }
