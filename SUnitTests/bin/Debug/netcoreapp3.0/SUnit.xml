@@ -268,8 +268,9 @@
         </member>
         <member name="M:SUnit.Assertions.IActualValueExpression`3.ApplyModifier(SUnit.Assertions.ConstraintModifier{`0})">
             <summary>
-            Applies a constraint modifier to the current <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>. Any
-            constraint that gets applied will be modified by the specified modifier.
+            Creates a new <see cref="T:SUnit.Assertions.IActualValueExpression`3"/> by applying 
+            a constraint modifier to the current <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>. Any
+            constraint that gets applied will be modified by the modifier.
             </summary>
             <param name="modifier">A function that modifies a <see cref="T:SUnit.Constraints.IConstraint`1"/>.</param>
             <returns>
