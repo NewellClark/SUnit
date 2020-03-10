@@ -76,7 +76,7 @@ namespace SUnit.TestAdapter
                 var fixtureLookup = new Dictionary<(string assembly, string @class), Fixture>();
                 var testLookup = new Dictionary<(Fixture fixture, string methodName), UnitTest>();
 
-                string getLookupName(Fixture fixture, string methodName)
+                static string getLookupName(Fixture fixture, string methodName)
                 {
                     return $@"{fixture.Type.FullName}||{methodName}";
                 }
