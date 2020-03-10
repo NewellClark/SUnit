@@ -49,8 +49,9 @@ namespace SUnit.Assertions
         }
 
         /// <summary>
-        /// Applies a constraint modifier to the current <see cref="IActualValueExpression{T, TExpression, TTest}"/>. Any
-        /// constraint that gets applied will be modified by the specified modifier.
+        /// Creates a new <see cref="IActualValueExpression{T, TExpression, TTest}"/> by applying 
+        /// a constraint modifier to the current <see cref="IActualValueExpression{T, TExpression, TTest}"/>. Any
+        /// constraint that gets applied will be modified by the modifier.
         /// </summary>
         /// <param name="modifier">A function that modifies a <see cref="IConstraint{T}"/>.</param>
         /// <returns>
