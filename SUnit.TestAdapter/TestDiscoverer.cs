@@ -131,21 +131,45 @@ namespace SUnit.TestAdapter
         private static VSResult RunUnitTest(TestCase @case, UnitTest test)
         {
             var sunitResult = test.Run();
-            var result = new VSResult(@case)
+            var result = new VSResult(@case);
+            result.DisplayName = test.Name;
+            result.Outcome = sunitResult.Kind switch
             {
-                DisplayName = test.Name,
-                Outcome = FromSUnitResultKind(sunitResult.Kind)
+                ResultKind.Pass => TestOutcome.Passed,
+                ResultKind.Fail => TestOutcome.Failed,
+                ResultKind.Error => TestOutcome.Failed,
+                _ => TestOutcome.None
             };
 
-            switch (sunitResult.Kind)
+            switch (sunitResult)
             {
-                case ResultKind.Fail:
-                case ResultKind.Error:
-                    result.ErrorMessage = sunitResult.ToString();
+                case UnexpectedExceptionResult errorResult:
+                    string heading = $"Unexpected {errorResult.Exception.GetType().Name}";
+                    string message = IndentLines(errorResult.Exception.Message, "   ");
+                    result.ErrorMessage = $"{heading}\n{message}";
+                    result.ErrorStackTrace = errorResult.Exception.StackTrace;
+                    break;
+                case RanSuccessfullyResult ranResult when !ranResult.Result.Passed:
+                    result.ErrorMessage = ranResult.Result.ToString();
+                    break;
+                case RanSuccessfullyResult ranResult when ranResult.Result.Passed:
+                    break;
+                default:
+                    result.ErrorMessage = $"{sunitResult.Kind}: {sunitResult}";
                     break;
             }
 
             return result;
+        }
+
+        private static string IndentLines(string input, string indent)
+        {
+            var lines = input.Split("\n");
+            var sb = new StringBuilder();
+            foreach (var line in lines)
+                sb.AppendLine($"{indent}{line}");
+
+            return sb.ToString();
         }
 
         public void RunTests(IEnumerable<string> sources, IRunContext runContext, IFrameworkHandle frameworkHandle)
