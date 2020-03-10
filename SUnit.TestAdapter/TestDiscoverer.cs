@@ -17,8 +17,10 @@ namespace SUnit.TestAdapter
 {
     internal static class Variables
     {
-        public static readonly Regex CompoundNamePattern = new Regex(@"(?<class>[^\|]*)\|\|(?<method>.*)");
+        public static readonly Regex CompoundNamePattern = new Regex(@"(?<class>[^\+]*)\+(?<factory>[^=>])=>(?<method>.*)");
         public const string Uri = "executor://SUnitTestExecutor";
+
+
     }
 
     [FileExtension(".dll")]
@@ -58,9 +60,10 @@ namespace SUnit.TestAdapter
             var fixtures = FindAllFixtures(sources);
             return fixtures
                 .Select(t => (t.source, t.fixture.Tests))
-                .SelectMany(t => t.Tests.Select(test => (t.source, test)))
-                .Select(t => (t.source, $@"{t.test.Fixture.Type.FullName}||{t.test.Method.Name}"))
-                .Select(t => new TestCase(t.Item2, new Uri(Variables.Uri), t.source));
+                .SelectMany(t => t.Tests.Select(method => (t.source, method)))
+                .SelectMany(t => t.method.Fixture.Factories.Select(factory => (t.source, factory, t.method)))
+                .Select(t => (t.source, fullName:$"{t.factory.Fixture.Type.FullName}+{t.factory.Name}=>{t.method.Name}"))
+                .Select(t => new TestCase(t.fullName, new Uri(Variables.Uri), t.source));
         }
     }
 
@@ -77,9 +80,9 @@ namespace SUnit.TestAdapter
                 var fixtureLookup = new Dictionary<(string assembly, string @class), Fixture>();
                 var testLookup = new Dictionary<(Fixture fixture, string methodName), UnitTest>();
 
-                static string getLookupName(Fixture fixture, string methodName)
+                static string getLookupName(Fixture fixture, Factory factory, string methodName)
                 {
-                    return $@"{fixture.Type.FullName}||{methodName}";
+                    return $@"{fixture.Type.FullName}+{factory.Name}=>{methodName}";
                 }
                 UnitTest getUnitTestFromTestCase(TestCase @case)
                 {
@@ -99,7 +102,7 @@ namespace SUnit.TestAdapter
                         foreach (var unitTest in factory.CreateTests())
                         {
                             cancelSource.Token.ThrowIfCancellationRequested();
-                            string lookupName = getLookupName(newFixture, unitTest.Name);
+                            string lookupName = getLookupName(newFixture, factory, unitTest.Name);
                             testLookup.Add((newFixture, lookupName), unitTest);
                         }
                     }
@@ -117,16 +120,11 @@ namespace SUnit.TestAdapter
                     frameworkHandle.RecordResult(result);
                 }
             }
-            catch (OperationCanceledException) { }
+            catch (OperationCanceledException)
+            {
+                cancelSource = new CancellationTokenSource();
+            }
         }
-
-        private static TestOutcome FromSUnitResultKind(ResultKind kind) => kind switch
-        {
-            ResultKind.Error => TestOutcome.Failed,
-            ResultKind.Fail => TestOutcome.Failed,
-            ResultKind.Pass => TestOutcome.Passed,
-            _ => TestOutcome.None
-        };
 
         private static VSResult RunUnitTest(TestCase @case, UnitTest test)
         {
