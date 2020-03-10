@@ -6,6 +6,10 @@
     <IsPackable>false</IsPackable>
 
     <RootNamespace>SUnit</RootNamespace>
+
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+
+    <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
   </PropertyGroup>
 
   <ItemGroup>

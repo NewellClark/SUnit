@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.1/": {
       "SampleTestLibrary/1.0.0": {
         "dependencies": {
+          "Microsoft.NET.Test.Sdk": "16.5.0",
           "SUnit": "1.0.0",
           "SUnit.TestAdapter": "1.0.0"
         },
@@ -26,6 +27,7 @@
       },
       "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.3": {},
       "Microsoft.CodeQuality.Analyzers/2.9.3": {},
+      "Microsoft.NET.Test.Sdk/16.5.0": {},
       "Microsoft.NetCore.Analyzers/2.9.3": {},
       "Microsoft.NetFramework.Analyzers/2.9.3": {},
       "Microsoft.TestPlatform.ObjectModel/16.5.0": {
@@ -151,6 +153,7 @@
       },
       "SUnit.TestAdapter/1.0.0": {
         "dependencies": {
+          "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
           "SUnit": "1.0.0",
           "SUnit.Discovery": "1.0.0"
@@ -187,6 +190,13 @@
       "sha512": "sha512-5KFSFcQjibITq33jojBITiGIZZkf2OMdggT7ZeNryMAUkT3VkPB/csRWaA8erItQlEvrBzgIwzYnW0531HFV7g==",
       "path": "microsoft.codequality.analyzers/2.9.3",
       "hashPath": "microsoft.codequality.analyzers.2.9.3.nupkg.sha512"
+    },
+    "Microsoft.NET.Test.Sdk/16.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yHZOhVSPuGqgHi+KhHiAZqNY08avkQraXKvgKgDU8c/ztmGzw7gmukkv49EaTq6T3xmp4XroWk3gAlbJHMxl8w==",
+      "path": "microsoft.net.test.sdk/16.5.0",
+      "hashPath": "microsoft.net.test.sdk.16.5.0.nupkg.sha512"
     },
     "Microsoft.NetCore.Analyzers/2.9.3": {
       "type": "package",
