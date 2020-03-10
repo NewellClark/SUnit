@@ -112,10 +112,7 @@ namespace SUnit.TestAdapter
                     cancelSource.Token.ThrowIfCancellationRequested();
 
                     UnitTest test = getUnitTestFromTestCase(@case);
-                    SunitResult sunitResult = test.Run();
-                    VSResult result = new VSResult(@case);
-                    result.DisplayName = test.Name;
-                    result.Outcome = FromSUnitResultKind(sunitResult.Kind);
+                    VSResult result = RunUnitTest(@case, test);
                     frameworkHandle.RecordResult(result);
                 }
             }
@@ -129,6 +126,26 @@ namespace SUnit.TestAdapter
             ResultKind.Pass => TestOutcome.Passed,
             _ => TestOutcome.None
         };
+
+        private static VSResult RunUnitTest(TestCase @case, UnitTest test)
+        {
+            var sunitResult = test.Run();
+            var result = new VSResult(@case)
+            {
+                DisplayName = test.Name,
+                Outcome = FromSUnitResultKind(sunitResult.Kind)
+            };
+
+            switch (sunitResult.Kind)
+            {
+                case ResultKind.Fail:
+                case ResultKind.Error:
+                    result.ErrorMessage = sunitResult.ToString();
+                    break;
+            }
+
+            return result;
+        }
 
         public void RunTests(IEnumerable<string> sources, IRunContext runContext, IFrameworkHandle frameworkHandle)
         {
