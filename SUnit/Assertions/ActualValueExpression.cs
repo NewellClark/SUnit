@@ -10,7 +10,7 @@ namespace SUnit.Assertions
     /// A base class for implementing <see cref="IActualValueExpression{T, TExpression, TTest}"/>.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    /// <typeparam name="TExpression">This should be set to your own type, or an interface you implement.</typeparam>
+    /// <typeparam name="TExpression">This should be the most specific public interface that you implement.</typeparam>
     /// <typeparam name="TTest">The type of <see cref="Test"/> that is created by calling 
     /// <see cref="ApplyConstraint(IConstraint{T})"/>. Must be derived from 
     /// <see cref="ActualValueTest{T, TExpression, TTest}"/>.</typeparam>
@@ -27,12 +27,12 @@ namespace SUnit.Assertions
         private readonly ConstraintModifier<T> constraintModifier;
 
         /// <summary>
-        /// Creates a new <see cref="ActualValueExpression{T, TExpression, TTest}"/> for the specified
-        /// actual value and with the specified constraint modifier.
+        /// Creates a new <see cref="ActualValueExpression{T, TExpression, TTest}"/> with the specified
+        /// actual value and <see cref="ConstraintModifier{T}"/>.
         /// </summary>
         /// <param name="actual">The actual value that is under test.</param>
-        /// <param name="constraintModifier">A function to modify any constraints that are applied
-        /// to the actual value.</param>
+        /// <param name="constraintModifier">A function to modify any <see cref="IConstraint{T}"/>s that
+        /// are applied to the new instance.</param>
         protected private ActualValueExpression(T actual, ConstraintModifier<T> constraintModifier)
         {
             Debug.Assert(constraintModifier != null);
@@ -69,6 +69,7 @@ namespace SUnit.Assertions
         /// </remarks>
         protected private abstract TExpression CreateExpression(T actual, ConstraintModifier<T> constraintModifier);
 
+        /// <inheritdoc/>
         public TTest ApplyConstraint(IConstraint<T> constraint)
         {
             if (constraint is null) throw new ArgumentNullException(nameof(constraint));
@@ -76,7 +77,7 @@ namespace SUnit.Assertions
             return CreateTest(actual, constraintModifier(constraint));
         }
 
-
+        /// <inheritdoc/>
         public TExpression ApplyModifier(ConstraintModifier<T> constraintModifier)
         {
             if (constraintModifier is null) throw new ArgumentNullException(nameof(constraintModifier));

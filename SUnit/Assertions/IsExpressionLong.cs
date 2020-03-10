@@ -28,17 +28,20 @@ namespace SUnit.Assertions
         public IsTestLong Negative => this.LessThan(0L);
     }
 
+    /// <inheritdoc/>
     internal class IsExpressionLong : ActualValueExpression<long?, IIsExpressionLong, IsTestLong>, IIsExpressionLong
     {
         internal IsExpressionLong(long? actual, ConstraintModifier<long?> constraintModifier)
             : base(actual, constraintModifier) { }
         internal IsExpressionLong(long? actual) : base(actual, c => c) { }
 
+        /// <inheritdoc/>
         private protected override IsTestLong CreateTest(long? actual, IConstraint<long?> constraint)
         {
             return new IsTestLong(actual, constraint);
         }
 
+        /// <inheritdoc/>
         private protected override IIsExpressionLong CreateExpression(long? actual, ConstraintModifier<long?> constraintModifier)
         {
             return new IsExpressionLong(actual, constraintModifier);

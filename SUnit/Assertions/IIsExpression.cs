@@ -10,7 +10,8 @@ namespace SUnit.Assertions
     /// performing assertions on an actual value.
     /// </summary>
     /// <typeparam name="T">The type of the actual value under test.</typeparam>
-    /// <typeparam name="TIs">The return type of <see cref="That{TActual}.Is"/>.</typeparam>
+    /// <typeparam name="TIs">The exact type of the current <see cref="IIsExpression{T, TIs, TTest}"/>. This needs
+    /// to be supplied so that members such as And and Or can return the same type of "Is".</typeparam>
     /// <typeparam name="TTest">The type of <see cref="Test"/> that is created when 
     /// constraints are applied to <typeparamref name="TIs"/>.</typeparam>
     public interface IIsExpression<T, TIs, TTest> : IActualValueExpression<T, TIs, TTest>

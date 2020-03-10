@@ -28,20 +28,20 @@ namespace SUnit.Assertions
         public IsTestDecimal Negative => this.LessThan(0m);
     }
 
-    /// <summary>
-    /// The implementation of <see cref="IIsExpressionDecimal"/> that is used by SUnit.
-    /// </summary>
+    /// <inheritdoc/>
     internal sealed class IsExpressionDecimal : ActualValueExpression<decimal?, IIsExpressionDecimal, IsTestDecimal>, IIsExpressionDecimal
     {
         internal IsExpressionDecimal(decimal? actual, ConstraintModifier<decimal?> constraintModifier)
             : base(actual, constraintModifier) { }
         internal IsExpressionDecimal(decimal? actual) : base(actual, c => c) { }
 
+        /// <inheritdoc/>
         private protected override IsTestDecimal CreateTest(decimal? actual, IConstraint<decimal?> constraint)
         {
             return new IsTestDecimal(actual, constraint);
         }
 
+        /// <inheritdoc/>
         private protected override IIsExpressionDecimal CreateExpression(decimal? actual, ConstraintModifier<decimal?> constraintModifier)
         {
             return new IsExpressionDecimal(actual, constraintModifier);
