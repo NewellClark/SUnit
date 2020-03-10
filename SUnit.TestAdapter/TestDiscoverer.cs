@@ -9,8 +9,9 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using VSResult = Microsoft.VisualStudio.TestPlatform.ObjectModel.TestResult;
-using SunitResult = SUnit.Discovery.TestResult;
+using SunitResult = SUnit.Discovery.Results.TestResult;
 using System.Threading;
+using SUnit.Discovery.Results;
 
 namespace SUnit.TestAdapter
 {
@@ -112,10 +113,7 @@ namespace SUnit.TestAdapter
                     cancelSource.Token.ThrowIfCancellationRequested();
 
                     UnitTest test = getUnitTestFromTestCase(@case);
-                    SunitResult sunitResult = test.Run();
-                    VSResult result = new VSResult(@case);
-                    result.DisplayName = test.Name;
-                    result.Outcome = FromSUnitResultKind(sunitResult.Kind);
+                    VSResult result = RunUnitTest(@case, test);
                     frameworkHandle.RecordResult(result);
                 }
             }
@@ -129,6 +127,50 @@ namespace SUnit.TestAdapter
             ResultKind.Pass => TestOutcome.Passed,
             _ => TestOutcome.None
         };
+
+        private static VSResult RunUnitTest(TestCase @case, UnitTest test)
+        {
+            var sunitResult = test.Run();
+            var result = new VSResult(@case);
+            result.DisplayName = test.Name;
+            result.Outcome = sunitResult.Kind switch
+            {
+                ResultKind.Pass => TestOutcome.Passed,
+                ResultKind.Fail => TestOutcome.Failed,
+                ResultKind.Error => TestOutcome.Failed,
+                _ => TestOutcome.None
+            };
+
+            switch (sunitResult)
+            {
+                case UnexpectedExceptionResult errorResult:
+                    string heading = $"Unexpected {errorResult.Exception.GetType().Name}";
+                    string message = IndentLines(errorResult.Exception.Message, "   ");
+                    result.ErrorMessage = $"{heading}\n{message}";
+                    result.ErrorStackTrace = errorResult.Exception.StackTrace;
+                    break;
+                case RanSuccessfullyResult ranResult when !ranResult.Result.Passed:
+                    result.ErrorMessage = ranResult.Result.ToString();
+                    break;
+                case RanSuccessfullyResult ranResult when ranResult.Result.Passed:
+                    break;
+                default:
+                    result.ErrorMessage = $"{sunitResult.Kind}: {sunitResult}";
+                    break;
+            }
+
+            return result;
+        }
+
+        private static string IndentLines(string input, string indent)
+        {
+            var lines = input.Split("\n");
+            var sb = new StringBuilder();
+            foreach (var line in lines)
+                sb.AppendLine($"{indent}{line}");
+
+            return sb.ToString();
+        }
 
         public void RunTests(IEnumerable<string> sources, IRunContext runContext, IFrameworkHandle frameworkHandle)
         {

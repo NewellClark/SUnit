@@ -24,8 +24,8 @@ namespace SUnit.Discovery
         }
 
         protected abstract Type Type { get; }
-        protected Fixture Fixture { get; }
-        protected Factory Factory => Fixture.Factories.Single();
+        protected private Fixture Fixture { get; }
+        protected private Factory Factory => Fixture.Factories.Single();
         private MockBase Build() => (MockBase)Fixture.Factories.Single().Build();
 
         protected FixtureFactoryTests()

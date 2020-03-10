@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using SUnit.Discovery.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;

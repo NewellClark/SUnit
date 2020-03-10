@@ -8,6 +8,6 @@ namespace SUnit.Constraints
     {
         public bool Apply(T value) => ReferenceEquals(null, value);
 
-        public override string ToString() => "null";
+        public override string ToString() => "<null>";
     }
 }

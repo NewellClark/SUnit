@@ -76,5 +76,17 @@ namespace SUnit.Assertions
         /// Boolean XOR operator.
         /// </summary>
         public new TExpression Xor => ApplyModifier(c => constraint ^ c);
+
+        /// <summary>
+        /// Overridden to display expected and actual values regardless of whether the test passed.
+        /// Expected and actual values are displayed on separate lines.
+        /// </summary>
+        /// <returns>"Expected (expected value)\nWas (actual value)".</returns>
+        public override string ToString()
+        {
+            return Passed ?
+                $"Got {constraint}" :
+                $"Expected {constraint}\nWas {Utilities.DisplayValue(actual)}";
+        }
     }
 }
