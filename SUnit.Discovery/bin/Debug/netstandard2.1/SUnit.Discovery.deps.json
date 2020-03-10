@@ -1,0 +1,85 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "SUnit.Discovery/1.0.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
+          "SUnit": "1.0.0"
+        },
+        "runtime": {
+          "SUnit.Discovery.dll": {}
+        }
+      },
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.3": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "2.9.3",
+          "Microsoft.CodeQuality.Analyzers": "2.9.3",
+          "Microsoft.NetCore.Analyzers": "2.9.3",
+          "Microsoft.NetFramework.Analyzers": "2.9.3"
+        }
+      },
+      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.3": {},
+      "Microsoft.CodeQuality.Analyzers/2.9.3": {},
+      "Microsoft.NetCore.Analyzers/2.9.3": {},
+      "Microsoft.NetFramework.Analyzers/2.9.3": {},
+      "SUnit/1.0.0": {
+        "runtime": {
+          "SUnit.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SUnit.Discovery/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k8wrTEpm0BE16zxqOHJ4xXxsWTbx5oINrgkLrMc3US8H/LJAx0OyXmTGOuwGEM2Tqa6L5RU1MPgeiWKwAMVkuw==",
+      "path": "microsoft.codeanalysis.fxcopanalyzers/2.9.3",
+      "hashPath": "microsoft.codeanalysis.fxcopanalyzers.2.9.3.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jUQbGsWTF/x4a6ZiWfXvOL3f9LFS7L7QkrDhdv25BaYQg4K7yzBMYcElN3le5S6dk7JG8F3AjRnlXp9QTGcBNg==",
+      "path": "microsoft.codeanalysis.versioncheckanalyzer/2.9.3",
+      "hashPath": "microsoft.codeanalysis.versioncheckanalyzer.2.9.3.nupkg.sha512"
+    },
+    "Microsoft.CodeQuality.Analyzers/2.9.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5KFSFcQjibITq33jojBITiGIZZkf2OMdggT7ZeNryMAUkT3VkPB/csRWaA8erItQlEvrBzgIwzYnW0531HFV7g==",
+      "path": "microsoft.codequality.analyzers/2.9.3",
+      "hashPath": "microsoft.codequality.analyzers.2.9.3.nupkg.sha512"
+    },
+    "Microsoft.NetCore.Analyzers/2.9.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6QTU/GKuB/s4eX/VD9ZgiIpD8dhP+BuGMUpp2VRDPflrbka+1DmdnayqPO18epUa/79n1OR9uT9hpvd0jgdggg==",
+      "path": "microsoft.netcore.analyzers/2.9.3",
+      "hashPath": "microsoft.netcore.analyzers.2.9.3.nupkg.sha512"
+    },
+    "Microsoft.NetFramework.Analyzers/2.9.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-umTMyEaz29EkSuTNJ3As2wrhomQqqQfkBURZHWh59d+LwAbA7YYveUwe6ZFSx1A83pJRQVnsqaSBPbfQ5+niaA==",
+      "path": "microsoft.netframework.analyzers/2.9.3",
+      "hashPath": "microsoft.netframework.analyzers.2.9.3.nupkg.sha512"
+    },
+    "SUnit/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

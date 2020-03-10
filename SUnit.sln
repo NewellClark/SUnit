@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleTestLibrary", "Sample
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnit.Discovery", "SUnit.Discovery\SUnit.Discovery.csproj", "{533C747D-18BE-4A90-8994-896E3A872328}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SUnit.TestAdapter", "SUnit.TestAdapter\SUnit.TestAdapter.csproj", "{BCD860D9-E94D-4A66-9E3E-F10F05001992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnit.TestAdapter", "SUnit.TestAdapter\SUnit.TestAdapter.csproj", "{BCD860D9-E94D-4A66-9E3E-F10F05001992}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

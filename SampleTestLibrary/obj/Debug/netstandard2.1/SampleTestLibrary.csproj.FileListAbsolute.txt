@@ -1,0 +1,17 @@
+D:\LocalRepositories\SUnit\SampleTestLibrary\bin\Debug\netstandard2.1\SampleTestLibrary.deps.json
+D:\LocalRepositories\SUnit\SampleTestLibrary\bin\Debug\netstandard2.1\SampleTestLibrary.dll
+D:\LocalRepositories\SUnit\SampleTestLibrary\bin\Debug\netstandard2.1\SampleTestLibrary.pdb
+D:\LocalRepositories\SUnit\SampleTestLibrary\bin\Debug\netstandard2.1\SUnit.dll
+D:\LocalRepositories\SUnit\SampleTestLibrary\bin\Debug\netstandard2.1\SUnit.pdb
+D:\LocalRepositories\SUnit\SampleTestLibrary\bin\Debug\netstandard2.1\SUnit.xml
+D:\LocalRepositories\SUnit\SampleTestLibrary\obj\Debug\netstandard2.1\SampleTestLibrary.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\SampleTestLibrary\obj\Debug\netstandard2.1\SampleTestLibrary.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\SampleTestLibrary\obj\Debug\netstandard2.1\SampleTestLibrary.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\SampleTestLibrary\obj\Debug\netstandard2.1\SampleTestLibrary.csproj.CopyComplete
+D:\LocalRepositories\SUnit\SampleTestLibrary\obj\Debug\netstandard2.1\SampleTestLibrary.dll
+D:\LocalRepositories\SUnit\SampleTestLibrary\obj\Debug\netstandard2.1\SampleTestLibrary.pdb
+D:\LocalRepositories\SUnit\SampleTestLibrary\bin\Debug\netstandard2.1\SUnit.TestAdapter.dll
+D:\LocalRepositories\SUnit\SampleTestLibrary\bin\Debug\netstandard2.1\SUnit.Discovery.dll
+D:\LocalRepositories\SUnit\SampleTestLibrary\bin\Debug\netstandard2.1\SUnit.TestAdapter.pdb
+D:\LocalRepositories\SUnit\SampleTestLibrary\bin\Debug\netstandard2.1\SUnit.Discovery.pdb
+D:\LocalRepositories\SUnit\SampleTestLibrary\bin\Debug\netstandard2.1\SUnit.Discovery.xml
