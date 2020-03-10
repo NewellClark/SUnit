@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {
+    ".NETStandard,Version=v2.1": {
       "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.3": {
         "type": "package",
         "dependencies": {
@@ -145,7 +145,7 @@
       },
       "SUnit/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.0",
+        "framework": ".NETStandard,Version=v2.1",
         "compile": {
           "bin/placeholder/SUnit.dll": {}
         },
@@ -155,7 +155,7 @@
       },
       "SUnit.Discovery/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.0",
+        "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
           "SUnit": "1.0.0"
@@ -448,7 +448,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": [
+    ".NETStandard,Version=v2.1": [
       "Microsoft.TestPlatform.ObjectModel >= 16.5.0",
       "SUnit >= 1.0.0",
       "SUnit.Discovery >= 1.0.0"
@@ -478,7 +478,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.0"
+        "netstandard2.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -487,7 +487,7 @@
         "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netstandard2.1": {
           "projectReferences": {
             "D:\\LocalRepositories\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj": {
               "projectPath": "D:\\LocalRepositories\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj"
@@ -505,7 +505,7 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.0": {
+      "netstandard2.1": {
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": {
             "target": "Package",
@@ -523,11 +523,11 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.NETCore.App": {
+          "NETStandard.Library": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -15,7 +15,7 @@ namespace SUnit.TestAdapter
     internal static class Variables
     {
         public static readonly Regex CompoundNamePattern = new Regex(@"(?<class>[^\|]*)\|\|(?<method>[^\|]*)");
-        public const string Uri = @"executor://SUnitTestExecutor";
+        public const string Uri = "executor://SUnitTestExecutor";
     }
 
     [FileExtension(".dll")]
@@ -37,7 +37,7 @@ namespace SUnit.TestAdapter
         internal static IEnumerable<(string source, Fixture fixture)> FindAllFixtures(IEnumerable<string> sources)
         {
             return sources
-                .Select(source => (source, Assembly.Load(source)))
+                .Select(source => (source, Assembly.LoadFrom(source)))
                 .Select(t => (t.source, t.Item2.GetTypes().Where(type => type.IsPublic)))
                 .SelectMany(t => t.Item2.Select(type => (t.source, type)))
                 .Select(t => (t.source, new Fixture(t.type)))
@@ -61,7 +61,7 @@ namespace SUnit.TestAdapter
         }
     }
 
-    [DefaultExecutorUri("executor://SUnitTestExecutor")]
+    [ExtensionUri("executor://SUnitTestExecutor")]
     public class TestExecutor : ITestExecutor
     {
         public void RunTests(IEnumerable<TestCase> tests, IRunContext runContext, IFrameworkHandle frameworkHandle)

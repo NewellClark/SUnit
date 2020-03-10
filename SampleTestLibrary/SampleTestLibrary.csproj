@@ -2,15 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="16.5.0" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SUnit.TestAdapter\SUnit.TestAdapter.csproj" />
     <ProjectReference Include="..\SUnit\SUnit.csproj" />
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="start &quot;&quot; &quot;D:\LocalRepositories\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.ConsoleRunner.exe&quot; &quot;D:\LocalRepositories\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\SampleTestLibrary.dll&quot;" />
-  </Target>
 
 </Project>
