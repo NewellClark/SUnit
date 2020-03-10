@@ -18,19 +18,6 @@ namespace SUnit.Constraints
         /// <returns>Whether the value satisfies the constraint.</returns>
         public bool Apply(T value);
 
-        private sealed class NotConstraint : IConstraint<T>
-        {
-            private readonly IConstraint<T> inner;
-            public NotConstraint(IConstraint<T> inner)
-            {
-                this.inner = inner;
-            }
-
-            public bool Apply(T value) => !inner.Apply(value);
-
-            public override string ToString() => $"NOT {inner}";
-        }
-
         /// <summary>
         /// Creates a new <see cref="IConstraint{T}"/> that passes if its operand fails.
         /// </summary>
@@ -40,40 +27,13 @@ namespace SUnit.Constraints
         {
             if (operand is null) throw new ArgumentNullException(nameof(operand));
 
-            return new NotConstraint(operand);
+            return new NotConstraint<T>(operand);
         }
 
         /// <summary>
         /// Creates a new <see cref="IConstraint{T}"/> that passes when the current <see cref="IConstraint{T}"/> fails.
         /// </summary>
         public IConstraint<T> Inverted => !this;
-
-        private abstract class BinaryConstraint : IConstraint<T>
-        {
-            protected IConstraint<T> Left { get; }
-            protected IConstraint<T> Right { get; }
-
-            public BinaryConstraint(IConstraint<T> left, IConstraint<T> right)
-            {
-                Left = left;
-                Right = right;
-            }
-
-            protected abstract bool ApplyToBoth(T value, IConstraint<T> left, IConstraint<T> right);
-
-            public bool Apply(T value) => ApplyToBoth(value, Left, Right);
-        }
-
-        private sealed class AndConstraint : BinaryConstraint
-        {
-            public AndConstraint(IConstraint<T> left, IConstraint<T> right) : base(left, right) { }
-            protected override bool ApplyToBoth(T value, IConstraint<T> left, IConstraint<T> right)
-            {
-                return left.Apply(value) & right.Apply(value);
-            }
-
-            public override string ToString() => $"{Left} AND {Right}";
-        }
 
         /// <summary>
         /// Creates a <see cref="IConstraint{T}"/> that passes if both operands pass.
@@ -86,18 +46,7 @@ namespace SUnit.Constraints
             if (left is null) throw new ArgumentNullException(nameof(left));
             if (right is null) throw new ArgumentNullException(nameof(right));
 
-            return new AndConstraint(left, right);
-        }
-
-        private sealed class OrConstraint : BinaryConstraint
-        {
-            public OrConstraint(IConstraint<T> left, IConstraint<T> right) : base(left, right) { }
-            protected override bool ApplyToBoth(T value, IConstraint<T> left, IConstraint<T> right)
-            {
-                return left.Apply(value) | right.Apply(value);
-            }
-
-            public override string ToString() => $"{Left} OR {Right}";
+            return new AndConstraint<T>(left, right);
         }
 
         /// <summary>
@@ -111,19 +60,7 @@ namespace SUnit.Constraints
             if (left is null) throw new ArgumentNullException(nameof(left));
             if (right is null) throw new ArgumentNullException(nameof(right));
 
-            return new OrConstraint(left, right);
-        }
-
-        private sealed class XorConstraint : BinaryConstraint
-        {
-            public XorConstraint(IConstraint<T> left, IConstraint<T> right) : base(left, right) { }
-
-            protected override bool ApplyToBoth(T value, IConstraint<T> left, IConstraint<T> right)
-            {
-                return left.Apply(value) ^ right.Apply(value);
-            }
-
-            public override string ToString() => $"{Left} XOR {Right}";
+            return new OrConstraint<T>(left, right);
         }
 
         /// <summary>
@@ -138,7 +75,7 @@ namespace SUnit.Constraints
             if (left is null) throw new ArgumentNullException(nameof(left));
             if (right is null) throw new ArgumentNullException(nameof(right));
 
-            return new XorConstraint(left, right);
+            return new XorConstraint<T>(left, right);
         }
     }
 #pragma warning restore CA2225

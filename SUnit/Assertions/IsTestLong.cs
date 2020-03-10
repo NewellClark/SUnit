@@ -13,6 +13,7 @@ namespace SUnit.Assertions
         internal IsTestLong(long? actual, IConstraint<long?> constraint) 
             : base(actual, constraint) { }
 
+        /// <inheritdoc/>
         private protected override IIsExpressionLong CreateExpression(
             long? actual, ConstraintModifier<long?> constraintModifier)
         {

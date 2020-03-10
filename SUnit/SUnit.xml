@@ -119,7 +119,7 @@
             A base class for implementing <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>.
             </summary>
             <typeparam name="T"></typeparam>
-            <typeparam name="TExpression">This should be set to your own type, or an interface you implement.</typeparam>
+            <typeparam name="TExpression">This should be the most specific public interface that you implement.</typeparam>
             <typeparam name="TTest">The type of <see cref="T:SUnit.Test"/> that is created by calling 
             <see cref="M:SUnit.Assertions.ActualValueExpression`3.ApplyConstraint(SUnit.Constraints.IConstraint{`0})"/>. Must be derived from 
             <see cref="T:SUnit.Assertions.ActualValueTest`3"/>.</typeparam>
@@ -131,12 +131,12 @@
         </member>
         <member name="M:SUnit.Assertions.ActualValueExpression`3.#ctor(`0,SUnit.Assertions.ConstraintModifier{`0})">
             <summary>
-            Creates a new <see cref="T:SUnit.Assertions.ActualValueExpression`3"/> for the specified
-            actual value and with the specified constraint modifier.
+            Creates a new <see cref="T:SUnit.Assertions.ActualValueExpression`3"/> with the specified
+            actual value and <see cref="T:SUnit.Assertions.ConstraintModifier`1"/>.
             </summary>
             <param name="actual">The actual value that is under test.</param>
-            <param name="constraintModifier">A function to modify any constraints that are applied
-            to the actual value.</param>
+            <param name="constraintModifier">A function to modify any <see cref="T:SUnit.Constraints.IConstraint`1"/>s that
+            are applied to the new instance.</param>
         </member>
         <member name="M:SUnit.Assertions.ActualValueExpression`3.CreateTest(`0,SUnit.Constraints.IConstraint{`0})">
             <summary>
@@ -165,6 +165,12 @@
             This should simply be passing the arguments through to your own constructor, which in turn should 
             just be passing the arguments to the base class constructor.
             </remarks>
+        </member>
+        <member name="M:SUnit.Assertions.ActualValueExpression`3.ApplyConstraint(SUnit.Constraints.IConstraint{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.ActualValueExpression`3.ApplyModifier(SUnit.Assertions.ConstraintModifier{`0})">
+            <inheritdoc/>
         </member>
         <member name="T:SUnit.Assertions.ActualValueTest`3">
             <summary>
@@ -225,11 +231,12 @@
         </member>
         <member name="T:SUnit.Assertions.ConstraintModifier`1">
             <summary>
-            A function that produces a new <see cref="T:SUnit.Constraints.IConstraint`1"/> by modifying an existing <see cref="T:SUnit.Constraints.IConstraint`1"/>.
+            A function that produces a new <see cref="T:SUnit.Constraints.IConstraint`1"/> by applying a function to 
+            an existing <see cref="T:SUnit.Constraints.IConstraint`1"/>.
             </summary>
-            <typeparam name="T">The type of value that the <see cref="T:SUnit.Constraints.IConstraint`1"/> applies to.</typeparam>
+            <typeparam name="T">The type that the <see cref="T:SUnit.Constraints.IConstraint`1"/> applies to.</typeparam>
             <param name="constraint">The input constraint.</param>
-            <returns>A new <see cref="T:SUnit.Constraints.IConstraint`1"/> produced by modifying the existing one.</returns>
+            <returns>A new <see cref="T:SUnit.Constraints.IConstraint`1"/> produced by applying a modification to the existing one.</returns>
         </member>
         <member name="T:SUnit.Assertions.IActualValueExpression`3">
             <summary>
@@ -272,8 +279,8 @@
         </member>
         <member name="P:SUnit.Assertions.IActualValueExpression`3.Not">
             <summary>
-            Inverts any <see cref="T:SUnit.Constraints.IConstraint`1"/> that is applied to the current 
-            <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>.
+            Returns a new <see cref="T:SUnit.Assertions.IActualValueExpression`3"/> that inverts any
+            <see cref="T:SUnit.Constraints.IConstraint`1"/> that is applied to it.
             </summary>
         </member>
         <member name="T:SUnit.Assertions.IIsExpression`3">
@@ -282,7 +289,8 @@
             performing assertions on an actual value.
             </summary>
             <typeparam name="T">The type of the actual value under test.</typeparam>
-            <typeparam name="TIs">The return type of <see cref="P:SUnit.That`1.Is"/>.</typeparam>
+            <typeparam name="TIs">The exact type of the current <see cref="T:SUnit.Assertions.IIsExpression`3"/>. This needs
+            to be supplied so that members such as And and Or can return the same type of "Is".</typeparam>
             <typeparam name="TTest">The type of <see cref="T:SUnit.Test"/> that is created when 
             constraints are applied to <typeparamref name="TIs"/>.</typeparam>
         </member>
@@ -306,11 +314,13 @@
             <typeparam name="T">The type of the actual value that is under test.</typeparam>
         </member>
         <member name="T:SUnit.Assertions.IsExpression`1">
-            <summary>
-            Provides an implementation of <see cref="T:SUnit.Assertions.IIsExpression`1"/> for actual value types that have
-            not been "special-cased" in any way.
-            </summary>
-            <typeparam name="T"></typeparam>
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.IsExpression`1.CreateTest(`0,SUnit.Constraints.IConstraint{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.IsExpression`1.CreateExpression(`0,SUnit.Assertions.ConstraintModifier{`0})">
+            <inheritdoc/>
         </member>
         <member name="T:SUnit.Assertions.IIsExpressionDecimal">
             <summary>
@@ -334,9 +344,13 @@
             </summary>
         </member>
         <member name="T:SUnit.Assertions.IsExpressionDecimal">
-            <summary>
-            The implementation of <see cref="T:SUnit.Assertions.IIsExpressionDecimal"/> that is used by SUnit.
-            </summary>
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.IsExpressionDecimal.CreateTest(System.Nullable{System.Decimal},SUnit.Constraints.IConstraint{System.Nullable{System.Decimal}})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.IsExpressionDecimal.CreateExpression(System.Nullable{System.Decimal},SUnit.Assertions.ConstraintModifier{System.Nullable{System.Decimal}})">
+            <inheritdoc/>
         </member>
         <member name="T:SUnit.Assertions.IIsExpressionDouble">
             <summary>
@@ -364,9 +378,13 @@
             </summary>
         </member>
         <member name="T:SUnit.Assertions.IsExpressionDouble">
-            <summary>
-            The implementation of <see cref="T:SUnit.Assertions.IIsExpressionDouble"/> that is used by SUnit.
-            </summary>
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.IsExpressionDouble.CreateTest(System.Nullable{System.Double},SUnit.Constraints.IConstraint{System.Nullable{System.Double}})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.IsExpressionDouble.CreateExpression(System.Nullable{System.Double},SUnit.Assertions.ConstraintModifier{System.Nullable{System.Double}})">
+            <inheritdoc/>
         </member>
         <member name="T:SUnit.Assertions.IIsExpressionLong">
             <summary>
@@ -389,27 +407,49 @@
             Tests that the actual value is negative. Zero is NOT negative!
             </summary>
         </member>
+        <member name="T:SUnit.Assertions.IsExpressionLong">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.IsExpressionLong.CreateTest(System.Nullable{System.Int64},SUnit.Constraints.IConstraint{System.Nullable{System.Int64}})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.IsExpressionLong.CreateExpression(System.Nullable{System.Int64},SUnit.Assertions.ConstraintModifier{System.Nullable{System.Int64}})">
+            <inheritdoc/>
+        </member>
         <member name="T:SUnit.Assertions.IsTest`1">
             <summary>
             The type of <see cref="T:SUnit.Test"/> that is returned when test methods are called on 
-            the <see cref="P:SUnit.That`1.Is"/> property when creating assertions.
+            the <see cref="P:SUnit.That`1.Is"/> property when creating assertions. Used for types of
+            <typeparamref name="T"/> that have not been "special-cased".
             </summary>
             <typeparam name="T">The type of the actual value that is being tested.</typeparam>
         </member>
+        <member name="M:SUnit.Assertions.IsTest`1.CreateExpression(`0,SUnit.Assertions.ConstraintModifier{`0})">
+            <inheritdoc/>
+        </member>
         <member name="T:SUnit.Assertions.IsTestDecimal">
             <summary>
-            A test created by applying a constraint to a nullable decimal.
+            A <see cref="T:SUnit.Test"/> created by applying a <see cref="T:SUnit.Constraints.IConstraint`1"/> to a nullable decimal.
             </summary>
+        </member>
+        <member name="M:SUnit.Assertions.IsTestDecimal.CreateExpression(System.Nullable{System.Decimal},SUnit.Assertions.ConstraintModifier{System.Nullable{System.Decimal}})">
+            <inheritdoc/>
         </member>
         <member name="T:SUnit.Assertions.IsTestDouble">
             <summary>
             A <see cref="T:SUnit.Test"/> that applies a <see cref="T:SUnit.Constraints.IConstraint`1"/> to an actual nullable double.
             </summary>
         </member>
+        <member name="M:SUnit.Assertions.IsTestDouble.CreateExpression(System.Nullable{System.Double},SUnit.Assertions.ConstraintModifier{System.Nullable{System.Double}})">
+            <inheritdoc/>
+        </member>
         <member name="T:SUnit.Assertions.IsTestLong">
             <summary>
             A <see cref="T:SUnit.Test"/> for applying constraints to actual <see cref="T:System.Int64"/> values.
             </summary>
+        </member>
+        <member name="M:SUnit.Assertions.IsTestLong.CreateExpression(System.Nullable{System.Int64},SUnit.Assertions.ConstraintModifier{System.Nullable{System.Int64}})">
+            <inheritdoc/>
         </member>
         <member name="T:SUnit.That`1">
             <summary>
@@ -459,6 +499,50 @@
             Contains methods and properties for applying constraints to the actual value specified
             in the <see cref="M:SUnit.Assert.That(System.Int64)"/> method.
             </summary>
+        </member>
+        <member name="T:SUnit.Constraints.BinaryOperatorConstraint`1">
+            <summary>
+            A <see cref="T:SUnit.Constraints.IConstraint`1"/> that combines two <see cref="T:SUnit.Constraints.IConstraint`1"/>s using a binary operator.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:SUnit.Constraints.BinaryOperatorConstraint`1.ApplyOperands(`0,SUnit.Constraints.IConstraint{`0},SUnit.Constraints.IConstraint{`0})">
+            <summary>
+            When overridden in a derived class, applies both operands to the specified value.
+            </summary>
+            <param name="value">The value to apply both operands to.</param>
+            <param name="left">The left operand.</param>
+            <param name="right">The right operand.</param>
+            <returns>The result of applying both operands to the value.</returns>
+        </member>
+        <member name="M:SUnit.Constraints.BinaryOperatorConstraint`1.Apply(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Constraints.BinaryOperatorConstraint`1.OperatorName">
+            <summary>
+            The name of the operator that is applied to the two sub-constraints.
+            </summary>
+        </member>
+        <member name="M:SUnit.Constraints.BinaryOperatorConstraint`1.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Constraints.AndConstraint`1.ApplyOperands(`0,SUnit.Constraints.IConstraint{`0},SUnit.Constraints.IConstraint{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Constraints.AndConstraint`1.OperatorName">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Constraints.OrConstraint`1.ApplyOperands(`0,SUnit.Constraints.IConstraint{`0},SUnit.Constraints.IConstraint{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Constraints.OrConstraint`1.OperatorName">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Constraints.XorConstraint`1.ApplyOperands(`0,SUnit.Constraints.IConstraint{`0},SUnit.Constraints.IConstraint{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Constraints.XorConstraint`1.OperatorName">
+            <inheritdoc/>
         </member>
         <member name="M:SUnit.Constraints.Constraint.FromPredicate``1(System.Predicate{``0})">
             <summary>

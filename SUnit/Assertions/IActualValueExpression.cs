@@ -7,11 +7,12 @@ using System.Text;
 namespace SUnit.Assertions
 {
     /// <summary>
-    /// A function that produces a new <see cref="IConstraint{T}"/> by modifying an existing <see cref="IConstraint{T}"/>.
+    /// A function that produces a new <see cref="IConstraint{T}"/> by applying a function to 
+    /// an existing <see cref="IConstraint{T}"/>.
     /// </summary>
-    /// <typeparam name="T">The type of value that the <see cref="IConstraint{T}"/> applies to.</typeparam>
+    /// <typeparam name="T">The type that the <see cref="IConstraint{T}"/> applies to.</typeparam>
     /// <param name="constraint">The input constraint.</param>
-    /// <returns>A new <see cref="IConstraint{T}"/> produced by modifying the existing one.</returns>
+    /// <returns>A new <see cref="IConstraint{T}"/> produced by applying a modification to the existing one.</returns>
     public delegate IConstraint<T> ConstraintModifier<T>(IConstraint<T> constraint);
 
     /// <summary>
@@ -48,8 +49,9 @@ namespace SUnit.Assertions
         }
 
         /// <summary>
-        /// Applies a constraint modifier to the current <see cref="IActualValueExpression{T, TExpression, TTest}"/>. Any
-        /// constraint that gets applied will be modified by the specified modifier.
+        /// Creates a new <see cref="IActualValueExpression{T, TExpression, TTest}"/> by applying 
+        /// a constraint modifier to the current <see cref="IActualValueExpression{T, TExpression, TTest}"/>. Any
+        /// constraint that gets applied will be modified by the modifier.
         /// </summary>
         /// <param name="modifier">A function that modifies a <see cref="IConstraint{T}"/>.</param>
         /// <returns>
@@ -60,11 +62,11 @@ namespace SUnit.Assertions
 
         //  Sorry, "Not" is the best name for it. Unit test frameworks have traditionally been written 
         //  to read as much like plain english as possible.
-        //  I'll consider putting in an alias if it becomes a pain point.
+        //  I'll consider putting in an alias if it becomes a pain point for Visual Basic programmers.
 #pragma warning disable CA1716 // Identifiers should not match keywords
         /// <summary>
-        /// Inverts any <see cref="IConstraint{T}"/> that is applied to the current 
-        /// <see cref="IActualValueExpression{T, TExpression, TTest}"/>.
+        /// Returns a new <see cref="IActualValueExpression{T, TExpression, TTest}"/> that inverts any
+        /// <see cref="IConstraint{T}"/> that is applied to it.
         /// </summary>
         public TExpression Not => ApplyModifier(constraint => !constraint);
 #pragma warning restore CA1716 // Identifiers should not match keywords
