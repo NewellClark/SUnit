@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "ConsoleRunner": {
-      "commandName": "Project",
-      "commandLineArgs": "\"D:\\LocalRepositories\\SUnit\\SampleTestLibrary\\bin\\Debug\\netcoreapp3.0\\SampleTestLibrary.dll\""
-    }
-  }
-}
