@@ -13,6 +13,7 @@ namespace SUnit.Assertions
         internal IsTestDouble(double? actual, IConstraint<double?> constraint) 
             : base(actual, constraint) { }
 
+        /// <inheritdoc/>
         private protected override IIsExpressionDouble CreateExpression(double? actual, ConstraintModifier<double?> constraintModifier)
         {
             return new IsExpressionDouble(actual, constraintModifier);

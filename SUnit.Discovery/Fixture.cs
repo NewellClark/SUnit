@@ -10,19 +10,18 @@ namespace SUnit.Discovery
     /// <summary>
     /// A class that defines unit tests.
     /// </summary>
-    public class Fixture
+    internal class Fixture
     {
-        private readonly Type type;
 
         /// <summary>
-        /// Creates a new <see cref="Fixture"/> for the specified <see cref="Type"/>.
+        /// Creates a new <see cref="Fixture"/> for the specified <see cref="System.Type"/>.
         /// </summary>
         /// <param name="type"></param>
         public Fixture(Type type)
         {
             Debug.Assert(type != null);
 
-            this.type = type;
+            this.Type = type;
 
             Tests = Finder.FindAllValidTestMethods(type)
                 .Select(method => new TestMethod(this, method))
@@ -32,10 +31,12 @@ namespace SUnit.Discovery
             Factories = FindAllFactories(this);
         }
 
+        public Type Type { get; }
+
         /// <summary>
         /// Gets the unqualified name of the class that the fixture represents.
         /// </summary>
-        public string Name => type.Name;
+        public string Name => Type.Name;
 
         /// <summary>
         /// Gets all the test methods on the fixture.
@@ -53,11 +54,11 @@ namespace SUnit.Discovery
 
             var results = new List<Factory>();
 
-            var @default = Finder.GetDefaultConstructor(fixture.type);
+            var @default = Finder.GetDefaultConstructor(fixture.Type);
             if (@default != null)
                 results.Add(Factory.FromDefaultCtor(fixture, @default));
 
-            var named = Finder.FindNamedConstructors(fixture.type)
+            var named = Finder.FindNamedConstructors(fixture.Type)
                 .Select(method => Factory.FromNamedCtor(fixture, method));
             results.AddRange(named);
 

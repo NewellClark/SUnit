@@ -133,6 +133,51 @@
             Gets all the methods that can be used to instantiate the fixture.
             </summary>
         </member>
+        <member name="T:SUnit.Discovery.Results.RanSuccessfullyResult">
+            <summary>
+            The <see cref="T:SUnit.Discovery.Results.TestResult"/> that is returned when a test runs to completion successfully.
+            </summary>
+        </member>
+        <member name="P:SUnit.Discovery.Results.RanSuccessfullyResult.Result">
+            <summary>
+            The <see cref="T:SUnit.Test"/> returned by the test method.
+            </summary>
+        </member>
+        <member name="T:SUnit.Discovery.Results.ResultKind">
+            <summary>
+            The kind of result.
+            </summary>
+        </member>
+        <member name="F:SUnit.Discovery.Results.ResultKind.Error">
+            <summary>
+            The test did not run due to an error.
+            </summary>
+        </member>
+        <member name="F:SUnit.Discovery.Results.ResultKind.Fail">
+            <summary>
+            The test ran, and it failed.
+            </summary>
+        </member>
+        <member name="F:SUnit.Discovery.Results.ResultKind.Pass">
+            <summary>
+            The test ran, and it passed.
+            </summary>
+        </member>
+        <member name="T:SUnit.Discovery.Results.TestResult">
+            <summary>
+            The result of running a <see cref="P:SUnit.Discovery.Results.TestResult.UnitTest"/>.
+            </summary>
+        </member>
+        <member name="P:SUnit.Discovery.Results.TestResult.UnitTest">
+            <summary>
+            The <see cref="T:SUnit.Discovery.UnitTest"/> that ran. 
+            </summary>
+        </member>
+        <member name="P:SUnit.Discovery.Results.TestResult.Kind">
+            <summary>
+            Whether the result was a pass, fail, or error.
+            </summary>
+        </member>
         <member name="T:SUnit.Discovery.TestMethod">
             <summary>
             A unit test method.
@@ -161,44 +206,6 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:SUnit.Discovery.ResultKind">
-            <summary>
-            The kind of result.
-            </summary>
-        </member>
-        <member name="F:SUnit.Discovery.ResultKind.Error">
-            <summary>
-            The test did not run due to an error.
-            </summary>
-        </member>
-        <member name="F:SUnit.Discovery.ResultKind.Fail">
-            <summary>
-            The test ran, and it failed.
-            </summary>
-        </member>
-        <member name="F:SUnit.Discovery.ResultKind.Pass">
-            <summary>
-            The test ran, and it passed.
-            </summary>
-        </member>
-        <member name="T:SUnit.Discovery.TestResult">
-            <summary>
-            The result of running a <see cref="T:SUnit.Discovery.UnitTest"/>.
-            </summary>
-        </member>
-        <member name="P:SUnit.Discovery.TestResult.Kind">
-            <summary>
-            Whether the result was a pass, fail, or error.
-            </summary>
-        </member>
-        <member name="M:SUnit.Discovery.TestResult.UnexpectedException(SUnit.Discovery.UnitTest,System.Exception)">
-            <summary>
-            Creates a <see cref="T:SUnit.Discovery.TestResult"/> for when an unexpected exception is thrown while running the test.
-            </summary>
-            <param name="test"></param>
-            <param name="exception"></param>
-            <returns></returns>
-        </member>
         <member name="T:SUnit.Discovery.UnitTest">
             <summary>
             A single unit test that is ready to be executed.
@@ -217,6 +224,11 @@
             Gets the <see cref="T:SUnit.Discovery.Fixture"/> that defines the test.
             </summary>
         </member>
+        <member name="P:SUnit.Discovery.UnitTest.Factory">
+            <summary>
+            Gets the <see cref="T:SUnit.Discovery.Factory"/> that will be used to instantiate the test fixture.
+            </summary>
+        </member>
         <member name="P:SUnit.Discovery.UnitTest.Name">
             <summary>
             Gets the name of the test method.
@@ -230,7 +242,7 @@
         </member>
         <member name="M:SUnit.Discovery.UnitTest.Run">
             <summary>
-            Runs the unit test, returning a <see cref="T:SUnit.Discovery.TestResult"/>.
+            Runs the unit test, returning a <see cref="T:SUnit.Discovery.Results.TestResult"/>.
             </summary>
             <returns></returns>
         </member>

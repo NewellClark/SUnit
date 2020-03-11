@@ -17,5 +17,7 @@ namespace SUnit.Constraints
         }
 
         public bool Apply(T value) => predicate(value);
+
+        public override string ToString() => $"A value satisfying a predicate";
     }
 }

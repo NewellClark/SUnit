@@ -10,7 +10,7 @@ namespace SUnit.Discovery
     /// <summary>
     /// An object that can be used to instantiate a <see cref="Discovery.Fixture"/>.
     /// </summary>
-    public abstract class Factory
+    internal abstract class Factory
     {
         protected private Factory(Fixture fixture)
         {
@@ -73,7 +73,7 @@ namespace SUnit.Discovery
             public override object Build() => ctor.Invoke(Array.Empty<object>());
             public override bool IsDefaultConstructor => true;
             public override bool IsNamedConstructor => false;
-            public override string Name => "<default ctor>";
+            public override string Name => "ctor";
         }
 
         internal static Factory FromDefaultCtor(Fixture fixture, ConstructorInfo ctor)

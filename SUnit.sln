@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleRunner", "ConsoleRun
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleTestLibrary", "SampleTestLibrary\SampleTestLibrary.csproj", "{47DDCD10-5160-417E-B326-5DE8712305C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SUnit.Discovery", "SUnit.Discovery\SUnit.Discovery.csproj", "{533C747D-18BE-4A90-8994-896E3A872328}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnit.Discovery", "SUnit.Discovery\SUnit.Discovery.csproj", "{533C747D-18BE-4A90-8994-896E3A872328}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnit.TestAdapter", "SUnit.TestAdapter\SUnit.TestAdapter.csproj", "{BCD860D9-E94D-4A66-9E3E-F10F05001992}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{533C747D-18BE-4A90-8994-896E3A872328}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{533C747D-18BE-4A90-8994-896E3A872328}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{533C747D-18BE-4A90-8994-896E3A872328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD860D9-E94D-4A66-9E3E-F10F05001992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD860D9-E94D-4A66-9E3E-F10F05001992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD860D9-E94D-4A66-9E3E-F10F05001992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD860D9-E94D-4A66-9E3E-F10F05001992}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

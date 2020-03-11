@@ -43,9 +43,7 @@ namespace SUnit.Assertions
         public IsTestDouble NaN => FailWhenNull(n => double.IsNaN(n));
     }
 
-    /// <summary>
-    /// The implementation of <see cref="IIsExpressionDouble"/> that is used by SUnit.
-    /// </summary>
+    /// <inheritdoc/>
     internal class IsExpressionDouble : ActualValueExpression<double?, IIsExpressionDouble, IsTestDouble>, IIsExpressionDouble
     {
         internal IsExpressionDouble(double? actual, ConstraintModifier<double?> constraintModifier) 
@@ -53,11 +51,13 @@ namespace SUnit.Assertions
         internal IsExpressionDouble(double? actual) 
             : base(actual, c => c) { }
 
+        /// <inheritdoc/>
         private protected override IsTestDouble CreateTest(double? actual, IConstraint<double?> constraint)
         {
             return new IsTestDouble(actual, constraint);
         }
 
+        /// <inheritdoc/>
         private protected override IIsExpressionDouble CreateExpression(double? actual, ConstraintModifier<double?> constraintModifier)
         {
             return new IsExpressionDouble(actual, constraintModifier);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SUnit.Discovery.Results;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -9,14 +10,13 @@ namespace SUnit.Discovery
     /// <summary>
     /// A single unit test that is ready to be executed.
     /// </summary>
-    public class UnitTest
+    internal class UnitTest
     {
         private readonly TestMethod method;
-        private readonly Factory factory;
 
         /// <summary>
         /// Creates a new <see cref="UnitTest"/> from the specified <see cref="TestMethod"/> and
-        /// the specified <see cref="Factory"/>.
+        /// the specified <see cref="Discovery.Factory"/>.
         /// </summary>
         /// <param name="method"></param>
         /// <param name="factory"></param>
@@ -26,13 +26,18 @@ namespace SUnit.Discovery
             Debug.Assert(factory != null);
 
             this.method = method;
-            this.factory = factory;
+            this.Factory = factory;
         }
 
         /// <summary>
         /// Gets the <see cref="Discovery.Fixture"/> that defines the test.
         /// </summary>
-        public Fixture Fixture => factory.Fixture;
+        public Fixture Fixture => Factory.Fixture;
+
+        /// <summary>
+        /// Gets the <see cref="Discovery.Factory"/> that will be used to instantiate the test fixture.
+        /// </summary>
+        public Factory Factory { get; }
 
         /// <summary>
         /// Gets the name of the test method.
@@ -53,58 +58,16 @@ namespace SUnit.Discovery
         {
             try
             {
-                object fixture = factory.Build();
+                object fixture = Factory.Build();
                 Test test = method.Execute(fixture);
 
-                return test.Passed ?
-                    (TestResult)new PassResult(method.Name) :
-                    new FailResult(method.Name, test);
+                return new RanSuccessfullyResult(this, test);
             }
 #pragma warning disable CA1031 // Do not catch general exception types
             catch (Exception ex)
 #pragma warning restore CA1031 // Do not catch general exception types
             {
-                return TestResult.UnexpectedException(this, ex);
-            }
-        }
-
-        private sealed class PassResult : TestResult
-        {
-            private readonly string testName;
-
-            public PassResult(string testName) : base(ResultKind.Pass) => this.testName = testName;
-
-            public override string ToString()
-            {
-                return $"{testName}";
-            }
-        }
-
-        private sealed class FailResult : TestResult
-        {
-            private readonly string testName;
-            private readonly Test test;
-            private const string indent = "   ";
-
-            public FailResult(string testName, Test test) : base(ResultKind.Fail)
-            {
-                Debug.Assert(test != null);
-                Debug.Assert(!test.Passed);
-
-                this.testName = testName;
-                this.test = test;
-            }
-
-            public override string ToString()
-            {
-                var sb = new StringBuilder();
-                sb.AppendLine(testName);
-                var details = test.ToString().Split("\n")
-                    .Select(line => $"{indent}{line}");
-                foreach (var line in details)
-                    sb.AppendLine(line);
-
-                return sb.ToString().TrimEnd();
+                return new UnexpectedExceptionResult(this, ex);
             }
         }
     }

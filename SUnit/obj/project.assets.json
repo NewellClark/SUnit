@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {
+    ".NETStandard,Version=v2.1": {
       "Microsoft.CodeQuality.Analyzers/2.9.8": {
         "type": "package",
         "build": {
@@ -111,7 +111,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": [
+    ".NETStandard,Version=v2.1": [
       "Microsoft.CodeQuality.Analyzers >= 2.9.8"
     ]
   },
@@ -139,7 +139,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.0"
+        "netstandard2.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -148,7 +148,7 @@
         "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netstandard2.1": {
           "projectReferences": {}
         }
       },
@@ -159,7 +159,7 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.0": {
+      "netstandard2.1": {
         "dependencies": {
           "Microsoft.CodeQuality.Analyzers": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -179,11 +179,11 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.NETCore.App": {
+          "NETStandard.Library": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
