@@ -195,6 +195,9 @@ D:\LocalRepositories\SUnit\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.A
 D:\LocalRepositories\SUnit\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.csproj.CopyComplete
 D:\LocalRepositories\SUnit\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.dll
 D:\LocalRepositories\SUnit\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug\netcoreapp3.0\NUnit3.TestAdapter.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug\netcoreapp3.0\NUnit3.TestAdapter.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug\netcoreapp3.0\nunit.engine.dll
@@ -289,9 +292,6 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug\netcoreapp3.0\SU
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug\netcoreapp3.0\SUnit.Discovery.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug\netcoreapp3.0\SUnit.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug\netcoreapp3.0\SUnit.xml
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.csprojAssemblyReference.cache
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.AssemblyInfoInputs.cache
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.pdb

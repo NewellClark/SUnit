@@ -9,7 +9,7 @@
             Contains methods for performing assertions. Every unit test framework has a class like  this.
             </summary>
         </member>
-        <member name="M:SUnit.Assert.That``1(``0)">
+        <member name="M:SUnit.Assert.That(System.Object)">
             <summary>
             Used to specify the actual value when writing assertions. For example,
             <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
@@ -416,6 +416,23 @@
         <member name="M:SUnit.Assertions.IsExpressionDouble.CreateExpression(System.Nullable{System.Double},SUnit.Assertions.ConstraintModifier{System.Nullable{System.Double}})">
             <inheritdoc/>
         </member>
+        <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.SetEqualTo(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Tests whether the actual sequence has all the same elements as the expected sequence. Order does not matter,
+            and duplicates do not matter.
+            </summary>
+            <param name="expected"></param>
+            <param name="comparer">The equality comparer to use to compare items.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.SetEqualTo(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Tests whether the actual sequence has all the same elements as the expected sequence. Order does not matter, and
+            duplicates do not matter.
+            </summary>
+            <param name="expected"></param>
+            <returns></returns>
+        </member>
         <member name="T:SUnit.Assertions.IIsExpressionLong">
             <summary>
             The return type of <see cref="P:SUnit.ThatLong.Is"/>. Contains members for applying assertions to longs and
@@ -473,6 +490,9 @@
         <member name="M:SUnit.Assertions.IsTestDouble.CreateExpression(System.Nullable{System.Double},SUnit.Assertions.ConstraintModifier{System.Nullable{System.Double}})">
             <inheritdoc/>
         </member>
+        <member name="T:SUnit.Assertions.IsTestEnumerable`1">
+            <inheritdoc/>
+        </member>
         <member name="T:SUnit.Assertions.IsTestLong">
             <summary>
             A <see cref="T:SUnit.Test"/> for applying constraints to actual <see cref="T:System.Int64"/> values.
@@ -490,8 +510,7 @@
         </member>
         <member name="P:SUnit.That`1.Is">
             <summary>
-            Contains methods and properties for applying contstraints to the actual value specified in the 
-            <see cref="M:SUnit.Assert.That``1(``0)"/> method.
+            Contains methods and properties for applying contstraints to the actual value specified.
             </summary>
         </member>
         <member name="T:SUnit.ThatDouble">
@@ -588,6 +607,27 @@
             <param name="predicate">The predicate to apply to values that the constraint is applied to.</param>
             <returns>A new <see cref="T:SUnit.Constraints.IConstraint`1"/> that uses the specified <see cref="T:System.Predicate`1"/>.</returns>
         </member>
+        <member name="M:SUnit.Constraints.Constraint.NullIsFalse``1(System.Predicate{``0})">
+            <summary>
+            Wraps a <see cref="T:System.Predicate`1"/> in another predicate so that it treats null values as false.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="predicate">The predicate to wrap.</param>
+            <returns>A new predicate that calls the supplied predicate, but always returns false when given null values.</returns>
+        </member>
+        <member name="M:SUnit.Constraints.Constraint.NullFriendlyEquality``2(``0,``1,System.Func{``0,``1,System.Boolean})">
+            <summary>
+            Applies the specified equality function to the two operands ONLY if neither operand is null. If both operands are null,
+            returns true. If one is null, returns false.
+            </summary>
+            <typeparam name="TLeft"></typeparam>
+            <typeparam name="TRight"></typeparam>
+            <param name="left"></param>
+            <param name="right"></param>
+            <param name="equalityFunction">The equality function to apply if neither operand is null.</param>
+            <returns>If both operands are null, returns true. If exactly one is null, returns false. Otherwise,
+            uses the supplied equality function.</returns>
+        </member>
         <member name="T:SUnit.Constraints.EqualToConstraint`1">
             <summary>
             Constraint that tests whether a value is equal to an expected value.
@@ -649,6 +689,12 @@
             <param name="left"></param>
             <param name="right"></param>
             <returns>A new <see cref="T:SUnit.Constraints.IConstraint`1"/> that passes if exactly one operand passes.</returns>
+        </member>
+        <member name="T:SUnit.Constraints.SetEqualityConstraint`1">
+            <summary>
+            A constraint that compares two sequences for set-equality. Order doesn't matter, and duplicates are ignored.
+            </summary>
+            <typeparam name="T"></typeparam>
         </member>
         <member name="T:SUnit.IsComparableExtensions">
             <summary>

@@ -21,10 +21,16 @@ namespace SUnit
         }
 
         /// <summary>
-        /// Contains methods and properties for applying contstraints to the actual value specified in the 
-        /// <see cref="Assert.That{TActual}(TActual)"/> method.
+        /// Contains methods and properties for applying contstraints to the actual value specified.
         /// </summary>
         public IIsExpression<TActual> Is => new IsExpression<TActual>(Actual);
+    }
+
+    public class ThatEnumerable<T> : That<IEnumerable<T>>
+    {
+        internal ThatEnumerable(IEnumerable<T> actual) : base(actual) { }
+
+        public new IIsExpressionEnumerable<T> Is => new IsExpressionEnumerable<T>(Actual);
     }
 
     /// <summary>

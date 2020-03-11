@@ -16,7 +16,9 @@ namespace SUnit
         /// <typeparam name="TActual"></typeparam>
         /// <param name="actual"></param>
         /// <returns></returns>
-        public static That<TActual> That<TActual>(TActual actual) => new That<TActual>(actual);
+        public static That<object> That(object actual) => new That<object>(actual);
+
+        public static ThatEnumerable<T> That<T>(IEnumerable<T> actual) => new ThatEnumerable<T>(actual);
 
         /// <summary>
         /// Used to specify the actual value when writing assertions. For example,

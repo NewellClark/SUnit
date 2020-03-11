@@ -10,8 +10,8 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.TestHost": "16.5.0",
-          "SUnit": "1.0.0.0",
-          "SUnit.TestAdapter": "1.0.0.0"
+          "SUnit": "1.0.0.3",
+          "SUnit.TestAdapter": "1.0.0.3"
         },
         "runtime": {
           "AdapterDebugging.dll": {}
@@ -630,27 +630,27 @@
           "System.Xml.ReaderWriter": "4.0.11"
         }
       },
-      "SUnit/1.0.0.0": {
+      "SUnit/1.0.0.3": {
         "runtime": {
           "SUnit.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.0.0.3",
+            "fileVersion": "1.0.0.3"
           }
         }
       },
-      "SUnit.TestAdapter/1.0.0.0": {
+      "SUnit.TestAdapter/1.0.0.3": {
         "runtime": {
           "SUnit.TestAdapter.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.0.0.3",
+            "fileVersion": "1.0.0.3"
           }
         }
       },
-      "SUnit.Discovery/1.0.0.0": {
+      "SUnit.Discovery/1.0.0.3": {
         "runtime": {
           "SUnit.Discovery.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.0.0.3",
+            "fileVersion": "1.0.0.3"
           }
         }
       }
@@ -949,17 +949,17 @@
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
     },
-    "SUnit/1.0.0.0": {
+    "SUnit/1.0.0.3": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.TestAdapter/1.0.0.0": {
+    "SUnit.TestAdapter/1.0.0.3": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.Discovery/1.0.0.0": {
+    "SUnit.Discovery/1.0.0.3": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
