@@ -71,4 +71,13 @@ namespace SUnit
         /// </summary>
         public new IIsExpressionLong Is => new IsExpressionLong(Actual);
     }
+
+    /// <inheritdoc/>
+    public class ThatBool : That<bool?>
+    {
+        internal ThatBool(bool? actual) : base(actual) { }
+
+        /// <inheritdoc/>
+        public new IIsExpressionBool Is => new IsExpressionBool(Actual);
+    }
 }

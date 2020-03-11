@@ -38,7 +38,7 @@
           "build/Microsoft.NetFramework.Analyzers.props": {}
         }
       },
-      "SUnit/1.0.0": {
+      "SUnit/1.0.0.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "compile": {
@@ -231,7 +231,7 @@
         "tools/uninstall.ps1"
       ]
     },
-    "SUnit/1.0.0": {
+    "SUnit/1.0.0.3": {
       "type": "project",
       "path": "../SUnit/SUnit.csproj",
       "msbuildProject": "../SUnit/SUnit.csproj"
@@ -240,7 +240,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.9.3",
-      "SUnit >= 1.0.0"
+      "SUnit >= 1.0.0.3"
     ]
   },
   "packageFolders": {
@@ -249,7 +249,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.0.3",
     "restore": {
       "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj",
       "projectName": "SUnit.Discovery",
@@ -271,6 +271,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "D:\\LocalRepositories\\SUnit\\PackageSource": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://dotnet.myget.org/F/aspnetcore-master/api/v3/index.json": {},
         "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}

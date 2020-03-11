@@ -42,6 +42,7 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.Discovery.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.Discovery.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.Discovery.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\ConsoleRunner.csprojAssemblyReference.cache

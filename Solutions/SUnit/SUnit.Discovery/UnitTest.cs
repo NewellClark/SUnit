@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace SUnit.Discovery
@@ -61,13 +62,28 @@ namespace SUnit.Discovery
                 object fixture = Factory.Build();
                 Test test = method.Execute(fixture);
 
-                return new RanSuccessfullyResult(this, test);
+                return new RanSuccessfullyResult(this.Name, test);
             }
 #pragma warning disable CA1031 // Do not catch general exception types
             catch (Exception ex)
 #pragma warning restore CA1031 // Do not catch general exception types
             {
-                return new UnexpectedExceptionResult(this, ex);
+                return new UnexpectedExceptionResult(this.Name, ex);
+            }
+        }
+
+        public static TestResult Run(object fixture, MethodInfo method)
+        {
+            var func = (Func<Test>)method.CreateDelegate(typeof(Func<Test>), fixture);
+            try
+            {
+                Test test = func();
+
+                return new RanSuccessfullyResult(method.Name, test);
+            }
+            catch (Exception ex)
+            {
+                return new UnexpectedExceptionResult(method.Name, ex);
             }
         }
     }

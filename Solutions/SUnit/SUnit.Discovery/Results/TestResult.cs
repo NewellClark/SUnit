@@ -31,18 +31,15 @@ namespace SUnit.Discovery.Results
     /// </summary>
     internal abstract class TestResult
     {
-        protected private TestResult(UnitTest unitTest, ResultKind kind)
+        protected private TestResult(string name, ResultKind kind)
         {
-            if (unitTest is null) throw new ArgumentNullException(nameof(unitTest));
+            if (name is null) throw new ArgumentNullException(nameof(name));
 
-            this.UnitTest = unitTest;
+            this.Name = name;
             this.Kind = kind;
         }
-        
-        /// <summary>
-        /// The <see cref="SUnit.Discovery.UnitTest"/> that ran. 
-        /// </summary>
-        public UnitTest UnitTest { get; }
+
+        public string Name { get; }
 
         /// <summary>
         /// Whether the result was a pass, fail, or error.

@@ -41,6 +41,18 @@ namespace SUnit.Assertions
         /// Tests that the actual value is NaN (basically you divided zero by zero or something crazy like that).
         /// </summary>
         public IsTestDouble NaN => FailWhenNull(n => double.IsNaN(n));
+
+        /// <summary>
+        /// Tests if the actual value is within a tolerance of the expected value. The tolerance used depends on
+        /// the magnitude of the actual and expected value.
+        /// </summary>
+        /// <param name="expected">The value we expect.</param>
+        /// <returns>A test that passes if the actual value is equal to the expected value, within
+        /// a tolerance that varies depending on the size of the actual and expected value.</returns>
+        public new IsTestDouble EqualTo(double? expected)
+        {
+            return ApplyConstraint(new FloatingPointEqualToConstraint(expected));
+        }
     }
 
     /// <inheritdoc/>
@@ -62,7 +74,5 @@ namespace SUnit.Assertions
         {
             return new IsExpressionDouble(actual, constraintModifier);
         }
-
-
     }
 }

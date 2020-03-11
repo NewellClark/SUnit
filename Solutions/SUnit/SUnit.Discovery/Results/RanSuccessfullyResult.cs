@@ -12,8 +12,8 @@ namespace SUnit.Discovery.Results
     {
         private const string indent = "   ";
 
-        public RanSuccessfullyResult(UnitTest unitTest, Test result) 
-            : base(unitTest, result.Passed ? ResultKind.Pass : ResultKind.Fail)
+        public RanSuccessfullyResult(string name, Test result) 
+            : base(name, result.Passed ? ResultKind.Pass : ResultKind.Fail)
         {
             this.Result = result;
         }
@@ -31,7 +31,7 @@ namespace SUnit.Discovery.Results
         private string GetFailedDisplayString()
         {
             var sb = new StringBuilder();
-            sb.AppendLine(UnitTest.Name);
+            sb.AppendLine(Name);
 
             var lines = Result.ToString().Split("\n")
                 .Select(line => $"{indent}{line}");

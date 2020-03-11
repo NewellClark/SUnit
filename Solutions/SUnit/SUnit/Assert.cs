@@ -5,7 +5,7 @@ using System.Text;
 namespace SUnit
 {
     /// <summary>
-    /// Contains methods for performing assertions. Every unit test framework has a class like this.
+    /// Contains methods for performing assertions. Every unit test framework has a class like  this.
     /// </summary>
     public static class Assert
     {
@@ -113,5 +113,9 @@ namespace SUnit
         /// <param name="actual"></param>
         /// <returns></returns>
         public static ThatLong That(short? actual) => new ThatLong(actual);
+
+        public static ThatBool That(bool actual) => new ThatBool(actual);
+
+        public static ThatBool That(bool? actual) => new ThatBool(actual);
     }
 }
