@@ -165,12 +165,7 @@
         </member>
         <member name="T:SUnit.Discovery.Results.TestResult">
             <summary>
-            The result of running a <see cref="P:SUnit.Discovery.Results.TestResult.UnitTest"/>.
-            </summary>
-        </member>
-        <member name="P:SUnit.Discovery.Results.TestResult.UnitTest">
-            <summary>
-            The <see cref="T:SUnit.Discovery.UnitTest"/> that ran. 
+            The result of running a <see cref="T:SUnit.Discovery.UnitTest"/>.
             </summary>
         </member>
         <member name="P:SUnit.Discovery.Results.TestResult.Kind">

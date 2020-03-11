@@ -93,3 +93,4 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\obj\Debug Packages\
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\obj\Debug Packages\netcoreapp3.0\SampleTestLibrary.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\obj\Debug Packages\netcoreapp3.0\SampleTestLibrary.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\obj\Debug Packages\netcoreapp3.0\SampleTestLibrary.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug Packages\netcoreapp3.0\System.Collections.Immutable.dll
