@@ -32,5 +32,7 @@ namespace ExampleConsumer
         public Test NonInclusiveLessThan() => Assert.That(7).Is.LessThan(7);
 
         public Test InclusiveLessThan() => Assert.That(7).Is.LessThanOrEqualTo(7);
+
+        public Test IsNullTest() => Assert.That((object)null).Is.Not.Null;
     }
 }

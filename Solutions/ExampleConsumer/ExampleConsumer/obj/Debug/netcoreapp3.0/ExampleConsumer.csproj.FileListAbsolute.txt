@@ -87,4 +87,3 @@ D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\n
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\SUnit.TestAdapter.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netcoreapp3.0\ExampleConsumer.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netcoreapp3.0\ExampleConsumer.pdb
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netcoreapp3.0\ExampleConsumer.csprojAssemblyReference.cache
