@@ -10,8 +10,9 @@
     <dependencies>
       <group targetFramework=".NETStandard2.1">
         <dependency id="SUnit.Discovery" version="1.0.0" exclude="Build,Analyzers" />
-        <dependency id="SUnit" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="SUnit" version="1.0.0.2" exclude="Build,Analyzers" />
         <dependency id="Microsoft.TestPlatform.ObjectModel" version="16.5.0" exclude="Build,Analyzers" />
+        <dependency id="System.Collections.Immutable" version="1.7.0" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>

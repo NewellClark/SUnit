@@ -204,6 +204,7 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreap
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\testhost.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\NuGet.Frameworks.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\System.Collections.Immutable.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll

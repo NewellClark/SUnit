@@ -13,46 +13,47 @@ using System.Threading;
 
 namespace SUnit.TestAdapter
 {
-    [ExtensionUri(SUnitTestDiscoverer.ExecutorUri)]
+    [ExtensionUri(ExecutorUri)]
     internal class SUnitTestExecutor : ITestExecutor
     {
+        internal const string ExecutorUri = "executor://SUnitTestExecutor";
         public void RunTests(IEnumerable<TestCase> tests, IRunContext runContext, IFrameworkHandle frameworkHandle)
         {
-            tests = SUnitTestDiscoverer.FindAllTestCases(Enumerable.Repeat(tests.First().Source, 1));
+            isCancellationRequested = false;
 
-            try
+            foreach (var test in tests)
             {
-                foreach (var test in tests)
+                VSResult result = RunUnitTest(test);
+                frameworkHandle.RecordResult(result);
+                if (isCancellationRequested)
                 {
-                    var result = RunUnitTest(test, GetUnitTestFromTestCase(test));
-                    frameworkHandle.RecordResult(result);
+                    isCancellationRequested = false;
+                    return;
                 }
             }
-            catch (OperationCanceledException)
-            {
-                cancelSource = new CancellationTokenSource();
-            }
-
         }
 
         public void RunTests(IEnumerable<string> sources, IRunContext runContext, IFrameworkHandle frameworkHandle)
         {
-            var cases = SUnitTestDiscoverer.FindAllTestCases(sources);
+            var testCases = SUnitTestDiscoverer.FindAllUnitTests(sources)
+                .Select(unitTest => new LiteTest(unitTest).ToTestCase());
 
-            RunTests(cases, runContext, frameworkHandle);
+            RunTests(testCases, runContext, frameworkHandle);
         }
 
         public void Cancel()
         {
-            cancelSource.Cancel();
+            isCancellationRequested = true;
         }
+        private bool isCancellationRequested = false;
 
-        private static UnitTest GetUnitTestFromTestCase(TestCase @case) => (UnitTest)@case.LocalExtensionData;
-        private static VSResult RunUnitTest(TestCase @case, UnitTest test)
+        private static VSResult RunUnitTest(TestCase @case)
         {
-            var sunitResult = test.Run();
+            var lite = LiteTest.FromTestCase(@case);
+
+            var sunitResult = lite.Run();
             var result = new VSResult(@case);
-            result.DisplayName = test.Name;
+            result.DisplayName = lite.TestMethodName;
             result.Outcome = sunitResult.Kind switch
             {
                 ResultKind.Pass => TestOutcome.Passed,
@@ -69,11 +70,14 @@ namespace SUnit.TestAdapter
                     result.ErrorMessage = $"{heading}\n{message}";
                     result.ErrorStackTrace = errorResult.Exception.StackTrace;
                     break;
+
                 case RanSuccessfullyResult ranResult when !ranResult.Result.Passed:
                     result.ErrorMessage = ranResult.Result.ToString();
                     break;
+
                 case RanSuccessfullyResult ranResult when ranResult.Result.Passed:
                     break;
+
                 default:
                     result.ErrorMessage = $"{sunitResult.Kind}: {sunitResult}";
                     break;
@@ -91,7 +95,5 @@ namespace SUnit.TestAdapter
 
             return sb.ToString();
         }
-
-        private CancellationTokenSource cancelSource = new CancellationTokenSource();
     }
 }

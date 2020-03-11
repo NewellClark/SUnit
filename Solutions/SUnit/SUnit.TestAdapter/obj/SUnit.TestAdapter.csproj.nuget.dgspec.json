@@ -132,6 +132,10 @@
             "Microsoft.TestPlatform.ObjectModel": {
               "target": "Package",
               "version": "[16.5.0, )"
+            },
+            "System.Collections.Immutable": {
+              "target": "Package",
+              "version": "[1.7.0, )"
             }
           },
           "imports": [
