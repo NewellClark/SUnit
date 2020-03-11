@@ -13,11 +13,10 @@ namespace SUnit.Discovery
     internal class UnitTest
     {
         private readonly TestMethod method;
-        private readonly Factory factory;
 
         /// <summary>
         /// Creates a new <see cref="UnitTest"/> from the specified <see cref="TestMethod"/> and
-        /// the specified <see cref="Factory"/>.
+        /// the specified <see cref="Discovery.Factory"/>.
         /// </summary>
         /// <param name="method"></param>
         /// <param name="factory"></param>
@@ -27,13 +26,18 @@ namespace SUnit.Discovery
             Debug.Assert(factory != null);
 
             this.method = method;
-            this.factory = factory;
+            this.Factory = factory;
         }
 
         /// <summary>
         /// Gets the <see cref="Discovery.Fixture"/> that defines the test.
         /// </summary>
-        public Fixture Fixture => factory.Fixture;
+        public Fixture Fixture => Factory.Fixture;
+
+        /// <summary>
+        /// Gets the <see cref="Discovery.Factory"/> that will be used to instantiate the test fixture.
+        /// </summary>
+        public Factory Factory { get; }
 
         /// <summary>
         /// Gets the name of the test method.
@@ -54,7 +58,7 @@ namespace SUnit.Discovery
         {
             try
             {
-                object fixture = factory.Build();
+                object fixture = Factory.Build();
                 Test test = method.Execute(fixture);
 
                 return new RanSuccessfullyResult(this, test);
