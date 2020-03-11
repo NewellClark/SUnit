@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
     <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
-    <Configurations>Debug;Release;Debug Packages</Configurations>
+    <Configurations>Debug;Release;Debug Packages;SingleProjectPackage</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

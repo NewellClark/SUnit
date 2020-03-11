@@ -5,7 +5,8 @@
     <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
     <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <Configurations>Debug;Release;Debug Packages</Configurations>
+    <Configurations>Debug;Release;Debug Packages;SingleProjectPackage</Configurations>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -13,9 +14,15 @@
     <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\SUnit.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SingleProjectPackage|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\SUnit.xml</DocumentationFile>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Packages|AnyCPU'">
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\SUnit.xml</DocumentationFile>
+    <OutputPath>D:\LocalRepositories\SUnit\PackageSource\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>

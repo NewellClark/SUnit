@@ -11,7 +11,7 @@
 
     <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
 
-    <Configurations>Debug;Release;Debug Packages</Configurations>
+    <Configurations>Debug;Release;Debug Packages;SingleProjectPackage</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
