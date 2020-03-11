@@ -43,10 +43,11 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.Discovery.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.pdb
-D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\ConsoleRunner.csprojAssemblyReference.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\ConsoleRunner.AssemblyInfoInputs.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\ConsoleRunner.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\ConsoleRunner.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\SUnit.ConsoleRunner.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\SUnit.ConsoleRunner.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.Discovery.xml
+D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.xml

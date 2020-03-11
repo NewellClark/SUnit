@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SUnit</id>
+    <version>1.0.0</version>
+    <authors>SUnit</authors>
+    <owners>SUnit</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE.md</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\bin\Debug\netstandard2.1\SUnit.dll" target="lib\netstandard2.1\SUnit.dll" />
+    <file src="D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\bin\Debug\netstandard2.1\SUnit.xml" target="lib\netstandard2.1\SUnit.xml" />
+    <file src="D:\LocalRepositories\SUnit\LICENSE.md" target="LICENSE.md" />
+  </files>
+</package>

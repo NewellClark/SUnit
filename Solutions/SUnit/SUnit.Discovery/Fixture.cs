@@ -8,7 +8,7 @@ using System.Text;
 namespace SUnit.Discovery
 {
     /// <summary>
-    /// A class that defines unit tests.
+    /// A class that defines unit tests. It must
     /// </summary>
     internal class Fixture
     {

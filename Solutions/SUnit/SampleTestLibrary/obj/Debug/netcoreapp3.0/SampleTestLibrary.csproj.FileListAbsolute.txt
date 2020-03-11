@@ -274,7 +274,6 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreap
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\SUnit.TestAdapter.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\SUnit.TestAdapter.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\SUnit.pdb
-D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\SUnit.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\SUnit.Discovery.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\obj\Debug\netcoreapp3.0\SampleTestLibrary.csprojAssemblyReference.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\obj\Debug\netcoreapp3.0\SampleTestLibrary.AssemblyInfoInputs.cache
@@ -282,3 +281,5 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\obj\Debug\netcoreap
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\obj\Debug\netcoreapp3.0\SampleTestLibrary.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\obj\Debug\netcoreapp3.0\SampleTestLibrary.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\obj\Debug\netcoreapp3.0\SampleTestLibrary.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\SUnit.Discovery.xml
+D:\LocalRepositories\SUnit\Solutions\SUnit\SampleTestLibrary\bin\Debug\netcoreapp3.0\SUnit.xml

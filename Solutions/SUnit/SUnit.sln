@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnit.Discovery", "SUnit.Di
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnit.TestAdapter", "SUnit.TestAdapter\SUnit.TestAdapter.csproj", "{BCD860D9-E94D-4A66-9E3E-F10F05001992}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleTestLibrary", "SampleTestLibrary\SampleTestLibrary.csproj", "{E63BA2D4-4D7D-4139-85D8-C0D2722487DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleTestLibrary", "SampleTestLibrary\SampleTestLibrary.csproj", "{B2DEF493-5C5D-4E75-9C69-4FFD515B8FC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{BCD860D9-E94D-4A66-9E3E-F10F05001992}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCD860D9-E94D-4A66-9E3E-F10F05001992}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCD860D9-E94D-4A66-9E3E-F10F05001992}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E63BA2D4-4D7D-4139-85D8-C0D2722487DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E63BA2D4-4D7D-4139-85D8-C0D2722487DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E63BA2D4-4D7D-4139-85D8-C0D2722487DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E63BA2D4-4D7D-4139-85D8-C0D2722487DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2DEF493-5C5D-4E75-9C69-4FFD515B8FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2DEF493-5C5D-4E75-9C69-4FFD515B8FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2DEF493-5C5D-4E75-9C69-4FFD515B8FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2DEF493-5C5D-4E75-9C69-4FFD515B8FC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
