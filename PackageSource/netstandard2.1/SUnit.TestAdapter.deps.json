@@ -11,7 +11,7 @@
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.6",
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0",
+          "SUnit": "1.0.0.2",
           "SUnit.Discovery": "1.0.0"
         },
         "runtime": {
@@ -137,7 +137,7 @@
           }
         }
       },
-      "SUnit/1.0.0": {
+      "SUnit/1.0.0.2": {
         "runtime": {
           "SUnit.dll": {}
         }
@@ -145,7 +145,7 @@
       "SUnit.Discovery/1.0.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.6",
-          "SUnit": "1.0.0"
+          "SUnit": "1.0.0.2"
         },
         "runtime": {
           "SUnit.Discovery.dll": {}
@@ -208,7 +208,7 @@
       "path": "nuget.frameworks/5.0.0",
       "hashPath": "nuget.frameworks.5.0.0.nupkg.sha512"
     },
-    "SUnit/1.0.0": {
+    "SUnit/1.0.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

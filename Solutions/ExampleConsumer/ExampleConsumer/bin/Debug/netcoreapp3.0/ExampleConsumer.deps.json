@@ -10,7 +10,7 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.TestHost": "16.5.0",
-          "SUnit": "1.0.0",
+          "SUnit": "1.0.0.2",
           "SUnit.TestAdapter": "1.0.0"
         },
         "runtime": {
@@ -351,7 +351,7 @@
           }
         }
       },
-      "SUnit/1.0.0": {
+      "SUnit/1.0.0.2": {
         "runtime": {
           "lib/netstandard2.1/SUnit.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -362,7 +362,7 @@
       "SUnit.Discovery/1.0.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
-          "SUnit": "1.0.0"
+          "SUnit": "1.0.0.2"
         },
         "runtime": {
           "lib/netstandard2.1/SUnit.Discovery.dll": {
@@ -374,7 +374,7 @@
       "SUnit.TestAdapter/1.0.0": {
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0",
+          "SUnit": "1.0.0.2",
           "SUnit.Discovery": "1.0.0"
         },
         "runtime": {
@@ -781,12 +781,12 @@
       "path": "nuget.frameworks/5.0.0",
       "hashPath": "nuget.frameworks.5.0.0.nupkg.sha512"
     },
-    "SUnit/1.0.0": {
+    "SUnit/1.0.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-th8q+qNBJZRHNI6NtX9dk88tXF4uBAMOy9iZ3ACnXIEduDTjfyJ7mSl690Iwq8XxqMMQ+0wuDw/EZKiTZG4Fug==",
-      "path": "sunit/1.0.0",
-      "hashPath": "sunit.1.0.0.nupkg.sha512"
+      "sha512": "sha512-eZRGLrd+9fUTMeIWghfK+BWHK7pBK6QnUm+yCYvr0FzUs0BXNvDzTkeqNMierYfvmdUfv534fEVp/KyrF/06/A==",
+      "path": "sunit/1.0.0.2",
+      "hashPath": "sunit.1.0.0.2.nupkg.sha512"
     },
     "SUnit.Discovery/1.0.0": {
       "type": "package",

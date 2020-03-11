@@ -1,8 +1,9 @@
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netcoreapp3.0\ExampleConsumer.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netcoreapp3.0\ExampleConsumer.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\ExampleConsumer.deps.json
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\ExampleConsumer.runtimeconfig.json
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\ExampleConsumer.runtimeconfig.dev.json
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\ExampleConsumer.dll
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\ExampleConsumer.pdb
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\Microsoft.TestPlatform.CoreUtilities.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\Microsoft.TestPlatform.PlatformAbstractions.dll
@@ -15,8 +16,6 @@ D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\n
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\NuGet.Frameworks.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\SUnit.dll
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\SUnit.Discovery.dll
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\SUnit.TestAdapter.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
@@ -82,8 +81,10 @@ D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\n
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netcoreapp3.0\ExampleConsumer.AssemblyInfoInputs.cache
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netcoreapp3.0\ExampleConsumer.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netcoreapp3.0\ExampleConsumer.csproj.CopyComplete
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\ExampleConsumer.pdb
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\SUnit.Discovery.dll
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netcoreapp3.0\SUnit.TestAdapter.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netcoreapp3.0\ExampleConsumer.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netcoreapp3.0\ExampleConsumer.pdb
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netcoreapp3.0\ExampleConsumer.csprojAssemblyReference.cache

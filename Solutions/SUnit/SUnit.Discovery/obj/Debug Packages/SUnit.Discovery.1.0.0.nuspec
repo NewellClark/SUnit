@@ -11,7 +11,7 @@
     <description>Package Description</description>
     <dependencies>
       <group targetFramework=".NETStandard2.1">
-        <dependency id="SUnit" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="SUnit" version="1.0.0.2" exclude="Build,Analyzers" />
         <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="2.9.3" exclude="Build,Analyzers" />
       </group>
     </dependencies>

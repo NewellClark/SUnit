@@ -38,7 +38,7 @@
           "build/Microsoft.NetFramework.Analyzers.props": {}
         }
       },
-      "SUnit/1.0.0": {
+      "SUnit/1.0.0.2": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "compile": {
@@ -231,7 +231,7 @@
         "tools/uninstall.ps1"
       ]
     },
-    "SUnit/1.0.0": {
+    "SUnit/1.0.0.2": {
       "type": "project",
       "path": "../SUnit/SUnit.csproj",
       "msbuildProject": "../SUnit/SUnit.csproj"
@@ -240,7 +240,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.9.3",
-      "SUnit >= 1.0.0"
+      "SUnit >= 1.0.0.2"
     ]
   },
   "packageFolders": {

@@ -113,5 +113,9 @@ namespace SUnit
         /// <param name="actual"></param>
         /// <returns></returns>
         public static ThatLong That(short? actual) => new ThatLong(actual);
+
+        public static ThatBool That(bool actual) => new ThatBool(actual);
+
+        public static ThatBool That(bool? actual) => new ThatBool(actual);
     }
 }
