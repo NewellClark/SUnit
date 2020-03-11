@@ -330,6 +330,19 @@
         <member name="M:SUnit.Assertions.IsExpression`1.CreateExpression(`0,SUnit.Assertions.ConstraintModifier{`0})">
             <inheritdoc/>
         </member>
+        <member name="T:SUnit.Assertions.IIsExpressionBool">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpressionBool.True">
+            <summary>
+            Tests whether the actual value is <see langword="true"/>.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpressionBool.False">
+            <summary>
+            Tests whether the actual value is <see langword="false"/>.
+            </summary>
+        </member>
         <member name="T:SUnit.Assertions.IIsExpressionDecimal">
             <summary>
             The return type of <see cref="P:SUnit.ThatDecimal.Is"/>. Used to apply constraints to decimals 
@@ -507,6 +520,12 @@
             Contains methods and properties for applying constraints to the actual value specified
             in the <see cref="M:SUnit.Assert.That(System.Int64)"/> method.
             </summary>
+        </member>
+        <member name="T:SUnit.ThatBool">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.ThatBool.Is">
+            <inheritdoc/>
         </member>
         <member name="T:SUnit.Constraints.BinaryOperatorConstraint`1">
             <summary>

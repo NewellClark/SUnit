@@ -1,7 +1,0 @@
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SinglePackageConsumer\bin\Debug\netcoreapp3.1\SinglePackageConsumer.deps.json
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SinglePackageConsumer\bin\Debug\netcoreapp3.1\SinglePackageConsumer.dll
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SinglePackageConsumer\bin\Debug\netcoreapp3.1\SinglePackageConsumer.pdb
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SinglePackageConsumer\obj\Debug\netcoreapp3.1\SinglePackageConsumer.AssemblyInfoInputs.cache
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SinglePackageConsumer\obj\Debug\netcoreapp3.1\SinglePackageConsumer.AssemblyInfo.cs
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SinglePackageConsumer\obj\Debug\netcoreapp3.1\SinglePackageConsumer.dll
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SinglePackageConsumer\obj\Debug\netcoreapp3.1\SinglePackageConsumer.pdb

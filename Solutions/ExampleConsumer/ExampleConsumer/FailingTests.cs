@@ -16,9 +16,10 @@ namespace ExampleConsumer
 
         public Test LessAndMore()
         {
-            return 
+            return
                 Assert.That(5).Is.LessThan(6) &
-                Assert.That(9).Is.GreaterThan(17);
+                Assert.That(9).Is.GreaterThan(17) &
+                Assert.That(true).Is.True;
         }
 
         public Test NoIdeaWhetherThisWillPass()
@@ -31,7 +32,5 @@ namespace ExampleConsumer
         public Test NonInclusiveLessThan() => Assert.That(7).Is.LessThan(7);
 
         public Test InclusiveLessThan() => Assert.That(7).Is.LessThanOrEqualTo(7);
-
-        
     }
 }

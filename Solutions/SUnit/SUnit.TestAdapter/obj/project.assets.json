@@ -143,7 +143,7 @@
           "lib/netstandard2.0/NuGet.Frameworks.dll": {}
         }
       },
-      "SUnit/1.0.0": {
+      "SUnit/1.0.0.2": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "compile": {
@@ -158,7 +158,7 @@
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
-          "SUnit": "1.0.0"
+          "SUnit": "1.0.0.2"
         },
         "compile": {
           "bin/placeholder/SUnit.Discovery.dll": {}
@@ -649,7 +649,7 @@
         "nuget.frameworks.nuspec"
       ]
     },
-    "SUnit/1.0.0": {
+    "SUnit/1.0.0.2": {
       "type": "project",
       "path": "../SUnit/SUnit.csproj",
       "msbuildProject": "../SUnit/SUnit.csproj"
@@ -664,7 +664,7 @@
     ".NETStandard,Version=v2.1": [
       "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.9.6",
       "Microsoft.TestPlatform.ObjectModel >= 16.5.0",
-      "SUnit >= 1.0.0",
+      "SUnit >= 1.0.0.2",
       "SUnit.Discovery >= 1.0.0"
     ]
   },

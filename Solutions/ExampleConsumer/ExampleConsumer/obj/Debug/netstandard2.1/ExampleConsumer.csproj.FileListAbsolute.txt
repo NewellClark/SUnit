@@ -1,8 +1,0 @@
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netstandard2.1\ExampleConsumer.deps.json
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netstandard2.1\ExampleConsumer.dll
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netstandard2.1\ExampleConsumer.csprojAssemblyReference.cache
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netstandard2.1\ExampleConsumer.AssemblyInfoInputs.cache
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netstandard2.1\ExampleConsumer.AssemblyInfo.cs
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\bin\Debug\netstandard2.1\ExampleConsumer.pdb
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netstandard2.1\ExampleConsumer.dll
-D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\ExampleConsumer\obj\Debug\netstandard2.1\ExampleConsumer.pdb
