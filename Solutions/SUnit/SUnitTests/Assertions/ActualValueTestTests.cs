@@ -7,7 +7,7 @@ using assert = NUnit.Framework.Assert;
 namespace SUnit.Assertions
 {
     [TestFixture]
-    public class IsTestTests
+    public class ActualValueTestTests
     {
         [Test]
         public void PassAndPass_Passes()
