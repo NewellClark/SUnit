@@ -398,6 +398,15 @@
             Tests that the actual value is NaN (basically you divided zero by zero or something crazy like that).
             </summary>
         </member>
+        <member name="M:SUnit.Assertions.IIsExpressionDouble.EqualTo(System.Nullable{System.Double})">
+            <summary>
+            Tests if the actual value is within a tolerance of the expected value. The tolerance used depends on
+            the magnitude of the actual and expected value.
+            </summary>
+            <param name="expected">The value we expect.</param>
+            <returns>A test that passes if the actual value is equal to the expected value, within
+            a tolerance that varies depending on the size of the actual and expected value.</returns>
+        </member>
         <member name="T:SUnit.Assertions.IsExpressionDouble">
             <inheritdoc/>
         </member>
@@ -584,6 +593,12 @@
             Constraint that tests whether a value is equal to an expected value.
             </summary>
             <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:SUnit.Constraints.FloatingPointEqualToConstraint.maxAllowedNormalizedError">
+            <summary>
+            The maximum allowed "normalized" error; in other words, the error divided by
+            the largest argument.
+            </summary>
         </member>
         <member name="T:SUnit.Constraints.IConstraint`1">
             <summary>
