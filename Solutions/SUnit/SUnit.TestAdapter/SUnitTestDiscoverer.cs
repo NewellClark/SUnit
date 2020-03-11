@@ -11,54 +11,31 @@ using System.Text;
 namespace SUnit.TestAdapter
 {
     [FileExtension(".dll")]
-    [DefaultExecutorUri(ExecutorUri)]
+    [DefaultExecutorUri(SUnitTestExecutor.ExecutorUri)]
     internal class SUnitTestDiscoverer : ITestDiscoverer
     {
-        internal const string ExecutorUri = "executor://SUnitTestExecutor";
-
         public void DiscoverTests(
             IEnumerable<string> sources, 
             IDiscoveryContext discoveryContext, 
             IMessageLogger logger, 
             ITestCaseDiscoverySink discoverySink)
         {
-            IEnumerable<TestCase> cases = FindAllTestCases(sources);
+            var unitTests = FindAllUnitTests(sources);
+            var cases = unitTests.Select(test => new LiteTest(test).ToTestCase());
 
             foreach (var @case in cases)
                 discoverySink.SendTestCase(@case);
         }
 
-        internal static IEnumerable<TestCase> FindAllTestCases(IEnumerable<string> sources)
+        internal static IEnumerable<UnitTest> FindAllUnitTests(IEnumerable<string> sources)
         {
-            return sources
-                .Select(source => (source, unitTests: FindAllUnitTestsInAssembly(source)))
-                .SelectMany(t => t.unitTests.Select(unitTest => CreateTestCaseFromUnitTest(t.source, unitTest)));
-        }
+            if (sources is null) throw new ArgumentNullException(nameof(sources));
 
-        private static IEnumerable<UnitTest> FindAllUnitTestsInAssembly(string source)
-        {
-            Assembly assembly = Assembly.LoadFrom(source);
-            var fixtures = assembly.GetTypes()
-                .Where(type => type.IsPublic)
+            return sources.Select(source => Assembly.LoadFrom(source))
+                .SelectMany(assembly => assembly.GetExportedTypes())
                 .Select(type => new Fixture(type))
-                .Where(fixture => fixture.Factories.Count > 0)
-                .Where(fixture => fixture.Tests.Count > 0);
-
-            return fixtures
                 .SelectMany(fixture => fixture.Factories)
                 .SelectMany(factory => factory.CreateTests());
-        }
-
-        private static TestCase CreateTestCaseFromUnitTest(string source, UnitTest unitTest)
-        {
-            TestCase @case = new TestCase();
-            @case.ExecutorUri = new Uri(ExecutorUri);
-            @case.Source = source;
-            @case.LocalExtensionData = unitTest;
-            @case.DisplayName = unitTest.Name;
-            @case.FullyQualifiedName = $@"{unitTest.Fixture.Type.FullName}+{unitTest.Factory.Name}.{unitTest.Name}";
-            
-            return @case;
         }
     }
 }

@@ -18,7 +18,7 @@ namespace SUnit.TestAdapter
         private static readonly TestProperty LinesProperty =
             TestProperty.Register(
                 nameof(LinesProperty), nameof(LinesProperty),
-                typeof(string), typeof(TestCase));
+                typeof(string[]), typeof(TestCase));
 
         public static LiteTest FromTestCase(TestCase testCase)
         {
@@ -47,7 +47,7 @@ namespace SUnit.TestAdapter
         /// <summary>
         /// Index 3
         /// </summary>
-        private string TestMethodName { get; }
+        public string TestMethodName { get; }
 
         public LiteTest(UnitTest unitTest)
         {
@@ -99,7 +99,7 @@ namespace SUnit.TestAdapter
             @case.Source = Source;
             @case.DisplayName = TestMethodName;
             @case.FullyQualifiedName = $"{FullFixtureTypeName}+{Parsing.GetFactoryMethodName(CompoundFactoryName)}.{TestMethodName}";
-            @case.ExecutorUri = new Uri(SUnitTestDiscoverer.ExecutorUri);
+            @case.ExecutorUri = new Uri(SUnitTestExecutor.ExecutorUri);
             @case.SetPropertyValue(LinesProperty, ToLines());
 
             return @case;
