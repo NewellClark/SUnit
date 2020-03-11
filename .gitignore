@@ -8,3 +8,7 @@
 
 .vs/SUnit/v16/.suo
 *.testlog
+
+*.sqlite
+
+.vs/slnx.sqlite-journal
