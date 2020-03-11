@@ -12,8 +12,9 @@
 *.sqlite
 
 .vs/slnx.sqlite-journal
-/Solutions/SUnit/.vs/SUnit/DesignTimeBuild
 /Solutions/SUnit/.vs/SUnit/v16/Server/sqlite3
 /Solutions/SUnit/.vs/SUnit/v16/TestStore/1
 /Solutions/SUnit/.vs/slnx.sqlite-journal
-/Solutions/SUnit/.vs/SUnit/v16/.suo
+/Solutions/ExampleConsumer/.vs/ExampleConsumer/v16/Server/sqlite3
+/Solutions/ExampleConsumer/.vs/ExampleConsumer/v16/TestStore/0
+/Solutions/ExampleConsumer/.vs/ExampleConsumer/DesignTimeBuild

@@ -10,6 +10,8 @@
     <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
 
     <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+
+    <Configurations>Debug;Release;Debug Packages</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

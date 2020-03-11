@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SUnit.TestAdapter</id>
+    <version>1.0.0</version>
+    <authors>SUnit.TestAdapter</authors>
+    <owners>SUnit.TestAdapter</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="SUnit.Discovery" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="SUnit" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.TestPlatform.ObjectModel" version="16.5.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\bin\Debug\netstandard2.1\SUnit.TestAdapter.dll" target="lib\netstandard2.1\SUnit.TestAdapter.dll" />
+  </files>
+</package>
