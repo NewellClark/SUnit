@@ -224,6 +224,11 @@
             Gets the <see cref="T:SUnit.Discovery.Fixture"/> that defines the test.
             </summary>
         </member>
+        <member name="P:SUnit.Discovery.UnitTest.Factory">
+            <summary>
+            Gets the <see cref="T:SUnit.Discovery.Factory"/> that will be used to instantiate the test fixture.
+            </summary>
+        </member>
         <member name="P:SUnit.Discovery.UnitTest.Name">
             <summary>
             Gets the name of the test method.

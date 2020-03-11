@@ -73,7 +73,7 @@ namespace SUnit.Discovery
             public override object Build() => ctor.Invoke(Array.Empty<object>());
             public override bool IsDefaultConstructor => true;
             public override bool IsNamedConstructor => false;
-            public override string Name => "<default ctor>";
+            public override string Name => "ctor";
         }
 
         internal static Factory FromDefaultCtor(Fixture fixture, ConstructorInfo ctor)
