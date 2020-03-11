@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterDebugging", "AdapterDebugging\AdapterDebugging.csproj", "{EFAC9C20-1898-44C8-939C-4F8CD12C8298}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleTestLibrary", "..\SUnit\SampleTestLibrary\SampleTestLibrary.csproj", "{0B5357AE-D71E-4829-858D-C11FCA9351F0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug Packages|Any CPU = Debug Packages|Any CPU
@@ -23,14 +21,6 @@ Global
 		{EFAC9C20-1898-44C8-939C-4F8CD12C8298}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EFAC9C20-1898-44C8-939C-4F8CD12C8298}.SingleProjectPackage|Any CPU.ActiveCfg = Debug|Any CPU
 		{EFAC9C20-1898-44C8-939C-4F8CD12C8298}.SingleProjectPackage|Any CPU.Build.0 = Debug|Any CPU
-		{0B5357AE-D71E-4829-858D-C11FCA9351F0}.Debug Packages|Any CPU.ActiveCfg = Debug Packages|Any CPU
-		{0B5357AE-D71E-4829-858D-C11FCA9351F0}.Debug Packages|Any CPU.Build.0 = Debug Packages|Any CPU
-		{0B5357AE-D71E-4829-858D-C11FCA9351F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0B5357AE-D71E-4829-858D-C11FCA9351F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0B5357AE-D71E-4829-858D-C11FCA9351F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B5357AE-D71E-4829-858D-C11FCA9351F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0B5357AE-D71E-4829-858D-C11FCA9351F0}.SingleProjectPackage|Any CPU.ActiveCfg = SingleProjectPackage|Any CPU
-		{0B5357AE-D71E-4829-858D-C11FCA9351F0}.SingleProjectPackage|Any CPU.Build.0 = SingleProjectPackage|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

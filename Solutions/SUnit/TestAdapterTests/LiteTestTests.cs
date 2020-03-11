@@ -9,7 +9,7 @@ using nAssert = NUnit.Framework.Assert;
 
 namespace SUnit.TestAdapter
 {
-    public class Mock
+    internal class Mock
     {
         public Mock() => ConstructedBy = DefaultCtorName;
         public static Mock Alpha()

@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.0.3",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj",
         "projectName": "SUnit.Discovery",
@@ -75,7 +75,7 @@
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.0.3",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj",
         "projectName": "SUnit.TestAdapter",
@@ -158,7 +158,7 @@
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit\\SUnit.csproj": {
-      "version": "1.0.0.2",
+      "version": "1.0.0.3",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit\\SUnit.csproj",
         "projectName": "SUnit",

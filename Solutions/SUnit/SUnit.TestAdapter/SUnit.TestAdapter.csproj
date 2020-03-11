@@ -6,6 +6,7 @@
     <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
     <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
     <Configurations>Debug;Release;Debug Packages;SingleProjectPackage</Configurations>
+    <Version>1.0.0.3</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Packages|AnyCPU'">

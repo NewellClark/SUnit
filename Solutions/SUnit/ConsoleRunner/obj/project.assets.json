@@ -38,7 +38,7 @@
           "build/_._": {}
         }
       },
-      "SUnit/1.0.0.2": {
+      "SUnit/1.0.0.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "compile": {
@@ -48,12 +48,12 @@
           "bin/placeholder/SUnit.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0": {
+      "SUnit.Discovery/1.0.0.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
-          "SUnit": "1.0.0.2"
+          "SUnit": "1.0.0.3"
         },
         "compile": {
           "bin/placeholder/SUnit.Discovery.dll": {}
@@ -245,12 +245,12 @@
         "tools/uninstall.ps1"
       ]
     },
-    "SUnit/1.0.0.2": {
+    "SUnit/1.0.0.3": {
       "type": "project",
       "path": "../SUnit/SUnit.csproj",
       "msbuildProject": "../SUnit/SUnit.csproj"
     },
-    "SUnit.Discovery/1.0.0": {
+    "SUnit.Discovery/1.0.0.3": {
       "type": "project",
       "path": "../SUnit.Discovery/SUnit.Discovery.csproj",
       "msbuildProject": "../SUnit.Discovery/SUnit.Discovery.csproj"
@@ -258,8 +258,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
-      "SUnit >= 1.0.0.2",
-      "SUnit.Discovery >= 1.0.0"
+      "SUnit >= 1.0.0.3",
+      "SUnit.Discovery >= 1.0.0.3"
     ]
   },
   "packageFolders": {
