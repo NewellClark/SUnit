@@ -391,7 +391,7 @@
           "lib/netstandard2.0/NuGet.Frameworks.dll": {}
         }
       },
-      "SUnit/1.0.0": {
+      "SUnit/1.0.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/SUnit.dll": {}
@@ -1480,16 +1480,16 @@
         "nuget.frameworks.nuspec"
       ]
     },
-    "SUnit/1.0.0": {
-      "sha512": "th8q+qNBJZRHNI6NtX9dk88tXF4uBAMOy9iZ3ACnXIEduDTjfyJ7mSl690Iwq8XxqMMQ+0wuDw/EZKiTZG4Fug==",
+    "SUnit/1.0.0.2": {
+      "sha512": "eZRGLrd+9fUTMeIWghfK+BWHK7pBK6QnUm+yCYvr0FzUs0BXNvDzTkeqNMierYfvmdUfv534fEVp/KyrF/06/A==",
       "type": "package",
-      "path": "sunit/1.0.0",
+      "path": "sunit/1.0.0.2",
       "files": [
         ".nupkg.metadata",
         "LICENSE.md",
         "lib/netstandard2.1/SUnit.dll",
         "lib/netstandard2.1/SUnit.xml",
-        "sunit.1.0.0.nupkg.sha512",
+        "sunit.1.0.0.2.nupkg.sha512",
         "sunit.nuspec"
       ]
     },
@@ -3499,7 +3499,7 @@
     ".NETCoreApp,Version=v3.0": [
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Microsoft.TestPlatform.TestHost >= 16.5.0",
-      "SUnit >= 1.0.0",
+      "SUnit >= 1.0.0.2",
       "SUnit.TestAdapter >= 1.0.0"
     ]
   },
@@ -3560,7 +3560,7 @@
           },
           "SUnit": {
             "target": "Package",
-            "version": "[1.0.0, )"
+            "version": "[1.0.0.2, )"
           },
           "SUnit.TestAdapter": {
             "target": "Package",
