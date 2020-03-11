@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v3.0": {
       "SUnit.ConsoleRunner/1.0.0": {
         "dependencies": {
-          "SUnit": "1.0.0.2",
-          "SUnit.Discovery": "1.0.0"
+          "SUnit": "1.0.0.3",
+          "SUnit.Discovery": "1.0.0.3"
         },
         "runtime": {
           "SUnit.ConsoleRunner.dll": {}
@@ -27,15 +27,15 @@
       "Microsoft.CodeQuality.Analyzers/2.9.3": {},
       "Microsoft.NetCore.Analyzers/2.9.3": {},
       "Microsoft.NetFramework.Analyzers/2.9.3": {},
-      "SUnit/1.0.0.2": {
+      "SUnit/1.0.0.3": {
         "runtime": {
           "SUnit.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0": {
+      "SUnit.Discovery/1.0.0.3": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
-          "SUnit": "1.0.0.2"
+          "SUnit": "1.0.0.3"
         },
         "runtime": {
           "SUnit.Discovery.dll": {}
@@ -84,12 +84,12 @@
       "path": "microsoft.netframework.analyzers/2.9.3",
       "hashPath": "microsoft.netframework.analyzers.2.9.3.nupkg.sha512"
     },
-    "SUnit/1.0.0.2": {
+    "SUnit/1.0.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.Discovery/1.0.0": {
+    "SUnit.Discovery/1.0.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

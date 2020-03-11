@@ -10,9 +10,9 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "NUnit3TestAdapter": "3.15.1",
-          "SUnit": "1.0.0.2",
-          "SUnit.Discovery": "1.0.0",
-          "SUnit.TestAdapter": "1.0.0",
+          "SUnit": "1.0.0.3",
+          "SUnit.Discovery": "1.0.0.3",
+          "SUnit.TestAdapter": "1.0.0.3",
           "NUnit": "3.12.0"
         },
         "runtime": {
@@ -881,25 +881,25 @@
           }
         }
       },
-      "SUnit/1.0.0.2": {
+      "SUnit/1.0.0.3": {
         "runtime": {
           "SUnit.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0": {
+      "SUnit.Discovery/1.0.0.3": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
-          "SUnit": "1.0.0.2"
+          "SUnit": "1.0.0.3"
         },
         "runtime": {
           "SUnit.Discovery.dll": {}
         }
       },
-      "SUnit.TestAdapter/1.0.0": {
+      "SUnit.TestAdapter/1.0.0.3": {
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0.2",
-          "SUnit.Discovery": "1.0.0",
+          "SUnit": "1.0.0.3",
+          "SUnit.Discovery": "1.0.0.3",
           "System.Collections.Immutable": "1.7.0"
         },
         "runtime": {
@@ -1397,17 +1397,17 @@
       "path": "system.xml.xpath.xmldocument/4.3.0",
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
-    "SUnit/1.0.0.2": {
+    "SUnit/1.0.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.Discovery/1.0.0": {
+    "SUnit.Discovery/1.0.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.TestAdapter/1.0.0": {
+    "SUnit.TestAdapter/1.0.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

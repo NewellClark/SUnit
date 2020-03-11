@@ -22,3 +22,4 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.csprojAssemblyReference.cache

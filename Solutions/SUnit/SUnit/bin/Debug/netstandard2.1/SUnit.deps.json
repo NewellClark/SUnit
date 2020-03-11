@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "SUnit/1.0.0.2": {
+      "SUnit/1.0.0.3": {
         "dependencies": {
           "Microsoft.CodeQuality.Analyzers": "2.9.8"
         },
@@ -19,7 +19,7 @@
     }
   },
   "libraries": {
-    "SUnit/1.0.0.2": {
+    "SUnit/1.0.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
