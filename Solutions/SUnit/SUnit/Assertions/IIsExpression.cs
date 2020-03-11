@@ -36,9 +36,4 @@ namespace SUnit.Assertions
             get => ApplyConstraint(new NullConstraint<T>());
         }
     }
-
-
-
-
-
 }

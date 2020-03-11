@@ -43,5 +43,7 @@ namespace SampleTestLibrary
             return Assert.That(4).Is.LessThanOrEqualTo(5) &
                 Assert.That(5).Is.GreaterThan(4).And.EqualTo(2 + 3).And.LessThan(3);
         }
+
+        public Test HelloShowsUp() => Assert.That(4).Is.Not.Hello.EqualTo(7);
     }
 }
