@@ -5,7 +5,7 @@ using System.Text;
 namespace SUnit
 {
     /// <summary>
-    /// Contains methods for performing assertions. Every unit test framework has a class like this.
+    /// Contains methods for performing assertions. Every unit test framework has a class like  this.
     /// </summary>
     public static class Assert
     {

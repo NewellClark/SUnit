@@ -6,7 +6,7 @@
     <members>
         <member name="T:SUnit.Assert">
             <summary>
-            Contains methods for performing assertions. Every unit test framework has a class like this.
+            Contains methods for performing assertions. Every unit test framework has a class like  this.
             </summary>
         </member>
         <member name="M:SUnit.Assert.That``1(``0)">

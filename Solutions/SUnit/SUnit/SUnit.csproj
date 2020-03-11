@@ -4,11 +4,25 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
     <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <Configurations>Debug;Release;Debug Packages;SingleProjectPackage</Configurations>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>D:\LocalRepositories\SUnit\SUnit\SUnit\SUnit.xml</DocumentationFile>
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\SUnit.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SingleProjectPackage|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\SUnit.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Packages|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\SUnit.xml</DocumentationFile>
+    <OutputPath>D:\LocalRepositories\SUnit\PackageSource\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +30,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

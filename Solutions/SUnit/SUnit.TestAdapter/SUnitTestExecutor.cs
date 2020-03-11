@@ -14,7 +14,7 @@ using System.Threading;
 namespace SUnit.TestAdapter
 {
     [ExtensionUri(SUnitTestDiscoverer.ExecutorUri)]
-    public class SUnitTestExecutor : ITestExecutor
+    internal class SUnitTestExecutor : ITestExecutor
     {
         public void RunTests(IEnumerable<TestCase> tests, IRunContext runContext, IFrameworkHandle frameworkHandle)
         {

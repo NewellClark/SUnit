@@ -27,6 +27,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\LocalRepositories\\SUnit\\PackageSource": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://dotnet.myget.org/F/aspnetcore-master/api/v3/index.json": {},
           "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
@@ -117,6 +118,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\LocalRepositories\\SUnit\\PackageSource": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://dotnet.myget.org/F/aspnetcore-master/api/v3/index.json": {},
           "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
@@ -186,6 +188,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\LocalRepositories\\SUnit\\PackageSource": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://dotnet.myget.org/F/aspnetcore-master/api/v3/index.json": {},
           "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
@@ -211,6 +214,12 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.9.6, )"
+            },
             "Microsoft.TestPlatform.ObjectModel": {
               "target": "Package",
               "version": "[16.5.0, )"
@@ -258,6 +267,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\LocalRepositories\\SUnit\\PackageSource": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://dotnet.myget.org/F/aspnetcore-master/api/v3/index.json": {},
           "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}

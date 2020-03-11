@@ -109,7 +109,7 @@
         </member>
         <member name="T:SUnit.Discovery.Fixture">
             <summary>
-            A class that defines unit tests.
+            A class that defines unit tests. It must
             </summary>
         </member>
         <member name="M:SUnit.Discovery.Fixture.#ctor(System.Type)">

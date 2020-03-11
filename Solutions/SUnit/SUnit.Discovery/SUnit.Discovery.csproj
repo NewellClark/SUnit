@@ -4,10 +4,22 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
     <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <Configurations>Debug;Release;Debug Packages;SingleProjectPackage</Configurations>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\LocalRepositories\SUnit\SUnit\SUnit.xml</DocumentationFile>
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\SUnit.Discovery.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SingleProjectPackage|AnyCPU'">
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\SUnit.Discovery.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Packages|AnyCPU'">
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\SUnit.Discovery.xml</DocumentationFile>
+    <OutputPath>D:\LocalRepositories\SUnit\PackageSource</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +28,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SUnit\SUnit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -12,7 +12,7 @@ namespace SUnit.TestAdapter
 {
     [FileExtension(".dll")]
     [DefaultExecutorUri(ExecutorUri)]
-    public class SUnitTestDiscoverer : ITestDiscoverer
+    internal class SUnitTestDiscoverer : ITestDiscoverer
     {
         internal const string ExecutorUri = "executor://SUnitTestExecutor";
 
