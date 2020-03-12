@@ -1,5 +1,5 @@
-﻿using SUnit.Discovery;
-using SUnit.Discovery.Results;
+﻿using SUnit.DiscoveryOLD;
+using SUnit.DiscoveryOLD.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,12 +1,12 @@
 ﻿using NUnit.Framework;
-using SUnit.Discovery.Results;
+using SUnit.DiscoveryOLD.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using assert = NUnit.Framework.Assert;
 
-namespace SUnit.Discovery
+namespace SUnit.DiscoveryOLD
 {
     [TestFixture]
     public class UnitTestTests

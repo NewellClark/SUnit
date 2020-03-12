@@ -5,10 +5,10 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace SUnit.Discovery
+namespace SUnit.DiscoveryOLD
 {
     /// <summary>
-    /// An object that can be used to instantiate a <see cref="Discovery.Fixture"/>.
+    /// An object that can be used to instantiate a <see cref="DiscoveryOLD.Fixture"/>.
     /// </summary>
     internal abstract class Factory
     {
@@ -20,14 +20,14 @@ namespace SUnit.Discovery
         }
 
         /// <summary>
-        /// Gets the <see cref="Discovery.Fixture"/> that the <see cref="Factory"/> instantiates.
+        /// Gets the <see cref="DiscoveryOLD.Fixture"/> that the <see cref="Factory"/> instantiates.
         /// </summary>
         public Fixture Fixture { get; }
 
         /// <summary>
-        /// Instantiates the <see cref="Discovery.Fixture"/>.
+        /// Instantiates the <see cref="DiscoveryOLD.Fixture"/>.
         /// </summary>
-        /// <returns>An instantiated <see cref="Discovery.Fixture"/>.</returns>
+        /// <returns>An instantiated <see cref="DiscoveryOLD.Fixture"/>.</returns>
         public abstract object Build();
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace SUnit.Discovery
 
         /// <summary>
         /// Uses the current <see cref="Factory"/> to instantiate all the <see cref="UnitTest"/>s
-        /// on the <see cref="SUnit.Discovery.Fixture"/>.
+        /// on the <see cref="SUnit.DiscoveryOLD.Fixture"/>.
         /// </summary>
         /// <returns></returns>
         public IEnumerable<UnitTest> CreateTests()

@@ -4,56 +4,56 @@
         <name>SUnit.Discovery</name>
     </assembly>
     <members>
-        <member name="T:SUnit.Discovery.Factory">
+        <member name="T:SUnit.DiscoveryOLD.Factory">
             <summary>
-            An object that can be used to instantiate a <see cref="T:SUnit.Discovery.Fixture"/>.
+            An object that can be used to instantiate a <see cref="T:SUnit.DiscoveryOLD.Fixture"/>.
             </summary>
         </member>
-        <member name="P:SUnit.Discovery.Factory.Fixture">
+        <member name="P:SUnit.DiscoveryOLD.Factory.Fixture">
             <summary>
-            Gets the <see cref="T:SUnit.Discovery.Fixture"/> that the <see cref="T:SUnit.Discovery.Factory"/> instantiates.
+            Gets the <see cref="T:SUnit.DiscoveryOLD.Fixture"/> that the <see cref="T:SUnit.DiscoveryOLD.Factory"/> instantiates.
             </summary>
         </member>
-        <member name="M:SUnit.Discovery.Factory.Build">
+        <member name="M:SUnit.DiscoveryOLD.Factory.Build">
             <summary>
-            Instantiates the <see cref="T:SUnit.Discovery.Fixture"/>.
+            Instantiates the <see cref="T:SUnit.DiscoveryOLD.Fixture"/>.
             </summary>
-            <returns>An instantiated <see cref="T:SUnit.Discovery.Fixture"/>.</returns>
+            <returns>An instantiated <see cref="T:SUnit.DiscoveryOLD.Fixture"/>.</returns>
         </member>
-        <member name="P:SUnit.Discovery.Factory.IsDefaultConstructor">
+        <member name="P:SUnit.DiscoveryOLD.Factory.IsDefaultConstructor">
             <summary>
-            Indicates whether the current <see cref="T:SUnit.Discovery.Factory"/> is a default constructor.
-            </summary>
-        </member>
-        <member name="P:SUnit.Discovery.Factory.IsNamedConstructor">
-            <summary>
-            Indicates whether the current <see cref="T:SUnit.Discovery.Factory"/> is a named constructor.
+            Indicates whether the current <see cref="T:SUnit.DiscoveryOLD.Factory"/> is a default constructor.
             </summary>
         </member>
-        <member name="P:SUnit.Discovery.Factory.Name">
+        <member name="P:SUnit.DiscoveryOLD.Factory.IsNamedConstructor">
+            <summary>
+            Indicates whether the current <see cref="T:SUnit.DiscoveryOLD.Factory"/> is a named constructor.
+            </summary>
+        </member>
+        <member name="P:SUnit.DiscoveryOLD.Factory.Name">
             <summary>
             Gets the name of the constructor. For named constructors, this will be the name of the method.
             </summary>
         </member>
-        <member name="M:SUnit.Discovery.Factory.CreateTests">
+        <member name="M:SUnit.DiscoveryOLD.Factory.CreateTests">
             <summary>
-            Uses the current <see cref="T:SUnit.Discovery.Factory"/> to instantiate all the <see cref="T:SUnit.Discovery.UnitTest"/>s
-            on the <see cref="T:SUnit.Discovery.Fixture"/>.
+            Uses the current <see cref="T:SUnit.DiscoveryOLD.Factory"/> to instantiate all the <see cref="T:SUnit.DiscoveryOLD.UnitTest"/>s
+            on the <see cref="T:SUnit.DiscoveryOLD.Fixture"/>.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:SUnit.Discovery.Factory.ToString">
+        <member name="M:SUnit.DiscoveryOLD.Factory.ToString">
             <summary>
             Overridden to display the name.
             </summary>
             <returns>The name.</returns>
         </member>
-        <member name="T:SUnit.Discovery.Finder">
+        <member name="T:SUnit.DiscoveryOLD.Finder">
             <summary>
             Contains methods for finding tests.
             </summary>
         </member>
-        <member name="M:SUnit.Discovery.Finder.IsValidTestMethod(System.Reflection.MethodInfo)">
+        <member name="M:SUnit.DiscoveryOLD.Finder.IsValidTestMethod(System.Reflection.MethodInfo)">
             <summary>
             Indicates whether the specified <see cref="T:System.Reflection.MethodInfo"/> is a valid test method.
             </summary>
@@ -63,7 +63,7 @@
             <paramref name="method"/> is null.
             </exception>
         </member>
-        <member name="M:SUnit.Discovery.Finder.FindAllValidTestMethods(System.Type)">
+        <member name="M:SUnit.DiscoveryOLD.Finder.FindAllValidTestMethods(System.Type)">
             <summary>
             Finds all the methods on the specified type that are valid test methods.
             </summary>
@@ -73,14 +73,14 @@
             <paramref name="type"/> is null.
             </exception>
         </member>
-        <member name="M:SUnit.Discovery.Finder.GetDefaultConstructor(System.Type)">
+        <member name="M:SUnit.DiscoveryOLD.Finder.GetDefaultConstructor(System.Type)">
             <summary>
             Gets the eligible default constructor for the specified type, if one exists.
             </summary>
             <param name="type">The type to search.</param>
             <returns>The eligible default constructor, if one exists. <see langword="null"/> if none is found.</returns>
         </member>
-        <member name="M:SUnit.Discovery.Finder.FindNamedConstructors(System.Type)">
+        <member name="M:SUnit.DiscoveryOLD.Finder.FindNamedConstructors(System.Type)">
             <summary>
             Finds all the valid named constructors on the specified type.
             </summary>
@@ -88,7 +88,7 @@
             <returns>All the valid named constructor methods on the specified fixture type.</returns>
             <exception cref="T:System.ArgumentNullException"><paramref name="type"/> is <see langword="null"/>.</exception>
         </member>
-        <member name="M:SUnit.Discovery.Finder.FindNamedConstructorsOnNonGenericType(System.Type)">
+        <member name="M:SUnit.DiscoveryOLD.Finder.FindNamedConstructorsOnNonGenericType(System.Type)">
             <summary>
             Finds all the valid named constructors on a non generic, or constructed generic, fixture type.
             </summary>
@@ -97,7 +97,7 @@
             must be <see langword="false"/>.</param>
             <returns>All valid named constructor methods found on the fixture type.</returns>
         </member>
-        <member name="M:SUnit.Discovery.Finder.FindNamedConstructorsOnGenericType(System.Type)">
+        <member name="M:SUnit.DiscoveryOLD.Finder.FindNamedConstructorsOnGenericType(System.Type)">
             <summary>
             Finds all the valid named constructors on an unconstructed generic fixture type.
             On an unconstructed generic fixture type, a valid named constructor returns a constructed version
@@ -107,137 +107,137 @@
             words, <see cref="P:System.Type.ContainsGenericParameters"/> must be <see langword="true"/>.</param>
             <returns>All valid named constructor methods found on the fixture type.</returns>
         </member>
-        <member name="T:SUnit.Discovery.Fixture">
+        <member name="T:SUnit.DiscoveryOLD.Fixture">
             <summary>
             A class that defines unit tests. It must
             </summary>
         </member>
-        <member name="M:SUnit.Discovery.Fixture.#ctor(System.Type)">
+        <member name="M:SUnit.DiscoveryOLD.Fixture.#ctor(System.Type)">
             <summary>
-            Creates a new <see cref="T:SUnit.Discovery.Fixture"/> for the specified <see cref="T:System.Type"/>.
+            Creates a new <see cref="T:SUnit.DiscoveryOLD.Fixture"/> for the specified <see cref="T:System.Type"/>.
             </summary>
             <param name="type"></param>
         </member>
-        <member name="P:SUnit.Discovery.Fixture.Name">
+        <member name="P:SUnit.DiscoveryOLD.Fixture.Name">
             <summary>
             Gets the unqualified name of the class that the fixture represents.
             </summary>
         </member>
-        <member name="P:SUnit.Discovery.Fixture.Tests">
+        <member name="P:SUnit.DiscoveryOLD.Fixture.Tests">
             <summary>
             Gets all the test methods on the fixture.
             </summary>
         </member>
-        <member name="P:SUnit.Discovery.Fixture.Factories">
+        <member name="P:SUnit.DiscoveryOLD.Fixture.Factories">
             <summary>
             Gets all the methods that can be used to instantiate the fixture.
             </summary>
         </member>
-        <member name="T:SUnit.Discovery.Results.RanSuccessfullyResult">
+        <member name="T:SUnit.DiscoveryOLD.Results.RanSuccessfullyResult">
             <summary>
-            The <see cref="T:SUnit.Discovery.Results.TestResult"/> that is returned when a test runs to completion successfully.
+            The <see cref="T:SUnit.DiscoveryOLD.Results.TestResult"/> that is returned when a test runs to completion successfully.
             </summary>
         </member>
-        <member name="P:SUnit.Discovery.Results.RanSuccessfullyResult.Result">
+        <member name="P:SUnit.DiscoveryOLD.Results.RanSuccessfullyResult.Result">
             <summary>
             The <see cref="T:SUnit.Test"/> returned by the test method.
             </summary>
         </member>
-        <member name="T:SUnit.Discovery.Results.ResultKind">
+        <member name="T:SUnit.DiscoveryOLD.Results.ResultKind">
             <summary>
             The kind of result.
             </summary>
         </member>
-        <member name="F:SUnit.Discovery.Results.ResultKind.Error">
+        <member name="F:SUnit.DiscoveryOLD.Results.ResultKind.Error">
             <summary>
             The test did not run due to an error.
             </summary>
         </member>
-        <member name="F:SUnit.Discovery.Results.ResultKind.Fail">
+        <member name="F:SUnit.DiscoveryOLD.Results.ResultKind.Fail">
             <summary>
             The test ran, and it failed.
             </summary>
         </member>
-        <member name="F:SUnit.Discovery.Results.ResultKind.Pass">
+        <member name="F:SUnit.DiscoveryOLD.Results.ResultKind.Pass">
             <summary>
             The test ran, and it passed.
             </summary>
         </member>
-        <member name="T:SUnit.Discovery.Results.TestResult">
+        <member name="T:SUnit.DiscoveryOLD.Results.TestResult">
             <summary>
-            The result of running a <see cref="T:SUnit.Discovery.UnitTest"/>.
+            The result of running a test.
             </summary>
         </member>
-        <member name="P:SUnit.Discovery.Results.TestResult.Kind">
+        <member name="P:SUnit.DiscoveryOLD.Results.TestResult.Kind">
             <summary>
             Whether the result was a pass, fail, or error.
             </summary>
         </member>
-        <member name="T:SUnit.Discovery.TestMethod">
+        <member name="T:SUnit.DiscoveryOLD.TestMethod">
             <summary>
             A unit test method.
             </summary>
         </member>
-        <member name="P:SUnit.Discovery.TestMethod.Fixture">
+        <member name="P:SUnit.DiscoveryOLD.TestMethod.Fixture">
             <summary>
-            Gets the <see cref="T:SUnit.Discovery.Fixture"/> that defines the <see cref="T:SUnit.Discovery.TestMethod"/>.
+            Gets the <see cref="T:SUnit.DiscoveryOLD.Fixture"/> that defines the <see cref="T:SUnit.DiscoveryOLD.TestMethod"/>.
             </summary>
         </member>
-        <member name="P:SUnit.Discovery.TestMethod.Name">
+        <member name="P:SUnit.DiscoveryOLD.TestMethod.Name">
             <summary>
             Gets the name of the method.
             </summary>
         </member>
-        <member name="M:SUnit.Discovery.TestMethod.Execute(System.Object)">
+        <member name="M:SUnit.DiscoveryOLD.TestMethod.Execute(System.Object)">
             <summary>
-            Executes the <see cref="T:SUnit.Discovery.TestMethod"/> for the specified fixture instance.
+            Executes the <see cref="T:SUnit.DiscoveryOLD.TestMethod"/> for the specified fixture instance.
             </summary>
-            <param name="fixture">An instance of the class that defines the <see cref="T:SUnit.Discovery.TestMethod"/>.</param>
+            <param name="fixture">An instance of the class that defines the <see cref="T:SUnit.DiscoveryOLD.TestMethod"/>.</param>
             <returns>The result of executing the test.</returns>
         </member>
-        <member name="M:SUnit.Discovery.TestMethod.ToString">
+        <member name="M:SUnit.DiscoveryOLD.TestMethod.ToString">
             <summary>
             Overridden to display the method name.
             </summary>
             <returns></returns>
         </member>
-        <member name="T:SUnit.Discovery.UnitTest">
+        <member name="T:SUnit.DiscoveryOLD.UnitTest">
             <summary>
             A single unit test that is ready to be executed.
             </summary>
         </member>
-        <member name="M:SUnit.Discovery.UnitTest.#ctor(SUnit.Discovery.TestMethod,SUnit.Discovery.Factory)">
+        <member name="M:SUnit.DiscoveryOLD.UnitTest.#ctor(SUnit.DiscoveryOLD.TestMethod,SUnit.DiscoveryOLD.Factory)">
             <summary>
-            Creates a new <see cref="T:SUnit.Discovery.UnitTest"/> from the specified <see cref="T:SUnit.Discovery.TestMethod"/> and
-            the specified <see cref="T:SUnit.Discovery.Factory"/>.
+            Creates a new <see cref="T:SUnit.DiscoveryOLD.UnitTest"/> from the specified <see cref="T:SUnit.DiscoveryOLD.TestMethod"/> and
+            the specified <see cref="T:SUnit.DiscoveryOLD.Factory"/>.
             </summary>
             <param name="method"></param>
             <param name="factory"></param>
         </member>
-        <member name="P:SUnit.Discovery.UnitTest.Fixture">
+        <member name="P:SUnit.DiscoveryOLD.UnitTest.Fixture">
             <summary>
-            Gets the <see cref="T:SUnit.Discovery.Fixture"/> that defines the test.
+            Gets the <see cref="T:SUnit.DiscoveryOLD.Fixture"/> that defines the test.
             </summary>
         </member>
-        <member name="P:SUnit.Discovery.UnitTest.Factory">
+        <member name="P:SUnit.DiscoveryOLD.UnitTest.Factory">
             <summary>
-            Gets the <see cref="T:SUnit.Discovery.Factory"/> that will be used to instantiate the test fixture.
+            Gets the <see cref="T:SUnit.DiscoveryOLD.Factory"/> that will be used to instantiate the test fixture.
             </summary>
         </member>
-        <member name="P:SUnit.Discovery.UnitTest.Name">
+        <member name="P:SUnit.DiscoveryOLD.UnitTest.Name">
             <summary>
             Gets the name of the test method.
             </summary>
         </member>
-        <member name="M:SUnit.Discovery.UnitTest.ToString">
+        <member name="M:SUnit.DiscoveryOLD.UnitTest.ToString">
             <summary>
             Overridden to display the name of the method.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:SUnit.Discovery.UnitTest.Run">
+        <member name="M:SUnit.DiscoveryOLD.UnitTest.Run">
             <summary>
-            Runs the unit test, returning a <see cref="T:SUnit.Discovery.Results.TestResult"/>.
+            Runs the unit test, returning a <see cref="T:SUnit.DiscoveryOLD.Results.TestResult"/>.
             </summary>
             <returns></returns>
         </member>

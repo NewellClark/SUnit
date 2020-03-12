@@ -1,4 +1,4 @@
-﻿using SUnit.Discovery.Results;
+﻿using SUnit.DiscoveryOLD.Results;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace SUnit.Discovery
+namespace SUnit.DiscoveryOLD
 {
     /// <summary>
     /// A single unit test that is ready to be executed.
@@ -17,7 +17,7 @@ namespace SUnit.Discovery
 
         /// <summary>
         /// Creates a new <see cref="UnitTest"/> from the specified <see cref="TestMethod"/> and
-        /// the specified <see cref="Discovery.Factory"/>.
+        /// the specified <see cref="DiscoveryOLD.Factory"/>.
         /// </summary>
         /// <param name="method"></param>
         /// <param name="factory"></param>
@@ -31,12 +31,12 @@ namespace SUnit.Discovery
         }
 
         /// <summary>
-        /// Gets the <see cref="Discovery.Fixture"/> that defines the test.
+        /// Gets the <see cref="DiscoveryOLD.Fixture"/> that defines the test.
         /// </summary>
         public Fixture Fixture => Factory.Fixture;
 
         /// <summary>
-        /// Gets the <see cref="Discovery.Factory"/> that will be used to instantiate the test fixture.
+        /// Gets the <see cref="DiscoveryOLD.Factory"/> that will be used to instantiate the test fixture.
         /// </summary>
         public Factory Factory { get; }
 

@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using static NUnit.Framework.Assert;
 
-namespace SUnit.Discovery
+namespace SUnit.DiscoveryOLD
 {
     [TestFixture]
     public class FinderTests

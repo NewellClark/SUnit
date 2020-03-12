@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestPlatform.ObjectModel;
-using SUnit.Discovery;
-using SUnit.Discovery.Results;
+using SUnit.DiscoveryOLD;
+using SUnit.DiscoveryOLD.Results;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -105,7 +105,7 @@ namespace SUnit.TestAdapter
             return @case;
         }
 
-        public Discovery.Results.TestResult Run()
+        public DiscoveryOLD.Results.TestResult Run()
         {
             Assembly assembly = Assembly.LoadFrom(Source);
             Type fixtureType = assembly.GetType(FullFixtureTypeName);

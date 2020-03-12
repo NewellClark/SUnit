@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace SUnit.Discovery.Results
+namespace SUnit.DiscoveryOLD.Results
 {
     /// <summary>
     /// The kind of result.
@@ -27,7 +27,7 @@ namespace SUnit.Discovery.Results
     }
 
     /// <summary>
-    /// The result of running a <see cref="UnitTest"/>.
+    /// The result of running a test.
     /// </summary>
     internal abstract class TestResult
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace SUnit.Discovery
+namespace SUnit.DiscoveryOLD
 {
     /// <summary>
     /// A class that defines unit tests. It must

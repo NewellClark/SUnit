@@ -1,14 +1,14 @@
 ﻿using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 using Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter;
-using SUnit.Discovery;
+using SUnit.DiscoveryOLD;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 using VSResult = Microsoft.VisualStudio.TestPlatform.ObjectModel.TestResult;
-using SUResult = SUnit.Discovery.Results.TestResult;
-using SUnit.Discovery.Results;
+using SUResult = SUnit.DiscoveryOLD.Results.TestResult;
+using SUnit.DiscoveryOLD.Results;
 using System.Threading;
 
 namespace SUnit.TestAdapter

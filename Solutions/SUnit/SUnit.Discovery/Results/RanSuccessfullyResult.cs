@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SUnit.Discovery.Results
+namespace SUnit.DiscoveryOLD.Results
 {
     /// <summary>
     /// The <see cref="TestResult"/> that is returned when a test runs to completion successfully.
