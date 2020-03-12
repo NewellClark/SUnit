@@ -13,7 +13,7 @@ namespace SUnit.Discovery
 
             try
             {
-                Test outcome = unitTest.Run();
+                Test outcome = unitTest.Execute();
                 return new RanSuccessfullyResult(unitTest.Name, outcome);
             }
 #pragma warning disable CA1031 // Do not catch general exception types

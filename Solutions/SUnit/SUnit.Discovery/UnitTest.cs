@@ -21,7 +21,7 @@ namespace SUnit.Discovery
 
         public string Name => method.Name;
 
-        public Test Run()
+        public Test Execute()
         {
             object fixture = factory.Build();
             Func<Test> func = (Func<Test>)method.CreateDelegate(typeof(Func<Test>), fixture);
