@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnit.TestAdapter", "SUnit.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAdapterTests", "TestAdapterTests\TestAdapterTests.csproj", "{2FA081E8-BC64-449A-ADD9-D4644CE6D8E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogfoodingTests", "DogfoodingTests\DogfoodingTests.csproj", "{F1774DF5-6D9A-4B34-88E7-A4F8A491534B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug Packages|Any CPU = Debug Packages|Any CPU
@@ -71,6 +73,14 @@ Global
 		{2FA081E8-BC64-449A-ADD9-D4644CE6D8E5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2FA081E8-BC64-449A-ADD9-D4644CE6D8E5}.SingleProjectPackage|Any CPU.ActiveCfg = Debug|Any CPU
 		{2FA081E8-BC64-449A-ADD9-D4644CE6D8E5}.SingleProjectPackage|Any CPU.Build.0 = Debug|Any CPU
+		{F1774DF5-6D9A-4B34-88E7-A4F8A491534B}.Debug Packages|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1774DF5-6D9A-4B34-88E7-A4F8A491534B}.Debug Packages|Any CPU.Build.0 = Debug|Any CPU
+		{F1774DF5-6D9A-4B34-88E7-A4F8A491534B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1774DF5-6D9A-4B34-88E7-A4F8A491534B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1774DF5-6D9A-4B34-88E7-A4F8A491534B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1774DF5-6D9A-4B34-88E7-A4F8A491534B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1774DF5-6D9A-4B34-88E7-A4F8A491534B}.SingleProjectPackage|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1774DF5-6D9A-4B34-88E7-A4F8A491534B}.SingleProjectPackage|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
