@@ -6,9 +6,13 @@ using System.Text;
 
 namespace SUnit.Assertions
 {
+    /// <inheritdoc/>
     public interface IIsExpressionEnumerable<T> : 
         IIsExpression<IEnumerable<T>, IIsExpressionEnumerable<T>, IsTestEnumerable<T>>
     {
+        /// <summary>
+        /// Tests whether the sequence is empty. Null is NOT empty!
+        /// </summary>
         public IsTestEnumerable<T> Empty
         {
             get
@@ -41,7 +45,13 @@ namespace SUnit.Assertions
         /// <returns></returns>
         public IsTestEnumerable<T> SetEqualTo(IEnumerable<T> expected) => SetEqualTo(expected, EqualityComparer<T>.Default);
 
-        
+        /// <summary>
+        /// Tests whether the actual sequence has the same elements in the same order.
+        /// </summary>
+        /// <param name="expected"></param>
+        /// <param name="comparer">The equality comparer to use to compare elements.</param>
+        /// <returns>A test that tests whether the actual sequence has the same elements in the same order
+        /// as the expected sequence.</returns>
         public IsTestEnumerable<T> SequenceEqualTo(IEnumerable<T> expected, IEqualityComparer<T> comparer)
         {
             if (comparer is null) throw new ArgumentNullException(nameof(comparer));
@@ -49,10 +59,39 @@ namespace SUnit.Assertions
             return ApplyConstraint(new SequenceEqualityConstraint<T>(expected, comparer));
         }
 
-
+        /// <summary>
+        /// Tests whether the current sequence has all the same items in the same order as the expected sequence.
+        /// </summary>
+        /// <param name="expected"></param>
+        /// <returns>A test that verifies that the actual sequence and the expected sequence have 
+        /// the same items in the same order.</returns>
         public IsTestEnumerable<T> SequenceEqualTo(IEnumerable<T> expected)
         {
             return SequenceEqualTo(expected, EqualityComparer<T>.Default);
+        }
+
+        /// <summary>
+        /// Tests whether the current sequence has the same number of all the same items, in any old order.
+        /// </summary>
+        /// <param name="expected"></param>
+        /// <param name="comparer"></param>
+        /// <returns></returns>
+        public IsTestEnumerable<T> EquivalentTo(IEnumerable<T> expected, IEqualityComparer<T> comparer)
+        {
+            if (comparer is null) throw new ArgumentNullException(nameof(comparer));
+
+            return ApplyConstraint(new EquivalentToConstraint<T>(expected, comparer));
+        }
+
+        /// <summary>
+        /// Tests whether the current sequence has the same number of all the same items as the expected sequence.
+        /// Order does not matter.
+        /// </summary>
+        /// <param name="expected"></param>
+        /// <returns></returns>
+        public IsTestEnumerable<T> EquivalentTo(IEnumerable<T> expected)
+        {
+            return EquivalentTo(expected, EqualityComparer<T>.Default);
         }
     }
 

@@ -1,5 +1,6 @@
 ﻿using SUnit.Assertions;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
@@ -66,5 +67,43 @@ namespace SUnit.Constraints
 
             return equalityFunction(left, right);
         }
+
+        /// <summary>
+        /// Checks if an <see cref="IEnumerable"/> is actually a collection. If so, returns the count. Otherwise, 
+        /// returns null.
+        /// </summary>
+        /// <param name="sequence"></param>
+        /// <returns>The number of items in the collection if the sequence was actually a collection. Otherwise, null.</returns>
+        public static int? TryGetCount(IEnumerable sequence)
+        {
+            if (sequence is null) throw new ArgumentNullException(nameof(sequence));
+
+            if (sequence is ICollection collection)
+                return collection.Count;
+
+            return null;
+        }
+
+        /// <summary>
+        /// Checks to see if the sequence is really a collection. If it is, returns the count. Otherwise, returns null.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sequence"></param>
+        /// <returns>The number of items in the sequence if it was actually a collection. Otherwise, null.</returns>
+        public static int? TryGetCount<T>(IEnumerable<T> sequence)
+        {
+            if (sequence is null) throw new ArgumentNullException(nameof(sequence));
+
+            if (sequence is ICollection<T> collection)
+                return collection.Count;
+            if (sequence is IReadOnlyCollection<T> roc)
+                return roc.Count;
+            if (sequence is ICollection nonGeneric)
+                return nonGeneric.Count;
+
+            return null;
+        }
+
+
     }
 }

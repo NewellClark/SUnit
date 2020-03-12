@@ -9,6 +9,7 @@ namespace ActualLegitUnitTests
     public class EnumerableAssertions
     {
         private static T[] Iter<T>(params T[] items) => items;
+        private static readonly IEnumerable<int> @null = null;
 
         public class SetEqualTo
         {
@@ -58,13 +59,6 @@ namespace ActualLegitUnitTests
 
         public class SequenceEqualTo
         {
-            private readonly IEnumerable<int> @null = null;
-            private IEnumerable<T> MakeEmptySequence<T>()
-            {
-                yield break;
-            }
-            
-
             public Test Null_Equals_Null() => Assert.That(@null).Is.SequenceEqualTo(@null);
 
             public Test Empty_Equals_Empty() => Assert.That(Enumerable.Empty<object>())
@@ -103,5 +97,53 @@ namespace ActualLegitUnitTests
             }
         }
         
+        public class EquivalentTo
+        {
+            public Test Empty_IsEquivalentTo_Empty()
+            {
+                return Assert.That(Iter<int>()).Is.EquivalentTo(Iter<int>());
+            }
+
+            public Test Null_IsEquivalentTo_Null()
+            {
+                return Assert.That(@null).Is.EquivalentTo(@null);
+            }
+
+            public Test Empty_IsNotEquivalentTo_Null()
+            {
+                return Assert.That(Iter<int>()).Is.Not.EquivalentTo(@null) &
+                    Assert.That(@null).Is.Not.EquivalentTo(Iter<int>());
+            }
+
+            public Test OrderDoesNotMatter()
+            {
+                return Assert.That(Iter(4, 69, -1000))
+                    .Is.EquivalentTo(Iter(69, -1000, 4));
+            }
+
+            public Test DuplicatesDoMatter()
+            {
+                return Assert.That(Iter(1, 3, 7, 8, 3))
+                    .Is.Not.EquivalentTo(Iter(7, 7, 8, 3, 1, 1));
+            }
+
+            public Test Empty_IsNotEquivalentToNonEmpty()
+            {
+                return Assert.That(Iter<int>()).Is.Not.EquivalentTo(Iter(71)) &
+                    Assert.That(Iter(14, -123)).Is.Not.EquivalentTo(Iter<int>());
+            }
+
+            public Test SingleNullItems_InEquivalentSequences()
+            {
+                return Assert.That(Iter("hello", null, "mass", "hole"))
+                    .Is.EquivalentTo(Iter(null, "hole", "hello", "mass"));
+            }
+
+            public Test DuplicateNulls_PreventPassingtest()
+            {
+                return Assert.That(Iter("Hi", null, null, null, "Baby"))
+                    .Is.Not.EquivalentTo(Iter("Baby", null, null, "Hi"));
+            }
+        }
     }
 }

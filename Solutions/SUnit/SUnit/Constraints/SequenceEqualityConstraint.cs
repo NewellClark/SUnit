@@ -28,6 +28,11 @@ namespace SUnit.Constraints
             Debug.Assert(actual != null);
             Debug.Assert(expected != null);
 
+            int? leftCount = Constraint.TryGetCount(actual);
+            int? rightCount = Constraint.TryGetCount(expected);
+            if (leftCount.HasValue && rightCount.HasValue && leftCount.Value != rightCount.Value)
+                return false;
+
             using var leftIter = actual.GetEnumerator();
             using var rightIter = expected.GetEnumerator();
 
