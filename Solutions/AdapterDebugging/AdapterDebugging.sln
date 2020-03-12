@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterDebugging", "AdapterDebugging\AdapterDebugging.csproj", "{EFAC9C20-1898-44C8-939C-4F8CD12C8298}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdapterDebugging", "AdapterDebugging\AdapterDebugging.csproj", "{EFAC9C20-1898-44C8-939C-4F8CD12C8298}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActualLegitUnitTests", "ActualLegitUnitTests\ActualLegitUnitTests.csproj", "{FBB18FBE-3AA7-4F0B-A9A2-7D11B483A19D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{EFAC9C20-1898-44C8-939C-4F8CD12C8298}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EFAC9C20-1898-44C8-939C-4F8CD12C8298}.SingleProjectPackage|Any CPU.ActiveCfg = Debug|Any CPU
 		{EFAC9C20-1898-44C8-939C-4F8CD12C8298}.SingleProjectPackage|Any CPU.Build.0 = Debug|Any CPU
+		{FBB18FBE-3AA7-4F0B-A9A2-7D11B483A19D}.Debug Packages|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBB18FBE-3AA7-4F0B-A9A2-7D11B483A19D}.Debug Packages|Any CPU.Build.0 = Debug|Any CPU
+		{FBB18FBE-3AA7-4F0B-A9A2-7D11B483A19D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBB18FBE-3AA7-4F0B-A9A2-7D11B483A19D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBB18FBE-3AA7-4F0B-A9A2-7D11B483A19D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBB18FBE-3AA7-4F0B-A9A2-7D11B483A19D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBB18FBE-3AA7-4F0B-A9A2-7D11B483A19D}.SingleProjectPackage|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBB18FBE-3AA7-4F0B-A9A2-7D11B483A19D}.SingleProjectPackage|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

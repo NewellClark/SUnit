@@ -92,3 +92,4 @@ D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\obj\Debug
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\obj\Debug\netcoreapp3.1\AdapterDebugging.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\obj\Debug\netcoreapp3.1\AdapterDebugging.dll
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\obj\Debug\netcoreapp3.1\AdapterDebugging.pdb
+D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\obj\Debug\netcoreapp3.1\AdapterDebugging.csprojAssemblyReference.cache

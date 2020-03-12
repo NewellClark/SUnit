@@ -9,7 +9,7 @@
             Contains methods for performing assertions. Every unit test framework has a class like  this.
             </summary>
         </member>
-        <member name="M:SUnit.Assert.That``1(``0)">
+        <member name="M:SUnit.Assert.That(System.Object)">
             <summary>
             Used to specify the actual value when writing assertions. For example,
             <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
@@ -416,6 +416,64 @@
         <member name="M:SUnit.Assertions.IsExpressionDouble.CreateExpression(System.Nullable{System.Double},SUnit.Assertions.ConstraintModifier{System.Nullable{System.Double}})">
             <inheritdoc/>
         </member>
+        <member name="T:SUnit.Assertions.IIsExpressionEnumerable`1">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpressionEnumerable`1.Empty">
+            <summary>
+            Tests whether the sequence is empty. Null is NOT empty!
+            </summary>
+        </member>
+        <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.SetEqualTo(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Tests whether the actual sequence has all the same elements as the expected sequence. Order does not matter,
+            and duplicates do not matter.
+            </summary>
+            <param name="expected"></param>
+            <param name="comparer">The equality comparer to use to compare items.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.SetEqualTo(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Tests whether the actual sequence has all the same elements as the expected sequence. Order does not matter, and
+            duplicates do not matter.
+            </summary>
+            <param name="expected"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.SequenceEqualTo(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Tests whether the actual sequence has the same elements in the same order.
+            </summary>
+            <param name="expected"></param>
+            <param name="comparer">The equality comparer to use to compare elements.</param>
+            <returns>A test that tests whether the actual sequence has the same elements in the same order
+            as the expected sequence.</returns>
+        </member>
+        <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.SequenceEqualTo(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Tests whether the current sequence has all the same items in the same order as the expected sequence.
+            </summary>
+            <param name="expected"></param>
+            <returns>A test that verifies that the actual sequence and the expected sequence have 
+            the same items in the same order.</returns>
+        </member>
+        <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.EquivalentTo(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Tests whether the current sequence has the same number of all the same items, in any old order.
+            </summary>
+            <param name="expected"></param>
+            <param name="comparer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.EquivalentTo(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Tests whether the current sequence has the same number of all the same items as the expected sequence.
+            Order does not matter.
+            </summary>
+            <param name="expected"></param>
+            <returns></returns>
+        </member>
         <member name="T:SUnit.Assertions.IIsExpressionLong">
             <summary>
             The return type of <see cref="P:SUnit.ThatLong.Is"/>. Contains members for applying assertions to longs and
@@ -473,67 +531,15 @@
         <member name="M:SUnit.Assertions.IsTestDouble.CreateExpression(System.Nullable{System.Double},SUnit.Assertions.ConstraintModifier{System.Nullable{System.Double}})">
             <inheritdoc/>
         </member>
+        <member name="T:SUnit.Assertions.IsTestEnumerable`1">
+            <inheritdoc/>
+        </member>
         <member name="T:SUnit.Assertions.IsTestLong">
             <summary>
             A <see cref="T:SUnit.Test"/> for applying constraints to actual <see cref="T:System.Int64"/> values.
             </summary>
         </member>
         <member name="M:SUnit.Assertions.IsTestLong.CreateExpression(System.Nullable{System.Int64},SUnit.Assertions.ConstraintModifier{System.Nullable{System.Int64}})">
-            <inheritdoc/>
-        </member>
-        <member name="T:SUnit.That`1">
-            <summary>
-            Specifies the actual value that was returned from whatever it is you are testing.
-            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
-            </summary>
-            <typeparam name="TActual">The type of the actual value.</typeparam>
-        </member>
-        <member name="P:SUnit.That`1.Is">
-            <summary>
-            Contains methods and properties for applying contstraints to the actual value specified in the 
-            <see cref="M:SUnit.Assert.That``1(``0)"/> method.
-            </summary>
-        </member>
-        <member name="T:SUnit.ThatDouble">
-            <summary>
-            Specifies the actual value that was returned from whatever it is you are testing.
-            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
-            </summary>
-        </member>
-        <member name="P:SUnit.ThatDouble.Is">
-            <summary>
-            Contains methods and properties for applying constraints to the actual value specified in
-            the <see cref="M:SUnit.Assert.That(System.Double)"/> method.
-            </summary>
-        </member>
-        <member name="T:SUnit.ThatDecimal">
-            <summary>
-            Specifies the actual value that was returned from whatever it is you are testing.
-            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
-            </summary>
-        </member>
-        <member name="P:SUnit.ThatDecimal.Is">
-            <summary>
-            Contains methods and properties for applying constraints to the actual value specified
-            in the <see cref="M:SUnit.Assert.That(System.Decimal)"/> method.
-            </summary>
-        </member>
-        <member name="T:SUnit.ThatLong">
-            <summary>
-            Specifies the actual value that was returned from whatever it is you are testing.
-            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
-            </summary>
-        </member>
-        <member name="P:SUnit.ThatLong.Is">
-            <summary>
-            Contains methods and properties for applying constraints to the actual value specified
-            in the <see cref="M:SUnit.Assert.That(System.Int64)"/> method.
-            </summary>
-        </member>
-        <member name="T:SUnit.ThatBool">
-            <inheritdoc/>
-        </member>
-        <member name="P:SUnit.ThatBool.Is">
             <inheritdoc/>
         </member>
         <member name="T:SUnit.Constraints.BinaryOperatorConstraint`1">
@@ -587,6 +593,43 @@
             <typeparam name="T">The type of value that the constraint applies to.</typeparam>
             <param name="predicate">The predicate to apply to values that the constraint is applied to.</param>
             <returns>A new <see cref="T:SUnit.Constraints.IConstraint`1"/> that uses the specified <see cref="T:System.Predicate`1"/>.</returns>
+        </member>
+        <member name="M:SUnit.Constraints.Constraint.NullIsFalse``1(System.Predicate{``0})">
+            <summary>
+            Wraps a <see cref="T:System.Predicate`1"/> in another predicate so that it treats null values as false.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="predicate">The predicate to wrap.</param>
+            <returns>A new predicate that calls the supplied predicate, but always returns false when given null values.</returns>
+        </member>
+        <member name="M:SUnit.Constraints.Constraint.NullFriendlyEquality``2(``0,``1,System.Func{``0,``1,System.Boolean})">
+            <summary>
+            Applies the specified equality function to the two operands ONLY if neither operand is null. If both operands are null,
+            returns true. If one is null, returns false.
+            </summary>
+            <typeparam name="TLeft"></typeparam>
+            <typeparam name="TRight"></typeparam>
+            <param name="left"></param>
+            <param name="right"></param>
+            <param name="equalityFunction">The equality function to apply if neither operand is null.</param>
+            <returns>If both operands are null, returns true. If exactly one is null, returns false. Otherwise,
+            uses the supplied equality function.</returns>
+        </member>
+        <member name="M:SUnit.Constraints.Constraint.TryGetCount(System.Collections.IEnumerable)">
+            <summary>
+            Checks if an <see cref="T:System.Collections.IEnumerable"/> is actually a collection. If so, returns the count. Otherwise, 
+            returns null.
+            </summary>
+            <param name="sequence"></param>
+            <returns>The number of items in the collection if the sequence was actually a collection. Otherwise, null.</returns>
+        </member>
+        <member name="M:SUnit.Constraints.Constraint.TryGetCount``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Checks to see if the sequence is really a collection. If it is, returns the count. Otherwise, returns null.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sequence"></param>
+            <returns>The number of items in the sequence if it was actually a collection. Otherwise, null.</returns>
         </member>
         <member name="T:SUnit.Constraints.EqualToConstraint`1">
             <summary>
@@ -649,6 +692,12 @@
             <param name="left"></param>
             <param name="right"></param>
             <returns>A new <see cref="T:SUnit.Constraints.IConstraint`1"/> that passes if exactly one operand passes.</returns>
+        </member>
+        <member name="T:SUnit.Constraints.SetEqualityConstraint`1">
+            <summary>
+            A constraint that compares two sequences for set-equality. Order doesn't matter, and duplicates are ignored.
+            </summary>
+            <typeparam name="T"></typeparam>
         </member>
         <member name="T:SUnit.IsComparableExtensions">
             <summary>
@@ -840,6 +889,60 @@
             <param name="left"></param>
             <param name="right"></param>
             <returns></returns>
+        </member>
+        <member name="T:SUnit.That`1">
+            <summary>
+            Specifies the actual value that was returned from whatever it is you are testing.
+            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
+            </summary>
+            <typeparam name="TActual">The type of the actual value.</typeparam>
+        </member>
+        <member name="P:SUnit.That`1.Is">
+            <summary>
+            Contains methods and properties for applying contstraints to the actual value specified.
+            </summary>
+        </member>
+        <member name="T:SUnit.ThatDouble">
+            <summary>
+            Specifies the actual value that was returned from whatever it is you are testing.
+            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
+            </summary>
+        </member>
+        <member name="P:SUnit.ThatDouble.Is">
+            <summary>
+            Contains methods and properties for applying constraints to the actual value specified in
+            the <see cref="M:SUnit.Assert.That(System.Double)"/> method.
+            </summary>
+        </member>
+        <member name="T:SUnit.ThatDecimal">
+            <summary>
+            Specifies the actual value that was returned from whatever it is you are testing.
+            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
+            </summary>
+        </member>
+        <member name="P:SUnit.ThatDecimal.Is">
+            <summary>
+            Contains methods and properties for applying constraints to the actual value specified
+            in the <see cref="M:SUnit.Assert.That(System.Decimal)"/> method.
+            </summary>
+        </member>
+        <member name="T:SUnit.ThatLong">
+            <summary>
+            Specifies the actual value that was returned from whatever it is you are testing.
+            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
+            </summary>
+        </member>
+        <member name="P:SUnit.ThatLong.Is">
+            <summary>
+            Contains methods and properties for applying constraints to the actual value specified
+            in the <see cref="M:SUnit.Assert.That(System.Int64)"/> method.
+            </summary>
+        </member>
+        <member name="T:SUnit.ThatBool">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.ThatBool.Is">
+            <inheritdoc/>
         </member>
         <member name="T:SUnit.Utilities">
             <summary>

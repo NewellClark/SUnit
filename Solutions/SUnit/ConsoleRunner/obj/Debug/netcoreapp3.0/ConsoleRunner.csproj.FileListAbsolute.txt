@@ -33,6 +33,8 @@ D:\LocalRepositories\SUnit\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\ConsoleRu
 D:\LocalRepositories\SUnit\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\ConsoleRunner.csproj.CopyComplete
 D:\LocalRepositories\SUnit\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\SUnit.ConsoleRunner.dll
 D:\LocalRepositories\SUnit\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\SUnit.ConsoleRunner.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\ConsoleRunner.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\ConsoleRunner.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.ConsoleRunner.exe
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.ConsoleRunner.deps.json
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.ConsoleRunner.runtimeconfig.json
@@ -46,8 +48,6 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\bin\Debug\netcoreapp3.0\SUnit.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\ConsoleRunner.csprojAssemblyReference.cache
-D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\ConsoleRunner.AssemblyInfoInputs.cache
-D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\ConsoleRunner.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\ConsoleRunner.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\SUnit.ConsoleRunner.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ConsoleRunner\obj\Debug\netcoreapp3.0\SUnit.ConsoleRunner.pdb
