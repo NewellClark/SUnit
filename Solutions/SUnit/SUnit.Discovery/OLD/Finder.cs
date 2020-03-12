@@ -6,161 +6,161 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace SUnit.DiscoveryOLD
+namespace SUnit.Discovery
 {
-    /// <summary>
-    /// Contains methods for finding tests.
-    /// </summary>
-    internal static class Finder
-    {
-        /// <summary>
-        /// Indicates whether the specified <see cref="MethodInfo"/> is a valid test method.
-        /// </summary>
-        /// <param name="method">The <see cref="MethodInfo"/> to inspect.</param>
-        /// <returns>True if the specified <see cref="MethodInfo"/> is valid.</returns>
-        /// <exception cref="ArgumentNullException">
-        /// <paramref name="method"/> is null.
-        /// </exception>
-        public static bool IsValidTestMethod(MethodInfo method)
-        {
-            if (method is null) throw new ArgumentNullException(nameof(method));
+    ///// <summary>
+    ///// Contains methods for finding tests.
+    ///// </summary>
+    //internal static class Finder
+    //{
+    //    /// <summary>
+    //    /// Indicates whether the specified <see cref="MethodInfo"/> is a valid test method.
+    //    /// </summary>
+    //    /// <param name="method">The <see cref="MethodInfo"/> to inspect.</param>
+    //    /// <returns>True if the specified <see cref="MethodInfo"/> is valid.</returns>
+    //    /// <exception cref="ArgumentNullException">
+    //    /// <paramref name="method"/> is null.
+    //    /// </exception>
+    //    public static bool IsValidTestMethod(MethodInfo method)
+    //    {
+    //        if (method is null) throw new ArgumentNullException(nameof(method));
 
-            bool hasCorrectReturnType = typeof(Test).IsAssignableFrom(method.ReturnType);
+    //        bool hasCorrectReturnType = typeof(Test).IsAssignableFrom(method.ReturnType);
 
-            if (!hasCorrectReturnType)
-                return false;
-            if (!method.IsPublic)
-                return false;
-            if (method.IsStatic)
-                return false;
-            if (method.GetParameters().Length > 0)
-                return false;
-            if (method.IsGenericMethodDefinition)
-                return false;
+    //        if (!hasCorrectReturnType)
+    //            return false;
+    //        if (!method.IsPublic)
+    //            return false;
+    //        if (method.IsStatic)
+    //            return false;
+    //        if (method.GetParameters().Length > 0)
+    //            return false;
+    //        if (method.IsGenericMethodDefinition)
+    //            return false;
 
-            return true;
-        }
+    //        return true;
+    //    }
 
-        /// <summary>
-        /// Finds all the methods on the specified type that are valid test methods.
-        /// </summary>
-        /// <param name="type">The type to search.</param>
-        /// <returns>All methods defined on the type that are valid test methods.</returns>
-        /// <exception cref="ArgumentNullException">
-        /// <paramref name="type"/> is null.
-        /// </exception>
-        public static IEnumerable<MethodInfo> FindAllValidTestMethods(Type type)
-        {
-            if (type is null) throw new ArgumentNullException(nameof(type));
+    //    /// <summary>
+    //    /// Finds all the methods on the specified type that are valid test methods.
+    //    /// </summary>
+    //    /// <param name="type">The type to search.</param>
+    //    /// <returns>All methods defined on the type that are valid test methods.</returns>
+    //    /// <exception cref="ArgumentNullException">
+    //    /// <paramref name="type"/> is null.
+    //    /// </exception>
+    //    public static IEnumerable<MethodInfo> FindAllValidTestMethods(Type type)
+    //    {
+    //        if (type is null) throw new ArgumentNullException(nameof(type));
 
-            return type.GetRuntimeMethods()
-                .Where(IsValidTestMethod);
-        }
+    //        return type.GetRuntimeMethods()
+    //            .Where(IsValidTestMethod);
+    //    }
 
-        /// <summary>
-        /// Gets the eligible default constructor for the specified type, if one exists.
-        /// </summary>
-        /// <param name="type">The type to search.</param>
-        /// <returns>The eligible default constructor, if one exists. <see langword="null"/> if none is found.</returns>
-        public static ConstructorInfo GetDefaultConstructor(Type type)
-        {
-            if (type is null) throw new ArgumentNullException(nameof(type));
+    //    /// <summary>
+    //    /// Gets the eligible default constructor for the specified type, if one exists.
+    //    /// </summary>
+    //    /// <param name="type">The type to search.</param>
+    //    /// <returns>The eligible default constructor, if one exists. <see langword="null"/> if none is found.</returns>
+    //    public static ConstructorInfo GetDefaultConstructor(Type type)
+    //    {
+    //        if (type is null) throw new ArgumentNullException(nameof(type));
 
-            if (type.IsAbstract)
-                return null;
-            if (type.IsGenericTypeDefinition)
-                return null;
+    //        if (type.IsAbstract)
+    //            return null;
+    //        if (type.IsGenericTypeDefinition)
+    //            return null;
 
-            return type.GetConstructors()
-                .Where(ctor => ctor.GetParameters().Length == 0)
-                .Where(ctor => !ctor.IsStatic)
-                .SingleOrDefault();
-        }
+    //        return type.GetConstructors()
+    //            .Where(ctor => ctor.GetParameters().Length == 0)
+    //            .Where(ctor => !ctor.IsStatic)
+    //            .SingleOrDefault();
+    //    }
         
-        /// <summary>
-        /// Finds all the valid named constructors on the specified type.
-        /// </summary>
-        /// <param name="type"></param>
-        /// <returns>All the valid named constructor methods on the specified fixture type.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="type"/> is <see langword="null"/>.</exception>
-        public static IEnumerable<MethodInfo> FindNamedConstructors(Type type)
-        {
-            if (type is null) throw new ArgumentNullException(nameof(type));
+    //    /// <summary>
+    //    /// Finds all the valid named constructors on the specified type.
+    //    /// </summary>
+    //    /// <param name="type"></param>
+    //    /// <returns>All the valid named constructor methods on the specified fixture type.</returns>
+    //    /// <exception cref="ArgumentNullException"><paramref name="type"/> is <see langword="null"/>.</exception>
+    //    public static IEnumerable<MethodInfo> FindNamedConstructors(Type type)
+    //    {
+    //        if (type is null) throw new ArgumentNullException(nameof(type));
 
-            return type.ContainsGenericParameters ?
-                FindNamedConstructorsOnGenericType(type) :
-                FindNamedConstructorsOnNonGenericType(type);
-        }
+    //        return type.ContainsGenericParameters ?
+    //            FindNamedConstructorsOnGenericType(type) :
+    //            FindNamedConstructorsOnNonGenericType(type);
+    //    }
 
-        /// <summary>
-        /// Finds all the valid named constructors on a non generic, or constructed generic, fixture type.
-        /// </summary>
-        /// <param name="type">The type of the fixture. Must be either non-generic or a fully-constructed
-        /// generic type. In other words, <see cref="Type.ContainsGenericParameters"/> 
-        /// must be <see langword="false"/>.</param>
-        /// <returns>All valid named constructor methods found on the fixture type.</returns>
-        private static IEnumerable<MethodInfo> FindNamedConstructorsOnNonGenericType(Type type)
-        {
-            Debug.Assert(!type.ContainsGenericParameters);
+    //    /// <summary>
+    //    /// Finds all the valid named constructors on a non generic, or constructed generic, fixture type.
+    //    /// </summary>
+    //    /// <param name="type">The type of the fixture. Must be either non-generic or a fully-constructed
+    //    /// generic type. In other words, <see cref="Type.ContainsGenericParameters"/> 
+    //    /// must be <see langword="false"/>.</param>
+    //    /// <returns>All valid named constructor methods found on the fixture type.</returns>
+    //    private static IEnumerable<MethodInfo> FindNamedConstructorsOnNonGenericType(Type type)
+    //    {
+    //        Debug.Assert(!type.ContainsGenericParameters);
 
-            bool predicate(MethodInfo method)
-            {
-                return
-                    method.IsStatic &&
-                    method.IsPublic &&
-                    type.IsAssignableFrom(method.ReturnType) &&
-                    !method.ContainsGenericParameters &&
-                    method.GetParameters().Length == 0;
-            }
+    //        bool predicate(MethodInfo method)
+    //        {
+    //            return
+    //                method.IsStatic &&
+    //                method.IsPublic &&
+    //                type.IsAssignableFrom(method.ReturnType) &&
+    //                !method.ContainsGenericParameters &&
+    //                method.GetParameters().Length == 0;
+    //        }
 
-            return type.GetRuntimeMethods()
-                .Where(predicate);
-        }
+    //        return type.GetRuntimeMethods()
+    //            .Where(predicate);
+    //    }
 
-        /// <summary>
-        /// Finds all the valid named constructors on an unconstructed generic fixture type.
-        /// On an unconstructed generic fixture type, a valid named constructor returns a constructed version
-        /// of the fixture, or a subclass of a constructed version of the fixture.
-        /// </summary>
-        /// <param name="type">The type of the fixture. Must be a not-fully-constructed generic type. In other
-        /// words, <see cref="Type.ContainsGenericParameters"/> must be <see langword="true"/>.</param>
-        /// <returns>All valid named constructor methods found on the fixture type.</returns>
-        private static IEnumerable<MethodInfo> FindNamedConstructorsOnGenericType(Type type)
-        {
-            Debug.Assert(type.ContainsGenericParameters);
+    //    /// <summary>
+    //    /// Finds all the valid named constructors on an unconstructed generic fixture type.
+    //    /// On an unconstructed generic fixture type, a valid named constructor returns a constructed version
+    //    /// of the fixture, or a subclass of a constructed version of the fixture.
+    //    /// </summary>
+    //    /// <param name="type">The type of the fixture. Must be a not-fully-constructed generic type. In other
+    //    /// words, <see cref="Type.ContainsGenericParameters"/> must be <see langword="true"/>.</param>
+    //    /// <returns>All valid named constructor methods found on the fixture type.</returns>
+    //    private static IEnumerable<MethodInfo> FindNamedConstructorsOnGenericType(Type type)
+    //    {
+    //        Debug.Assert(type.ContainsGenericParameters);
 
-            static Type getConstructedGenericBase(Type genericTypeDefinition, Type potentialSubclass)
-            {
-                Debug.Assert(genericTypeDefinition.IsGenericTypeDefinition);
-                Debug.Assert(!potentialSubclass.ContainsGenericParameters);
+    //        static Type getConstructedGenericBase(Type genericTypeDefinition, Type potentialSubclass)
+    //        {
+    //            Debug.Assert(genericTypeDefinition.IsGenericTypeDefinition);
+    //            Debug.Assert(!potentialSubclass.ContainsGenericParameters);
 
-                static IEnumerable<Type> baseTypes(Type type)
-                {
-                    if (type is null)
-                        yield break;
-                    yield return type;
-                    foreach (var baseType in baseTypes(type.BaseType))
-                        yield return baseType;
-                }
+    //            static IEnumerable<Type> baseTypes(Type type)
+    //            {
+    //                if (type is null)
+    //                    yield break;
+    //                yield return type;
+    //                foreach (var baseType in baseTypes(type.BaseType))
+    //                    yield return baseType;
+    //            }
 
-                return baseTypes(potentialSubclass)
-                    .Where(type => type.IsGenericType)
-                    .Where(type => type.GetGenericTypeDefinition() == genericTypeDefinition)
-                    .SingleOrDefault();
-            }
+    //            return baseTypes(potentialSubclass)
+    //                .Where(type => type.IsGenericType)
+    //                .Where(type => type.GetGenericTypeDefinition() == genericTypeDefinition)
+    //                .SingleOrDefault();
+    //        }
 
-            (MethodInfo method, Type constructed) selectConstructed(MethodInfo method)
-            {
-                return (method, getConstructedGenericBase(type.GetGenericTypeDefinition(), method.ReturnType));
-            }
+    //        (MethodInfo method, Type constructed) selectConstructed(MethodInfo method)
+    //        {
+    //            return (method, getConstructedGenericBase(type.GetGenericTypeDefinition(), method.ReturnType));
+    //        }
 
-            return type.GetRuntimeMethods()
-                .Where(method => method.IsStatic)
-                .Where(method => method.IsPublic)
-                .Where(method => method.GetParameters().Length == 0)
-                .Where(method => !method.ReturnType.ContainsGenericParameters)
-                .Select(selectConstructed)
-                .Select(t => t.constructed.GetMethod(t.method.Name));
-        }
-    }
+    //        return type.GetRuntimeMethods()
+    //            .Where(method => method.IsStatic)
+    //            .Where(method => method.IsPublic)
+    //            .Where(method => method.GetParameters().Length == 0)
+    //            .Where(method => !method.ReturnType.ContainsGenericParameters)
+    //            .Select(selectConstructed)
+    //            .Select(t => t.constructed.GetMethod(t.method.Name));
+    //    }
+    //}
 }

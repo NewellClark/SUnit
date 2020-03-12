@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using assert = NUnit.Framework.Assert;
 
-namespace SUnit.DiscoveryOLD
+namespace SUnit.Discovery
 {
     [TestFixture]
     public abstract class FixtureFactoryTests

@@ -1,5 +1,5 @@
-﻿using SUnit.DiscoveryOLD;
-using SUnit.DiscoveryOLD.Results;
+﻿using SUnit.Discovery;
+using SUnit.Discovery.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +37,7 @@ namespace SUnit.Runners
         private void PrintFixtureName(Fixture fixture)
         {
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(fixture.Name);
+            Console.WriteLine(fixture.Type.Name);
 
         }
 
@@ -59,7 +59,7 @@ namespace SUnit.Runners
 
             foreach (var test in factory.CreateTests())
             {
-                var result = test.Run();
+                var result = TestRunner.RunTest(test);
                 Console.ForegroundColor = GetColorForResult(result.Kind);
                 var resultLines = $"{result.Kind.ToString().ToUpper()} {result}".Split("\n");
                 foreach (var line in resultLines)

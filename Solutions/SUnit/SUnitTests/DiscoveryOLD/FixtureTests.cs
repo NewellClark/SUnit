@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using assert = NUnit.Framework.Assert;
 
-namespace SUnit.DiscoveryOLD
+namespace SUnit.Discovery
 {
     [TestFixture]
     public class FixtureTests
@@ -43,15 +43,6 @@ namespace SUnit.DiscoveryOLD
             };
 
             assert.That(actualNames, Is.EquivalentTo(expected));
-        }
-
-        [Test]
-        public void AnyFactory_HasFixturePropertySet()
-        {
-            foreach (var factory in fixture.Factories)
-            {
-                assert.That(factory.Fixture, Is.EqualTo(fixture));
-            }
         }
     }
 }

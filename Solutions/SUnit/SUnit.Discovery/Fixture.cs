@@ -1,4 +1,4 @@
-﻿using SUnit.DiscoveryOLD.Results;
+﻿using SUnit.Discovery.Results;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

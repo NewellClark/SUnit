@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 
@@ -19,6 +20,12 @@ namespace SUnit.Discovery
         public abstract string Name { get; }
         public abstract bool IsDefaultConstructor { get; }
         public abstract bool IsNamedConstructor { get; }
+
+        public IEnumerable<UnitTest> CreateTests()
+        {
+            return new Fixture(FixtureType).Tests
+                .Select(method => new UnitTest(this, method));
+        }
     }
 
     internal class DefaultCtorFactory : Factory

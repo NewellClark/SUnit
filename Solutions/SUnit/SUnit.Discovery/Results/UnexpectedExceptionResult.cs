@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace SUnit.DiscoveryOLD.Results
+namespace SUnit.Discovery.Results
 {
     internal sealed class UnexpectedExceptionResult : TestResult
     {

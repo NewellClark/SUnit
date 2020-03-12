@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestPlatform.ObjectModel;
-using SUnit.DiscoveryOLD;
-using SUnit.DiscoveryOLD.Results;
+using SUnit.Discovery;
+using SUnit.Discovery.Results;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -51,8 +51,8 @@ namespace SUnit.TestAdapter
 
         public LiteTest(UnitTest unitTest)
         {
-            Source = unitTest.Fixture.Type.Assembly.Location;
-            FullFixtureTypeName = unitTest.Fixture.Type.FullName;
+            Source = unitTest.Factory.FixtureType.Assembly.Location;
+            FullFixtureTypeName = unitTest.Factory.FixtureType.FullName;
             CompoundFactoryName = Parsing.EncodeFactoryMethod(unitTest.Factory);
             TestMethodName = unitTest.Name;
         }
@@ -105,14 +105,15 @@ namespace SUnit.TestAdapter
             return @case;
         }
 
-        public DiscoveryOLD.Results.TestResult Run()
+        public Discovery.Results.TestResult Run()
         {
             Assembly assembly = Assembly.LoadFrom(Source);
             Type fixtureType = assembly.GetType(FullFixtureTypeName);
             MethodInfo method = fixtureType.GetMethod(TestMethodName, Array.Empty<Type>());
             object fixture = Parsing.InvokeFactoryMethod(fixtureType, CompoundFactoryName);
+            var func = (Func<Test>)method.CreateDelegate(typeof(Func<Test>), fixture);
 
-            return UnitTest.Run(fixture, method);
+            return TestRunner.RunTest(func, method.Name);
         }
 
 

@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
-using SUnit.DiscoveryOLD;
-using SUnit.DiscoveryOLD.Results;
+using SUnit.Discovery;
+using SUnit.Discovery.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
