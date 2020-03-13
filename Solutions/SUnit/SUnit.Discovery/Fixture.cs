@@ -8,20 +8,47 @@ using System.Text;
 
 namespace SUnit.Discovery
 {
-    internal class Fixture : IEquatable<Fixture>
+    internal sealed class Fixture : IEquatable<Fixture>
     {
         public Fixture(Type type)
         {
             if (type is null) throw new ArgumentNullException(nameof(type));
 
             this.Type = type;
-            _Factories = new Lazy<IReadOnlyCollection<Factory>>(() => FindAllFactories(type));
+            _Factories = new Lazy<IReadOnlyCollection<Factory>>(() => FindAllFactories(this));
             _Tests = new Lazy<IReadOnlyCollection<MethodInfo>>(
                 () => Finder.FindAllValidTestMethods(type)
                     .ToList()
                     .AsReadOnly());
         }
 
+        public string Save()
+        {
+            var assemblyPair = new TraitPair(nameof(Assembly), Assembly.Location);
+            var typePair = new TraitPair(nameof(Type), Type.FullName);
+
+            return TraitPair.SaveAll(assemblyPair, typePair);
+        }
+
+        public static Fixture Load(string serializedFixture)
+        {
+            var lookup = TraitPair.ParseAll(serializedFixture)
+                .ToDictionary(pair => pair.Name);
+
+            string getOrThrow(string name)
+            {
+                if (!lookup.TryGetValue(name, out TraitPair pair))
+                    throw new FormatException($"Missing {name} property when loading {nameof(Fixture)} from {serializedFixture}.");
+                return pair.Value;
+            }
+
+            Assembly assembly = Assembly.LoadFrom(getOrThrow(nameof(Assembly)));
+            Type type = assembly.GetType(getOrThrow(nameof(Type)));
+
+            return new Fixture(type);
+        }
+
+        public Assembly Assembly => Type.Assembly;
         public Type Type { get; }
 
         private readonly Lazy<IReadOnlyCollection<MethodInfo>> _Tests;
@@ -38,27 +65,32 @@ namespace SUnit.Discovery
                 return false;
             return left.Type == right.Type;
         }
+
         public static bool operator ==(Fixture left, Fixture right) => Equals(left, right);
+
         public static bool operator !=(Fixture left, Fixture right) => !Equals(left, right);
+
         public bool Equals(Fixture other) => Equals(this, other);
+
         public override bool Equals(object obj)
         {
             return obj is Fixture fixture && Equals(this, fixture);
         }
+
         public override int GetHashCode() => Type.GetHashCode();
 
-        private static IReadOnlyCollection<Factory> FindAllFactories(Type fixtureType)
+        private static IReadOnlyCollection<Factory> FindAllFactories(Fixture fixture)
         {
-            Debug.Assert(fixtureType != null);
+            Debug.Assert(fixture != null);
 
             var results = new List<Factory>();
 
-            var @default = Finder.GetDefaultConstructor(fixtureType);
+            var @default = Finder.GetDefaultConstructor(fixture.Type);
             if (@default != null)
-                results.Add(new DefaultCtorFactory(fixtureType, @default));
+                results.Add(Factory.FromDefaultCtor(fixture));
 
-            var named = Finder.FindNamedConstructors(fixtureType)
-                .Select(method => new NamedCtorFactory(fixtureType, method));
+            var named = Finder.FindNamedConstructors(fixture.Type)
+                .Select(method => Factory.FromNamedCtor(fixture, method));
             results.AddRange(named);
 
             return results.AsReadOnly();

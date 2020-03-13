@@ -51,8 +51,8 @@ namespace SUnit.TestAdapter
 
         public LiteTest(UnitTest unitTest)
         {
-            Source = unitTest.Factory.FixtureType.Assembly.Location;
-            FullFixtureTypeName = unitTest.Factory.FixtureType.FullName;
+            Source = unitTest.Factory.Fixture.Assembly.Location;
+            FullFixtureTypeName = unitTest.Factory.Fixture.Type.FullName;
             CompoundFactoryName = Parsing.EncodeFactoryMethod(unitTest.Factory);
             TestMethodName = unitTest.Name;
         }

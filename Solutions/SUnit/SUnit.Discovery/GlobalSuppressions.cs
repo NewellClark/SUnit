@@ -6,3 +6,4 @@
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CA2235:Mark all non-serializable fields", Justification = "'string' is definitely serializable.", Scope = "member", Target = "~P:SUnit.Discovery.TraitPair.Name")]
 
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Globalization", "CA1303:Do not pass literals as localized parameters", Justification = "<Pending>", Scope = "member", Target = "~M:SUnit.Discovery.TraitPair.Parse(System.String,System.Int32)~SUnit.Discovery.TraitPair")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Globalization", "CA1303:Do not pass literals as localized parameters", Justification = "<Pending>", Scope = "member", Target = "~M:SUnit.Discovery.DefaultCtorFactory.#ctor(System.Type,System.Reflection.ConstructorInfo)")]

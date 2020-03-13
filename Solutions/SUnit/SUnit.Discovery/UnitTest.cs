@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SUnit.Discovery
 {
-    internal class UnitTest
+    internal sealed class UnitTest
     {
         private readonly MethodInfo method;
 

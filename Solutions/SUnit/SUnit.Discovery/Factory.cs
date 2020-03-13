@@ -1,76 +1,68 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 
 namespace SUnit.Discovery
 {
-    internal abstract class Factory
+    internal abstract partial class Factory
     {
-        protected private Factory(Type fixtureType)
+        private Factory(Fixture fixture)
         {
-            if (fixtureType is null) throw new ArgumentNullException(nameof(fixtureType));
+            if (fixture is null) throw new ArgumentNullException(nameof(fixture));
 
-            this.FixtureType = fixtureType;
+            this.Fixture = fixture;
         }
 
-        public Type FixtureType { get; }
+        protected private abstract string SaveSubclassData();
+
+        public string Save()
+        {
+            var ourTypePair = new TraitPair(nameof(Type), GetType().FullName);
+            var fixturePair = new TraitPair(nameof(Fixture), Fixture.Save());
+            var subclassDataPair = new TraitPair("SubclassData", SaveSubclassData());
+            return TraitPair.SaveAll(ourTypePair, fixturePair, subclassDataPair);
+        }
+
+        public static Factory Load(string serializedFactory)
+        {
+            var lookup = TraitPair.ParseAll(serializedFactory)
+                .ToDictionary(pair => pair.Name);
+
+            Fixture fixture = Fixture.Load(lookup[nameof(Fixture)].Value);
+            string subclassData = lookup["SubclassData"].Value;
+            TraitPair subclassTypePair = lookup[nameof(Type)];
+            Type subclassType = Type.GetType(lookup[nameof(Type)].Value);
+
+            Debug.Assert(typeof(Factory).IsAssignableFrom(subclassType));
+
+            var loadMethod = subclassType.GetMethod(
+                "Load", BindingFlags.Static | BindingFlags.Public |
+                BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+
+            return (Factory)loadMethod.Invoke(null, new object[] { fixture, subclassData });
+        }
+
+        public Fixture Fixture { get; }
+
         public abstract object Build();
+
         public abstract string Name { get; }
+
         public abstract bool IsDefaultConstructor { get; }
+
         public abstract bool IsNamedConstructor { get; }
 
         public IEnumerable<UnitTest> CreateTests()
         {
-            return new Fixture(FixtureType).Tests
+            return Fixture.Tests
                 .Select(method => new UnitTest(this, method));
         }
-    }
 
-    internal class DefaultCtorFactory : Factory
-    {
-        private readonly ConstructorInfo ctor;
+        public static Factory FromDefaultCtor(Fixture fixture) => new DefaultCtorFactory(fixture);
 
-        public DefaultCtorFactory(Type fixtureType, ConstructorInfo ctor)
-            : base(fixtureType)
-        {
-            if (ctor is null) throw new ArgumentNullException(nameof(ctor));
-            if (ctor.GetParameters().Length > 0)
-                throw new ArgumentException($"{nameof(ctor)} must have no parameters.");
-
-            this.ctor = ctor;
-        }
-
-        public override object Build()
-        {
-            return ctor.Invoke(Array.Empty<object>());
-        }
-
-        public override string Name => "ctor";
-        public override bool IsDefaultConstructor => true;
-        public override bool IsNamedConstructor => false;
-    }
-
-    internal class NamedCtorFactory : Factory
-    {
-        private readonly MethodInfo method;
-
-        public NamedCtorFactory(Type fixtureType, MethodInfo method)
-            : base(fixtureType)
-        {
-            if (method is null) throw new ArgumentNullException(nameof(method));
-            if (!method.IsStatic)
-                throw new ArgumentException($"{nameof(method)} must be static.", nameof(method));
-            if (method.GetParameters().Length > 0)
-                throw new ArgumentException($"{nameof(method)} must have no parameters.", nameof(method));
-
-            this.method = method;
-        }
-
-        public override object Build() => method.Invoke(null, Array.Empty<object>());
-        public override string Name => method.Name;
-        public override bool IsDefaultConstructor => false;
-        public override bool IsNamedConstructor => true;
+        public static Factory FromNamedCtor(Fixture fixture, MethodInfo method) => new NamedCtorFactory(fixture, method);
     }
 }

@@ -44,5 +44,14 @@ namespace SUnit.Discovery
 
             assert.That(actualNames, Is.EquivalentTo(expected));
         }
+
+        [Test]
+        public void Fixture_IsRoundTripSerializableAsText()
+        {
+            string text = fixture.Save();
+            var roundTripped = Fixture.Load(text);
+
+            assert.That(roundTripped.Type, Is.EqualTo(fixture.Type));
+        }
     }
 }
