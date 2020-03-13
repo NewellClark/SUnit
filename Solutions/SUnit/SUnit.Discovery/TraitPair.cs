@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -23,13 +24,14 @@ namespace SUnit.Discovery
 
         public override string ToString()
         {
-            return $"{Name}: {Value}";
+            return Save();
+            //return $"{Name}: {Value}";
         }
 
         /// <summary>
         /// Gets the length of the string that the TraitPair is serialized to.
         /// </summary>
-        public int SerializedLength => SaveToText().Length;
+        public int SerializedLength => Save().Length;
 
         public static bool Equals(TraitPair left, TraitPair right)
         {
@@ -92,7 +94,9 @@ namespace SUnit.Discovery
         /// Saves the <see cref="TraitPair"/> as a string.
         /// </summary>
         /// <returns>The round-trippable string representation for the current <see cref="TraitPair"/>.</returns>
-        public string SaveToText() => $"{Name.Length},{Value.Length}:{Name}{Value}";
+        public string Save() => Save(Name, Value);
+
+        public static string Save(string name, string value) => $"{name.Length},{value.Length}:{name}{value}";
 
         public static string SaveAll(IEnumerable<TraitPair> pairs)
         {
@@ -100,9 +104,11 @@ namespace SUnit.Discovery
 
             var sb = new StringBuilder();
             foreach (var pair in pairs)
-                sb.Append(pair.SaveToText());
+                sb.Append(pair.Save());
 
             return sb.ToString();
         }
+
+        public static string SaveAll(params TraitPair[] pairs) => SaveAll(pairs.AsEnumerable());
     }
 }

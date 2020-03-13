@@ -34,7 +34,7 @@ namespace SUnit.Discovery
             public void IsRoundTripSerializable((string name, string value) data)
             {
                 var pair = new TraitPair(data.name, data.value);
-                TraitPair roundTripped = TraitPair.Parse(pair.SaveToText());
+                TraitPair roundTripped = TraitPair.Parse(pair.Save());
 
                 nAssert.That(pair, Is.EqualTo(roundTripped));
             }
@@ -56,7 +56,7 @@ namespace SUnit.Discovery
                 string serialized = pairs.Aggregate(
                     new StringBuilder(),
                     (sb, pair) => { 
-                        sb.Append(pair.SaveToText()); 
+                        sb.Append(pair.Save()); 
                         return sb; 
                     })
                     .ToString();
@@ -76,8 +76,8 @@ namespace SUnit.Discovery
             public NestedPairs()
             {
                 inner = new TraitPair("AbsoluteValue", "This is the value of the absolute property");
-                outer = new TraitPair("Serialized Inner Trait Pair", inner.SaveToText());
-                roundTrippedOuter = TraitPair.Parse(outer.SaveToText());
+                outer = new TraitPair("Serialized Inner Trait Pair", inner.Save());
+                roundTrippedOuter = TraitPair.Parse(outer.Save());
             }
 
             [Test]

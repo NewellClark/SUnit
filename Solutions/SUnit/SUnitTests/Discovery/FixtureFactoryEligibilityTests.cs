@@ -9,7 +9,7 @@ using assert = NUnit.Framework.Assert;
 namespace SUnit.Discovery
 {
     [TestFixture]
-    public abstract class FixtureFactoryTests
+    public abstract class FixtureFactoryEligibilityTests
     {
         private class MockBase
         {
@@ -28,14 +28,14 @@ namespace SUnit.Discovery
         protected private Factory Factory => Fixture.Factories.Single();
         private MockBase Build() => (MockBase)Fixture.Factories.Single().Build();
 
-        protected FixtureFactoryTests()
+        protected FixtureFactoryEligibilityTests()
         {
             Fixture = new Fixture(Type);
         }
 
 
         [TestFixture]
-        public class DefaultCtor : FixtureFactoryTests
+        public class DefaultCtor : FixtureFactoryEligibilityTests
         {
             private class Mock : MockBase { public Mock() { SetBuilder("Default"); } }
 
@@ -70,10 +70,12 @@ namespace SUnit.Discovery
             {
                 assert.That(Factory.IsNamedConstructor, Is.False);
             }
+
+
         }
 
         [TestFixture]
-        public class PublicStaticNoParamMockReturningMethod : FixtureFactoryTests
+        public class PublicStaticNoParamMockReturningMethod : FixtureFactoryEligibilityTests
         {
             private class Mock : MockBase
             {
@@ -94,10 +96,21 @@ namespace SUnit.Discovery
             {
                 assert.That(Build().Builder, Is.EqualTo(nameof(Mock.NamedCtor)));
             }
+
+            [Test]
+            public void IsRoundTripSerializableToText()
+            {
+                var factory = Fixture.Factories.Single();
+                string serialized = factory.Save();
+                var roundTripped = Factory.Load(serialized);
+                object instantiated = roundTripped.Build();
+
+                assert.That(instantiated, Is.InstanceOf<Mock>());
+            }
         }
 
         [TestFixture]
-        public class NonPublicMethod : FixtureFactoryTests
+        public class NonPublicMethod : FixtureFactoryEligibilityTests
         {
             private class Mock : MockBase
             {
@@ -114,7 +127,7 @@ namespace SUnit.Discovery
         }
 
         [TestFixture]
-        public class InstanceMethod : FixtureFactoryTests
+        public class InstanceMethod : FixtureFactoryEligibilityTests
         {
             private class Mock : MockBase
             {
@@ -132,7 +145,7 @@ namespace SUnit.Discovery
         }
 
         [TestFixture]
-        public class DefaultCtorOnAbstractClass : FixtureFactoryTests
+        public class DefaultCtorOnAbstractClass : FixtureFactoryEligibilityTests
         {
             private abstract class Mock : MockBase
             {
@@ -149,7 +162,7 @@ namespace SUnit.Discovery
         }
 
         [TestFixture]
-        public abstract class DefaultCtorOnGeneric : FixtureFactoryTests
+        public abstract class DefaultCtorOnGeneric : FixtureFactoryEligibilityTests
         {
             private class Mock<T> : MockBase
             {
@@ -188,7 +201,7 @@ namespace SUnit.Discovery
         }
 
         [TestFixture]
-        public abstract class NamedCtorOnGeneric : FixtureFactoryTests
+        public abstract class NamedCtorOnGeneric : FixtureFactoryEligibilityTests
         {
             [TestFixture]
             public class ReturnsUnconstructed : NamedCtorOnGeneric
