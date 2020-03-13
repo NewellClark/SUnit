@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace SUnit.Discovery
 {
+    [Serializable]
     internal struct TraitPair : IEquatable<TraitPair>
     {
         private static readonly Regex preamble = new Regex(
@@ -22,13 +23,13 @@ namespace SUnit.Discovery
 
         public override string ToString()
         {
-            return $"{Name.Length},{Value.Length}:{Name}{Value}";
+            return $"{Name}: {Value}";
         }
 
         /// <summary>
         /// Gets the length of the string that the TraitPair is serialized to.
         /// </summary>
-        public int SerializedLength => ToString().Length;
+        public int SerializedLength => SaveToText().Length;
 
         public static bool Equals(TraitPair left, TraitPair right)
         {
@@ -86,5 +87,22 @@ namespace SUnit.Discovery
         }
 
         public static IEnumerable<TraitPair> ParseAll(string text) => ParseAll(text, 0);
+
+        /// <summary>
+        /// Saves the <see cref="TraitPair"/> as a string.
+        /// </summary>
+        /// <returns>The round-trippable string representation for the current <see cref="TraitPair"/>.</returns>
+        public string SaveToText() => $"{Name.Length},{Value.Length}:{Name}{Value}";
+
+        public static string SaveAll(IEnumerable<TraitPair> pairs)
+        {
+            if (pairs is null) throw new ArgumentNullException(nameof(pairs));
+
+            var sb = new StringBuilder();
+            foreach (var pair in pairs)
+                sb.Append(pair.SaveToText());
+
+            return sb.ToString();
+        }
     }
 }

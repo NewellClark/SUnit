@@ -8,7 +8,7 @@ using System.Text;
 
 namespace SUnit.Discovery
 {
-    internal class Fixture
+    internal class Fixture : IEquatable<Fixture>
     {
         public Fixture(Type type)
         {
@@ -29,7 +29,24 @@ namespace SUnit.Discovery
 
         private readonly Lazy<IReadOnlyCollection<Factory>> _Factories;
         public IReadOnlyCollection<Factory> Factories => _Factories.Value;
-        
+
+        public static bool Equals(Fixture left, Fixture right)
+        {
+            if (ReferenceEquals(left, right))
+                return true;
+            if (left is null || right is null)
+                return false;
+            return left.Type == right.Type;
+        }
+        public static bool operator ==(Fixture left, Fixture right) => Equals(left, right);
+        public static bool operator !=(Fixture left, Fixture right) => !Equals(left, right);
+        public bool Equals(Fixture other) => Equals(this, other);
+        public override bool Equals(object obj)
+        {
+            return obj is Fixture fixture && Equals(this, fixture);
+        }
+        public override int GetHashCode() => Type.GetHashCode();
+
         private static IReadOnlyCollection<Factory> FindAllFactories(Type fixtureType)
         {
             Debug.Assert(fixtureType != null);
