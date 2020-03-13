@@ -103,5 +103,10 @@
             Whether the result was a pass, fail, or error.
             </summary>
         </member>
+        <member name="P:SUnit.Discovery.TraitPair.SerializedLength">
+            <summary>
+            Gets the length of the string that the TraitPair is serialized to.
+            </summary>
+        </member>
     </members>
 </doc>
