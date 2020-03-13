@@ -36,7 +36,7 @@ namespace SUnit.TestAdapter
         public void RunTests(IEnumerable<string> sources, IRunContext runContext, IFrameworkHandle frameworkHandle)
         {
             var testCases = SUnitTestDiscoverer.FindAllUnitTests(sources)
-                .Select(unitTest => new LiteTest(unitTest).ToTestCase());
+                .Select(unitTest => unitTest.ToTestCase());
 
             RunTests(testCases, runContext, frameworkHandle);
         }
@@ -49,18 +49,15 @@ namespace SUnit.TestAdapter
 
         private static VSResult RunUnitTest(TestCase @case)
         {
-            var lite = LiteTest.FromTestCase(@case);
+            return RunUnitTest(@case, @case.ToUnitTest());
+        }
 
-            var sunitResult = lite.Run();
+        private static VSResult RunUnitTest(TestCase @case, UnitTest unitTest)
+        {
+            var sunitResult = TestRunner.RunTest(unitTest);
             var result = new VSResult(@case);
-            result.DisplayName = lite.TestMethodName;
-            result.Outcome = sunitResult.Kind switch
-            {
-                ResultKind.Pass => TestOutcome.Passed,
-                ResultKind.Fail => TestOutcome.Failed,
-                ResultKind.Error => TestOutcome.Failed,
-                _ => TestOutcome.None
-            };
+            result.DisplayName = unitTest.Name;
+            result.Outcome = sunitResult.Kind.ToTestOutcome();
 
             switch (sunitResult)
             {
@@ -85,6 +82,7 @@ namespace SUnit.TestAdapter
 
             return result;
         }
+
 
         private static string IndentLines(string input, string indent)
         {

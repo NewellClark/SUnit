@@ -21,7 +21,7 @@ namespace SUnit.TestAdapter
             ITestCaseDiscoverySink discoverySink)
         {
             var unitTests = FindAllUnitTests(sources);
-            var cases = unitTests.Select(test => new LiteTest(test).ToTestCase());
+            var cases = unitTests.Select(u => u.ToTestCase());
 
             foreach (var @case in cases)
                 discoverySink.SendTestCase(@case);

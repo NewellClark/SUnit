@@ -103,5 +103,16 @@
             Whether the result was a pass, fail, or error.
             </summary>
         </member>
+        <member name="P:SUnit.Discovery.TraitPair.SerializedLength">
+            <summary>
+            Gets the length of the string that the TraitPair is serialized to.
+            </summary>
+        </member>
+        <member name="M:SUnit.Discovery.TraitPair.Save">
+            <summary>
+            Saves the <see cref="T:SUnit.Discovery.TraitPair"/> as a string.
+            </summary>
+            <returns>The round-trippable string representation for the current <see cref="T:SUnit.Discovery.TraitPair"/>.</returns>
+        </member>
     </members>
 </doc>

@@ -35,71 +35,71 @@ namespace SUnit.TestAdapter
     }
 
 
-    [TestFixture]
-    public class LiteTestTests
-    {
-        private readonly UnitTest defaultCtorTest;
-        private readonly UnitTest namedCtorTest;
+    //[TestFixture]
+    //public class LiteTestTests
+    //{
+    //    private readonly UnitTest defaultCtorTest;
+    //    private readonly UnitTest namedCtorTest;
 
-        public LiteTestTests()
-        {
-            var fixture = new Fixture(typeof(Mock));
+    //    public LiteTestTests()
+    //    {
+    //        var fixture = new Fixture(typeof(Mock));
 
-            defaultCtorTest = fixture.Factories
-                .Where(fact => fact.IsDefaultConstructor)
-                .Single()
-                .CreateTests()
-                .Where(test => test.Name == nameof(Mock.WasConstructedBy_Default))
-                .Single();
+    //        defaultCtorTest = fixture.Factories
+    //            .Where(fact => fact.IsDefaultConstructor)
+    //            .Single()
+    //            .CreateTests()
+    //            .Where(test => test.Name == nameof(Mock.WasConstructedBy_Default))
+    //            .Single();
 
-            namedCtorTest = fixture.Factories
-                .Where(fact => fact.IsNamedConstructor)
-                .Single()
-                .CreateTests()
-                .Where(test => test.Name == nameof(Mock.WasConstructedBy_Alpha))
-                .Single();
-        }
+    //        namedCtorTest = fixture.Factories
+    //            .Where(fact => fact.IsNamedConstructor)
+    //            .Single()
+    //            .CreateTests()
+    //            .Where(test => test.Name == nameof(Mock.WasConstructedBy_Alpha))
+    //            .Single();
+    //    }
 
-        [Test]
-        public void CanRunDefaultCtor()
-        {
-            var lite = new LiteTest(defaultCtorTest);
-            var result = lite.Run();
+    //    [Test]
+    //    public void CanRunDefaultCtor()
+    //    {
+    //        var lite = new LiteTest(defaultCtorTest);
+    //        var result = lite.Run();
 
-            nAssert.That(result.Kind, Is.EqualTo(ResultKind.Pass));
-        }
+    //        nAssert.That(result.Kind, Is.EqualTo(ResultKind.Pass));
+    //    }
 
-        [Test]
-        public void CanRunNamedCtor()
-        {
-            var lite = new LiteTest(namedCtorTest);
-            var result = lite.Run();
+    //    [Test]
+    //    public void CanRunNamedCtor()
+    //    {
+    //        var lite = new LiteTest(namedCtorTest);
+    //        var result = lite.Run();
 
-            nAssert.That(result.Kind, Is.EqualTo(ResultKind.Pass));
-        }
+    //        nAssert.That(result.Kind, Is.EqualTo(ResultKind.Pass));
+    //    }
 
-        [Test]
-        public void CanRunDefaultCtor_AfterRoundTrip()
-        {
-            var original = new LiteTest(defaultCtorTest);
-            var lines = original.ToLines();
-            var roundTripped = new LiteTest(lines);
+    //    [Test]
+    //    public void CanRunDefaultCtor_AfterRoundTrip()
+    //    {
+    //        var original = new LiteTest(defaultCtorTest);
+    //        var lines = original.ToLines();
+    //        var roundTripped = new LiteTest(lines);
 
-            var result = roundTripped.Run();
+    //        var result = roundTripped.Run();
 
-            nAssert.That(result.Kind, Is.EqualTo(ResultKind.Pass));
-        }
+    //        nAssert.That(result.Kind, Is.EqualTo(ResultKind.Pass));
+    //    }
 
-        [Test]
-        public void CanRunNamedCtor_AfterRoundTrip()
-        {
-            var original = new LiteTest(namedCtorTest);
-            var lines = original.ToLines();
-            var roundTripped = new LiteTest(lines);
+    //    [Test]
+    //    public void CanRunNamedCtor_AfterRoundTrip()
+    //    {
+    //        var original = new LiteTest(namedCtorTest);
+    //        var lines = original.ToLines();
+    //        var roundTripped = new LiteTest(lines);
 
-            var result = roundTripped.Run();
+    //        var result = roundTripped.Run();
 
-            nAssert.That(result.Kind, Is.EqualTo(ResultKind.Pass));
-        }
-    }
+    //        nAssert.That(result.Kind, Is.EqualTo(ResultKind.Pass));
+    //    }
+    //}
 }
