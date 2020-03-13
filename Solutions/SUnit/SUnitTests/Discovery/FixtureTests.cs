@@ -46,12 +46,12 @@ namespace SUnit.Discovery
         }
 
         [Test]
-        public void AnyFactory_HasFixturePropertySet()
+        public void Fixture_IsRoundTripSerializableAsText()
         {
-            foreach (var factory in fixture.Factories)
-            {
-                assert.That(factory.Fixture, Is.EqualTo(fixture));
-            }
+            string text = fixture.Save();
+            var roundTripped = Fixture.Load(text);
+
+            assert.That(roundTripped.Type, Is.EqualTo(fixture.Type));
         }
     }
 }

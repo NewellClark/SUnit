@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SUnit.Discovery.Results;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -7,46 +8,76 @@ using System.Text;
 
 namespace SUnit.Discovery
 {
-    /// <summary>
-    /// A class that defines unit tests. It must
-    /// </summary>
-    internal class Fixture
+    internal sealed class Fixture : IEquatable<Fixture>
     {
-
-        /// <summary>
-        /// Creates a new <see cref="Fixture"/> for the specified <see cref="System.Type"/>.
-        /// </summary>
-        /// <param name="type"></param>
         public Fixture(Type type)
         {
-            Debug.Assert(type != null);
+            if (type is null) throw new ArgumentNullException(nameof(type));
 
             this.Type = type;
-
-            Tests = Finder.FindAllValidTestMethods(type)
-                .Select(method => new TestMethod(this, method))
-                .ToList()
-                .AsReadOnly();
-
-            Factories = FindAllFactories(this);
+            _Factories = new Lazy<IReadOnlyCollection<Factory>>(() => FindAllFactories(this));
+            _Tests = new Lazy<IReadOnlyCollection<MethodInfo>>(
+                () => Finder.FindAllValidTestMethods(type)
+                    .ToList()
+                    .AsReadOnly());
         }
 
+        public string Save()
+        {
+            var assemblyPair = new TraitPair(nameof(Assembly), Assembly.Location);
+            var typePair = new TraitPair(nameof(Type), Type.FullName);
+
+            return TraitPair.SaveAll(assemblyPair, typePair);
+        }
+
+        public static Fixture Load(string serializedFixture)
+        {
+            var lookup = TraitPair.ParseAll(serializedFixture)
+                .ToDictionary(pair => pair.Name);
+
+            string getOrThrow(string name)
+            {
+                if (!lookup.TryGetValue(name, out TraitPair pair))
+                    throw new FormatException($"Missing {name} property when loading {nameof(Fixture)} from {serializedFixture}.");
+                return pair.Value;
+            }
+
+            Assembly assembly = Assembly.LoadFrom(getOrThrow(nameof(Assembly)));
+            Type type = assembly.GetType(getOrThrow(nameof(Type)));
+
+            return new Fixture(type);
+        }
+
+        public Assembly Assembly => Type.Assembly;
         public Type Type { get; }
 
-        /// <summary>
-        /// Gets the unqualified name of the class that the fixture represents.
-        /// </summary>
-        public string Name => Type.Name;
+        private readonly Lazy<IReadOnlyCollection<MethodInfo>> _Tests;
+        public IReadOnlyCollection<MethodInfo> Tests => _Tests.Value;
 
-        /// <summary>
-        /// Gets all the test methods on the fixture.
-        /// </summary>
-        public IReadOnlyCollection<TestMethod> Tests { get; }
+        private readonly Lazy<IReadOnlyCollection<Factory>> _Factories;
+        public IReadOnlyCollection<Factory> Factories => _Factories.Value;
 
-        /// <summary>
-        /// Gets all the methods that can be used to instantiate the fixture.
-        /// </summary>
-        public IReadOnlyCollection<Factory> Factories { get; }
+        public static bool Equals(Fixture left, Fixture right)
+        {
+            if (ReferenceEquals(left, right))
+                return true;
+            if (left is null || right is null)
+                return false;
+            return left.Type == right.Type;
+        }
+
+        public static bool operator ==(Fixture left, Fixture right) => Equals(left, right);
+
+        public static bool operator !=(Fixture left, Fixture right) => !Equals(left, right);
+
+        public bool Equals(Fixture other) => Equals(this, other);
+
+        public override bool Equals(object obj)
+        {
+            return obj is Fixture fixture && Equals(this, fixture);
+        }
+
+        public override int GetHashCode() => Type.GetHashCode();
 
         private static IReadOnlyCollection<Factory> FindAllFactories(Fixture fixture)
         {
@@ -56,7 +87,7 @@ namespace SUnit.Discovery
 
             var @default = Finder.GetDefaultConstructor(fixture.Type);
             if (@default != null)
-                results.Add(Factory.FromDefaultCtor(fixture, @default));
+                results.Add(Factory.FromDefaultCtor(fixture));
 
             var named = Finder.FindNamedConstructors(fixture.Type)
                 .Select(method => Factory.FromNamedCtor(fixture, method));

@@ -27,7 +27,7 @@ namespace SUnit.Discovery.Results
     }
 
     /// <summary>
-    /// The result of running a <see cref="UnitTest"/>.
+    /// The result of running a test.
     /// </summary>
     internal abstract class TestResult
     {

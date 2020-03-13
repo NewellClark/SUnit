@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace SUnit.Discovery
@@ -76,7 +75,7 @@ namespace SUnit.Discovery
                 .Where(ctor => !ctor.IsStatic)
                 .SingleOrDefault();
         }
-        
+
         /// <summary>
         /// Finds all the valid named constructors on the specified type.
         /// </summary>

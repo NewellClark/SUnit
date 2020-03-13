@@ -7,106 +7,61 @@ using System.Text;
 
 namespace SUnit.Discovery
 {
-    /// <summary>
-    /// An object that can be used to instantiate a <see cref="Discovery.Fixture"/>.
-    /// </summary>
-    internal abstract class Factory
+    internal abstract partial class Factory
     {
-        protected private Factory(Fixture fixture)
+        private Factory(Fixture fixture)
         {
-            Debug.Assert(fixture != null);
+            if (fixture is null) throw new ArgumentNullException(nameof(fixture));
 
-            Fixture = fixture;
+            this.Fixture = fixture;
         }
 
-        /// <summary>
-        /// Gets the <see cref="Discovery.Fixture"/> that the <see cref="Factory"/> instantiates.
-        /// </summary>
+        protected private abstract string SaveSubclassData();
+
+        public string Save()
+        {
+            var ourTypePair = new TraitPair(nameof(Type), GetType().FullName);
+            var fixturePair = new TraitPair(nameof(Fixture), Fixture.Save());
+            var subclassDataPair = new TraitPair("SubclassData", SaveSubclassData());
+            return TraitPair.SaveAll(ourTypePair, fixturePair, subclassDataPair);
+        }
+
+        public static Factory Load(string serializedFactory)
+        {
+            var lookup = TraitPair.ParseAll(serializedFactory)
+                .ToDictionary(pair => pair.Name);
+
+            Fixture fixture = Fixture.Load(lookup[nameof(Fixture)].Value);
+            string subclassData = lookup["SubclassData"].Value;
+            Type subclassType = Type.GetType(lookup[nameof(Type)].Value);
+
+            Debug.Assert(typeof(Factory).IsAssignableFrom(subclassType));
+
+            var loadMethod = subclassType.GetMethod(
+                "Load", BindingFlags.Static | BindingFlags.Public |
+                BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+
+            return (Factory)loadMethod.Invoke(null, new object[] { fixture, subclassData });
+        }
+
         public Fixture Fixture { get; }
 
-        /// <summary>
-        /// Instantiates the <see cref="Discovery.Fixture"/>.
-        /// </summary>
-        /// <returns>An instantiated <see cref="Discovery.Fixture"/>.</returns>
         public abstract object Build();
 
-        /// <summary>
-        /// Indicates whether the current <see cref="Factory"/> is a default constructor.
-        /// </summary>
-        public abstract bool IsDefaultConstructor { get; }
-
-        /// <summary>
-        /// Indicates whether the current <see cref="Factory"/> is a named constructor.
-        /// </summary>
-        public abstract bool IsNamedConstructor { get; }
-
-        /// <summary>
-        /// Gets the name of the constructor. For named constructors, this will be the name of the method.
-        /// </summary>
         public abstract string Name { get; }
 
-        /// <summary>
-        /// Uses the current <see cref="Factory"/> to instantiate all the <see cref="UnitTest"/>s
-        /// on the <see cref="SUnit.Discovery.Fixture"/>.
-        /// </summary>
-        /// <returns></returns>
+        public abstract bool IsDefaultConstructor { get; }
+
+        public abstract bool IsNamedConstructor { get; }
+
         public IEnumerable<UnitTest> CreateTests()
         {
-            return Fixture.Tests.Select(method => new UnitTest(method, this));
+            return Fixture.Tests
+                .Select(method => new UnitTest(this, method));
         }
 
-        /// <summary>
-        /// Overridden to display the name.
-        /// </summary>
-        /// <returns>The name.</returns>
-        public override string ToString() => Name;
+        public static Factory FromDefaultCtor(Fixture fixture) => new DefaultCtorFactory(fixture);
 
-        private sealed class DefaultConstructorFactory : Factory
-        {
-            private readonly ConstructorInfo ctor;
-
-            public DefaultConstructorFactory(Fixture fixture, ConstructorInfo ctor) : base(fixture)
-            {
-                this.ctor = ctor;
-            }
-
-            public override object Build() => ctor.Invoke(Array.Empty<object>());
-            public override bool IsDefaultConstructor => true;
-            public override bool IsNamedConstructor => false;
-            public override string Name => "ctor";
-        }
-
-        internal static Factory FromDefaultCtor(Fixture fixture, ConstructorInfo ctor)
-        {
-            Debug.Assert(fixture != null);
-            Debug.Assert(ctor != null);
-            Debug.Assert(ctor.GetParameters().Length == 0);
-
-            return new DefaultConstructorFactory(fixture, ctor);
-        }
-
-        private sealed class NamedConstructorFactory : Factory
-        {
-            private readonly MethodInfo method;
-
-            public NamedConstructorFactory(Fixture fixture, MethodInfo method) : base(fixture)
-            {
-                this.method = method;
-            }
-
-            public override bool IsDefaultConstructor => false;
-            public override bool IsNamedConstructor => true;
-            public override object Build() => method.Invoke(null, Array.Empty<object>());
-            public override string Name => method.Name;
-        }
-
-        internal static Factory FromNamedCtor(Fixture fixture, MethodInfo method)
-        {
-            Debug.Assert(fixture != null);
-            Debug.Assert(method != null);
-            Debug.Assert(method.GetParameters().Length == 0);
-
-            return new NamedConstructorFactory(fixture, method);
-        }
+        public static Factory FromNamedCtor(Fixture fixture, MethodInfo method) => new NamedCtorFactory(fixture, method);
     }
 }

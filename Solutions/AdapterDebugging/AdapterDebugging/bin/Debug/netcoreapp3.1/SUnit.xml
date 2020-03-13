@@ -14,7 +14,6 @@
             Used to specify the actual value when writing assertions. For example,
             <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
             </summary>
-            <typeparam name="TActual"></typeparam>
             <param name="actual"></param>
             <returns></returns>
         </member>
@@ -464,6 +463,14 @@
             </summary>
             <param name="expected"></param>
             <param name="comparer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.EquivalentTo(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Tests whether the current sequence has the same number of all the same items as the expected sequence.
+            Order does not matter.
+            </summary>
+            <param name="expected"></param>
             <returns></returns>
         </member>
         <member name="T:SUnit.Assertions.IIsExpressionLong">

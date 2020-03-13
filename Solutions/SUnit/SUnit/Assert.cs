@@ -13,7 +13,6 @@ namespace SUnit
         /// Used to specify the actual value when writing assertions. For example,
         /// <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
         /// </summary>
-        /// <typeparam name="TActual"></typeparam>
         /// <param name="actual"></param>
         /// <returns></returns>
         public static That<object> That(object actual) => new That<object>(actual);
