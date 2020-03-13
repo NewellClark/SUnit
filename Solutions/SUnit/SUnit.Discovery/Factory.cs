@@ -33,7 +33,6 @@ namespace SUnit.Discovery
 
             Fixture fixture = Fixture.Load(lookup[nameof(Fixture)].Value);
             string subclassData = lookup["SubclassData"].Value;
-            TraitPair subclassTypePair = lookup[nameof(Type)];
             Type subclassType = Type.GetType(lookup[nameof(Type)].Value);
 
             Debug.Assert(typeof(Factory).IsAssignableFrom(subclassType));

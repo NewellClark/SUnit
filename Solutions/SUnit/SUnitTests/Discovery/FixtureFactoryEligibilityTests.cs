@@ -71,13 +71,7 @@ namespace SUnit.Discovery
                 assert.That(Factory.IsNamedConstructor, Is.False);
             }
 
-            [Test]
-            public void IsRoundTripSerializableAsText()
-            {
-                var factory = Fixture.Factories.Single();
-                string serialized = factory.Save();
-                var roundTripped = Factory.Load(serialized);
-            }
+
         }
 
         [TestFixture]
