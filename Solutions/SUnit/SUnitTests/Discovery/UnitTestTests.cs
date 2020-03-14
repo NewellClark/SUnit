@@ -2,10 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using nAssert = NUnit.Framework.Assert;
 using System.Linq;
 using System.Reflection;
 using SUnit.Discovery.Results;
+using System.Reactive.Linq;
+using nAssert = NUnit.Framework.Assert;
+using System.Threading.Tasks;
 
 namespace SUnit.Discovery
 {
@@ -71,18 +73,20 @@ namespace SUnit.Discovery
         }
 
         [Theory]
-        public void YieldsExpectedResult(Data data)
+        public async Task YieldsExpectedResult(Data data)
         {
-            nAssert.That(TestRunner.RunTest(data.UnitTest).Kind, Is.EqualTo(data.Expected));
+            var result = await TestRunner.RunTest(data.UnitTest).SingleAsync();
+            nAssert.That(result.Kind, Is.EqualTo(data.Expected));
         }
 
         [Theory]
-        public void WorksAfterRoundTripSerialization(Data data)
+        public async Task WorksAfterRoundTripSerialization(Data data)
         {
             string serialized = data.UnitTest.Save();
             UnitTest roundTripped = UnitTest.Load(serialized);
+            var result = await TestRunner.RunTest(data.UnitTest).SingleAsync();
 
-            nAssert.That(TestRunner.RunTest(roundTripped).Kind, Is.EqualTo(data.Expected));
+            nAssert.That(result.Kind, Is.EqualTo(data.Expected));
         }
     }
 }

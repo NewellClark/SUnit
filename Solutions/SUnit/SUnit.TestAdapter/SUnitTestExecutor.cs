@@ -47,14 +47,8 @@ namespace SUnit.TestAdapter
         }
         private bool isCancellationRequested = false;
 
-        private static VSResult RunUnitTest(TestCase @case)
+        private static VSResult ConvertToVsResult(TestCase @case, UnitTest unitTest, SUResult sunitResult)
         {
-            return RunUnitTest(@case, @case.ToUnitTest());
-        }
-
-        private static VSResult RunUnitTest(TestCase @case, UnitTest unitTest)
-        {
-            var sunitResult = TestRunner.RunTest(unitTest);
             var result = new VSResult(@case);
             result.DisplayName = unitTest.Name;
             result.Outcome = sunitResult.Kind.ToTestOutcome();
