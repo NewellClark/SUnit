@@ -12,6 +12,9 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\SUnit.Discovery.xml</DocumentationFile>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <NoWarn>1701;1702;CA1303</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SingleProjectPackage|AnyCPU'">

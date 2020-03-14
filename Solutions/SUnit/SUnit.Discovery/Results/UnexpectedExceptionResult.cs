@@ -9,7 +9,7 @@ namespace SUnit.Discovery.Results
     {
         public Exception Exception { get; }
 
-        public UnexpectedExceptionResult(string name, Exception exception) : base(name, ResultKind.Error)
+        public UnexpectedExceptionResult(UnitTest unitTest, Exception exception) : base(unitTest, ResultKind.Error)
         {
             if (exception is null) throw new ArgumentNullException(nameof(exception));
 

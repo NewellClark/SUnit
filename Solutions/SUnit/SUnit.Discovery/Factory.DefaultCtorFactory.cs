@@ -20,14 +20,15 @@ namespace SUnit.Discovery
                 this.ctor = fixture.Type.GetConstructor(Type.EmptyTypes);
             }
 
-            //  Used by reflection.
+//  Used via reflection
 #pragma warning disable IDE0060 // Remove unused parameter
             private static DefaultCtorFactory Load(Fixture fixture, string subclassData)
-#pragma warning restore IDE0060 // Remove unused parameter
             {
+                if (subclassData is null) throw new ArgumentNullException(nameof(subclassData));
+
                 return new DefaultCtorFactory(fixture);
             }
-
+#pragma warning restore IDE0060 // Remove unused parameter
             protected private override string SaveSubclassData()
             {
                 var ourTypePair = new TraitPair(nameof(Type), GetType().FullName);

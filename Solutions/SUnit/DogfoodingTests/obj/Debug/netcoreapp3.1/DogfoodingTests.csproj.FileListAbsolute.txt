@@ -14,6 +14,7 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\testhost.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\System.Reactive.Linq.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
@@ -82,17 +83,16 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\SUnit.Discovery.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\SUnit.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\SUnit.TestAdapter.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\System.Reactive.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\SUnit.TestAdapter.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\SUnit.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\SUnit.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\SUnit.Discovery.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\SUnit.Discovery.xml
+D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\System.Reactive.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Debug\netcoreapp3.1\DogfoodingTests.csprojAssemblyReference.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Debug\netcoreapp3.1\DogfoodingTests.AssemblyInfoInputs.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Debug\netcoreapp3.1\DogfoodingTests.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Debug\netcoreapp3.1\DogfoodingTests.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Debug\netcoreapp3.1\DogfoodingTests.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Debug\netcoreapp3.1\DogfoodingTests.pdb
-D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\System.Reactive.Linq.dll
-D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\System.Reactive.dll
-D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\System.Reactive.xml

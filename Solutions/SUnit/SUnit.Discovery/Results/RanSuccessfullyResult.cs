@@ -12,8 +12,8 @@ namespace SUnit.Discovery.Results
     {
         private const string indent = "   ";
 
-        public RanSuccessfullyResult(string name, Test result) 
-            : base(name, result.Passed ? ResultKind.Pass : ResultKind.Fail)
+        public RanSuccessfullyResult(UnitTest unitTest, Test result) 
+            : base(unitTest, result.Passed ? ResultKind.Pass : ResultKind.Fail)
         {
             this.Result = result;
         }

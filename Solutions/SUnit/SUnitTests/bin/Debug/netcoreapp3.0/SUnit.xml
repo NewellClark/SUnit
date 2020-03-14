@@ -545,6 +545,11 @@
         <member name="M:SUnit.Assertions.IsTest`1.CreateExpression(`0,SUnit.Assertions.ConstraintModifier{`0})">
             <inheritdoc/>
         </member>
+        <member name="T:SUnit.Assertions.IsTestBool">
+            <summary>
+            The type that is returned when you say <code>Assert.That(something).Is.True;</code>.
+            </summary>
+        </member>
         <member name="T:SUnit.Assertions.IsTestDecimal">
             <summary>
             A <see cref="T:SUnit.Test"/> created by applying a <see cref="T:SUnit.Constraints.IConstraint`1"/> to a nullable decimal.
@@ -930,6 +935,17 @@
         <member name="P:SUnit.That`1.Is">
             <summary>
             Contains methods and properties for applying contstraints to the actual value specified.
+            </summary>
+        </member>
+        <member name="T:SUnit.ThatEnumerable`1">
+            <summary>
+            The type that allows you to say "Is" and apply constraints to sequences.
+            </summary>
+            <typeparam name="T">The type of element in the actual value sequence.</typeparam>
+        </member>
+        <member name="P:SUnit.ThatEnumerable`1.Is">
+            <summary>
+            Allows you to apply constraints to sequences.
             </summary>
         </member>
         <member name="T:SUnit.ThatDouble">

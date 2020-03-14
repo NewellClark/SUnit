@@ -31,8 +31,9 @@ namespace SUnit.Discovery
         public FailAttribute() : base(false) { }
     }
 
+
     [TestFixture]
-    public abstract partial class UnitTestTests
+    public abstract partial class SingleTestTests
     {
         public struct Data
         {

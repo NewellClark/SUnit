@@ -6,10 +6,10 @@ using nAssert = NUnit.Framework.Assert;
 
 namespace SUnit.Discovery
 {
-    partial class UnitTestTests
+    partial class SingleTestTests
     {
         [TestFixture]
-        public class GenericFixture : UnitTestTests
+        public class GenericFixture : SingleTestTests
         {
             private class Mock<T>
             {
@@ -61,17 +61,17 @@ namespace SUnit.Discovery
                 [Fail]
                 public Test NotReferenceEquals() => Assert.That(valueEqualA).Is.Not.EqualTo(valueEqualA);
 
-                //[Pass]
-                //public Test ValueEquals() => Assert.That(valueEqualA).Is.EqualTo(valueEqualB);
+                [Pass]
+                public Test ValueEquals() => Assert.That(valueEqualA).Is.EqualTo(valueEqualB);
 
-                //[Fail]
-                //public Test NotValueEquals() => Assert.That(valueEqualA).Is.Not.EqualTo(valueEqualB);
+                [Fail]
+                public Test NotValueEquals() => Assert.That(valueEqualA).Is.Not.EqualTo(valueEqualB);
 
-                //[Fail]
-                //public Test EqualTo_NotEqual() => Assert.That(valueEqualA).Is.EqualTo(notEqual);
+                [Fail]
+                public Test EqualTo_NotEqual() => Assert.That(valueEqualA).Is.EqualTo(notEqual);
 
-                //[Pass]
-                //public Test NotEqualTo_NotEqual() => Assert.That(valueEqualA).Is.Not.EqualTo(notEqual);
+                [Pass]
+                public Test NotEqualTo_NotEqual() => Assert.That(valueEqualA).Is.Not.EqualTo(notEqual);
             }
 
             private protected override Type FixtureType => typeof(Mock<>);

@@ -6,10 +6,10 @@ using nAssert = NUnit.Framework.Assert;
 
 namespace SUnit.Discovery
 {
-    partial class UnitTestTests
+    partial class SingleTestTests
     {
         [TestFixture]
-        public class SingleDefaultCtor : UnitTestTests
+        public class SingleDefaultCtor : SingleTestTests
         {
             private class Mock
             {
