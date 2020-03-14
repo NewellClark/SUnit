@@ -16,6 +16,7 @@ namespace SUnit.Discovery
         private static readonly List<ITestKind> testKinds = new List<ITestKind>
         {
             new MultiTestKind(),
+            new AsyncTestKind(),
             new SingletonTestKind()
         };
 

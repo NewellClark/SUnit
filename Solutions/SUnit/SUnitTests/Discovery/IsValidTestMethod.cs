@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
 using static NUnit.Framework.Assert;
 
 namespace SUnit.Discovery
@@ -28,9 +29,13 @@ namespace SUnit.Discovery
                 public Test GenericMethod<T>() => throw new NotSupportedException();
                 public TestSubclass ReturnsTestSubclass() => throw new NotSupportedException();
                 public IEnumerable<Test> EnumerableOfTest() => throw new NotSupportedException();
+
+                public IEnumerable<TTest> EnumerableOfConstrainedTypeParameter<TTest>() where TTest 
+                    : Test => throw new NotSupportedException();
                 public List<Test> ListOfTest() => throw new NotSupportedException();
                 public Test[] ArrayOfTest() => throw new NotSupportedException();
                 public List<TestSubclass> ListOfTestSubclass() => throw new NotSupportedException();
+                public Task<Test> TaskOfTest() => throw new NotSupportedException();
             }
 
             [Test]
@@ -128,6 +133,14 @@ namespace SUnit.Discovery
             public void ListOfTestSubclass_IsValid()
             {
                 var info = typeof(Mock).GetMethod(nameof(Mock.ListOfTestSubclass));
+
+                That(Rules.IsValidTestMethod(info), Is.True);
+            }
+
+            [Test]
+            public void TaskOfTest_IsValid()
+            {
+                var info = typeof(Mock).GetMethod(nameof(Mock.TaskOfTest));
 
                 That(Rules.IsValidTestMethod(info), Is.True);
             }

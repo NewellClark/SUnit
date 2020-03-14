@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AdapterDebugging
 {
@@ -39,6 +40,21 @@ namespace AdapterDebugging
             yield return Assert.That(-1).Is.Not.Positive.Or.Not.Zero;
 
             throw new InvalidOperationException($"This exception was intentionally thrown.");
+        }
+    }
+
+    public class AsyncTests
+    {
+        public async Task<Test> KeepYouWaitingThenThrow()
+        {
+            await Task.Yield();
+            throw new InvalidOperationException("This exception was thrown intentionally.");
+        }
+
+        public async Task<Test> DelayThenPass()
+        {
+            await Task.Delay(TimeSpan.FromMilliseconds(4));
+            return Test.Pass;
         }
     }
 }

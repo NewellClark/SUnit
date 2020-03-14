@@ -11,8 +11,8 @@
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.TestHost": "16.5.0",
           "System.Reactive": "4.3.2",
-          "SUnit": "1.0.0.3",
-          "SUnit.TestAdapter": "1.0.0.3",
+          "SUnit": "1.0.0.6",
+          "SUnit.TestAdapter": "1.0.0.6",
           "System.Reactive.Reference": "4.3.0.0"
         },
         "runtime": {
@@ -633,19 +633,19 @@
           "System.Xml.ReaderWriter": "4.0.11"
         }
       },
-      "SUnit/1.0.0.3": {
+      "SUnit/1.0.0.6": {
         "runtime": {
           "SUnit.dll": {
-            "assemblyVersion": "1.0.0.3",
-            "fileVersion": "1.0.0.3"
+            "assemblyVersion": "1.0.0.6",
+            "fileVersion": "1.0.0.6"
           }
         }
       },
-      "SUnit.TestAdapter/1.0.0.3": {
+      "SUnit.TestAdapter/1.0.0.6": {
         "runtime": {
           "SUnit.TestAdapter.dll": {
-            "assemblyVersion": "1.0.0.3",
-            "fileVersion": "1.0.0.3"
+            "assemblyVersion": "1.0.0.6",
+            "fileVersion": "1.0.0.6"
           }
         }
       },
@@ -657,11 +657,11 @@
           }
         }
       },
-      "SUnit.Discovery/1.0.0.3": {
+      "SUnit.Discovery/1.0.0.6": {
         "runtime": {
           "SUnit.Discovery.dll": {
-            "assemblyVersion": "1.0.0.3",
-            "fileVersion": "1.0.0.3"
+            "assemblyVersion": "1.0.0.6",
+            "fileVersion": "1.0.0.6"
           }
         }
       }
@@ -967,12 +967,12 @@
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
     },
-    "SUnit/1.0.0.3": {
+    "SUnit/1.0.0.6": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.TestAdapter/1.0.0.3": {
+    "SUnit.TestAdapter/1.0.0.6": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -982,7 +982,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.Discovery/1.0.0.3": {
+    "SUnit.Discovery/1.0.0.6": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
