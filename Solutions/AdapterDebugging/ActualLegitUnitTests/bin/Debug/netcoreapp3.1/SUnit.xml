@@ -4,18 +4,33 @@
         <name>SUnit</name>
     </assembly>
     <members>
-        <member name="T:SUnit.Assert">
+        <member name="T:SUnit.BaseAssert">
             <summary>
-            Contains methods for performing assertions. Every unit test framework has a class like  this.
+            The only purpose of this class is to ensure that more-specific overloads of
+            <see cref="M:SUnit.BaseAssert.That``1(``0)"/> are always prioritized.
             </summary>
         </member>
-        <member name="M:SUnit.Assert.That(System.Object)">
+        <member name="M:SUnit.BaseAssert.That``1(``0)">
             <summary>
             Used to specify the actual value when writing assertions. For example,
             <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
             </summary>
             <param name="actual"></param>
             <returns></returns>
+        </member>
+        <member name="T:SUnit.Assert">
+            <summary>
+            Contains methods for performing assertions. Every unit test framework has a class like  this.
+            </summary>
+        </member>
+        <member name="M:SUnit.Assert.That``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Used to specify the actual value when writing assertions for sequences.
+            <code>Assert.That(errorCollection).Is.Empty;</code>
+            </summary>
+            <typeparam name="T">The type of element in the sequence.</typeparam>
+            <param name="actual">The actual value that is under test.</param>
+            <returns>An object that lets you say "Is" (unless you're using VB). </returns>
         </member>
         <member name="M:SUnit.Assert.That(System.Double)">
             <summary>
@@ -23,7 +38,7 @@
             <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
             </summary>
             <param name="actual"></param>
-            <returns></returns>
+            <returns>An object that lets you say "Is".</returns>
         </member>
         <member name="M:SUnit.Assert.That(System.Nullable{System.Double})">
             <summary>
@@ -112,6 +127,22 @@
             </summary>
             <param name="actual"></param>
             <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Boolean)">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns>An object that lets you say "Is".</returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Nullable{System.Boolean})">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns>An object that lets you say "Is".</returns>
         </member>
         <member name="T:SUnit.Assertions.ActualValueExpression`3">
             <summary>
@@ -514,6 +545,11 @@
         <member name="M:SUnit.Assertions.IsTest`1.CreateExpression(`0,SUnit.Assertions.ConstraintModifier{`0})">
             <inheritdoc/>
         </member>
+        <member name="T:SUnit.Assertions.IsTestBool">
+            <summary>
+            The type that is returned when you say <code>Assert.That(something).Is.True;</code>.
+            </summary>
+        </member>
         <member name="T:SUnit.Assertions.IsTestDecimal">
             <summary>
             A <see cref="T:SUnit.Test"/> created by applying a <see cref="T:SUnit.Constraints.IConstraint`1"/> to a nullable decimal.
@@ -899,6 +935,17 @@
         <member name="P:SUnit.That`1.Is">
             <summary>
             Contains methods and properties for applying contstraints to the actual value specified.
+            </summary>
+        </member>
+        <member name="T:SUnit.ThatEnumerable`1">
+            <summary>
+            The type that allows you to say "Is" and apply constraints to sequences.
+            </summary>
+            <typeparam name="T">The type of element in the actual value sequence.</typeparam>
+        </member>
+        <member name="P:SUnit.ThatEnumerable`1.Is">
+            <summary>
+            Allows you to apply constraints to sequences.
             </summary>
         </member>
         <member name="T:SUnit.ThatDouble">

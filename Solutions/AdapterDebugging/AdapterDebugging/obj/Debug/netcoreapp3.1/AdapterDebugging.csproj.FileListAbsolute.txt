@@ -87,9 +87,11 @@ D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\bin\Debug
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\bin\Debug\netcoreapp3.1\SUnit.TestAdapter.pdb
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\bin\Debug\netcoreapp3.1\SUnit.Discovery.pdb
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\bin\Debug\netcoreapp3.1\SUnit.Discovery.xml
-D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\obj\Debug\netcoreapp3.1\AdapterDebugging.csprojAssemblyReference.cache
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\obj\Debug\netcoreapp3.1\AdapterDebugging.AssemblyInfoInputs.cache
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\obj\Debug\netcoreapp3.1\AdapterDebugging.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\obj\Debug\netcoreapp3.1\AdapterDebugging.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\obj\Debug\netcoreapp3.1\AdapterDebugging.dll
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\obj\Debug\netcoreapp3.1\AdapterDebugging.pdb
+D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\obj\Debug\netcoreapp3.1\AdapterDebugging.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\bin\Debug\netcoreapp3.1\System.Reactive.dll
+D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\AdapterDebugging\bin\Debug\netcoreapp3.1\System.Reactive.xml

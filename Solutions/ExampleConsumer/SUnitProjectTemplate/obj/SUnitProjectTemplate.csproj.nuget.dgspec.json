@@ -56,11 +56,11 @@
             },
             "SUnit": {
               "target": "Package",
-              "version": "[1.0.0.2, )"
+              "version": "[1.0.0.6, )"
             },
             "SUnit.TestAdapter": {
               "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[1.0.0.6, )"
             }
           },
           "imports": [

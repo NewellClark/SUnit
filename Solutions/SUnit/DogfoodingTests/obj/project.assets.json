@@ -848,7 +848,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "SUnit/1.0.0.3": {
+      "SUnit/1.0.0.6": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "compile": {
@@ -858,12 +858,12 @@
           "bin/placeholder/SUnit.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0.3": {
+      "SUnit.Discovery/1.0.0.6": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
-          "SUnit": "1.0.0.3",
+          "SUnit": "1.0.0.6",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -874,13 +874,13 @@
           "bin/placeholder/SUnit.Discovery.dll": {}
         }
       },
-      "SUnit.TestAdapter/1.0.0.3": {
+      "SUnit.TestAdapter/1.0.0.6": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0.3",
-          "SUnit.Discovery": "1.0.0.3",
+          "SUnit": "1.0.0.6",
+          "SUnit.Discovery": "1.0.0.6",
           "System.Collections.Immutable": "1.7.0"
         },
         "compile": {
@@ -3362,17 +3362,17 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "SUnit/1.0.0.3": {
+    "SUnit/1.0.0.6": {
       "type": "project",
       "path": "../SUnit/SUnit.csproj",
       "msbuildProject": "../SUnit/SUnit.csproj"
     },
-    "SUnit.Discovery/1.0.0.3": {
+    "SUnit.Discovery/1.0.0.6": {
       "type": "project",
       "path": "../SUnit.Discovery/SUnit.Discovery.csproj",
       "msbuildProject": "../SUnit.Discovery/SUnit.Discovery.csproj"
     },
-    "SUnit.TestAdapter/1.0.0.3": {
+    "SUnit.TestAdapter/1.0.0.6": {
       "type": "project",
       "path": "../SUnit.TestAdapter/SUnit.TestAdapter.csproj",
       "msbuildProject": "../SUnit.TestAdapter/SUnit.TestAdapter.csproj"
@@ -3382,8 +3382,8 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Microsoft.TestPlatform.TestHost >= 16.5.0",
-      "SUnit >= 1.0.0.3",
-      "SUnit.TestAdapter >= 1.0.0.3"
+      "SUnit >= 1.0.0.6",
+      "SUnit.TestAdapter >= 1.0.0.6"
     ]
   },
   "packageFolders": {
