@@ -6,6 +6,20 @@ namespace SUnit
 {
     partial class Test
     {
+        public static bool operator true(Test operand)
+        {
+            if (operand is null) throw new ArgumentNullException(nameof(operand));
+
+            return operand.Passed;
+        }
+
+        public static bool operator false(Test operand)
+        {
+            if (operand is null) throw new ArgumentNullException(nameof(operand));
+
+            return !operand.Passed;
+        }
+
         private sealed class NotTest : Test
         {
             private readonly Test inner;
