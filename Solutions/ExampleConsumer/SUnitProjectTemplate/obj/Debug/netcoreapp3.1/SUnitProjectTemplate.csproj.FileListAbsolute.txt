@@ -90,3 +90,4 @@ D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\De
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\Debug\netcoreapp3.1\SUnitProjectTemplate.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\Debug\netcoreapp3.1\SUnitProjectTemplate.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\Debug\netcoreapp3.1\SUnitProjectTemplate.pdb
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\Debug\netcoreapp3.1\SUnitProjectTemplate.csprojAssemblyReference.cache
