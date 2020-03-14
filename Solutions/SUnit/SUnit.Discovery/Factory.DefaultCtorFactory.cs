@@ -19,8 +19,11 @@ namespace SUnit.Discovery
 
                 this.ctor = fixture.Type.GetConstructor(Type.EmptyTypes);
             }
-            
+
+            //  Used by reflection.
+#pragma warning disable IDE0060 // Remove unused parameter
             private static DefaultCtorFactory Load(Fixture fixture, string subclassData)
+#pragma warning restore IDE0060 // Remove unused parameter
             {
                 return new DefaultCtorFactory(fixture);
             }

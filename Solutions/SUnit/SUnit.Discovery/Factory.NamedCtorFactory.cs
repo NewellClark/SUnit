@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 
@@ -21,6 +22,7 @@ namespace SUnit.Discovery
                     throw new ArgumentException($"{nameof(method)} must have no parameters.", nameof(method));
 
                 this.method = method;
+                ReturnType = method.ReturnType;
             }
 
             //  Used via reflection.
@@ -28,17 +30,25 @@ namespace SUnit.Discovery
             private static NamedCtorFactory Load(Fixture fixture, string subclassData)
 #pragma warning restore IDE0051 // Remove unused private members
             {
-                string name = TraitPair.Parse(subclassData).Value;
-                var method = fixture.Type.GetMethod(name, Type.EmptyTypes);
+                var pairs = TraitPair.ParseAll(subclassData).ToDictionary(pair => pair.Name);
 
-                return new NamedCtorFactory(fixture, method);
+                string returnTypeName = pairs[nameof(ReturnType)].Value;
+                Type returnType = Type.GetType(returnTypeName);
+
+                string methodName = pairs[nameof(method)].Value;
+                var methodInfo = returnType.GetMethod(methodName, Type.EmptyTypes);
+
+                return new NamedCtorFactory(fixture, methodInfo);
             }
 
-            private protected override string SaveSubclassData()
+            protected private override string SaveSubclassData()
             {
-                var namePair = new TraitPair(nameof(Name), Name);
-                return namePair.Save();
+                return TraitPair.SaveAll(
+                    new TraitPair(nameof(method), method.Name),
+                    new TraitPair(nameof(ReturnType), ReturnType.AssemblyQualifiedName));
             }
+
+            public override Type ReturnType { get; }
 
             public override object Build() => method.Invoke(null, Array.Empty<object>());
             public override string Name => method.Name;

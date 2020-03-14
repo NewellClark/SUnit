@@ -91,6 +91,28 @@ namespace SUnit.Discovery
                 FindNamedConstructorsOnNonGenericType(type);
         }
 
+        public static bool IsTypeCompletelyFreeOfGenericArguments(Type type)
+        {
+            if (type is null) throw new ArgumentNullException(nameof(type));
+
+            static bool isFullyConstructed(Type type)
+            {
+                if (type.IsGenericParameter)
+                    return false;
+                if (type.ContainsGenericParameters)
+                    return false;
+                if (!type.IsGenericType)
+                    return true;
+                foreach (Type argument in type.GetGenericArguments())
+                    if (!isFullyConstructed(argument))
+                        return false;
+
+                return true;
+            }
+
+            return isFullyConstructed(type);
+        }
+
         /// <summary>
         /// Finds all the valid named constructors on a non generic, or constructed generic, fixture type.
         /// </summary>
@@ -159,7 +181,8 @@ namespace SUnit.Discovery
                 .Where(method => method.GetParameters().Length == 0)
                 .Where(method => !method.ReturnType.ContainsGenericParameters)
                 .Select(selectConstructed)
-                .Select(t => t.constructed.GetMethod(t.method.Name));
+                .Select(t => t.constructed.GetMethod(t.method.Name))
+                .Where(method => !method.ContainsGenericParameters);
         }
     }
 }

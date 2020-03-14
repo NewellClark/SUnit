@@ -9,7 +9,7 @@ using assert = NUnit.Framework.Assert;
 namespace SUnit.Discovery
 {
     [TestFixture]
-    public abstract class FixtureFactoryEligibilityTests
+    public abstract class FixtureFactoryTests
     {
         private class MockBase
         {
@@ -28,14 +28,20 @@ namespace SUnit.Discovery
         protected private Factory Factory => Fixture.Factories.Single();
         private MockBase Build() => (MockBase)Fixture.Factories.Single().Build();
 
-        protected FixtureFactoryEligibilityTests()
+        private Factory RoundTripSerialize(Factory factory)
+        {
+            string serialized = factory.Save();
+            return Factory.Load(serialized);
+        }
+
+        protected FixtureFactoryTests()
         {
             Fixture = new Fixture(Type);
         }
 
 
         [TestFixture]
-        public class DefaultCtor : FixtureFactoryEligibilityTests
+        public class DefaultCtor : FixtureFactoryTests
         {
             private class Mock : MockBase { public Mock() { SetBuilder("Default"); } }
 
@@ -75,7 +81,7 @@ namespace SUnit.Discovery
         }
 
         [TestFixture]
-        public class PublicStaticNoParamMockReturningMethod : FixtureFactoryEligibilityTests
+        public class PublicStaticNoParamMockReturningMethod : FixtureFactoryTests
         {
             private class Mock : MockBase
             {
@@ -110,7 +116,7 @@ namespace SUnit.Discovery
         }
 
         [TestFixture]
-        public class NonPublicMethod : FixtureFactoryEligibilityTests
+        public class NonPublicMethod : FixtureFactoryTests
         {
             private class Mock : MockBase
             {
@@ -127,7 +133,7 @@ namespace SUnit.Discovery
         }
 
         [TestFixture]
-        public class InstanceMethod : FixtureFactoryEligibilityTests
+        public class InstanceMethod : FixtureFactoryTests
         {
             private class Mock : MockBase
             {
@@ -145,7 +151,7 @@ namespace SUnit.Discovery
         }
 
         [TestFixture]
-        public class DefaultCtorOnAbstractClass : FixtureFactoryEligibilityTests
+        public class DefaultCtorOnAbstractClass : FixtureFactoryTests
         {
             private abstract class Mock : MockBase
             {
@@ -162,7 +168,7 @@ namespace SUnit.Discovery
         }
 
         [TestFixture]
-        public abstract class DefaultCtorOnGeneric : FixtureFactoryEligibilityTests
+        public abstract class DefaultCtorOnGeneric : FixtureFactoryTests
         {
             private class Mock<T> : MockBase
             {
@@ -201,7 +207,7 @@ namespace SUnit.Discovery
         }
 
         [TestFixture]
-        public abstract class NamedCtorOnGeneric : FixtureFactoryEligibilityTests
+        public abstract class NamedCtorOnGeneric : FixtureFactoryTests
         {
             [TestFixture]
             public class ReturnsUnconstructed : NamedCtorOnGeneric
@@ -257,6 +263,14 @@ namespace SUnit.Discovery
                 {
                     assert.That(Build(), Is.InstanceOf<Mock<TimeSpan>>());
                 }
+
+                [Test]
+                public void WorksAfterRoundTripSerialization()
+                {
+                    var rt = RoundTripSerialize(Factory);
+
+                    assert.That(rt.Build(), Is.InstanceOf<Mock<TimeSpan>>());
+                }
             }
 
             [TestFixture]
@@ -300,6 +314,25 @@ namespace SUnit.Discovery
                 public void BuildsConstructedInstance()
                 {
                     assert.That(Build(), Is.InstanceOf<Mock<DateTime>>());
+                }
+            }
+
+            [TestFixture]
+            public class MethodHasItsOwnGenericParameters : NamedCtorOnGeneric
+            {
+                private class Mock<T> : MockBase
+                {
+                    public Mock(string builder) : base(builder) { }
+
+                    public static Mock<string> GenericFactory<U>() => new Mock<string>(nameof(GenericFactory));
+                }
+
+                protected override Type Type => typeof(Mock<>);
+
+                [Test]
+                public void IsNotValidFactory()
+                {
+                    assert.That(Fixture.Factories, Is.Empty);
                 }
             }
         }
