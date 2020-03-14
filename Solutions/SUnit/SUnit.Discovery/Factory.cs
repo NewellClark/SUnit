@@ -58,7 +58,7 @@ namespace SUnit.Discovery
 
         public IEnumerable<UnitTest> CreateTests()
         {
-            return Finder.FindAllValidTestMethods(ReturnType)
+            return Rules.FindAllValidTestMethods(ReturnType)
                 .Select(method => new UnitTest(this, method));
         }
 

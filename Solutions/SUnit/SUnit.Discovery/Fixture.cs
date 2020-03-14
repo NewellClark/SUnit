@@ -17,7 +17,7 @@ namespace SUnit.Discovery
             this.Type = type;
             _Factories = new Lazy<IReadOnlyCollection<Factory>>(() => FindAllFactories(this));
             _Tests = new Lazy<IReadOnlyCollection<MethodInfo>>(
-                () => Finder.FindAllValidTestMethods(type)
+                () => Rules.FindAllValidTestMethods(type)
                     .ToList()
                     .AsReadOnly());
         }
@@ -85,11 +85,11 @@ namespace SUnit.Discovery
 
             var results = new List<Factory>();
 
-            var @default = Finder.GetDefaultConstructor(fixture.Type);
+            var @default = Rules.GetDefaultConstructor(fixture.Type);
             if (@default != null)
                 results.Add(Factory.FromDefaultCtor(fixture));
 
-            var named = Finder.FindNamedConstructors(fixture.Type)
+            var named = Rules.FindNamedConstructors(fixture.Type)
                 .Select(method => Factory.FromNamedCtor(fixture, method));
             results.AddRange(named);
 

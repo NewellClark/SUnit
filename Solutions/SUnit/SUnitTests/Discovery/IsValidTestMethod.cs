@@ -27,6 +27,10 @@ namespace SUnit.Discovery
                 public Test HasArguments(string argument) => throw new NotSupportedException(argument);
                 public Test GenericMethod<T>() => throw new NotSupportedException();
                 public TestSubclass ReturnsTestSubclass() => throw new NotSupportedException();
+                public IEnumerable<Test> EnumerableOfTest() => throw new NotSupportedException();
+                public List<Test> ListOfTest() => throw new NotSupportedException();
+                public Test[] ArrayOfTest() => throw new NotSupportedException();
+                public List<TestSubclass> ListOfTestSubclass() => throw new NotSupportedException();
             }
 
             [Test]
@@ -34,7 +38,7 @@ namespace SUnit.Discovery
             {
                 MethodInfo info = typeof(Mock).GetMethod(nameof(Mock.InstanceMethod));
 
-                That(Finder.IsValidTestMethod(info), Is.True);
+                That(Rules.IsValidTestMethod(info), Is.True);
             }
 
             [Test]
@@ -42,7 +46,7 @@ namespace SUnit.Discovery
             {
                 var info = typeof(Mock).GetMethod(nameof(Mock.StaticMethod));
 
-                That(Finder.IsValidTestMethod(info), Is.False);
+                That(Rules.IsValidTestMethod(info), Is.False);
             }
 
             [Test]
@@ -50,7 +54,7 @@ namespace SUnit.Discovery
             {
                 var info = typeof(Mock).GetMethod(nameof(Mock.VoidMethod));
 
-                That(Finder.IsValidTestMethod(info), Is.False);
+                That(Rules.IsValidTestMethod(info), Is.False);
             }
 
             [Test]
@@ -60,7 +64,7 @@ namespace SUnit.Discovery
                     nameof(Mock.InternalMethod),
                     BindingFlags.Instance | BindingFlags.NonPublic);
 
-                That(Finder.IsValidTestMethod(info), Is.False);
+                That(Rules.IsValidTestMethod(info), Is.False);
             }
 
             [Test]
@@ -68,7 +72,7 @@ namespace SUnit.Discovery
             {
                 var info = typeof(Mock).GetMethod(nameof(Mock.HasArguments));
 
-                That(Finder.IsValidTestMethod(info), Is.False);
+                That(Rules.IsValidTestMethod(info), Is.False);
             }
 
             [Test]
@@ -76,7 +80,7 @@ namespace SUnit.Discovery
             {
                 var info = typeof(Mock).GetMethod(nameof(Mock.GenericMethod));
 
-                That(Finder.IsValidTestMethod(info), Is.False);
+                That(Rules.IsValidTestMethod(info), Is.False);
             }
 
             [Test]
@@ -85,7 +89,7 @@ namespace SUnit.Discovery
                 var info = typeof(Mock).GetMethod(nameof(Mock.GenericMethod))
                     .MakeGenericMethod(typeof(int));
 
-                That(Finder.IsValidTestMethod(info), Is.True);
+                That(Rules.IsValidTestMethod(info), Is.True);
             }
 
             [Test]
@@ -93,7 +97,39 @@ namespace SUnit.Discovery
             {
                 var info = typeof(Mock).GetMethod(nameof(Mock.ReturnsTestSubclass));
 
-                That(Finder.IsValidTestMethod(info), Is.True);
+                That(Rules.IsValidTestMethod(info), Is.True);
+            }
+
+            [Test]
+            public void EnumerableOfTest_IsValid()
+            {
+                var info = typeof(Mock).GetMethod(nameof(Mock.EnumerableOfTest));
+
+                That(Rules.IsValidTestMethod(info), Is.True);
+            }
+
+            [Test]
+            public void ListOfTest_IsValid()
+            {
+                var info = typeof(Mock).GetMethod(nameof(Mock.ListOfTest));
+
+                That(Rules.IsValidTestMethod(info), Is.True);
+            }
+
+            [Test]
+            public void ArrayOfTest_IsValid()
+            {
+                var info = typeof(Mock).GetMethod(nameof(Mock.ArrayOfTest));
+
+                That(Rules.IsValidTestMethod(info), Is.True);
+            }
+
+            [Test]
+            public void ListOfTestSubclass_IsValid()
+            {
+                var info = typeof(Mock).GetMethod(nameof(Mock.ListOfTestSubclass));
+
+                That(Rules.IsValidTestMethod(info), Is.True);
             }
         }
     }

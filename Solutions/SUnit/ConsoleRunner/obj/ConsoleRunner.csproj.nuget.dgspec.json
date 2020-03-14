@@ -138,6 +138,14 @@
             "Microsoft.CodeAnalysis.FxCopAnalyzers": {
               "target": "Package",
               "version": "[2.9.3, )"
+            },
+            "System.Reactive": {
+              "target": "Package",
+              "version": "[4.3.2, )"
+            },
+            "System.Reactive.Linq": {
+              "target": "Package",
+              "version": "[4.3.2, )"
             }
           },
           "imports": [

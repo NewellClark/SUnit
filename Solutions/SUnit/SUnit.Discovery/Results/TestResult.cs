@@ -31,15 +31,16 @@ namespace SUnit.Discovery.Results
     /// </summary>
     internal abstract class TestResult
     {
-        protected private TestResult(string name, ResultKind kind)
+        protected private TestResult(UnitTest unitTest, ResultKind kind)
         {
-            if (name is null) throw new ArgumentNullException(nameof(name));
+            if (unitTest is null) throw new ArgumentNullException(nameof(unitTest));
 
-            this.Name = name;
+            this.UnitTest = unitTest;
             this.Kind = kind;
         }
 
-        public string Name { get; }
+        public UnitTest UnitTest { get; }
+        public string Name => UnitTest.Name;
 
         /// <summary>
         /// Whether the result was a pass, fail, or error.

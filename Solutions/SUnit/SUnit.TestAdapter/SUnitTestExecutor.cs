@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 using Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel.Logging;
 using SUnit.Discovery;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using VSResult = Microsoft.VisualStudio.TestPlatform.ObjectModel.TestResult;
 using SUResult = SUnit.Discovery.Results.TestResult;
 using SUnit.Discovery.Results;
 using System.Threading;
+using System.Reactive.Linq;
 
 namespace SUnit.TestAdapter
 {
@@ -17,20 +19,27 @@ namespace SUnit.TestAdapter
     internal class SUnitTestExecutor : ITestExecutor
     {
         internal const string ExecutorUri = "executor://SUnitTestExecutor";
+
         public void RunTests(IEnumerable<TestCase> tests, IRunContext runContext, IFrameworkHandle frameworkHandle)
         {
-            isCancellationRequested = false;
+            var testCaseLookup = tests
+                .ToDictionary(test => test.ToUnitTest(), test => test);
 
-            foreach (var test in tests)
-            {
-                VSResult result = RunUnitTest(test);
-                frameworkHandle.RecordResult(result);
-                if (isCancellationRequested)
+            var results = TestRunner.RunTests(testCaseLookup.Select(kvp => kvp.Key));
+
+            subscription = results.Subscribe(
+                result =>
                 {
-                    isCancellationRequested = false;
-                    return;
-                }
-            }
+                    var vsResult = ConvertToVsResult(testCaseLookup[result.UnitTest], result.UnitTest, result);
+                    frameworkHandle.RecordResult(vsResult);
+                },
+                error =>
+                {
+                    frameworkHandle.SendMessage(TestMessageLevel.Error, $"Unexpected {error.GetType().FullName}");
+                    frameworkHandle.SendMessage(TestMessageLevel.Error, error.Message);
+                    frameworkHandle.SendMessage(TestMessageLevel.Error, error.StackTrace);
+                    throw error;
+                });
         }
 
         public void RunTests(IEnumerable<string> sources, IRunContext runContext, IFrameworkHandle frameworkHandle)
@@ -41,20 +50,11 @@ namespace SUnit.TestAdapter
             RunTests(testCases, runContext, frameworkHandle);
         }
 
-        public void Cancel()
-        {
-            isCancellationRequested = true;
-        }
-        private bool isCancellationRequested = false;
+        public void Cancel() => subscription?.Dispose();
+        private IDisposable subscription;
 
-        private static VSResult RunUnitTest(TestCase @case)
+        private static VSResult ConvertToVsResult(TestCase @case, UnitTest unitTest, SUResult sunitResult)
         {
-            return RunUnitTest(@case, @case.ToUnitTest());
-        }
-
-        private static VSResult RunUnitTest(TestCase @case, UnitTest unitTest)
-        {
-            var sunitResult = TestRunner.RunTest(unitTest);
             var result = new VSResult(@case);
             result.DisplayName = unitTest.Name;
             result.Outcome = sunitResult.Kind.ToTestOutcome();

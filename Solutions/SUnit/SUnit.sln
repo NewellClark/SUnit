@@ -7,13 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnit", "SUnit\SUnit.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnitTests", "SUnitTests\SUnitTests.csproj", "{03A7BB81-0817-4D94-9C73-DBFC8615D5A1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleRunner", "ConsoleRunner\ConsoleRunner.csproj", "{BFE024D5-84EA-46C7-9EC1-40C916700E87}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnit.Discovery", "SUnit.Discovery\SUnit.Discovery.csproj", "{533C747D-18BE-4A90-8994-896E3A872328}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnit.TestAdapter", "SUnit.TestAdapter\SUnit.TestAdapter.csproj", "{BCD860D9-E94D-4A66-9E3E-F10F05001992}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogfoodingTests", "DogfoodingTests\DogfoodingTests.csproj", "{F1774DF5-6D9A-4B34-88E7-A4F8A491534B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogfoodingTests", "DogfoodingTests\DogfoodingTests.csproj", "{F1774DF5-6D9A-4B34-88E7-A4F8A491534B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AF389AF5-8B03-4F14-AF95-4E84346ED59E}"
 	ProjectSection(SolutionItems) = preProject
@@ -44,14 +42,6 @@ Global
 		{03A7BB81-0817-4D94-9C73-DBFC8615D5A1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{03A7BB81-0817-4D94-9C73-DBFC8615D5A1}.SingleProjectPackage|Any CPU.ActiveCfg = SingleProjectPackage|Any CPU
 		{03A7BB81-0817-4D94-9C73-DBFC8615D5A1}.SingleProjectPackage|Any CPU.Build.0 = SingleProjectPackage|Any CPU
-		{BFE024D5-84EA-46C7-9EC1-40C916700E87}.Debug Packages|Any CPU.ActiveCfg = Debug Packages|Any CPU
-		{BFE024D5-84EA-46C7-9EC1-40C916700E87}.Debug Packages|Any CPU.Build.0 = Debug Packages|Any CPU
-		{BFE024D5-84EA-46C7-9EC1-40C916700E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFE024D5-84EA-46C7-9EC1-40C916700E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFE024D5-84EA-46C7-9EC1-40C916700E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFE024D5-84EA-46C7-9EC1-40C916700E87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BFE024D5-84EA-46C7-9EC1-40C916700E87}.SingleProjectPackage|Any CPU.ActiveCfg = SingleProjectPackage|Any CPU
-		{BFE024D5-84EA-46C7-9EC1-40C916700E87}.SingleProjectPackage|Any CPU.Build.0 = SingleProjectPackage|Any CPU
 		{533C747D-18BE-4A90-8994-896E3A872328}.Debug Packages|Any CPU.ActiveCfg = Debug Packages|Any CPU
 		{533C747D-18BE-4A90-8994-896E3A872328}.Debug Packages|Any CPU.Build.0 = Debug Packages|Any CPU
 		{533C747D-18BE-4A90-8994-896E3A872328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

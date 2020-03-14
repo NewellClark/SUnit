@@ -8,10 +8,25 @@ using System.Text;
 namespace SUnit.Discovery
 {
     /// <summary>
-    /// Contains methods for finding tests.
+    /// Contains methods that define what constitutes a test, a fixture, a fixture factory, etc.
     /// </summary>
-    internal static class Finder
+    internal static class Rules
     {
+        /// <summary>
+        /// Indicates whether the specified type is valid as the return type for a test method.
+        /// </summary>
+        /// <param name="returnType">The <see cref="Type"/> to test.</param>
+        /// <returns>True if the specified type is a legal return type for a unit test method.</returns>
+        public static bool IsReturnTypeValidForTestMethod(Type returnType)
+        {
+            if (typeof(Test).IsAssignableFrom(returnType))
+                return true;
+            if (typeof(IEnumerable<Test>).IsAssignableFrom(returnType))
+                return true;
+
+            return false;
+        }
+
         /// <summary>
         /// Indicates whether the specified <see cref="MethodInfo"/> is a valid test method.
         /// </summary>
@@ -24,9 +39,7 @@ namespace SUnit.Discovery
         {
             if (method is null) throw new ArgumentNullException(nameof(method));
 
-            bool hasCorrectReturnType = typeof(Test).IsAssignableFrom(method.ReturnType);
-
-            if (!hasCorrectReturnType)
+            if (!IsReturnTypeValidForTestMethod(method.ReturnType))
                 return false;
             if (!method.IsPublic)
                 return false;
@@ -89,28 +102,6 @@ namespace SUnit.Discovery
             return type.ContainsGenericParameters ?
                 FindNamedConstructorsOnGenericType(type) :
                 FindNamedConstructorsOnNonGenericType(type);
-        }
-
-        public static bool IsTypeCompletelyFreeOfGenericArguments(Type type)
-        {
-            if (type is null) throw new ArgumentNullException(nameof(type));
-
-            static bool isFullyConstructed(Type type)
-            {
-                if (type.IsGenericParameter)
-                    return false;
-                if (type.ContainsGenericParameters)
-                    return false;
-                if (!type.IsGenericType)
-                    return true;
-                foreach (Type argument in type.GetGenericArguments())
-                    if (!isFullyConstructed(argument))
-                        return false;
-
-                return true;
-            }
-
-            return isFullyConstructed(type);
         }
 
         /// <summary>
