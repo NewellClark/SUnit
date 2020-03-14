@@ -32,7 +32,7 @@ namespace SUnit.Discovery
             var lookup = TraitPair.ParseAll(serialized).ToDictionary(pair => pair.Name);
             Factory factory = Factory.Load(lookup[nameof(Factory)].Value);
             string name = lookup[nameof(Name)].Value;
-            var method = factory.Fixture.Type.GetMethod(name, Type.EmptyTypes);
+            var method = factory.ReturnType.GetMethod(name, Type.EmptyTypes);
 
             return new UnitTest(factory, method);
         }

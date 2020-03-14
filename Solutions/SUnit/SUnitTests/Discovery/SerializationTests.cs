@@ -27,8 +27,6 @@ namespace SUnit.Discovery
         [TestFixture]
         public class FactorySerialization
         {
-
-
             [DatapointSource]
             private IEnumerable<Type> Types
             {

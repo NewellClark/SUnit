@@ -46,6 +46,8 @@ namespace SUnit.Discovery
 
         public Fixture Fixture { get; }
 
+        public virtual Type ReturnType => Fixture.Type;
+
         public abstract object Build();
 
         public abstract string Name { get; }
@@ -56,7 +58,7 @@ namespace SUnit.Discovery
 
         public IEnumerable<UnitTest> CreateTests()
         {
-            return Fixture.Tests
+            return Finder.FindAllValidTestMethods(ReturnType)
                 .Select(method => new UnitTest(this, method));
         }
 
