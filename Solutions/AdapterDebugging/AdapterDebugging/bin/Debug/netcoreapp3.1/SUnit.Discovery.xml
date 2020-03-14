@@ -4,12 +4,31 @@
         <name>SUnit.Discovery</name>
     </assembly>
     <members>
-        <member name="T:SUnit.Discovery.Finder">
+        <member name="P:SUnit.Discovery.Factory.Fixture">
             <summary>
-            Contains methods for finding tests.
+            Gets the <see cref="P:SUnit.Discovery.Factory.Fixture"/> that is instantiated by the current <see cref="T:SUnit.Discovery.Factory"/>.
             </summary>
         </member>
-        <member name="M:SUnit.Discovery.Finder.IsValidTestMethod(System.Reflection.MethodInfo)">
+        <member name="P:SUnit.Discovery.Factory.ReturnType">
+            <summary>
+            Gets the return type of the method or constructor that the <see cref="T:SUnit.Discovery.Factory"/> calls to build
+            test fixtures.
+            </summary>
+        </member>
+        <member name="T:SUnit.Discovery.Rules">
+            <summary>
+            Contains methods that define the rules for what is a valid test, what is a valid fixture,
+            and what is a valid factory.
+            </summary>
+        </member>
+        <member name="M:SUnit.Discovery.Rules.IsReturnTypeValidForTestMethod(System.Type)">
+            <summary>
+            Indicates whether the specified type is valid as the return type for a test method.
+            </summary>
+            <param name="returnType">The <see cref="T:System.Type"/> to test.</param>
+            <returns>True if the specified type is a legal return type for a unit test method.</returns>
+        </member>
+        <member name="M:SUnit.Discovery.Rules.IsValidTestMethod(System.Reflection.MethodInfo)">
             <summary>
             Indicates whether the specified <see cref="T:System.Reflection.MethodInfo"/> is a valid test method.
             </summary>
@@ -19,7 +38,7 @@
             <paramref name="method"/> is null.
             </exception>
         </member>
-        <member name="M:SUnit.Discovery.Finder.FindAllValidTestMethods(System.Type)">
+        <member name="M:SUnit.Discovery.Rules.FindAllValidTestMethods(System.Type)">
             <summary>
             Finds all the methods on the specified type that are valid test methods.
             </summary>
@@ -29,14 +48,14 @@
             <paramref name="type"/> is null.
             </exception>
         </member>
-        <member name="M:SUnit.Discovery.Finder.GetDefaultConstructor(System.Type)">
+        <member name="M:SUnit.Discovery.Rules.GetDefaultConstructor(System.Type)">
             <summary>
             Gets the eligible default constructor for the specified type, if one exists.
             </summary>
             <param name="type">The type to search.</param>
             <returns>The eligible default constructor, if one exists. <see langword="null"/> if none is found.</returns>
         </member>
-        <member name="M:SUnit.Discovery.Finder.FindNamedConstructors(System.Type)">
+        <member name="M:SUnit.Discovery.Rules.FindNamedConstructors(System.Type)">
             <summary>
             Finds all the valid named constructors on the specified type.
             </summary>
@@ -44,7 +63,7 @@
             <returns>All the valid named constructor methods on the specified fixture type.</returns>
             <exception cref="T:System.ArgumentNullException"><paramref name="type"/> is <see langword="null"/>.</exception>
         </member>
-        <member name="M:SUnit.Discovery.Finder.FindNamedConstructorsOnNonGenericType(System.Type)">
+        <member name="M:SUnit.Discovery.Rules.FindNamedConstructorsOnNonGenericType(System.Type)">
             <summary>
             Finds all the valid named constructors on a non generic, or constructed generic, fixture type.
             </summary>
@@ -53,7 +72,7 @@
             must be <see langword="false"/>.</param>
             <returns>All valid named constructor methods found on the fixture type.</returns>
         </member>
-        <member name="M:SUnit.Discovery.Finder.FindNamedConstructorsOnGenericType(System.Type)">
+        <member name="M:SUnit.Discovery.Rules.FindNamedConstructorsOnGenericType(System.Type)">
             <summary>
             Finds all the valid named constructors on an unconstructed generic fixture type.
             On an unconstructed generic fixture type, a valid named constructor returns a constructed version
@@ -62,6 +81,17 @@
             <param name="type">The type of the fixture. Must be a not-fully-constructed generic type. In other
             words, <see cref="P:System.Type.ContainsGenericParameters"/> must be <see langword="true"/>.</param>
             <returns>All valid named constructor methods found on the fixture type.</returns>
+        </member>
+        <member name="P:SUnit.Discovery.UnitTest.ReturnType">
+            <summary>
+            Gets the return type of the test method.
+            </summary>
+        </member>
+        <member name="M:SUnit.Discovery.UnitTest.CreateDelegate">
+            <summary>
+            Creates a new fixture instance and binds a delegate for the test method to it.
+            </summary>
+            <returns>A newly-created delegate with a newly-created test fixture as the receiver.</returns>
         </member>
         <member name="T:SUnit.Discovery.Results.RanSuccessfullyResult">
             <summary>
@@ -102,6 +132,34 @@
             <summary>
             Whether the result was a pass, fail, or error.
             </summary>
+        </member>
+        <member name="T:SUnit.Discovery.TestRunner">
+            <summary>
+            Contains methods for running <see cref="T:SUnit.Discovery.UnitTest"/>s. 
+            </summary>
+        </member>
+        <member name="M:SUnit.Discovery.TestRunner.RunTest(SUnit.Discovery.UnitTest)">
+            <summary>
+            Runs the specified <see cref="T:SUnit.Discovery.UnitTest"/>. 
+            </summary>
+            <param name="unitTest">The <see cref="T:SUnit.Discovery.UnitTest"/> to run.</param>
+            <returns>An <see cref="T:System.IObservable`1"/> that produces the <see cref="T:SUnit.Discovery.Results.TestResult"/>s from running the test. 
+            The obervable will complete once all test results are finished.</returns>
+            <remarks>
+            For single tests, the observable will yield a single result and then complete. If a test throws an exception,
+            the returned <see cref="T:SUnit.Discovery.Results.TestResult"/> will be an <see cref="T:SUnit.Discovery.Results.UnexpectedExceptionResult"/>, but the 
+            observable will still complete normally (<see cref="M:System.IObserver`1.OnNext(`0)"/> will be called, rather
+            than <see cref="M:System.IObserver`1.OnError(System.Exception)"/>).
+            </remarks>
+        </member>
+        <member name="M:SUnit.Discovery.TestRunner.RunTests(System.Collections.Generic.IEnumerable{SUnit.Discovery.UnitTest})">
+            <summary>
+            Runs all the <see cref="T:SUnit.Discovery.UnitTest"/>s. 
+            </summary>
+            <param name="unitTests">The <see cref="T:SUnit.Discovery.UnitTest"/>s to run.</param>
+            <returns>
+            An <see cref="T:System.IObservable`1"/> that produces the results of running all the specified unit tests.
+            </returns>
         </member>
         <member name="P:SUnit.Discovery.TraitPair.SerializedLength">
             <summary>

@@ -1,6 +1,7 @@
 ﻿using SUnit;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ExampleConsumer
@@ -34,5 +35,18 @@ namespace ExampleConsumer
         public Test InclusiveLessThan() => Assert.That(7).Is.LessThanOrEqualTo(7);
 
         public Test IsNullTest() => Assert.That((object)null).Is.Not.Null;
+    }
+
+    public class MultiTests
+    {
+        public IEnumerable<Test> AllPass() => Enumerable.Repeat(Test.Pass, 5);
+
+        public IEnumerable<Test> AllFail() => Enumerable.Repeat(Test.Fail, 4);
+
+        public IEnumerable<Test> EveryThirdFails()
+        {
+            return Enumerable.Range(1, 9)
+                .Select(n => Assert.That(n % 3).Is.Not.EqualTo(0));
+        }
     }
 }

@@ -13,6 +13,12 @@ namespace SUnit.Discovery
     /// </summary>
     internal static class Rules
     {
+        private static readonly List<ITestKind> testKinds = new List<ITestKind>
+        {
+            new MultiTestKind(),
+            new SingletonTestKind()
+        };
+
         /// <summary>
         /// Indicates whether the specified type is valid as the return type for a test method.
         /// </summary>
@@ -20,12 +26,22 @@ namespace SUnit.Discovery
         /// <returns>True if the specified type is a legal return type for a unit test method.</returns>
         public static bool IsReturnTypeValidForTestMethod(Type returnType)
         {
-            if (typeof(Test).IsAssignableFrom(returnType))
-                return true;
-            if (typeof(IEnumerable<Test>).IsAssignableFrom(returnType))
-                return true;
+            foreach (var testKind in testKinds)
+                if (testKind.IsReturnTypeValid(returnType))
+                    return true;
 
             return false;
+        }
+
+#pragma warning disable CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
+        public static ITestKind? GetTestKind(Type returnType)
+#pragma warning restore CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
+        {
+            foreach (var testKind in testKinds)
+                if (testKind.IsReturnTypeValid(returnType))
+                    return testKind;
+
+            return null;
         }
 
         /// <summary>

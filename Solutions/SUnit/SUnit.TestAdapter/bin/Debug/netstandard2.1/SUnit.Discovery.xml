@@ -4,6 +4,17 @@
         <name>SUnit.Discovery</name>
     </assembly>
     <members>
+        <member name="P:SUnit.Discovery.Factory.Fixture">
+            <summary>
+            Gets the <see cref="P:SUnit.Discovery.Factory.Fixture"/> that is instantiated by the current <see cref="T:SUnit.Discovery.Factory"/>.
+            </summary>
+        </member>
+        <member name="P:SUnit.Discovery.Factory.ReturnType">
+            <summary>
+            Gets the return type of the method or constructor that the <see cref="T:SUnit.Discovery.Factory"/> calls to build
+            test fixtures.
+            </summary>
+        </member>
         <member name="T:SUnit.Discovery.Rules">
             <summary>
             Contains methods that define the rules for what is a valid test, what is a valid fixture,
@@ -70,6 +81,11 @@
             <param name="type">The type of the fixture. Must be a not-fully-constructed generic type. In other
             words, <see cref="P:System.Type.ContainsGenericParameters"/> must be <see langword="true"/>.</param>
             <returns>All valid named constructor methods found on the fixture type.</returns>
+        </member>
+        <member name="P:SUnit.Discovery.UnitTest.ReturnType">
+            <summary>
+            Gets the return type of the test method.
+            </summary>
         </member>
         <member name="M:SUnit.Discovery.UnitTest.CreateDelegate">
             <summary>
