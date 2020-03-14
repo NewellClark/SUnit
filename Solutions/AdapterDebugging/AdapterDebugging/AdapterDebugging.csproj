@@ -7,11 +7,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="16.5.0" />
+    <PackageReference Include="System.Reactive" Version="4.3.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="SUnit">
-      <HintPath>..\..\SUnit\SUnit\bin\Debug\netstandard2.1\SUnit.dll</HintPath>
+      <HintPath>..\..\SUnit\SUnit.TestAdapter\bin\Debug\netstandard2.1\SUnit.dll</HintPath>
     </Reference>
     <Reference Include="SUnit.TestAdapter">
       <HintPath>..\..\SUnit\SUnit.TestAdapter\bin\Debug\netstandard2.1\SUnit.TestAdapter.dll</HintPath>

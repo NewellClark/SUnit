@@ -87,7 +87,6 @@ D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\ActualLegitUnitTests\bin\D
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\ActualLegitUnitTests\bin\Debug\netcoreapp3.1\SUnit.TestAdapter.pdb
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\ActualLegitUnitTests\bin\Debug\netcoreapp3.1\SUnit.Discovery.pdb
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\ActualLegitUnitTests\bin\Debug\netcoreapp3.1\SUnit.Discovery.xml
-D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\ActualLegitUnitTests\obj\Debug\netcoreapp3.1\ActualLegitUnitTests.csprojAssemblyReference.cache
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\ActualLegitUnitTests\obj\Debug\netcoreapp3.1\ActualLegitUnitTests.AssemblyInfoInputs.cache
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\ActualLegitUnitTests\obj\Debug\netcoreapp3.1\ActualLegitUnitTests.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\AdapterDebugging\ActualLegitUnitTests\obj\Debug\netcoreapp3.1\ActualLegitUnitTests.csproj.CopyComplete

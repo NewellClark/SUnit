@@ -274,7 +274,7 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "SUnit/1.0.0.3": {
+      "SUnit/1.0.0.6": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "compile": {
@@ -284,12 +284,12 @@
           "bin/placeholder/SUnit.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0.3": {
+      "SUnit.Discovery/1.0.0.6": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
-          "SUnit": "1.0.0.3",
+          "SUnit": "1.0.0.6",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -1178,12 +1178,12 @@
         "version.txt"
       ]
     },
-    "SUnit/1.0.0.3": {
+    "SUnit/1.0.0.6": {
       "type": "project",
       "path": "../SUnit/SUnit.csproj",
       "msbuildProject": "../SUnit/SUnit.csproj"
     },
-    "SUnit.Discovery/1.0.0.3": {
+    "SUnit.Discovery/1.0.0.6": {
       "type": "project",
       "path": "../SUnit.Discovery/SUnit.Discovery.csproj",
       "msbuildProject": "../SUnit.Discovery/SUnit.Discovery.csproj"
@@ -1193,8 +1193,8 @@
     ".NETStandard,Version=v2.1": [
       "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.9.6",
       "Microsoft.TestPlatform.ObjectModel >= 16.5.0",
-      "SUnit >= 1.0.0.3",
-      "SUnit.Discovery >= 1.0.0.3",
+      "SUnit >= 1.0.0.6",
+      "SUnit.Discovery >= 1.0.0.6",
       "System.Collections.Immutable >= 1.7.0"
     ]
   },
@@ -1204,7 +1204,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0.3",
+    "version": "1.0.0.6",
     "restore": {
       "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj",
       "projectName": "SUnit.TestAdapter",

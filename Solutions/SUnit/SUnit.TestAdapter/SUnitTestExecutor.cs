@@ -55,9 +55,11 @@ namespace SUnit.TestAdapter
 
         private static VSResult ConvertToVsResult(TestCase @case, UnitTest unitTest, SUResult sunitResult)
         {
-            var result = new VSResult(@case);
-            result.DisplayName = unitTest.Name;
-            result.Outcome = sunitResult.Kind.ToTestOutcome();
+            var result = new VSResult(@case)
+            {
+                DisplayName = unitTest.Name,
+                Outcome = sunitResult.Kind.ToTestOutcome()
+            };
 
             switch (sunitResult)
             {

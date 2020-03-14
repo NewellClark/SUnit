@@ -17,6 +17,7 @@ D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\De
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\SUnit.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\SUnit.Discovery.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\SUnit.TestAdapter.dll
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\System.Reactive.Linq.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
@@ -82,6 +83,8 @@ D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\De
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\System.Reactive.dll
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\System.Reactive.xml
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\Debug\netcoreapp3.1\SUnitProjectTemplate.AssemblyInfoInputs.cache
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\Debug\netcoreapp3.1\SUnitProjectTemplate.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\Debug\netcoreapp3.1\SUnitProjectTemplate.csproj.CopyComplete

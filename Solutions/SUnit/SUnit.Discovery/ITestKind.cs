@@ -104,7 +104,6 @@ namespace SUnit.Discovery
                 {
                     var errorResult = new UnexpectedExceptionResult(unitTest, ex);
                     observer.OnNext(errorResult);
-                    return emptyAction;
                 }
 
                 observer.OnCompleted();
