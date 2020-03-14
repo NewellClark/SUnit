@@ -4,18 +4,18 @@
         <name>SUnit</name>
     </assembly>
     <members>
-        <member name="T:SUnit.Assert">
-            <summary>
-            Contains methods for performing assertions. Every unit test framework has a class like  this.
-            </summary>
-        </member>
-        <member name="M:SUnit.Assert.That(System.Object)">
+        <member name="M:SUnit.BaseAssert.That``1(``0)">
             <summary>
             Used to specify the actual value when writing assertions. For example,
             <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
             </summary>
             <param name="actual"></param>
             <returns></returns>
+        </member>
+        <member name="T:SUnit.Assert">
+            <summary>
+            Contains methods for performing assertions. Every unit test framework has a class like  this.
+            </summary>
         </member>
         <member name="M:SUnit.Assert.That(System.Double)">
             <summary>
