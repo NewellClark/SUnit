@@ -4,6 +4,12 @@
         <name>SUnit</name>
     </assembly>
     <members>
+        <member name="T:SUnit.BaseAssert">
+            <summary>
+            The only purpose of this class is to ensure that more-specific overloads of
+            <see cref="M:SUnit.BaseAssert.That``1(``0)"/> are always prioritized.
+            </summary>
+        </member>
         <member name="M:SUnit.BaseAssert.That``1(``0)">
             <summary>
             Used to specify the actual value when writing assertions. For example,
@@ -17,13 +23,22 @@
             Contains methods for performing assertions. Every unit test framework has a class like  this.
             </summary>
         </member>
+        <member name="M:SUnit.Assert.That``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Used to specify the actual value when writing assertions for sequences.
+            <code>Assert.That(errorCollection).Is.Empty;</code>
+            </summary>
+            <typeparam name="T">The type of element in the sequence.</typeparam>
+            <param name="actual">The actual value that is under test.</param>
+            <returns>An object that lets you say "Is" (unless you're using VB). </returns>
+        </member>
         <member name="M:SUnit.Assert.That(System.Double)">
             <summary>
             Used to specify the actual value when writing assertions. For example,
             <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
             </summary>
             <param name="actual"></param>
-            <returns></returns>
+            <returns>An object that lets you say "Is".</returns>
         </member>
         <member name="M:SUnit.Assert.That(System.Nullable{System.Double})">
             <summary>
@@ -112,6 +127,22 @@
             </summary>
             <param name="actual"></param>
             <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Boolean)">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns>An object that lets you say "Is".</returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Nullable{System.Boolean})">
+            <summary>
+            Used to specify the actual value when writing assertions. For example,
+            <code>Assert.That(2 + 2).Is.Not.EqualTo(5);</code>.
+            </summary>
+            <param name="actual"></param>
+            <returns>An object that lets you say "Is".</returns>
         </member>
         <member name="T:SUnit.Assertions.ActualValueExpression`3">
             <summary>

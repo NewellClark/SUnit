@@ -7,13 +7,13 @@ namespace SUnit.Discovery
 {
     internal static class TestRunner
     {
-        public static TestResult RunTest(Func<Test> testMethod, string testName)
+        public static TestResult RunTest(Func<object> testMethod, string testName)
         {
             if (testMethod is null) throw new ArgumentNullException(nameof(testMethod));
 
             try
             {
-                Test outcome = testMethod();
+                Test outcome = (Test)testMethod();
                 return new RanSuccessfullyResult(testName, outcome);
             }
 #pragma warning disable CA1031 // Do not catch general exception types
@@ -28,5 +28,7 @@ namespace SUnit.Discovery
         {
             return RunTest(unitTest.Execute, unitTest.Name);
         }
+
+        
     }
 }

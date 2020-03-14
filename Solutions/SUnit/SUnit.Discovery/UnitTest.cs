@@ -41,12 +41,15 @@ namespace SUnit.Discovery
 
         public string Name => method.Name;
 
-        public Test Execute()
+        /// <summary>
+        /// Creates a new fixture instance and binds a delegate for the test method to it.
+        /// </summary>
+        /// <returns>A newly-created delegate with a newly-created test fixture as the receiver.</returns>
+        public Func<object> CreateDelegate()
         {
             object fixture = Factory.Build();
-            Func<Test> func = (Func<Test>)method.CreateDelegate(typeof(Func<Test>), fixture);
-
-            return func();
+            return (Func<object>)method.CreateDelegate(typeof(Func<object>), fixture);
         }
+        public object Execute() => CreateDelegate()();
     }
 }
