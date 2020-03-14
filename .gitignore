@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
@@ -21,4 +21,6 @@
 /Solutions/AdapterDebugging/.vs/AdapterDebugging/v16/Server/sqlite3
 /Solutions/AdapterDebugging/.vs/AdapterDebugging/v16/TestStore/0
 
-Solutions/SUnit/.vs/SUnit/v16/.suo
+Solutions/SUnit/.vs/
+
+Solutions/SUnit/SUnit/bin/
