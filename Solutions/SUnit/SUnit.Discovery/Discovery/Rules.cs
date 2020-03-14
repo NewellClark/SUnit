@@ -8,7 +8,8 @@ using System.Text;
 namespace SUnit.Discovery
 {
     /// <summary>
-    /// Contains methods that define what constitutes a test, a fixture, a fixture factory, etc.
+    /// Contains methods that define the rules for what is a valid test, what is a valid fixture,
+    /// and what is a valid factory.
     /// </summary>
     internal static class Rules
     {
