@@ -44,10 +44,17 @@ namespace SUnit.Discovery
             return (Factory)loadMethod.Invoke(null, new object[] { fixture, subclassData });
         }
 
+        /// <summary>
+        /// Gets the <see cref="Fixture"/> that is instantiated by the current <see cref="Factory"/>.
+        /// </summary>
         public Fixture Fixture { get; }
 
+        /// <summary>
+        /// Gets the return type of the method or constructor that the <see cref="Factory"/> calls to build
+        /// test fixtures.
+        /// </summary>
         public virtual Type ReturnType => Fixture.Type;
-
+        
         public abstract object Build();
 
         public abstract string Name { get; }

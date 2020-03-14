@@ -42,6 +42,11 @@ namespace SUnit.Discovery
         public string Name => method.Name;
 
         /// <summary>
+        /// Gets the return type of the test method.
+        /// </summary>
+        public Type ReturnType => method.ReturnType;
+
+        /// <summary>
         /// Creates a new fixture instance and binds a delegate for the test method to it.
         /// </summary>
         /// <returns>A newly-created delegate with a newly-created test fixture as the receiver.</returns>
@@ -50,6 +55,7 @@ namespace SUnit.Discovery
             object fixture = Factory.Build();
             return (Func<object>)method.CreateDelegate(typeof(Func<object>), fixture);
         }
+
         public object Execute() => CreateDelegate()();
     }
 }
