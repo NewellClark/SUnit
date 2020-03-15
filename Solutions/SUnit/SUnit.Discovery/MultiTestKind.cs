@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Reactive.Linq;
+using System.Linq;
 
 namespace SUnit.Discovery
 {
@@ -13,7 +14,7 @@ namespace SUnit.Discovery
 
             return typeof(IEnumerable<Test>).IsAssignableFrom(returnType);
         }
-
+        
         public IObservable<TestResult> Run(UnitTest unitTest)
         {
             if (unitTest is null) throw new ArgumentNullException(nameof(unitTest));

@@ -43,7 +43,6 @@ namespace SUnit.Discovery
                     return new UnexpectedExceptionResult(unitTest, ex);
                 }
 #pragma warning restore CA1031 // Do not catch general exception types
-
             }
 
             return Observable.FromAsync(runAsync);

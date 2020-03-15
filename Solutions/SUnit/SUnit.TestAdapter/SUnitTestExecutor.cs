@@ -14,6 +14,7 @@ using System.Threading;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using System.Reactive;
+using System.Reactive.Threading.Tasks;
 
 namespace SUnit.TestAdapter
 {
@@ -26,28 +27,26 @@ namespace SUnit.TestAdapter
         {
             var testCaseLookup = tests
                 .ToDictionary(test => test.ToUnitTest(), test => test);
+            cts = new CancellationTokenSource();
 
-            var results = TestRunner.RunTests(testCaseLookup.Select(kvp => kvp.Key));
-            var tsc = new TaskCompletionSource<Unit>();
-            subscription = results.Subscribe(
-                result =>
+            try
+            {
+                var resultObservable = TestRunner.RunTests(testCaseLookup.Select(kvp => kvp.Key));
+                resultObservable.Do(sunitResult =>
                 {
-                    var vsResult = ConvertToVsResult(testCaseLookup[result.UnitTest], result.UnitTest, result);
+                    UnitTest unitTest = sunitResult.UnitTest;
+                    TestCase testCase = testCaseLookup[unitTest];
+                    VSResult vsResult = ConvertToVsResult(testCase, unitTest, sunitResult);
                     frameworkHandle.RecordResult(vsResult);
-                },
-                error =>
-                {
-                    frameworkHandle.SendMessage(TestMessageLevel.Error, $"Unexpected {error.GetType().FullName}");
-                    frameworkHandle.SendMessage(TestMessageLevel.Error, error.Message);
-                    frameworkHandle.SendMessage(TestMessageLevel.Error, error.StackTrace);
-                    tsc.SetException(error);
-                },
-                () =>
-                {
-                    tsc.SetResult(Unit.Default);
-                });
-
-            tsc.Task.Wait();
+                }).ToTask()
+                .Wait(cts.Token);
+            }
+            catch (Exception error)
+            {
+                frameworkHandle.SendMessage(TestMessageLevel.Error, $"Unexpected {error.GetType().FullName}");
+                frameworkHandle.SendMessage(TestMessageLevel.Error, error.Message);
+                frameworkHandle.SendMessage(TestMessageLevel.Error, error.StackTrace);
+            }
         }
 
         public void RunTests(IEnumerable<string> sources, IRunContext runContext, IFrameworkHandle frameworkHandle)
@@ -58,8 +57,8 @@ namespace SUnit.TestAdapter
             RunTests(testCases, runContext, frameworkHandle);
         }
 
-        public void Cancel() => subscription?.Dispose();
-        private IDisposable subscription;
+        public void Cancel() => cts?.Cancel();
+        private CancellationTokenSource cts;
 
         private static VSResult ConvertToVsResult(TestCase @case, UnitTest unitTest, SUResult sunitResult)
         {
@@ -92,7 +91,6 @@ namespace SUnit.TestAdapter
 
             return result;
         }
-
 
         private static string IndentLines(string input, string indent)
         {
