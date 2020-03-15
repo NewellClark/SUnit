@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj": {
-      "version": "1.0.0.6",
+      "version": "1.0.0.7",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj",
         "projectName": "SUnit.Discovery",
@@ -40,11 +40,6 @@
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
@@ -83,7 +78,7 @@
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit\\SUnit.csproj": {
-      "version": "1.0.0.6",
+      "version": "1.0.0.7",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit\\SUnit.csproj",
         "projectName": "SUnit",

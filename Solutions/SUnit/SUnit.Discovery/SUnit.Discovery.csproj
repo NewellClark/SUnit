@@ -7,7 +7,8 @@
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <Configurations>Debug;Release;Debug Packages;SingleProjectPackage</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0.6</Version>
+    <Version>1.0.0.7</Version>
+    <Authors>Newell Clark</Authors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

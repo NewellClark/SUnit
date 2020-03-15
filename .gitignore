@@ -22,11 +22,17 @@
 /Solutions/AdapterDebugging/.vs/AdapterDebugging/v16/TestStore/0
 
 Solutions/SUnit/.vs/
-
 Solutions/SUnit/SUnit/bin/
+Solutions/SUnit/SUnit.Discovery/bin/
+Solutions/SUnit/SUnit.TestAdapter/bin/
 
 Solutions/SUnit/SUnitTests/bin/
+Solutions/SUnit/DogfoodingTests/bin/
 
-Solutions/SUnit/SUnitTests/obj/
 
-Solutions/SUnit/SUnit.Discovery/bin/
+Solutions/AdapterDebugging/.vs/
+Solutions/AdapterDebugging/AdapterDebugging/bin/
+Solutions/AdapterDebugging/ActualLegitUnitTests/bin/
+
+Solutions/ExampleConsumer/.vs/
+Solutions/ExampleConsumer/ExampleConsumer/bin/
