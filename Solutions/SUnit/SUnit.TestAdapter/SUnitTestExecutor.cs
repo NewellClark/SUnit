@@ -12,6 +12,8 @@ using SUResult = SUnit.Discovery.Results.TestResult;
 using SUnit.Discovery.Results;
 using System.Threading;
 using System.Reactive.Linq;
+using System.Threading.Tasks;
+using System.Reactive;
 
 namespace SUnit.TestAdapter
 {
@@ -26,7 +28,7 @@ namespace SUnit.TestAdapter
                 .ToDictionary(test => test.ToUnitTest(), test => test);
 
             var results = TestRunner.RunTests(testCaseLookup.Select(kvp => kvp.Key));
-
+            var tsc = new TaskCompletionSource<Unit>();
             subscription = results.Subscribe(
                 result =>
                 {
@@ -38,8 +40,14 @@ namespace SUnit.TestAdapter
                     frameworkHandle.SendMessage(TestMessageLevel.Error, $"Unexpected {error.GetType().FullName}");
                     frameworkHandle.SendMessage(TestMessageLevel.Error, error.Message);
                     frameworkHandle.SendMessage(TestMessageLevel.Error, error.StackTrace);
-                    throw error;
+                    tsc.SetException(error);
+                },
+                () =>
+                {
+                    tsc.SetResult(Unit.Default);
                 });
+
+            tsc.Task.Wait();
         }
 
         public void RunTests(IEnumerable<string> sources, IRunContext runContext, IFrameworkHandle frameworkHandle)

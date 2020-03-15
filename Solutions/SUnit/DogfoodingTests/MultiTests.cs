@@ -58,7 +58,7 @@ namespace DogfoodingTests
 
         public async Task<Test> AsyncEqualTo()
         {
-            await Task.Yield();
+            await Task.Delay(400);
             return Assert.That("ABC").Is.EqualTo("ABC");
         }
     }

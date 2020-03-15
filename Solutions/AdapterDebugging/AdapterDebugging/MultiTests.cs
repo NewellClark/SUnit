@@ -53,7 +53,7 @@ namespace AdapterDebugging
 
         public async Task<Test> DelayThenPass()
         {
-            await Task.Delay(TimeSpan.FromMilliseconds(4));
+            await Task.Delay(TimeSpan.FromMilliseconds(5));
             return Test.Pass;
         }
     }
