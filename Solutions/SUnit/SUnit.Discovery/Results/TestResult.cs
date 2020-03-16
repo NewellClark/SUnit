@@ -11,17 +11,18 @@ namespace SUnit.Discovery.Results
     internal enum ResultKind
     {
         /// <summary>
-        /// The test did not run due to an error.
+        /// The test did not run due to an exception, and we don't know whether the code under test or
+        /// the test itself is to blame.
         /// </summary>
         Error,
 
         /// <summary>
-        /// The test ran, and it failed.
+        /// The test ran successfully, and returned a failing <see cref="Test"/>.
         /// </summary>
         Fail,
 
         /// <summary>
-        /// The test ran, and it passed.
+        /// The test ran successfully, and returned a passing <see cref="Test"/>.
         /// </summary>
         Pass
     }

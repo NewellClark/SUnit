@@ -22,6 +22,8 @@ namespace SUnit.Discovery
                 public Test Passes() => Test.Pass;
 
                 public Test Fails() => Test.Fail;
+
+                public Test ReturnsNull() => null;
             }
 
             private IObservable<TestResult> Run(string name)
@@ -38,7 +40,8 @@ namespace SUnit.Discovery
             [Test]
             public async Task ThrowingTest_YieldsErrorResult()
             {
-                var result = await Run(nameof(Mock.Throws));
+                var result = await Run(nameof(Mock.Throws))
+                    .SingleAsync();
 
                 nAssert.That(result.Kind, Is.EqualTo(ResultKind.Error));
             }
@@ -46,7 +49,8 @@ namespace SUnit.Discovery
             [Test]
             public async Task PassingTest_YieldsPassingResult()
             {
-                var result = await Run(nameof(Mock.Passes));
+                var result = await Run(nameof(Mock.Passes))
+                    .SingleAsync();
 
                 nAssert.That(result.Kind, Is.EqualTo(ResultKind.Pass));
             }
@@ -54,9 +58,19 @@ namespace SUnit.Discovery
             [Test]
             public async Task FailingTest_YieldsFailingResult()
             {
-                var result = await Run(nameof(Mock.Fails));
+                var result = await Run(nameof(Mock.Fails))
+                    .SingleAsync();
 
                 nAssert.That(result.Kind, Is.EqualTo(ResultKind.Fail));
+            }
+
+            [Test]
+            public async Task NullReturningTest_YieldsInvalidResult()
+            {
+                var result = await Run(nameof(Mock.ReturnsNull))
+                    .SingleAsync();
+
+                nAssert.That(result, Is.InstanceOf<InvalidTestResult>());
             }
         }
     }

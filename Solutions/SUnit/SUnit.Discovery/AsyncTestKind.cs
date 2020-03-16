@@ -33,7 +33,12 @@ namespace SUnit.Discovery
                 try
                 {
                     var task = (Task<Test>)method();
+                    if (task is null)
+                        return new InvalidTestResult(unitTest, "Async test methods may not return null tasks.");
                     Test outcome = await task.ConfigureAwait(false);
+                    if (outcome is null)
+                        return new InvalidTestResult(
+                            unitTest, "Async test methods may not return tasks containing null tests.");
                     return new RanSuccessfullyResult(unitTest, outcome);
                 }
 

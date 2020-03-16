@@ -110,17 +110,18 @@
         </member>
         <member name="F:SUnit.Discovery.Results.ResultKind.Error">
             <summary>
-            The test did not run due to an error.
+            The test did not run due to an exception, and we don't know whether the code under test or
+            the test itself is to blame.
             </summary>
         </member>
         <member name="F:SUnit.Discovery.Results.ResultKind.Fail">
             <summary>
-            The test ran, and it failed.
+            The test ran successfully, and returned a failing <see cref="T:SUnit.Test"/>.
             </summary>
         </member>
         <member name="F:SUnit.Discovery.Results.ResultKind.Pass">
             <summary>
-            The test ran, and it passed.
+            The test ran successfully, and returned a passing <see cref="T:SUnit.Test"/>.
             </summary>
         </member>
         <member name="T:SUnit.Discovery.Results.TestResult">

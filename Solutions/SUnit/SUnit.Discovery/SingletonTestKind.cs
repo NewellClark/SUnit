@@ -46,8 +46,10 @@ namespace SUnit.Discovery
             }
 #pragma warning restore CA1031 // Do not catch general exception types
 
-            var ranResult = new RanSuccessfullyResult(unitTest, outcome);
-            return Observable.Return(ranResult);
+            if (outcome is null)
+                return Observable.Return(new InvalidTestResult(unitTest, $"Simple test methods may not return null."));
+
+            return Observable.Return(new RanSuccessfullyResult(unitTest, outcome));
         }
     }
 }

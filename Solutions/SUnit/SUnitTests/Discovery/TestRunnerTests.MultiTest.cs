@@ -55,6 +55,22 @@ namespace SUnit.Discovery
                     yield return Test.Fail;
                     yield return Test.Pass;
                 }
+
+                public IEnumerable<Test> ReturnsNullSequence() => null;
+
+                public IEnumerable<Test> ReturnsNullFirstElement()
+                {
+                    yield return null;
+                    yield return Test.Pass;
+                    yield return Test.Fail;
+                }
+
+                public IEnumerable<Test> ReturnsNullMiddleElement()
+                {
+                    yield return Test.Fail;
+                    yield return null;
+                    yield return Test.Pass;
+                }
             }
 
             private UnitTest Get(string name)
@@ -132,6 +148,44 @@ namespace SUnit.Discovery
                 await tcs.Task;
 
                 nAssert.That(count, Is.EqualTo(3));
+            }
+
+            [Test]
+            public async Task ReturnsNullSequence_YieldsSingleInvalidTestResult()
+            {
+                var result = await Run(nameof(Mock.ReturnsNullSequence)).SingleAsync();
+
+                nAssert.That(result, Is.InstanceOf<InvalidTestResult>());
+            }
+
+            [Test]
+            public async Task FirstElementIsNull_YieldsNullResultForNullElement()
+            {
+                var resultTypes = await Run(nameof(Mock.ReturnsNullFirstElement))
+                    .Select(tr => tr.GetType())
+                    .ToList()
+                    .SingleAsync();
+
+                var invalid = typeof(InvalidTestResult);
+                var successful = typeof(RanSuccessfullyResult);
+                var expected = new[] { invalid, successful, successful };
+
+                CollectionAssert.AreEqual(expected, resultTypes);
+            }
+
+            [Test]
+            public async Task MiddleElementIsNull_YieldsInvalidMiddleResult()
+            {
+                var resultTypes = await Run(nameof(Mock.ReturnsNullMiddleElement))
+                    .Select(tr => tr.GetType())
+                    .ToList()
+                    .SingleAsync();
+
+                var invalid = typeof(InvalidTestResult);
+                var successful = typeof(RanSuccessfullyResult);
+                var expected = new[] { successful, invalid, successful };
+
+                CollectionAssert.AreEqual(expected, resultTypes);
             }
         }
     }
