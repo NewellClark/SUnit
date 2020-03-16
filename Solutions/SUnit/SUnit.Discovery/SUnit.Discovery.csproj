@@ -5,9 +5,9 @@
     <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
     <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <Configurations>Debug;Release;Debug Packages;SingleProjectPackage</Configurations>
+    <Configurations>Debug;Release;Debug Packages;SingleProjectPackage;Release Packages</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0.7</Version>
+    <Version>1.0.0.8</Version>
     <Authors>Newell Clark</Authors>
   </PropertyGroup>
 
@@ -23,6 +23,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Packages|AnyCPU'">
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\SUnit.Discovery.xml</DocumentationFile>
+    <OutputPath>D:\LocalRepositories\SUnit\PackageSource</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Packages|AnyCPU'">
     <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\SUnit.Discovery.xml</DocumentationFile>
     <OutputPath>D:\LocalRepositories\SUnit\PackageSource</OutputPath>
   </PropertyGroup>

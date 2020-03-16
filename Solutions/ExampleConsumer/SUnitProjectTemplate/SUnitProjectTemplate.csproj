@@ -13,8 +13,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="16.5.0" />
-    <PackageReference Include="SUnit" Version="1.0.0.6" />
-    <PackageReference Include="SUnit.TestAdapter" Version="1.0.0.6" />
+    <PackageReference Include="SUnit" Version="1.0.0.8" />
+    <PackageReference Include="SUnit.TestAdapter" Version="1.0.0.8" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,10 @@
+D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.Discovery.deps.json
+D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.Discovery.dll
+D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.Discovery.pdb
+D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.Discovery.xml
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\obj\Release Packages\netstandard2.1\SUnit.Discovery.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\obj\Release Packages\netstandard2.1\SUnit.Discovery.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\obj\Release Packages\netstandard2.1\SUnit.Discovery.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\obj\Release Packages\netstandard2.1\SUnit.Discovery.csproj.CopyComplete
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\obj\Release Packages\netstandard2.1\SUnit.Discovery.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\obj\Release Packages\netstandard2.1\SUnit.Discovery.pdb
