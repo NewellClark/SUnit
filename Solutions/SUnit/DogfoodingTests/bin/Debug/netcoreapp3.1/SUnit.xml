@@ -144,6 +144,16 @@
             <param name="actual"></param>
             <returns>An object that lets you say "Is".</returns>
         </member>
+        <member name="M:SUnit.Assert.Throws``1(System.Action)">
+            <summary>
+            Tests that the specified <see cref="T:System.Action"/> throws the specified exception. Does not
+            include subclasses.
+            </summary>
+            <typeparam name="TException">The type of exception that should be thrown.</typeparam>
+            <param name="methodThatShouldThrow">An <see cref="T:System.Action"/> delegate that should throw.</param>
+            <returns>A <see cref="T:SUnit.Test"/> that passes if the specified <see cref="T:System.Action"/> threw 
+            an exception of exactly the specified type (no subclasses). </returns>
+        </member>
         <member name="T:SUnit.Assertions.ActualValueExpression`3">
             <summary>
             A base class for implementing <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>.

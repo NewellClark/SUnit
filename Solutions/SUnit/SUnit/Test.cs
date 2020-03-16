@@ -19,5 +19,25 @@ namespace SUnit
         /// </summary>
         /// <returns></returns>
         public override string ToString() => Passed ? "PASS" : "FAIL";
+
+        private sealed class CustomMessageTest : Test
+        {
+            private readonly string message;
+
+            public CustomMessageTest(bool result, string message)
+            {
+                this.Passed = result;
+                this.message = message;
+            }
+
+            public override bool Passed { get; }
+
+            public override string ToString() => message;
+        }
+
+        internal static Test FromResult(bool result, string message)
+        {
+            return new CustomMessageTest(result, message);
+        }
     }
 }

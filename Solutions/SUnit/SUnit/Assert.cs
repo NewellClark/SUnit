@@ -148,5 +148,43 @@ namespace SUnit
         /// <param name="actual"></param>
         /// <returns>An object that lets you say "Is".</returns>
         public static ThatBool That(bool? actual) => new ThatBool(actual);
+
+        /// <summary>
+        /// Tests that the specified <see cref="Action"/> throws the specified exception. Does not
+        /// include subclasses.
+        /// </summary>
+        /// <typeparam name="TException">The type of exception that should be thrown.</typeparam>
+        /// <param name="methodThatShouldThrow">An <see cref="Action"/> delegate that should throw.</param>
+        /// <returns>A <see cref="Test"/> that passes if the specified <see cref="Action"/> threw 
+        /// an exception of exactly the specified type (no subclasses). </returns>
+        public static Test Throws<TException>(Action methodThatShouldThrow)
+            where TException : Exception
+        {
+            if (methodThatShouldThrow is null)
+                throw new ArgumentNullException(nameof(methodThatShouldThrow));
+
+            string exceptionName = typeof(TException).Name;
+
+            try
+            {
+                methodThatShouldThrow();
+            }
+            catch (TException)
+            {
+                string message = $"Got expected {exceptionName}.";
+                return Test.FromResult(true, message);
+            }
+#pragma warning disable CA1031 // Do not catch general exception types
+            catch (Exception ex)
+
+            {
+                string message = $"Expected {exceptionName}\n" +
+                    $"But was {ex.GetType().Name}: {ex.Message}";
+                return Test.FromResult(false, message);
+            }
+#pragma warning restore CA1031 // Do not catch general exception types
+
+            return Test.FromResult(false, $"Expected {exceptionName}\nBut caught nothing.");
+        }
     }
 }
