@@ -41,8 +41,24 @@ namespace SUnit.Discovery
                 try
                 {
                     var outcome = (IEnumerable<Test>)method();
+                    if (outcome is null)
+                    {
+                        observer.OnNext(new InvalidTestResult(unitTest, "Multi-test methods may not return null enumerables."));
+                        observer.OnCompleted();
+
+                        return emptyAction;
+                    }
+
                     foreach (Test test in outcome)
+                    {
+                        if (test is null)
+                        {
+                            observer.OnNext(new InvalidTestResult(unitTest, $"Multi-test methods may not return null elements."));
+                            continue;
+                        }
                         observer.OnNext(new RanSuccessfullyResult(unitTest, test));
+                    }
+
                 }
                 catch (Exception ex)
                 {

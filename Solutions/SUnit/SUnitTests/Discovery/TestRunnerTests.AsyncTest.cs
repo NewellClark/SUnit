@@ -61,6 +61,15 @@ namespace SUnit.Discovery
                     await Task.Delay(longAsyncDuration);
                     throw new ExpectedException();
                 }
+
+                public Task<Test> SyncReturnNullTask() => null;
+                public Task<Test> SyncReturnTaskWithNullTest() => Task.FromResult<Test>(null);
+                public async Task<Test> AsyncReturnTaskWithNullTest()
+                {
+                    await Task.Yield();
+
+                    return null;
+                }
             }
 
 
@@ -101,6 +110,23 @@ namespace SUnit.Discovery
                 var result = await RunAsync(methodName);
 
                 nAssert.That(result.Kind, Is.EqualTo(ResultKind.Error));
+            }
+
+            [Test]
+            public async Task NullTaskReturningMethod_YieldsInvalidTestResult()
+            {
+                var result = await RunAsync(nameof(Mock.SyncReturnNullTask));
+
+                nAssert.That(result, Is.InstanceOf<InvalidTestResult>());
+            }
+
+            [TestCase(nameof(Mock.SyncReturnTaskWithNullTest))]
+            [TestCase(nameof(Mock.AsyncReturnTaskWithNullTest))]
+            public async Task MethodReturnsTaskThatReturnsNullTest_YieldsInvalidTestResult(string name)
+            {
+                var result = await RunAsync(name);
+
+                nAssert.That(result, Is.InstanceOf<InvalidTestResult>());
             }
         }
     }
