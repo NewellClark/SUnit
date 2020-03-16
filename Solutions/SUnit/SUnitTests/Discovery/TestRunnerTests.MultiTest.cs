@@ -14,8 +14,6 @@ namespace SUnit.Discovery
     [TestFixture]
     public partial class TestRunnerTests
     {
-        public class ExpectedException : Exception { }
-
         [TestFixture]
         public class MultiTests
         {
