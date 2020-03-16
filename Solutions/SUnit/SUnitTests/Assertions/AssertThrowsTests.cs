@@ -31,9 +31,17 @@ namespace SUnit.Assertions
         }
 
         [Test]
-        public void MoreDerivedException_Fails()
+        public void MoreDerivedException_FailsWhenAllowSubclassesIsFalse()
         {
-            Test test = Assert.Throws<ArgumentException>(() => throw new ArgumentOutOfRangeException());
+            Test test = Assert.Throws<ArgumentException>(() => throw new ArgumentOutOfRangeException(), false);
+            nAssert.That(test.Passed, Is.False);
+        }
+
+        [Test]
+        public void MoreDerivedException_PassesWhenAllowSubclassesIsTrue()
+        {
+            Test test = Assert.Throws<ArgumentException>(() => throw new ArgumentOutOfRangeException(), true);
+            nAssert.That(test.Passed, Is.True);
         }
     }
 }

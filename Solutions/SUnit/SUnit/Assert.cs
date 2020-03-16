@@ -150,14 +150,16 @@ namespace SUnit
         public static ThatBool That(bool? actual) => new ThatBool(actual);
 
         /// <summary>
-        /// Tests that the specified <see cref="Action"/> throws the specified exception. Does not
-        /// include subclasses.
+        /// Tests that the specified <see cref="Action"/> throws the specified exception, optionally including
+        /// subclasses of <typeparamref name="TException"/>.
         /// </summary>
         /// <typeparam name="TException">The type of exception that should be thrown.</typeparam>
         /// <param name="methodThatShouldThrow">An <see cref="Action"/> delegate that should throw.</param>
+        /// <param name="allowSubtypes">Whether subclasses of <typeparamref name="TException"/> should
+        /// be allowed.</param>
         /// <returns>A <see cref="Test"/> that passes if the specified <see cref="Action"/> threw 
-        /// an exception of exactly the specified type (no subclasses). </returns>
-        public static Test Throws<TException>(Action methodThatShouldThrow)
+        /// an exception of the expected type.</returns>
+        public static Test Throws<TException>(Action methodThatShouldThrow, bool allowSubtypes)
             where TException : Exception
         {
             if (methodThatShouldThrow is null)
@@ -165,26 +167,45 @@ namespace SUnit
 
             string exceptionName = typeof(TException).Name;
 
+            bool didWePass(Exception exception)
+            {
+                return allowSubtypes ?
+                    typeof(TException).IsAssignableFrom(exception.GetType()) :
+                    typeof(TException) == exception.GetType();
+            }
+
+#pragma warning disable CA1031 // Do not catch general exception types
             try
             {
                 methodThatShouldThrow();
             }
-            catch (TException)
-            {
-                string message = $"Got expected {exceptionName}.";
-                return Test.FromResult(true, message);
-            }
-#pragma warning disable CA1031 // Do not catch general exception types
             catch (Exception ex)
-
             {
-                string message = $"Expected {exceptionName}\n" +
+                bool result = didWePass(ex);
+                string message = result ?
+                    $"Got expected {exceptionName}" :
+                    $"Expected {exceptionName}\n" +
                     $"But was {ex.GetType().Name}: {ex.Message}";
-                return Test.FromResult(false, message);
+                
+                return Test.FromResult(result, message);
             }
 #pragma warning restore CA1031 // Do not catch general exception types
 
             return Test.FromResult(false, $"Expected {exceptionName}\nBut caught nothing.");
+        }
+
+        /// <summary>
+        /// Tests that the specified <see cref="Action"/> throws the specified exception. Subclasses
+        /// of <typeparamref name="TException"/> are excluded.
+        /// </summary>
+        /// <typeparam name="TException">The type of exception that should be thrown.</typeparam>
+        /// <param name="methodThatShouldThrow">An <see cref="Action"/> delegate that should throw.</param>
+        /// <returns>A <see cref="Test"/> that passes if the specified <see cref="Action"/> threw 
+        /// an exception of the expected type.</returns>
+        public static Test Throws<TException>(Action methodThatShouldThrow)
+            where TException : Exception
+        {
+            return Throws<TException>(methodThatShouldThrow, false);
         }
     }
 }
