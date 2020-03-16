@@ -33,23 +33,23 @@ namespace SUnit.Discovery
                 return Observable.Throw<TestResult>(ex);
             }
 
-            Test outcome;
+            TestResult testResult;
 
             try
             {
-                outcome = (Test)method();
+                Test outcome = (Test)method();
+
+                testResult = outcome is null ?
+                    new InvalidTestResult(unitTest, $"Test methods may not return null.") as TestResult :
+                    new RanSuccessfullyResult(unitTest, outcome);
             }
             catch (Exception ex)
             {
-                var errorResult = new UnexpectedExceptionResult(unitTest, ex);
-                return Observable.Return(errorResult);
+                testResult = new UnexpectedExceptionResult(unitTest, ex);
             }
 #pragma warning restore CA1031 // Do not catch general exception types
 
-            if (outcome is null)
-                return Observable.Return(new InvalidTestResult(unitTest, $"Simple test methods may not return null."));
-
-            return Observable.Return(new RanSuccessfullyResult(unitTest, outcome));
+            return Observable.Return(testResult);
         }
     }
 }

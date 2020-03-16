@@ -58,13 +58,9 @@
               "target": "Package",
               "version": "[16.5.0, )"
             },
-            "SUnit": {
+            "System.Reactive": {
               "target": "Package",
-              "version": "[1.0.0.8, )"
-            },
-            "SUnit.TestAdapter": {
-              "target": "Package",
-              "version": "[1.0.0.8, )"
+              "version": "[4.3.2, )"
             }
           },
           "imports": [
