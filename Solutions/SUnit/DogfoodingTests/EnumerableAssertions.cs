@@ -145,5 +145,12 @@ namespace DogfoodingTests
                     .Is.Not.EquivalentTo(Iter("Baby", null, null, "Hi"));
             }
         }
+
+        public Test ThrowingEmptyAssertions_ReportsErrorResult()
+        {
+            static IEnumerable<int> thrower() => throw new NotImplementedException();
+
+            return Assert.That(thrower()).Is.Empty;
+        }
     }
 }
