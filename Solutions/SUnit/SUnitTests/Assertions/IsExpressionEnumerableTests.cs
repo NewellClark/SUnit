@@ -10,11 +10,6 @@ namespace SUnit.Assertions
     [TestFixture]
     public class IsExpressionEnumerableTests
     {
-        private IEnumerable<T> EmptyEnumerable<T>()
-        {
-            yield break;
-        }
-
         [Test]
         public void AnEmptyArray_IsEmpty() => AssertPassed(Assert.That(Array.Empty<object>()).Is.Empty);
 
@@ -34,18 +29,17 @@ namespace SUnit.Assertions
         public void OrderDoesNotMatter_ForSetEquality()
         {
             var actual = new string[] { "Hello", "World", "Everyone" };
-            var expected = new string[] { "Everyone", "Hello", "World" };
 
-            AssertPassed(Assert.That(actual).Is.SetEqualTo(expected));
+            AssertPassed(Assert.That(actual).Is.SetEqualTo("Everyone", "Hello", "World"));
         }
 
         [Test]
         public void DuplicatesDoNotMatter_ForSetEquality()
         {
             var actual = new string[] { "baby", "baby", "goats", "carrots" };
-            var expected = new string[] { "carrots", "carrots", "carrots", "baby", "goats", "goats", "goats" };
 
-            AssertPassed(Assert.That(actual).Is.SetEqualTo(expected));
+            AssertPassed(Assert.That(actual)
+                .Is.SetEqualTo("carrots", "carrots", "carrots", "baby", "goats", "goats", "goats"));
         }
 
         [Test]

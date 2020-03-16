@@ -490,8 +490,18 @@
             Tests whether the actual sequence has all the same elements as the expected sequence. Order does not matter, and
             duplicates do not matter.
             </summary>
-            <param name="expected"></param>
-            <returns></returns>
+            <param name="expected">The expected value.</param>
+            <returns>A test that passes if the actual collection has all the same distinct items as
+            the expected value.</returns>
+        </member>
+        <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.SetEqualTo(`0[])">
+            <summary>
+            Tests whether the actual sequence has all the same elements as the expected sequence. Order does not matter, and
+            duplicates do not matter.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <returns>A test that passes if the actual collection has all the same distinct items as
+            the expected value.</returns>
         </member>
         <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.SequenceEqualTo(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
             <summary>
@@ -510,6 +520,14 @@
             <returns>A test that verifies that the actual sequence and the expected sequence have 
             the same items in the same order.</returns>
         </member>
+        <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.SequenceEqualTo(`0[])">
+            <summary>
+            Tests whether the current sequence has all the same items in the same order as the expected sequence.
+            </summary>
+            <param name="expected"></param>
+            <returns>A test that verifies that the actual sequence and the expected sequence have 
+            the same items in the same order.</returns>
+        </member>
         <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.EquivalentTo(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
             <summary>
             Tests whether the current sequence has the same number of all the same items, in any old order.
@@ -519,6 +537,14 @@
             <returns></returns>
         </member>
         <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.EquivalentTo(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Tests whether the current sequence has the same number of all the same items as the expected sequence.
+            Order does not matter.
+            </summary>
+            <param name="expected"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IIsExpressionEnumerable`1.EquivalentTo(`0[])">
             <summary>
             Tests whether the current sequence has the same number of all the same items as the expected sequence.
             Order does not matter.
@@ -868,6 +894,20 @@
             Overridden to indicate test status.
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:SUnit.Test.op_True(SUnit.Test)">
+            <summary>
+            Indicates whether the <see cref="T:SUnit.Test"/> passed.
+            </summary>
+            <param name="operand"></param>
+            <returns>True if the test passed.</returns>
+        </member>
+        <member name="M:SUnit.Test.op_False(SUnit.Test)">
+            <summary>
+            Indicates whether the <see cref="T:SUnit.Test"/> failed.
+            </summary>
+            <param name="operand"></param>
+            <returns>True if the test failed.</returns>
         </member>
         <member name="M:SUnit.Test.op_LogicalNot(SUnit.Test)">
             <summary>
