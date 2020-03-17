@@ -7,10 +7,10 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "SUnit.Discovery/1.0.0.6": {
+      "SUnit.Discovery/1.0.0.8": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
-          "SUnit": "1.0.0.6",
+          "SUnit": "1.0.0.8",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -92,7 +92,7 @@
           }
         }
       },
-      "SUnit/1.0.0.6": {
+      "SUnit/1.0.0.8": {
         "runtime": {
           "SUnit.dll": {}
         }
@@ -100,7 +100,7 @@
     }
   },
   "libraries": {
-    "SUnit.Discovery/1.0.0.6": {
+    "SUnit.Discovery/1.0.0.8": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -196,7 +196,7 @@
       "path": "system.threading.tasks.extensions/4.5.3",
       "hashPath": "system.threading.tasks.extensions.4.5.3.nupkg.sha512"
     },
-    "SUnit/1.0.0.6": {
+    "SUnit/1.0.0.8": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

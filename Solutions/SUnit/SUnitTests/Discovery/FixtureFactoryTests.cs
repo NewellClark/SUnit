@@ -76,8 +76,23 @@ namespace SUnit.Discovery
             {
                 assert.That(Factory.IsNamedConstructor, Is.False);
             }
+        }
 
+        [TestFixture]
+        public class ThrowingDefaultCtor : FixtureFactoryTests
+        {
+            private class Mock : MockBase
+            {
+                public Mock() => throw new ExpectedException();
+            }
 
+            protected override Type Type => typeof(Mock);
+
+            [Test]
+            public void UnwrapsTargetInvocationException()
+            {
+                assert.Throws<ExpectedException>(() => Factory.Build());
+            }
         }
 
         [TestFixture]

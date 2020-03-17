@@ -39,7 +39,14 @@ namespace SUnit.Discovery
 
             public override object Build()
             {
-                return ctor.Invoke(Array.Empty<object>());
+                try
+                {
+                    return ctor.Invoke(Array.Empty<object>());
+                }
+                catch (TargetInvocationException ex) when (ex.InnerException != null) 
+                {
+                    throw ex.InnerException;
+                }
             }
 
             public override string Name => "ctor";

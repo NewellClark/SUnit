@@ -6,19 +6,36 @@ namespace SUnit
 {
     partial class Test
     {
+        //  Already did. It's called "Passed". This is a Test. We want to
+        //  know if it Passed, so we check the Passed property.
+#pragma warning disable CA2225 // Operator overloads have named alternates
+
+        /// <summary>
+        /// Indicates whether the <see cref="Test"/> passed.
+        /// </summary>
+        /// <param name="operand"></param>
+        /// <returns>True if the test passed.</returns>
         public static bool operator true(Test operand)
+
         {
             if (operand is null) throw new ArgumentNullException(nameof(operand));
 
             return operand.Passed;
         }
 
+        /// <summary>
+        /// Indicates whether the <see cref="Test"/> failed.
+        /// </summary>
+        /// <param name="operand"></param>
+        /// <returns>True if the test failed.</returns>
         public static bool operator false(Test operand)
         {
             if (operand is null) throw new ArgumentNullException(nameof(operand));
 
             return !operand.Passed;
         }
+
+#pragma warning restore CA2225 // Operator overloads have named alternates
 
         private sealed class NotTest : Test
         {

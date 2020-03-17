@@ -26,24 +26,26 @@ namespace SUnit.Discovery
 #pragma warning disable CA1031 // Do not catch general exception types
             Action onSubscribe(IObserver<TestResult> observer)
             {
-                Func<object> method;
-
                 try
                 {
-                    method = unitTest.CreateDelegate();
-                }
-                catch (Exception ex)
-                {
-                    observer.OnError(ex);
-                    return emptyAction;
-                }
+                    object fixture = unitTest.InstantiateFixture();
+                    Func<object> method;
 
-                try
-                {
+                    try
+                    {
+                        method = unitTest.CreateDelegate(fixture);
+                    }
+                    catch (Exception ex)
+                    {
+                        observer.OnError(ex);
+                        return emptyAction;
+                    }
+
                     var outcome = (IEnumerable<Test>)method();
+
                     if (outcome is null)
                     {
-                        observer.OnNext(new InvalidTestResult(unitTest, "Multi-test methods may not return null enumerables."));
+                        observer.OnNext(new InvalidTestResult(unitTest, "Test methods may not return null enumerables."));
                         observer.OnCompleted();
 
                         return emptyAction;

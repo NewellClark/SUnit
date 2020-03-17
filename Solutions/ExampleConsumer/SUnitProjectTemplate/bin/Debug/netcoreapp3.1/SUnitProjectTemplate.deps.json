@@ -10,8 +10,8 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.TestHost": "16.5.0",
-          "SUnit": "1.0.0.6",
-          "SUnit.TestAdapter": "1.0.0.6",
+          "SUnit": "1.0.0.8",
+          "SUnit.TestAdapter": "1.0.0.8",
           "System.Reactive.Reference": "4.3.0.0"
         },
         "runtime": {
@@ -352,39 +352,39 @@
           }
         }
       },
-      "SUnit/1.0.0.6": {
+      "SUnit/1.0.0.8": {
         "runtime": {
           "lib/netstandard2.1/SUnit.dll": {
-            "assemblyVersion": "1.0.0.6",
-            "fileVersion": "1.0.0.6"
+            "assemblyVersion": "1.0.0.8",
+            "fileVersion": "1.0.0.8"
           }
         }
       },
-      "SUnit.Discovery/1.0.0.6": {
+      "SUnit.Discovery/1.0.0.8": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
-          "SUnit": "1.0.0.6",
+          "SUnit": "1.0.0.8",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
         "runtime": {
           "lib/netstandard2.1/SUnit.Discovery.dll": {
-            "assemblyVersion": "1.0.0.6",
-            "fileVersion": "1.0.0.6"
+            "assemblyVersion": "1.0.0.8",
+            "fileVersion": "1.0.0.8"
           }
         }
       },
-      "SUnit.TestAdapter/1.0.0.6": {
+      "SUnit.TestAdapter/1.0.0.8": {
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0.6",
-          "SUnit.Discovery": "1.0.0.6",
+          "SUnit": "1.0.0.8",
+          "SUnit.Discovery": "1.0.0.8",
           "System.Collections.Immutable": "1.7.0"
         },
         "runtime": {
           "lib/netstandard2.1/SUnit.TestAdapter.dll": {
-            "assemblyVersion": "1.0.0.6",
-            "fileVersion": "1.0.0.6"
+            "assemblyVersion": "1.0.0.8",
+            "fileVersion": "1.0.0.8"
           }
         }
       },
@@ -801,26 +801,26 @@
       "path": "nuget.frameworks/5.0.0",
       "hashPath": "nuget.frameworks.5.0.0.nupkg.sha512"
     },
-    "SUnit/1.0.0.6": {
+    "SUnit/1.0.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IdJjaxgMyQj/LQEFus6xpBN2UeoEkbjLyx06g5cDvkiATRD4khBtxsZNepjuh2K8jmpHuXZ998PNuO7qsA//PA==",
-      "path": "sunit/1.0.0.6",
-      "hashPath": "sunit.1.0.0.6.nupkg.sha512"
+      "sha512": "sha512-ZbSFbUVo4mZLJnkiJPFjaxe7hNIuUPp8c6yURb63yyYQ9bh9eQBXf3NY+zzXKLC2Hd/0le6GrMGje5Y/XeLurQ==",
+      "path": "sunit/1.0.0.8",
+      "hashPath": "sunit.1.0.0.8.nupkg.sha512"
     },
-    "SUnit.Discovery/1.0.0.6": {
+    "SUnit.Discovery/1.0.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-O28fHQQtuHtxeCJuG7o7a+oS+d4662+t1mAzrbyHaIumXS0g30mmIcScQmwdYB4WAhq5PCp79uIBGPAv0elRRg==",
-      "path": "sunit.discovery/1.0.0.6",
-      "hashPath": "sunit.discovery.1.0.0.6.nupkg.sha512"
+      "sha512": "sha512-qtDTqMO47RsOezlw2ZVBLd+YzsDrjNhG+WGYIbdlpVYn/VwyWri5lcbNzR19r3g5LYzS5kJuUyE2xdXpDburzg==",
+      "path": "sunit.discovery/1.0.0.8",
+      "hashPath": "sunit.discovery.1.0.0.8.nupkg.sha512"
     },
-    "SUnit.TestAdapter/1.0.0.6": {
+    "SUnit.TestAdapter/1.0.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rZ1vqe3apa49ubsHe9nVj2kOWurUZO05853KWX43sufohT0hIupK7vUwNldBu7gZqG3RWT+v+qFCZzJkZwhFng==",
-      "path": "sunit.testadapter/1.0.0.6",
-      "hashPath": "sunit.testadapter.1.0.0.6.nupkg.sha512"
+      "sha512": "sha512-VXrsL0WEwT9Rp65Ac7u7PIeJ/I3cPms0/wJotMT/dX2UpyXSaPdDgFjia8iDuTr0ZAKRq7gVmRK7FSnAGf89bw==",
+      "path": "sunit.testadapter/1.0.0.8",
+      "hashPath": "sunit.testadapter.1.0.0.8.nupkg.sha512"
     },
     "System.Collections/4.0.11": {
       "type": "package",

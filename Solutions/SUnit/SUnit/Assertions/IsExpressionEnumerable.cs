@@ -41,9 +41,19 @@ namespace SUnit.Assertions
         /// Tests whether the actual sequence has all the same elements as the expected sequence. Order does not matter, and
         /// duplicates do not matter.
         /// </summary>
-        /// <param name="expected"></param>
-        /// <returns></returns>
+        /// <param name="expected">The expected value.</param>
+        /// <returns>A test that passes if the actual collection has all the same distinct items as
+        /// the expected value.</returns>
         public IsTestEnumerable<T> SetEqualTo(IEnumerable<T> expected) => SetEqualTo(expected, EqualityComparer<T>.Default);
+
+        /// <summary>
+        /// Tests whether the actual sequence has all the same elements as the expected sequence. Order does not matter, and
+        /// duplicates do not matter.
+        /// </summary>
+        /// <param name="expected">The expected value.</param>
+        /// <returns>A test that passes if the actual collection has all the same distinct items as
+        /// the expected value.</returns>
+        public IsTestEnumerable<T> SetEqualTo(params T[] expected) => SetEqualTo(expected.AsEnumerable());
 
         /// <summary>
         /// Tests whether the actual sequence has the same elements in the same order.
@@ -71,6 +81,14 @@ namespace SUnit.Assertions
         }
 
         /// <summary>
+        /// Tests whether the current sequence has all the same items in the same order as the expected sequence.
+        /// </summary>
+        /// <param name="expected"></param>
+        /// <returns>A test that verifies that the actual sequence and the expected sequence have 
+        /// the same items in the same order.</returns>
+        public IsTestEnumerable<T> SequenceEqualTo(params T[] expected) => SequenceEqualTo(expected.AsEnumerable());
+
+        /// <summary>
         /// Tests whether the current sequence has the same number of all the same items, in any old order.
         /// </summary>
         /// <param name="expected"></param>
@@ -93,6 +111,14 @@ namespace SUnit.Assertions
         {
             return EquivalentTo(expected, EqualityComparer<T>.Default);
         }
+
+        /// <summary>
+        /// Tests whether the current sequence has the same number of all the same items as the expected sequence.
+        /// Order does not matter.
+        /// </summary>
+        /// <param name="expected"></param>
+        /// <returns></returns>
+        public IsTestEnumerable<T> EquivalentTo(params T[] expected) => EquivalentTo(expected.AsEnumerable());
     }
 
     internal class IsExpressionEnumerable<T> : 

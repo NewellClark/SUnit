@@ -5,15 +5,19 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
     <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
-    <Configurations>Debug;Release;Debug Packages;SingleProjectPackage</Configurations>
-    <Version>1.0.0.7</Version>
-    <AssemblyVersion>1.0.0.7</AssemblyVersion>
-    <FileVersion>1.0.0.7</FileVersion>
+    <Configurations>Debug;Release;Debug Packages;SingleProjectPackage;Release Packages</Configurations>
+    <Version>1.0.0.8</Version>
+    <AssemblyVersion>1.0.0.8</AssemblyVersion>
+    <FileVersion>1.0.0.8</FileVersion>
     <Authors>Newell Clark</Authors>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Packages|AnyCPU'">
+    <OutputPath>D:\LocalRepositories\SUnit\PackageSource</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Packages|AnyCPU'">
     <OutputPath>D:\LocalRepositories\SUnit\PackageSource</OutputPath>
   </PropertyGroup>
 

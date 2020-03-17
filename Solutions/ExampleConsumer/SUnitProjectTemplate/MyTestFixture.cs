@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using SUnit;
 
 namespace SUnitProjectTemplate
@@ -21,6 +22,14 @@ namespace SUnitProjectTemplate
         {
             foreach (int n in Enumerable.Range(1, 7))
                 yield return Assert.That(n).Is.Positive.And.Not.Zero;
+        }
+
+        //  Async tests are also supported.
+        public async Task<Test> TestTheLaggyDatabase()
+        {
+            await Task.Yield();
+
+            return Assert.That("Hello, World!").Is.EquivalentTo("World, Hello!");
         }
     }
 }

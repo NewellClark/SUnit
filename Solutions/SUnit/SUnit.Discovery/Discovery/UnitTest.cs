@@ -52,9 +52,24 @@ namespace SUnit.Discovery
         /// <returns>A newly-created delegate with a newly-created test fixture as the receiver.</returns>
         public Func<object> CreateDelegate()
         {
-            object fixture = Factory.Build();
+            object fixture = InstantiateFixture();
+
+            return CreateDelegate(fixture);
+        }
+
+        /// <summary>
+        /// Creates a new test method delegate with the specified fixture instance as the receiver.
+        /// </summary>
+        /// <param name="fixture">An instance of the test fixture to bind t</param>
+        /// <returns>A delegate created by binding the test method to the specified fixture instance.</returns>
+        public Func<object> CreateDelegate(object fixture)
+        {
+            if (fixture is null) throw new ArgumentNullException(nameof(fixture));
+
             return (Func<object>)method.CreateDelegate(typeof(Func<object>), fixture);
         }
+        
+        public object InstantiateFixture() => Factory.Build();
 
         public object Execute() => CreateDelegate()();
     }
