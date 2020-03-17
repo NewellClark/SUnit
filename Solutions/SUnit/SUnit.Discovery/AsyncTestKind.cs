@@ -27,9 +27,19 @@ namespace SUnit.Discovery
 
             async Task<TestResult> runAsync()
             {
-                Func<object> method = unitTest.CreateDelegate();
-
 #pragma warning disable CA1031 // Do not catch general exception types
+                object fixture;
+                try
+                {
+                    fixture = unitTest.InstantiateFixture();
+                }
+                catch (Exception ex)
+                {
+                    return new UnexpectedExceptionResult(unitTest, ex);
+                }
+
+                Func<object> method = unitTest.CreateDelegate(fixture);
+
                 try
                 {
                     var task = (Task<Test>)method();
@@ -41,9 +51,7 @@ namespace SUnit.Discovery
                             unitTest, "Async test methods may not return tasks containing null tests.");
                     return new RanSuccessfullyResult(unitTest, outcome);
                 }
-
                 catch (Exception ex)
-
                 {
                     return new UnexpectedExceptionResult(unitTest, ex);
                 }

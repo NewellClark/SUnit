@@ -1,0 +1,8 @@
+D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections\bin\Debug\netstandard2.1\NewellClark.Collections.deps.json
+D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections\bin\Debug\netstandard2.1\NewellClark.Collections.dll
+D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections\bin\Debug\netstandard2.1\NewellClark.Collections.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections\obj\Debug\netstandard2.1\NewellClark.Collections.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections\obj\Debug\netstandard2.1\NewellClark.Collections.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections\obj\Debug\netstandard2.1\NewellClark.Collections.dll
+D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections\obj\Debug\netstandard2.1\NewellClark.Collections.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections\obj\Debug\netstandard2.1\NewellClark.Collections.csprojAssemblyReference.cache

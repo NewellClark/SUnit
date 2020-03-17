@@ -21,35 +21,33 @@ namespace SUnit.Discovery
                     $"Invalid type passed to {nameof(SingletonTestKind)}. Got {unitTest.ReturnType.FullName}.",
                     nameof(unitTest));
 
-            Func<object> method;
-            
 #pragma warning disable CA1031 // Do not catch general exception types
             try
             {
-                method = unitTest.CreateDelegate();
+                object fixture = unitTest.InstantiateFixture();
+                Func<object> method;
+
+                try
+                {
+                    method = unitTest.CreateDelegate(fixture);
+                }
+                catch (Exception ex)
+                {
+                    return Observable.Throw<TestResult>(ex);
+                }
+
+                Test outcome = (Test)method();
+                TestResult testResult = outcome is null ?
+                    new InvalidTestResult(unitTest, $"Test methods may not return null.") as TestResult :
+                    new RanSuccessfullyResult(unitTest, outcome);
+
+                return Observable.Return(testResult);
             }
             catch (Exception ex)
             {
-                return Observable.Throw<TestResult>(ex);
-            }
-
-            Test outcome;
-
-            try
-            {
-                outcome = (Test)method();
-            }
-            catch (Exception ex)
-            {
-                var errorResult = new UnexpectedExceptionResult(unitTest, ex);
-                return Observable.Return(errorResult);
+                return Observable.Return(new UnexpectedExceptionResult(unitTest, ex));
             }
 #pragma warning restore CA1031 // Do not catch general exception types
-
-            if (outcome is null)
-                return Observable.Return(new InvalidTestResult(unitTest, $"Simple test methods may not return null."));
-
-            return Observable.Return(new RanSuccessfullyResult(unitTest, outcome));
         }
     }
 }
