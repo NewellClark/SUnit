@@ -5,22 +5,30 @@ using System.Text;
 
 namespace SUnit.NewAssertions
 {
-    public interface IIsExpression<T> : IValueExpression<T>
+    public interface IIsExpression<T, TExpression, TTest> : IValueExpression<T>
+        where TExpression : IIsExpression<T, TExpression, TTest>
+        where TTest : ValueTest<T>
     {
-        public new IIsExpression<T> ApplyModifier(ConstraintModifier<T> modifier);
+        public new TExpression ApplyModifier(ConstraintModifier<T> modifier);
 
         IValueExpression<T> IValueExpression<T>.ApplyModifier(ConstraintModifier<T> modifier) => ApplyModifier(modifier);
-        
-        public IIsExpression<T> Not => ApplyModifier(constraint => !constraint);
+
+        public new TTest ApplyConstraint(IConstraint<T> constraint);
+
+        ValueTest<T> IValueExpression<T>.ApplyConstraint(IConstraint<T> constraint) => ApplyConstraint(constraint);
+
+        public TExpression Not => ApplyModifier(constraint => !constraint);
 
 
-        public ValueTest<T> EqualTo(T expected)
+        public TTest EqualTo(T expected)
         {
             var constraint = new EqualToConstraint<T>(expected);
 
             return ApplyConstraint(constraint);
         }
 
-        public ValueTest<T> Null => ApplyConstraint(new NullConstraint<T>());
+        public TTest Null => ApplyConstraint(new NullConstraint<T>());
     }
+
+    public interface IIsExpression<T> : IIsExpression<T, IIsExpression<T>, ValueTest<T>> { }
 }

@@ -36,4 +36,19 @@ namespace SUnit.NewAssertions
 
         public That<T> Xor => ApplyModifier(constraint => this.constraint ^ constraint);
     }
+
+    public abstract class ValueTest<T, TThat> : ValueTest<T>
+        where TThat : That<T>
+    {
+        protected private ValueTest(T actual, IConstraint<T> constraint) 
+            : base(actual, constraint) { }
+
+        public new TThat ApplyModifier(ConstraintModifier<T> modifier) => (TThat)base.ApplyModifier(modifier);
+
+        public new TThat And => (TThat)base.And;
+
+        public new TThat Or => (TThat)base.Or;
+
+        public new TThat Xor => (TThat)base.Xor;
+    }
 }

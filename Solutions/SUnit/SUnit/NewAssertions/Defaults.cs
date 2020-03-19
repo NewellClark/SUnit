@@ -58,7 +58,7 @@ namespace SUnit.NewAssertions
     }
 
 
-    internal class BasicIsExpression<T> : IIsExpression<T> 
+    internal class BasicIsExpression<T> : IIsExpression<T>
     {
         private readonly IValueExpression<T> expression;
 
@@ -79,6 +79,5 @@ namespace SUnit.NewAssertions
             return expression.ApplyConstraint(constraint);
         }
     }
-
 
 }

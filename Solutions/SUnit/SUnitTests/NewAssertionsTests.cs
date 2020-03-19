@@ -25,5 +25,7 @@ namespace SUnit
 
             AssertFailed(Assert.That(2 + 2).Is.Not.EqualTo(4));
         }
+
+        
     }
 }
