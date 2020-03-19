@@ -6,8 +6,16 @@ using System.Text;
 
 namespace SUnit.Assertions
 {
+    /// <summary>
+    /// The return value of <see cref="That{T}.Is"/>.
+    /// </summary>
+    /// <typeparam name="T">The type of the value that is under test.</typeparam>
     public interface IIsExpression<T> : IIsExpression<T, IIsExpression<T>, ValueTest<T>> { }
 
+    /// <summary>
+    /// The type that lets you say <see cref="Is"/>.
+    /// </summary>
+    /// <typeparam name="T">The type of the value under test.</typeparam>
     public class That<T>
     {
         internal That(T actual) 
@@ -22,6 +30,9 @@ namespace SUnit.Assertions
 
         protected private IValueExpression<T> Expression { get; }
 
+        /// <summary>
+        /// Contains methods for performing assertions on the value under test.
+        /// </summary>
         public IIsExpression<T> Is => new BasicIsExpression<T>(Expression);
     }
 
