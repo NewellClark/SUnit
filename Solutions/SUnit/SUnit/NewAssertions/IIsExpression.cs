@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace SUnit.NewAssertions
-{
+{ 
     public interface IIsExpression<T, TExpression, TTest> : IValueExpression<T>
         where TExpression : IIsExpression<T, TExpression, TTest>
         where TTest : ValueTest<T>
@@ -29,6 +29,4 @@ namespace SUnit.NewAssertions
 
         public TTest Null => ApplyConstraint(new NullConstraint<T>());
     }
-
-    public interface IIsExpression<T> : IIsExpression<T, IIsExpression<T>, ValueTest<T>> { }
 }

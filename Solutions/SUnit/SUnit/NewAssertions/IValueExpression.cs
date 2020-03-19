@@ -58,10 +58,6 @@ namespace SUnit.NewAssertions
 
             return ApplyModifier(actual, combinedModifier);
         }
-
-        //ValueTest<T> IValueExpression<T>.ApplyConstraint(IConstraint<T> constraint) => ApplyConstraint(constraint);
-
-        //IValueExpression<T> IValueExpression<T>.ApplyModifier(ConstraintModifier<T> modifier) => ApplyModifier(modifier);
     }
 
 }

@@ -6,6 +6,7 @@ using System.Text;
 
 namespace SUnit.NewAssertions
 {
+    public interface IIsExpression<T> : IIsExpression<T, IIsExpression<T>, ValueTest<T>> { }
 
     public class That<T>
     {
@@ -56,7 +57,6 @@ namespace SUnit.NewAssertions
             return new BasicValueExpression<T>(actual, modifier);
         }
     }
-
 
     internal class BasicIsExpression<T> : IIsExpression<T>
     {

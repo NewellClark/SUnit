@@ -93,7 +93,6 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netco
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\SUnit.Discovery.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\SUnit.Discovery.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\SUnit.pdb
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\SUnit.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\System.Reactive.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.csprojAssemblyReference.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.AssemblyInfoInputs.cache
