@@ -15,6 +15,7 @@ namespace SUnit.NewAssertions
         public abstract IValueExpression<T> ApplyModifier(ConstraintModifier<T> modifier);
     }
 
+
     internal abstract class ValueExpression<T> : IValueExpression<T>
     {
         private readonly T actual;
@@ -54,6 +55,7 @@ namespace SUnit.NewAssertions
             return ApplyModifier(actual, combinedModifier);
         }
     }
+
 
     //public interface IValueExpression<T, TExpression, TTest, TThat>
     //    where TExpression : IValueExpression<T, TExpression, TTest, TThat>
