@@ -50,7 +50,17 @@ namespace SUnit.Discovery
 
             public override Type ReturnType { get; }
 
-            public override object Build() => method.Invoke(null, Array.Empty<object>());
+            public override object Build()
+            {
+                try
+                {
+                    return method.Invoke(null, Array.Empty<object>());
+                }
+                catch (TargetInvocationException ex) when (ex.InnerException != null)
+                {
+                    throw ex.InnerException;
+                }
+            }
             public override string Name => method.Name;
             public override bool IsDefaultConstructor => false;
             public override bool IsNamedConstructor => true;
