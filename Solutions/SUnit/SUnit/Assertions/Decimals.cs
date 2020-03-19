@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace SUnit.NewAssertions
+namespace SUnit.Assertions
 {
     public interface IDecimalExpression : IValueExpression<decimal?, IDecimalExpression, DecimalTest> { }
     

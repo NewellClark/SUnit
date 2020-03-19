@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-namespace SUnit.NewAssertions
+namespace SUnit.Assertions
 {
     public interface IEnumerableExpression<T> 
         : IValueExpression<IEnumerable<T>, IEnumerableExpression<T>, EnumerableTest<T>> { }
@@ -63,6 +63,19 @@ namespace SUnit.NewAssertions
         public EnumerableTest<T> EquivalentTo(params T[] expected)
         {
             return EquivalentTo(expected?.AsEnumerable());
+        }
+
+        public EnumerableTest<T> Empty
+        {
+            get
+            {
+                bool predicate(IEnumerable<T> items)
+                {
+                    return !items?.Any() ?? false;
+                }
+
+                return ApplyConstraint(Constraint.FromPredicate<IEnumerable<T>>(predicate));
+            }
         }
     }
 

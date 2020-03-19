@@ -48,7 +48,7 @@ namespace DogfoodingTests
 
     public class AsyncTests
     {
-        public Task<Test> SyncEquals() => Task.FromResult<Test>(Assert.That(-31).Is.Not.Positive.Or.Zero);
+        public Task<Test> SyncEquals() => Task.FromResult<Test>(Assert.That(-31).Is.Not.Positive.Or.Is.Zero);
 
         public async Task<Test> AsyncEquivalentTo()
         {

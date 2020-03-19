@@ -110,28 +110,28 @@ namespace SUnit.Assertions
         [Test]
         public void FailOrPass_Passes()
         {
-            AssertPassed(Assert.That(double.NaN).Is.Negative.Or.NaN);
+            AssertPassed(Assert.That(double.NaN).Is.Negative.Or.Is.NaN);
         }
 
         [Test]
         public void PassOrFail_Passes()
         {
-            AssertPassed(Assert.That(double.PositiveInfinity).Is.Positive.Or.Negative);
+            AssertPassed(Assert.That(double.PositiveInfinity).Is.Positive.Or.Is.Negative);
         }
 
         [Test]
         public void PassAndFail_Fails()
         {
-            AssertFailed(Assert.That(double.NegativeInfinity).Is.Positive.And.Zero);
+            AssertFailed(Assert.That(double.NegativeInfinity).Is.Positive.And.Is.Zero);
         }
 
         [Test]
         public void ManyChainedAndsAllPass_Passes()
         {
             Assert.That(7.2).Is.LessThan(7.3)
-                .And.LessThan(7.4)
-                .And.LessThan(7.5)
-                .And.LessThan(7.6);
+                .And.Is.LessThan(7.4)
+                .And.Is.LessThan(7.5)
+                .And.Is.LessThan(7.6);
         }
     }
 }

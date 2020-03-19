@@ -2,8 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using SUnit.Assertions;
 
-namespace SUnit.NewAssertions
+namespace SUnit
 {
     public static class ComparableExtensions
     {

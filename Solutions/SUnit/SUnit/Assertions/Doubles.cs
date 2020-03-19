@@ -4,7 +4,7 @@ using System.Text;
 using System.Diagnostics;
 using SUnit.Constraints;
 
-namespace SUnit.NewAssertions
+namespace SUnit.Assertions
 {
     public interface IDoubleExpression : IValueExpression<double?, IDoubleExpression, DoubleTest> { }
 

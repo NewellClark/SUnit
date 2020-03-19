@@ -5,7 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using static SUnit.Helpers;
 
-namespace SUnit.NewAssertions
+namespace SUnit.Assertions
 {
     [TestFixture]
     public class NewAssertionsTests

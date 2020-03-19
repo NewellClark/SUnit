@@ -1,7 +1,7 @@
 ﻿using SUnit.Constraints;
 using System.Diagnostics;
 
-namespace SUnit.NewAssertions
+namespace SUnit.Assertions
 {
 
 

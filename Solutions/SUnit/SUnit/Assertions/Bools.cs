@@ -4,16 +4,18 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace SUnit.NewAssertions
+namespace SUnit.Assertions
 {
     public interface IBoolExpression : IValueExpression<bool?, IBoolExpression, BoolTest> { }
 
 
     public interface IBoolIsExpression : IIsExpression<bool?, IBoolIsExpression, BoolTest>
     {
+#pragma warning disable CA1716 // Identifiers should not match keywords
         public BoolTest True => EqualTo(true);
 
         public BoolTest False => EqualTo(false);
+#pragma warning restore CA1716 // Identifiers should not match keywords
     }
 
 
