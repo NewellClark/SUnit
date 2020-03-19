@@ -34,8 +34,9 @@ namespace SUnit.NewAssertions
 
         public That<T> Or => ApplyModifier(constraint => this.constraint | constraint);
 
-        public That<T> Xor => ApplyModifier(constraint => this.constraint ^ constraint);
+        public new That<T> Xor => ApplyModifier(constraint => this.constraint ^ constraint);
     }
+
 
     public abstract class ValueTest<T, TThat> : ValueTest<T>
         where TThat : That<T>

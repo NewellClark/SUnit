@@ -16,5 +16,7 @@ namespace SUnit.NewAssertions
         private Assert() : base() { }
 
         public static DoubleThat That(double? actual) => new DoubleThat(actual);
+
+        public static LongThat That(long? actual) => new LongThat(actual);
     }
 }

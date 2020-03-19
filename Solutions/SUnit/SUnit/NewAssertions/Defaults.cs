@@ -41,8 +41,7 @@ namespace SUnit.NewAssertions
 
 
     internal class BasicValueExpression<T> 
-        : ValueExpression<T, IValueExpression<T>, ValueTest<T>>,
-        IValueExpression<T>
+        : ValueExpression<T, IValueExpression<T>, ValueTest<T>>
     {
         internal BasicValueExpression(T actual, ConstraintModifier<T> modifier) 
             : base(actual, modifier) { }

@@ -45,5 +45,13 @@ namespace SUnit.NewAssertions
 
             var s = Assert.That("hello, world").Is.LessThan("Hello, World!");
         }
+
+        [Test]
+        public void IntegersWork()
+        {
+            AssertPassed(Assert.That(17).Is.Not.Zero.And.Is.LessThan(18));
+
+            AssertFailed(Assert.That(-1).Is.Positive.And.Is.Negative);
+        }
     }
 }

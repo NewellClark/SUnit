@@ -8,6 +8,7 @@ namespace SUnit.NewAssertions
 {
     public delegate IConstraint<T> ConstraintModifier<T>(IConstraint<T> constraint);
 
+
     public interface IValueExpression<T>
     {
         public abstract ValueTest<T> ApplyConstraint(IConstraint<T> constraint);
@@ -15,8 +16,23 @@ namespace SUnit.NewAssertions
         public abstract IValueExpression<T> ApplyModifier(ConstraintModifier<T> modifier);
     }
 
+    
+    public interface IValueExpression<T, TExpression, TTest> : IValueExpression<T>
+        where TExpression : IValueExpression<T>
+        where TTest : ValueTest<T>
+    {
+        public new TTest ApplyConstraint(IConstraint<T> constraint);
+
+        ValueTest<T> IValueExpression<T>.ApplyConstraint(IConstraint<T> constraint) => ApplyConstraint(constraint);
+
+        public new TExpression ApplyModifier(ConstraintModifier<T> modifier);
+
+        IValueExpression<T> IValueExpression<T>.ApplyModifier(ConstraintModifier<T> modifier) => ApplyModifier(modifier);
+    }
+
 
     internal abstract class ValueExpression<T, TExpression, TTest> 
+        : IValueExpression<T, TExpression, TTest>
         where TExpression : IValueExpression<T>
         where TTest : ValueTest<T>
     {

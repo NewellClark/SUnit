@@ -6,22 +6,8 @@ using SUnit.Constraints;
 
 namespace SUnit.NewAssertions
 {
-    public interface IDoubleExpression : IValueExpression<double?>
-    {
-        public new DoubleTest ApplyConstraint(IConstraint<double?> constraint);
+    public interface IDoubleExpression : IValueExpression<double?, IDoubleExpression, DoubleTest> { }
 
-        ValueTest<double?> IValueExpression<double?>.ApplyConstraint(IConstraint<double?> constraint)
-        {
-            return ApplyConstraint(constraint);
-        }
-
-        public new IDoubleExpression ApplyModifier(ConstraintModifier<double?> modifier);
-
-        IValueExpression<double?> IValueExpression<double?>.ApplyModifier(ConstraintModifier<double?> modifier)
-        {
-            return ApplyModifier(modifier);
-        }
-    }
 
     public interface IDoubleIsExpression : IIsExpression<double?, IDoubleIsExpression, DoubleTest>
     {
@@ -33,7 +19,14 @@ namespace SUnit.NewAssertions
         DoubleTest IIsExpression<double?, IDoubleIsExpression, DoubleTest>.EqualTo(double? expected) => EqualTo(expected);
         
         public DoubleTest Zero => EqualTo(0.0);
+
+        public DoubleTest Positive => this.GreaterThan(0.0);
+
+        public DoubleTest Negative => this.LessThan(0.0);
+
+        public DoubleTest NaN => ApplyConstraint(new NanConstraint());
     }
+
 
     public class DoubleThat : That<double?>
     {
@@ -45,6 +38,7 @@ namespace SUnit.NewAssertions
         public new IDoubleIsExpression Is => new DoubleIsExpression(Expression);
     }
 
+
     public class DoubleTest : ValueTest<double?, DoubleThat>
     {
         internal DoubleTest(double? actual, IConstraint<double?> constraint)
@@ -55,6 +49,7 @@ namespace SUnit.NewAssertions
             return new DoubleThat(new DoubleExpression(actual, modifier));
         }
     }
+
 
     internal class DoubleExpression : ValueExpression<double?, IDoubleExpression, DoubleTest>, IDoubleExpression
     {
@@ -71,6 +66,7 @@ namespace SUnit.NewAssertions
             return new DoubleExpression(actual, modifier);
         }
     }
+
 
     internal class DoubleIsExpression : IDoubleIsExpression
     {
