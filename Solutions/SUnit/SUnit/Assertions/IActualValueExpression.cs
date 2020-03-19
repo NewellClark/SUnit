@@ -71,4 +71,6 @@ namespace SUnit.Assertions
         public TExpression Not => ApplyModifier(constraint => !constraint);
 #pragma warning restore CA1716 // Identifiers should not match keywords
     }
+
+
 }

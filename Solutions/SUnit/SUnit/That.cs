@@ -1,10 +1,7 @@
-﻿
-using SUnit.Assertions;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Text;
 
-namespace SUnit
+namespace SUnit.Assertions
 {
     /// <summary>
     /// Specifies the actual value that was returned from whatever it is you are testing.
@@ -17,27 +14,13 @@ namespace SUnit
 
         internal That(TActual actual)
         {
-            this.Actual = actual;
+            Actual = actual;
         }
 
         /// <summary>
         /// Contains methods and properties for applying contstraints to the actual value specified.
         /// </summary>
         public IIsExpression<TActual> Is => new IsExpression<TActual>(Actual);
-    }
-
-    /// <summary>
-    /// The type that allows you to say "Is" and apply constraints to sequences.
-    /// </summary>
-    /// <typeparam name="T">The type of element in the actual value sequence.</typeparam>
-    public class ThatEnumerable<T> : That<IEnumerable<T>>
-    {
-        internal ThatEnumerable(IEnumerable<T> actual) : base(actual) { }
-
-        /// <summary>
-        /// Allows you to apply constraints to sequences.
-        /// </summary>
-        public new IIsExpressionEnumerable<T> Is => new IsExpressionEnumerable<T>(Actual);
     }
 
     /// <summary>

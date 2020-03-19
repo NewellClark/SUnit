@@ -19,7 +19,8 @@ namespace SUnit.Assertions
     /// in to allow specialization for certain types of actual value. For example, we want to support special
     /// operations such as <c>Is.Empty</c> for collections, and <c>Is.True</c> and <c>Is.False</c> for booleans.
     /// </remarks>
-    internal abstract class ActualValueExpression<T, TExpression, TTest> : IActualValueExpression<T, TExpression, TTest>
+    internal abstract class ActualValueExpression<T, TExpression, TTest>
+        : IActualValueExpression<T, TExpression, TTest>
         where TExpression : IActualValueExpression<T, TExpression, TTest>
         where TTest : ActualValueTest<T, TExpression, TTest>
     {

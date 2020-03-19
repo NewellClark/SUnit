@@ -301,7 +301,7 @@
             <summary>
             An expression that allows users to apply constraints to a supplied actual value.
             An example of an <see cref="T:SUnit.Assertions.IActualValueExpression`3"/> would be the
-            <see cref="P:SUnit.That`1.Is"/> property that's commonly used when creating assertions. 
+            <see cref="P:SUnit.Assertions.That`1.Is"/> property that's commonly used when creating assertions. 
             </summary>
             <typeparam name="T">The type of the actual value. </typeparam>
             <typeparam name="TExpression">The type of the current <see cref="T:SUnit.Assertions.IActualValueExpression`3"/>.
@@ -345,7 +345,7 @@
         </member>
         <member name="T:SUnit.Assertions.IIsExpression`3">
             <summary>
-            The return type of <see cref="P:SUnit.That`1.Is"/>. Contains methods and properties for
+            The return type of <see cref="P:SUnit.Assertions.That`1.Is"/>. Contains methods and properties for
             performing assertions on an actual value.
             </summary>
             <typeparam name="T">The type of the actual value under test.</typeparam>
@@ -368,7 +368,7 @@
         </member>
         <member name="T:SUnit.Assertions.IIsExpression`1">
             <summary>
-            The return value of <see cref="P:SUnit.That`1.Is"/>, for values of <typeparamref name="T"/> that 
+            The return value of <see cref="P:SUnit.Assertions.That`1.Is"/>, for values of <typeparamref name="T"/> that 
             have not been special-cased.
             </summary>
             <typeparam name="T">The type of the actual value that is under test.</typeparam>
@@ -380,6 +380,17 @@
             <inheritdoc/>
         </member>
         <member name="M:SUnit.Assertions.IsExpression`1.CreateExpression(`0,SUnit.Assertions.ConstraintModifier{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.IsTest`1">
+            <summary>
+            The type of <see cref="T:SUnit.Test"/> that is returned when test methods are called on 
+            the <see cref="P:SUnit.Assertions.That`1.Is"/> property when creating assertions. Used for types of
+            <typeparamref name="T"/> that have not been "special-cased".
+            </summary>
+            <typeparam name="T">The type of the actual value that is being tested.</typeparam>
+        </member>
+        <member name="M:SUnit.Assertions.IsTest`1.CreateExpression(`0,SUnit.Assertions.ConstraintModifier{`0})">
             <inheritdoc/>
         </member>
         <member name="T:SUnit.Assertions.IIsExpressionBool">
@@ -397,7 +408,7 @@
         </member>
         <member name="T:SUnit.Assertions.IIsExpressionDecimal">
             <summary>
-            The return type of <see cref="P:SUnit.ThatDecimal.Is"/>. Used to apply constraints to decimals 
+            The return type of <see cref="P:SUnit.Assertions.ThatDecimal.Is"/>. Used to apply constraints to decimals 
             and nullable decimals.
             </summary>
         </member>
@@ -427,7 +438,7 @@
         </member>
         <member name="T:SUnit.Assertions.IIsExpressionDouble">
             <summary>
-            The return type of <see cref="P:SUnit.ThatDouble.Is"/>. Used to apply constraints to nullable doubles.
+            The return type of <see cref="P:SUnit.Assertions.ThatDouble.Is"/>. Used to apply constraints to nullable doubles.
             </summary>
         </member>
         <member name="P:SUnit.Assertions.IIsExpressionDouble.Zero">
@@ -554,7 +565,7 @@
         </member>
         <member name="T:SUnit.Assertions.IIsExpressionLong">
             <summary>
-            The return type of <see cref="P:SUnit.ThatLong.Is"/>. Contains members for applying assertions to longs and
+            The return type of <see cref="P:SUnit.Assertions.ThatLong.Is"/>. Contains members for applying assertions to longs and
             nullable longs.
             </summary>
         </member>
@@ -580,17 +591,6 @@
             <inheritdoc/>
         </member>
         <member name="M:SUnit.Assertions.IsExpressionLong.CreateExpression(System.Nullable{System.Int64},SUnit.Assertions.ConstraintModifier{System.Nullable{System.Int64}})">
-            <inheritdoc/>
-        </member>
-        <member name="T:SUnit.Assertions.IsTest`1">
-            <summary>
-            The type of <see cref="T:SUnit.Test"/> that is returned when test methods are called on 
-            the <see cref="P:SUnit.That`1.Is"/> property when creating assertions. Used for types of
-            <typeparamref name="T"/> that have not been "special-cased".
-            </summary>
-            <typeparam name="T">The type of the actual value that is being tested.</typeparam>
-        </member>
-        <member name="M:SUnit.Assertions.IsTest`1.CreateExpression(`0,SUnit.Assertions.ConstraintModifier{`0})">
             <inheritdoc/>
         </member>
         <member name="T:SUnit.Assertions.IsTestBool">
@@ -624,6 +624,71 @@
         </member>
         <member name="M:SUnit.Assertions.IsTestLong.CreateExpression(System.Nullable{System.Int64},SUnit.Assertions.ConstraintModifier{System.Nullable{System.Int64}})">
             <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.That`1">
+            <summary>
+            Specifies the actual value that was returned from whatever it is you are testing.
+            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
+            </summary>
+            <typeparam name="TActual">The type of the actual value.</typeparam>
+        </member>
+        <member name="P:SUnit.Assertions.That`1.Is">
+            <summary>
+            Contains methods and properties for applying contstraints to the actual value specified.
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.ThatDouble">
+            <summary>
+            Specifies the actual value that was returned from whatever it is you are testing.
+            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.ThatDouble.Is">
+            <summary>
+            Contains methods and properties for applying constraints to the actual value specified in
+            the <see cref="M:SUnit.Assert.That(System.Double)"/> method.
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.ThatDecimal">
+            <summary>
+            Specifies the actual value that was returned from whatever it is you are testing.
+            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.ThatDecimal.Is">
+            <summary>
+            Contains methods and properties for applying constraints to the actual value specified
+            in the <see cref="M:SUnit.Assert.That(System.Decimal)"/> method.
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.ThatLong">
+            <summary>
+            Specifies the actual value that was returned from whatever it is you are testing.
+            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.ThatLong.Is">
+            <summary>
+            Contains methods and properties for applying constraints to the actual value specified
+            in the <see cref="M:SUnit.Assert.That(System.Int64)"/> method.
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.ThatBool">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.ThatBool.Is">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.ThatEnumerable`1">
+            <summary>
+            The type that allows you to say "Is" and apply constraints to sequences.
+            </summary>
+            <typeparam name="T">The type of element in the actual value sequence.</typeparam>
+        </member>
+        <member name="P:SUnit.Assertions.ThatEnumerable`1.Is">
+            <summary>
+            Allows you to apply constraints to sequences.
+            </summary>
         </member>
         <member name="T:SUnit.Constraints.BinaryOperatorConstraint`1">
             <summary>
@@ -986,71 +1051,6 @@
             <param name="left"></param>
             <param name="right"></param>
             <returns></returns>
-        </member>
-        <member name="T:SUnit.That`1">
-            <summary>
-            Specifies the actual value that was returned from whatever it is you are testing.
-            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
-            </summary>
-            <typeparam name="TActual">The type of the actual value.</typeparam>
-        </member>
-        <member name="P:SUnit.That`1.Is">
-            <summary>
-            Contains methods and properties for applying contstraints to the actual value specified.
-            </summary>
-        </member>
-        <member name="T:SUnit.ThatEnumerable`1">
-            <summary>
-            The type that allows you to say "Is" and apply constraints to sequences.
-            </summary>
-            <typeparam name="T">The type of element in the actual value sequence.</typeparam>
-        </member>
-        <member name="P:SUnit.ThatEnumerable`1.Is">
-            <summary>
-            Allows you to apply constraints to sequences.
-            </summary>
-        </member>
-        <member name="T:SUnit.ThatDouble">
-            <summary>
-            Specifies the actual value that was returned from whatever it is you are testing.
-            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
-            </summary>
-        </member>
-        <member name="P:SUnit.ThatDouble.Is">
-            <summary>
-            Contains methods and properties for applying constraints to the actual value specified in
-            the <see cref="M:SUnit.Assert.That(System.Double)"/> method.
-            </summary>
-        </member>
-        <member name="T:SUnit.ThatDecimal">
-            <summary>
-            Specifies the actual value that was returned from whatever it is you are testing.
-            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
-            </summary>
-        </member>
-        <member name="P:SUnit.ThatDecimal.Is">
-            <summary>
-            Contains methods and properties for applying constraints to the actual value specified
-            in the <see cref="M:SUnit.Assert.That(System.Decimal)"/> method.
-            </summary>
-        </member>
-        <member name="T:SUnit.ThatLong">
-            <summary>
-            Specifies the actual value that was returned from whatever it is you are testing.
-            Allows you to write code like <code>Assert.That(actual).Is.EqualTo(expected);</code>.
-            </summary>
-        </member>
-        <member name="P:SUnit.ThatLong.Is">
-            <summary>
-            Contains methods and properties for applying constraints to the actual value specified
-            in the <see cref="M:SUnit.Assert.That(System.Int64)"/> method.
-            </summary>
-        </member>
-        <member name="T:SUnit.ThatBool">
-            <inheritdoc/>
-        </member>
-        <member name="P:SUnit.ThatBool.Is">
-            <inheritdoc/>
         </member>
         <member name="T:SUnit.Utilities">
             <summary>

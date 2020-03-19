@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SUnit.Assertions;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -186,7 +187,7 @@ namespace SUnit
                     $"Got expected {exceptionName}" :
                     $"Expected {exceptionName}\n" +
                     $"But was {ex.GetType().Name}: {ex.Message}";
-                
+
                 return Test.FromResult(result, message);
             }
 #pragma warning restore CA1031 // Do not catch general exception types
