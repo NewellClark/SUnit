@@ -6,19 +6,30 @@ using System.Text;
 
 namespace SUnit.Assertions
 {
+    /// <inheritdoc/>
     public interface IBoolExpression : IValueExpression<bool?, IBoolExpression, BoolTest> { }
 
 
+    /// <inheritdoc/>
     public interface IBoolIsExpression : IIsExpression<bool?, IBoolIsExpression, BoolTest>
     {
 #pragma warning disable CA1716 // Identifiers should not match keywords
+
+        /// <summary>
+        /// Tests whether the value is true.
+        /// </summary>
         public BoolTest True => EqualTo(true);
 
+        /// <summary>
+        /// Tests whether the value is false.
+        /// </summary>
         public BoolTest False => EqualTo(false);
+
 #pragma warning restore CA1716 // Identifiers should not match keywords
     }
 
 
+    /// <inheritdoc/>
     public class BoolThat : That<bool?>
     {
         internal BoolThat(bool? actual) 
@@ -29,10 +40,12 @@ namespace SUnit.Assertions
 
         protected private new IBoolExpression Expression => (IBoolExpression)base.Expression;
 
+        /// <inheritdoc/>
         public new IBoolIsExpression Is => new BoolIsExpression(Expression);
     }
 
 
+    /// <inheritdoc/>
     public class BoolTest : ValueTest<bool?, BoolThat>
     {
         internal BoolTest(bool? actual, IConstraint<bool?> constraint)

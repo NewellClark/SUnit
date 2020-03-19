@@ -53,8 +53,9 @@ namespace SUnit.Assertions
         internal DoubleThat(double? actual) : this(new DoubleExpression(actual, c => c)) { }
         internal DoubleThat(IDoubleExpression expression) : base(expression) { }
 
-        public new IDoubleExpression Expression => (IDoubleExpression)base.Expression;
+        protected private new IDoubleExpression Expression => (IDoubleExpression)base.Expression;
 
+        /// <inheritdoc/>
         public new IDoubleIsExpression Is => new DoubleIsExpression(Expression);
     }
 

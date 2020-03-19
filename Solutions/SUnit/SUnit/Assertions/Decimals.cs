@@ -81,6 +81,7 @@ namespace SUnit.Assertions
 
         protected private new IDecimalExpression Expression => (IDecimalExpression)base.Expression;
 
+        /// <inheritdoc/>
         public new IDecimalIsExpression Is => new DecimalIsExpression(Expression);
     }
 
