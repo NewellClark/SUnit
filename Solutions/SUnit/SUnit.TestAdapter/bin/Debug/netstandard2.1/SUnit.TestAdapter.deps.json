@@ -7,12 +7,12 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "SUnit.TestAdapter/1.0.0.7": {
+      "SUnit.TestAdapter/1.0.0.8": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.6",
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0.7",
-          "SUnit.Discovery": "1.0.0.7",
+          "SUnit": "1.0.0.8",
+          "SUnit.Discovery": "1.0.0.8",
           "System.Collections.Immutable": "1.7.0"
         },
         "runtime": {
@@ -132,6 +132,14 @@
           }
         }
       },
+      "morelinq/3.3.2": {
+        "runtime": {
+          "lib/netstandard2.0/MoreLinq.dll": {
+            "assemblyVersion": "3.3.2.0",
+            "fileVersion": "3.3.2.0"
+          }
+        }
+      },
       "NuGet.Frameworks/5.0.0": {
         "runtime": {
           "lib/netstandard2.0/NuGet.Frameworks.dll": {
@@ -240,15 +248,18 @@
           }
         }
       },
-      "SUnit/1.0.0.7": {
+      "SUnit/1.0.0.8": {
+        "dependencies": {
+          "morelinq": "3.3.2"
+        },
         "runtime": {
           "SUnit.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0.7": {
+      "SUnit.Discovery/1.0.0.8": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.6",
-          "SUnit": "1.0.0.7",
+          "SUnit": "1.0.0.8",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -259,7 +270,7 @@
     }
   },
   "libraries": {
-    "SUnit.TestAdapter/1.0.0.7": {
+    "SUnit.TestAdapter/1.0.0.8": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -319,6 +330,13 @@
       "sha512": "sha512-NnLFxmFBCAS6kye2JFszD5WKgj4Zve5KX/R0mhYwh6BVnSeybI2unRnjEPtLyY3CAVhwrY4bh/8LNFtslAcGZg==",
       "path": "microsoft.testplatform.objectmodel/16.5.0",
       "hashPath": "microsoft.testplatform.objectmodel.16.5.0.nupkg.sha512"
+    },
+    "morelinq/3.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MQc8GppZJLmjvcpEdf3EkC6ovsp7gRWt2e5mC7dcIOrgwSc+yjFd3JQ0iRqr3XrUT6rb/phv0IkEmBtbfVA7AQ==",
+      "path": "morelinq/3.3.2",
+      "hashPath": "morelinq.3.3.2.nupkg.sha512"
     },
     "NuGet.Frameworks/5.0.0": {
       "type": "package",
@@ -397,12 +415,12 @@
       "path": "system.threading.tasks.extensions/4.5.3",
       "hashPath": "system.threading.tasks.extensions.4.5.3.nupkg.sha512"
     },
-    "SUnit/1.0.0.7": {
+    "SUnit/1.0.0.8": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.Discovery/1.0.0.7": {
+    "SUnit.Discovery/1.0.0.8": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

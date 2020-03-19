@@ -10,8 +10,8 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.TestHost": "16.5.0",
-          "SUnit": "1.0.0.7",
-          "SUnit.TestAdapter": "1.0.0.7",
+          "SUnit": "1.0.0.8",
+          "SUnit.TestAdapter": "1.0.0.8",
           "System.Reactive.Reference": "4.3.0.0"
         },
         "runtime": {
@@ -297,6 +297,14 @@
           },
           "lib/netcoreapp2.1/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
             "locale": "zh-Hant"
+          }
+        }
+      },
+      "morelinq/3.3.2": {
+        "runtime": {
+          "lib/netstandard2.0/MoreLinq.dll": {
+            "assemblyVersion": "3.3.2.0",
+            "fileVersion": "3.3.2.0"
           }
         }
       },
@@ -639,14 +647,17 @@
           "System.Xml.ReaderWriter": "4.0.11"
         }
       },
-      "SUnit/1.0.0.7": {
+      "SUnit/1.0.0.8": {
+        "dependencies": {
+          "morelinq": "3.3.2"
+        },
         "runtime": {
           "SUnit.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0.7": {
+      "SUnit.Discovery/1.0.0.8": {
         "dependencies": {
-          "SUnit": "1.0.0.7",
+          "SUnit": "1.0.0.8",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -654,11 +665,11 @@
           "SUnit.Discovery.dll": {}
         }
       },
-      "SUnit.TestAdapter/1.0.0.7": {
+      "SUnit.TestAdapter/1.0.0.8": {
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0.7",
-          "SUnit.Discovery": "1.0.0.7",
+          "SUnit": "1.0.0.8",
+          "SUnit.Discovery": "1.0.0.8",
           "System.Collections.Immutable": "1.7.0"
         },
         "runtime": {
@@ -729,6 +740,13 @@
       "sha512": "sha512-ytGymboQIvjNX5pLC0yp/Bz9sGDHqSnLQgBRtd4VrqOUgKmmcfxMYZ6p0TBZgAT1oijdC6xqUZ7rl8mbaaXTJw==",
       "path": "microsoft.testplatform.testhost/16.5.0",
       "hashPath": "microsoft.testplatform.testhost.16.5.0.nupkg.sha512"
+    },
+    "morelinq/3.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MQc8GppZJLmjvcpEdf3EkC6ovsp7gRWt2e5mC7dcIOrgwSc+yjFd3JQ0iRqr3XrUT6rb/phv0IkEmBtbfVA7AQ==",
+      "path": "morelinq/3.3.2",
+      "hashPath": "morelinq.3.3.2.nupkg.sha512"
     },
     "Newtonsoft.Json/9.0.1": {
       "type": "package",
@@ -989,17 +1007,17 @@
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
     },
-    "SUnit/1.0.0.7": {
+    "SUnit/1.0.0.8": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.Discovery/1.0.0.7": {
+    "SUnit.Discovery/1.0.0.8": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.TestAdapter/1.0.0.7": {
+    "SUnit.TestAdapter/1.0.0.8": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

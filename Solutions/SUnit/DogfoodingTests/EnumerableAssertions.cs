@@ -145,5 +145,179 @@ namespace DogfoodingTests
                     .Is.Not.EquivalentTo(Iter("Baby", null, null, "Hi"));
             }
         }
+
+        public class Contains
+        {
+            public class ArrayContainingNull
+            {
+                private string[] items = new string[] { "TeamS", null, "Squishy", "Squidwards" };
+
+                public IEnumerable<Test> Empty_ContainsNothing()
+                {
+                    return items.Select(t => !Assert.That(Enumerable.Empty<string>()).Contains(t));
+                }
+
+                public Test ContainsNull() 
+                {
+                    return Assert.That(items).Contains(null);
+                }
+
+                public Test DoesNotContainMissingNonNull()
+                {
+                    return !Assert.That(items).Contains("TeamU");
+                }
+
+                public Test ContainsIncludedNonNull()
+                {
+                    return Assert.That(items).Contains("Squidwards");
+                }
+            }
+
+
+            public class ArrayLackingNull
+            {
+                private string[] items = new string[] { "Squishy", "Squidward", "TeamS" };
+
+                public Test ContainsNonNull()
+                {
+                    return Assert.That(items).Contains("Squishy");
+                }
+
+                public Test DoesNotContainMissingNonNull()
+                {
+                    return !Assert.That(items).Contains("TeamT");
+                }
+
+                public Test DoesNotContainNull()
+                {
+                    return !Assert.That(items).Contains(null);
+                }
+            }
+        }
+
+        public class SetOperations
+        {
+            private static IEnumerable<IEnumerable<string>> SplitAll(IEnumerable<string> strings)
+            {
+                return strings.Select(s => s.Split(" "));
+            }
+
+
+            public class AnySequence
+            {
+                private IEnumerable<IEnumerable<string>> Data
+                {
+                    get
+                    {
+                        string[] lines =
+                        {
+                            "I love C# more than java",
+                            "",
+                            "Hello World",
+                            "Hi everyone! Keep coding!",
+                            "A B C D E F G G H I J J J",
+                            "hi"
+                        };
+
+                        return SplitAll(lines);
+                    }
+                }
+
+                public IEnumerable<Test> IsSupersetOfEmptySet()
+                {
+                    return Data.Select(actual => Assert.That(actual).Is.SupersetOf(Enumerable.Empty<string>()));
+                }
+
+                public IEnumerable<Test> IsSupersetOfItself()
+                {
+                    return Data.Select(actual => Assert.That(actual).Is.SupersetOf(actual));
+                }
+
+                public IEnumerable<Test> IsSubsetOfItself()
+                {
+                    return Data.Select(actual => Assert.That(actual).Is.SubsetOf(actual));
+                }
+
+                public IEnumerable<Test> IsNotProperSupersetOfItself()
+                {
+                    return Data.Select(actual => Assert.That(actual).Is.Not.ProperSupersetOf(actual));
+                }
+
+                public IEnumerable<Test> IsNotProperSubsetOfItself()
+                {
+                    return Data.Select(actual => Assert.That(actual).Is.Not.ProperSubsetOf(actual));
+                }
+
+                public IEnumerable<Test> IsSupersetOfItselfWithItemsRemoved()
+                {
+                    foreach (var items in Data)
+                    {
+                        yield return Assert.That(items).Is.SupersetOf(items.Skip(1));
+                        yield return Assert.That(items).Is.SupersetOf(items.SkipLast(1));
+                    }
+                }
+
+                public IEnumerable<Test> IsProperSupersetOfItselfWithItemsRemoved()
+                {
+                    foreach (var items in Data.Where(data => data.Any()))
+                    {
+                        yield return Assert.That(items).Is.ProperSupersetOf(items.Skip(1));
+                        yield return Assert.That(items).Is.ProperSupersetOf(items.SkipLast(1));
+                    }
+                }
+
+                public IEnumerable<Test> EmptySetIsNotSupersetOfNonEmpty()
+                {
+                    return Data.Where(t => t.Any())
+                        .Select(actual => Assert.That(Enumerable.Empty<string>()).Is.Not.SupersetOf(actual));
+                }
+
+                public IEnumerable<Test> EmptySetIsSubsetOfAnySet()
+                {
+                    return Data.Select(actual => Assert.That(Enumerable.Empty<string>()).Is.SubsetOf(actual));
+                }
+            }
+
+            public class SequenceWithDuplicates
+            {
+                private readonly string[] actual = "the quick the fox brown".Split(" ");
+                
+                public Test IsSupersetOfUniquifiedSelf()
+                {
+                    string[] expected = "the quick fox brown".Split(" ");
+
+                    return Assert.That(actual).Is.SupersetOf(expected);
+                }
+
+                public Test IsProperSupersetOfUniquifiedSelf()
+                {
+                    string[] expected = "the quick fox brown".Split(" ");
+
+                    return Assert.That(actual).Is.ProperSupersetOf(expected);
+                }
+
+                public Test IsNotSubsetOfUniquifiedSelf()
+                {
+                    string[] expected = "brown fox quick the".Split(" ");
+
+                    return Assert.That(actual).Is.Not.SubsetOf(expected);
+                }
+
+                public Test IsNotProperSubsetOfUniquifiedSelf()
+                {
+                    string[] expected = "brown fox quick the".Split(" ");
+
+                    return Assert.That(actual).Is.Not.ProperSubsetOf(expected);
+                }
+
+                public Test IsSupersetOfSelf() => Assert.That(actual).Is.SupersetOf(actual);
+
+                public Test IsNotProperSupersetOfSelf() => Assert.That(actual).Is.Not.ProperSupersetOf(actual);
+
+                public Test IsSubsetOfSelf() => Assert.That(actual).Is.SubsetOf(actual);
+
+                public Test IsNotProperSubsetOfSelf() => Assert.That(actual).Is.Not.ProperSubsetOf(actual);
+            }
+        }
     }
 }

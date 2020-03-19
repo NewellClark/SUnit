@@ -40,11 +40,6 @@
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
@@ -212,6 +207,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.9.8, )"
+            },
+            "morelinq": {
+              "target": "Package",
+              "version": "[3.3.2, )"
             }
           },
           "imports": [

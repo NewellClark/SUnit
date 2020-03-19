@@ -1,16 +1,10 @@
 ﻿using SUnit.Constraints;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
 
 namespace SUnit.Assertions
 {
-    public interface IEnumerableExpression<T> 
-        : IValueExpression<IEnumerable<T>, IEnumerableExpression<T>, EnumerableTest<T>> { }
-
-
     public interface IEnumerableIsExpression<T>
         : IIsExpression<IEnumerable<T>, IEnumerableIsExpression<T>, EnumerableTest<T>>
     {
@@ -77,73 +71,45 @@ namespace SUnit.Assertions
                 return ApplyConstraint(Constraint.FromPredicate<IEnumerable<T>>(predicate));
             }
         }
-    }
 
-
-    internal class EnumerableExpression<T> 
-        : ValueExpression<IEnumerable<T>, IEnumerableExpression<T>, EnumerableTest<T>>,
-        IEnumerableExpression<T>
-    {
-        internal EnumerableExpression(IEnumerable<T> actual, ConstraintModifier<IEnumerable<T>> modifier)
-            : base(actual, modifier) { }
-
-        private protected override EnumerableTest<T> ApplyConstraint(IEnumerable<T> actual, IConstraint<IEnumerable<T>> constraint)
+        public EnumerableTest<T> SupersetOf(IEnumerable<T> expected, IEqualityComparer<T> comparer)
         {
-            return new EnumerableTest<T>(actual, constraint);
+            return ApplyConstraint(new SupersetOfConstraint<T>(expected, comparer));
         }
 
-        private protected override IEnumerableExpression<T> ApplyModifier(IEnumerable<T> actual, ConstraintModifier<IEnumerable<T>> modifier)
+        public EnumerableTest<T> SupersetOf(IEnumerable<T> expected)
         {
-            return new EnumerableExpression<T>(actual, modifier);
-        }
-    }
-
-
-    internal class EnumerableIsExpression<T> : IEnumerableIsExpression<T>
-    {
-        private readonly IEnumerableExpression<T> expression;
-
-        internal EnumerableIsExpression(IEnumerableExpression<T> expression)
-        {
-            Debug.Assert(expression != null);
-
-            this.expression = expression;
+            return ApplyConstraint(new SupersetOfConstraint<T>(expected));
         }
 
-        public IEnumerableIsExpression<T> ApplyModifier(ConstraintModifier<IEnumerable<T>> modifier)
+        public EnumerableTest<T> SubsetOf(IEnumerable<T> expected, IEqualityComparer<T> comparer)
         {
-            return new EnumerableIsExpression<T>(expression.ApplyModifier(modifier));
+            return ApplyConstraint(new SubsetOfConstraint<T>(expected, comparer));
         }
 
-        public EnumerableTest<T> ApplyConstraint(IConstraint<IEnumerable<T>> constraint)
+        public EnumerableTest<T> SubsetOf(IEnumerable<T> expected)
         {
-            return expression.ApplyConstraint(constraint);
+            return ApplyConstraint(new SubsetOfConstraint<T>(expected));
         }
-    }
 
-
-    public class EnumerableThat<T> : That<IEnumerable<T>>
-    {
-        internal EnumerableThat(IEnumerable<T> actual) 
-            : this(new EnumerableExpression<T>(actual, c => c)) { }
-
-        internal EnumerableThat(IEnumerableExpression<T> expression)
-            : base(expression) { }
-
-        protected private new IEnumerableExpression<T> Expression => (IEnumerableExpression<T>)base.Expression;
-
-        public new IEnumerableIsExpression<T> Is => new EnumerableIsExpression<T>(Expression);
-    }
-
-
-    public class EnumerableTest<T> : ValueTest<IEnumerable<T>, EnumerableThat<T>>
-    {
-        internal EnumerableTest(IEnumerable<T> actual, IConstraint<IEnumerable<T>> constraint)
-            : base(actual, constraint) { }
-
-        private protected override That<IEnumerable<T>> ApplyModifier(IEnumerable<T> actual, ConstraintModifier<IEnumerable<T>> modifier)
+        public EnumerableTest<T> ProperSupersetOf(IEnumerable<T> expected, IEqualityComparer<T> comparer)
         {
-            return new EnumerableThat<T>(new EnumerableExpression<T>(actual, modifier));
+            return ApplyConstraint(new ProperSupersetOfConstraint<T>(expected, comparer));
+        }
+
+        public EnumerableTest<T> ProperSupersetOf(IEnumerable<T> expected)
+        {
+            return ApplyConstraint(new ProperSupersetOfConstraint<T>(expected));
+        }
+
+        public EnumerableTest<T> ProperSubsetOf(IEnumerable<T> expected, IEqualityComparer<T> comparer)
+        {
+            return ApplyConstraint(new ProperSubsetOfConstraint<T>(expected, comparer));
+        }
+
+        public EnumerableTest<T> ProperSubsetOf(IEnumerable<T> expected)
+        {
+            return ApplyConstraint(new ProperSubsetOfConstraint<T>(expected));
         }
     }
 }
