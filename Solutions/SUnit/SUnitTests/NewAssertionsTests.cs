@@ -53,5 +53,13 @@ namespace SUnit.NewAssertions
 
             AssertFailed(Assert.That(-1).Is.Positive.And.Is.Negative);
         }
+
+        [Test]
+        public void DecimalsWork()
+        {
+            AssertPassed(Assert.That(17.98970m).Is.EqualTo(1798.970m / 100m));
+
+            AssertFailed(Assert.That(.0000000000001m).Is.Zero);
+        }
     }
 }

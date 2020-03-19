@@ -18,5 +18,7 @@ namespace SUnit.NewAssertions
         public static DoubleThat That(double? actual) => new DoubleThat(actual);
 
         public static LongThat That(long? actual) => new LongThat(actual);
+
+        public static DecimalThat That(decimal? actual) => new DecimalThat(actual);
     }
 }
