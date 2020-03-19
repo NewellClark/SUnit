@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>SUnit.TestAdapter</id>
-    <version>1.0.0.8</version>
+    <version>1.0.0.9</version>
     <authors>Newell Clark</authors>
     <owners>Newell Clark</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -11,8 +11,8 @@
     <description>Package Description</description>
     <dependencies>
       <group targetFramework=".NETStandard2.1">
-        <dependency id="SUnit.Discovery" version="1.0.0.8" exclude="Build,Analyzers" />
-        <dependency id="SUnit" version="1.0.0.8" exclude="Build,Analyzers" />
+        <dependency id="SUnit.Discovery" version="1.0.0.9" exclude="Build,Analyzers" />
+        <dependency id="SUnit" version="1.0.0.9" exclude="Build,Analyzers" />
         <dependency id="Microsoft.TestPlatform.ObjectModel" version="16.5.0" exclude="Build,Analyzers" />
         <dependency id="System.Collections.Immutable" version="1.7.0" exclude="Build,Analyzers" />
       </group>

@@ -5,4 +5,3 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Release Packages\netstandar
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Release Packages\netstandard2.1\SUnit.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Release Packages\netstandard2.1\SUnit.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Release Packages\netstandard2.1\SUnit.pdb
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Release Packages\netstandard2.1\SUnit.csprojAssemblyReference.cache

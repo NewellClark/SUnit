@@ -12,6 +12,7 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Release Packages\
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Release Packages\netcoreapp3.1\Microsoft.TestPlatform.Utilities.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Release Packages\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Release Packages\netcoreapp3.1\testhost.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Release Packages\netcoreapp3.1\MoreLinq.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Release Packages\netcoreapp3.1\Newtonsoft.Json.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Release Packages\netcoreapp3.1\NuGet.Frameworks.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Release Packages\netcoreapp3.1\System.Reactive.Linq.dll
