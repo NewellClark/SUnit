@@ -28,6 +28,9 @@ namespace SUnit.Assertions
         ValueTest<T> IValueExpression<T>.ApplyConstraint(IConstraint<T> constraint) => ApplyConstraint(constraint);
 
 #pragma warning disable CA1716 // Identifiers should not match keywords
+        /// <summary>
+        /// Inverts the next constraint.
+        /// </summary>
         public TExpression Not => ApplyModifier(constraint => !constraint);
 #pragma warning restore CA1716 // Identifiers should not match keywords
 

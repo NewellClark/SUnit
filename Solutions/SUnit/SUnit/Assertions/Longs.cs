@@ -6,15 +6,26 @@ using System.Text;
 
 namespace SUnit.Assertions
 {
+    /// <inheritdoc/>
     public interface ILongExpression : IValueExpression<long?, ILongExpression, LongTest> { }
 
 
+    /// <inheritdoc/>
     public interface ILongIsExpression : IIsExpression<long?, ILongIsExpression, LongTest>
     {
+        /// <summary>
+        /// Tests whether the value is zero.
+        /// </summary>
         public LongTest Zero => EqualTo(0L);
 
+        /// <summary>
+        /// Tests whether the value is positive (zero is not positive).
+        /// </summary>
         public LongTest Positive => this.GreaterThan(0L);
 
+        /// <summary>
+        /// Tests whether the value is negative (zero is not negative).
+        /// </summary>
         public LongTest Negative => this.LessThan(0L);
     }
 
@@ -42,6 +53,7 @@ namespace SUnit.Assertions
     }
 
 
+    /// <inheritdoc/>
     public class LongThat : That<long?>
     {
         internal LongThat(long? actual) 
@@ -52,10 +64,12 @@ namespace SUnit.Assertions
 
         protected private new ILongExpression Expression => (ILongExpression)base.Expression;
 
+        /// <inheritdoc/>
         public new ILongIsExpression Is => new LongIsExpression(Expression);
     }
 
 
+    /// <inheritdoc/>
     public class LongTest : ValueTest<long?, LongThat>
     {
         internal LongTest(long? actual, IConstraint<long?> constraint) 

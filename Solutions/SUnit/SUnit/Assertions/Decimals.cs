@@ -6,15 +6,26 @@ using System.Text;
 
 namespace SUnit.Assertions
 {
+    /// <inheritdoc/>
     public interface IDecimalExpression : IValueExpression<decimal?, IDecimalExpression, DecimalTest> { }
-    
 
+
+    /// <inheritdoc/>
     public interface IDecimalIsExpression : IIsExpression<decimal?, IDecimalIsExpression, DecimalTest>
     {
+        /// <summary>
+        /// Tests whether the value is zero.
+        /// </summary>
         public DecimalTest Zero => EqualTo(0m);
 
+        /// <summary>
+        /// Tests whether the value is positive (zero is not positive).
+        /// </summary>
         public DecimalTest Positive => this.GreaterThan(0m);
 
+        /// <summary>
+        /// Tests whether the value is negative (zero is not negative).
+        /// </summary>
         public DecimalTest Negative => this.LessThan(0m);
     }
 
@@ -59,6 +70,7 @@ namespace SUnit.Assertions
     }
 
 
+    /// <inheritdoc/>
     public class DecimalThat : That<decimal?>
     {
         internal DecimalThat(decimal? actual) 
@@ -73,6 +85,7 @@ namespace SUnit.Assertions
     }
 
 
+    /// <inheritdoc/>
     public class DecimalTest : ValueTest<decimal?, DecimalThat>
     {
         internal DecimalTest(decimal? actual, IConstraint<decimal?> constraint)

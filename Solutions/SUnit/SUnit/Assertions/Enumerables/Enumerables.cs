@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SUnit.Assertions
 {
+    /// <inheritdoc/>
     public interface IEnumerableExpression<T> 
         : IValueExpression<IEnumerable<T>, IEnumerableExpression<T>, EnumerableTest<T>> { }
 
@@ -50,7 +51,7 @@ namespace SUnit.Assertions
         }
     }
 
-
+    /// <inheritdoc/>
     public class EnumerableTest<T> : ValueTest<IEnumerable<T>, EnumerableThat<T>>
     {
         internal EnumerableTest(IEnumerable<T> actual, IConstraint<IEnumerable<T>> constraint)
