@@ -7,7 +7,7 @@ using System.Text;
 namespace SUnit.NewAssertions
 {
     public interface IDecimalExpression : IValueExpression<decimal?, IDecimalExpression, DecimalTest> { }
-
+    
 
     public interface IDecimalIsExpression : IIsExpression<decimal?, IDecimalIsExpression, DecimalTest>
     {

@@ -20,5 +20,12 @@ namespace SUnit.NewAssertions
         public static LongThat That(long? actual) => new LongThat(actual);
 
         public static DecimalThat That(decimal? actual) => new DecimalThat(actual);
+
+        public static BoolThat That(bool? actual) => new BoolThat(actual);
+
+        public static EnumerableThat<T> That<T>(IEnumerable<T> actual)
+        {
+            return new EnumerableThat<T>(actual);
+        }
     }
 }

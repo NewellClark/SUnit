@@ -42,8 +42,6 @@ namespace SUnit.NewAssertions
             AssertPassed(Assert.That(7.0).Is.LessThan(8).And.Is.Not.Zero);
 
             var d = Assert.That(17.9).Is.LessThan(17.91).And.Is.Zero;
-
-            var s = Assert.That("hello, world").Is.LessThan("Hello, World!");
         }
 
         [Test]
@@ -60,6 +58,18 @@ namespace SUnit.NewAssertions
             AssertPassed(Assert.That(17.98970m).Is.EqualTo(1798.970m / 100m));
 
             AssertFailed(Assert.That(.0000000000001m).Is.Zero);
+        }
+
+        [Test]
+        public void EnumerablesWork()
+        {
+            int[] nums = { 5, 19, 47, 19 };
+
+            AssertPassed(Assert.That(nums).Is.SetEqualTo(19, 5, 47));
+
+            AssertFailed(Assert.That(nums).Is.SequenceEqualTo(19, 5, 47));
+
+            AssertPassed(Assert.That(nums).Is.EquivalentTo(19, 19, 5, 47));
         }
     }
 }
