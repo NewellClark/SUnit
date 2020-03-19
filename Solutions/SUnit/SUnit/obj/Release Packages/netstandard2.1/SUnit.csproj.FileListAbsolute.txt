@@ -1,8 +1,6 @@
 D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.deps.json
 D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.dll
 D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.pdb
-D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.xml
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Release Packages\netstandard2.1\SUnit.csprojAssemblyReference.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Release Packages\netstandard2.1\SUnit.AssemblyInfoInputs.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Release Packages\netstandard2.1\SUnit.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Release Packages\netstandard2.1\SUnit.dll

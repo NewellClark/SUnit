@@ -17,6 +17,7 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netco
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\Microsoft.TestPlatform.Utilities.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\Microsoft.VisualStudio.TestPlatform.Common.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\testhost.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\MoreLinq.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\Newtonsoft.Json.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\NuGet.Frameworks.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\nunit.framework.dll
@@ -93,7 +94,6 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netco
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\SUnit.Discovery.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\SUnit.Discovery.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\SUnit.pdb
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\SUnit.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\System.Reactive.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.csprojAssemblyReference.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.AssemblyInfoInputs.cache

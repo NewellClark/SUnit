@@ -86,7 +86,6 @@ D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections.Test
 D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections.Tests\bin\Debug\netcoreapp3.1\System.Reactive.dll
 D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections.Tests\bin\Debug\netcoreapp3.1\NewellClark.Collections.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections.Tests\bin\Debug\netcoreapp3.1\SUnit.pdb
-D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections.Tests\bin\Debug\netcoreapp3.1\SUnit.xml
 D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections.Tests\bin\Debug\netcoreapp3.1\SUnit.Discovery.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections.Tests\bin\Debug\netcoreapp3.1\SUnit.Discovery.xml
 D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections.Tests\bin\Debug\netcoreapp3.1\SUnit.TestAdapter.pdb

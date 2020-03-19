@@ -54,7 +54,7 @@ namespace SUnit.Assertions
         [Test]
         public void Or_Works()
         {
-            AssertPassed(Assert.That(-1m).Is.Zero.Or.EqualTo(7m).Or.LessThan(decimal.MaxValue));
+            AssertPassed(Assert.That(-1m).Is.Zero.Or.Is.EqualTo(7m).Or.Is.LessThan(decimal.MaxValue));
         }
     }
 }

@@ -96,3 +96,4 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Debug\netcoreapp3
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Debug\netcoreapp3.1\DogfoodingTests.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Debug\netcoreapp3.1\DogfoodingTests.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Debug\netcoreapp3.1\DogfoodingTests.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Debug\netcoreapp3.1\MoreLinq.dll

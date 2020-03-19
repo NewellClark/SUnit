@@ -298,3 +298,4 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SU
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug\netcoreapp3.0\SUnitTests.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug\netcoreapp3.0\MoreLinq.dll

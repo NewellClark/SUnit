@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj": {
-      "version": "1.0.0.8",
+      "version": "1.0.0.9",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj",
         "projectName": "SUnit.Discovery",
@@ -83,7 +83,7 @@
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj": {
-      "version": "1.0.0.8",
+      "version": "1.0.0.9",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj",
         "projectName": "SUnit.TestAdapter",
@@ -166,7 +166,7 @@
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit\\SUnit.csproj": {
-      "version": "1.0.0.8",
+      "version": "1.0.0.9",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit\\SUnit.csproj",
         "projectName": "SUnit",
@@ -212,6 +212,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.9.8, )"
+            },
+            "morelinq": {
+              "target": "Package",
+              "version": "[3.3.2, )"
             }
           },
           "imports": [

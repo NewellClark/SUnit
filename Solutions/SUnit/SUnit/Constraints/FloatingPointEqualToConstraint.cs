@@ -33,6 +33,9 @@ namespace SUnit.Constraints
             double x = expected.Value;
             double y = actual.Value;
 
+            if (x == y)
+                return true;
+
             double normalizedError = Math.Abs(x - y) / Math.Max(Math.Abs(x), Math.Abs(y));
 
             return normalizedError < maxAllowedNormalizedError;
