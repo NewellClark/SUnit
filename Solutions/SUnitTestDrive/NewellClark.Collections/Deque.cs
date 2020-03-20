@@ -108,7 +108,5 @@ namespace NewellClark.Collections
                 start = 0;
             }
         }
-
-
     }
 }
