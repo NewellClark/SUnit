@@ -10,8 +10,8 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.TestHost": "16.5.0",
-          "SUnit": "1.0.0.8",
-          "SUnit.TestAdapter": "1.0.0.8",
+          "SUnit": "1.0.0.9",
+          "SUnit.TestAdapter": "1.0.0.9",
           "System.Reactive.Reference": "4.3.0.0"
         },
         "runtime": {
@@ -647,7 +647,7 @@
           "System.Xml.ReaderWriter": "4.0.11"
         }
       },
-      "SUnit/1.0.0.8": {
+      "SUnit/1.0.0.9": {
         "dependencies": {
           "morelinq": "3.3.2"
         },
@@ -655,9 +655,9 @@
           "SUnit.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0.8": {
+      "SUnit.Discovery/1.0.0.9": {
         "dependencies": {
-          "SUnit": "1.0.0.8",
+          "SUnit": "1.0.0.9",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -665,11 +665,11 @@
           "SUnit.Discovery.dll": {}
         }
       },
-      "SUnit.TestAdapter/1.0.0.8": {
+      "SUnit.TestAdapter/1.0.0.9": {
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0.8",
-          "SUnit.Discovery": "1.0.0.8",
+          "SUnit": "1.0.0.9",
+          "SUnit.Discovery": "1.0.0.9",
           "System.Collections.Immutable": "1.7.0"
         },
         "runtime": {
@@ -1007,17 +1007,17 @@
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
     },
-    "SUnit/1.0.0.8": {
+    "SUnit/1.0.0.9": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.Discovery/1.0.0.8": {
+    "SUnit.Discovery/1.0.0.9": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.TestAdapter/1.0.0.8": {
+    "SUnit.TestAdapter/1.0.0.9": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

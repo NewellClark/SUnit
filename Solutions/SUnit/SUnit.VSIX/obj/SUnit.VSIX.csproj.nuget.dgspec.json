@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.VSIX\\SUnit.VSIX.csproj": {}
+  },
+  "projects": {
+    "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.VSIX\\SUnit.VSIX.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.VSIX\\SUnit.VSIX.csproj",
+        "projectName": "SUnit.VSIX",
+        "projectPath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.VSIX\\SUnit.VSIX.csproj",
+        "packagesPath": "C:\\Users\\Newell Clark\\.nuget\\packages\\",
+        "outputPath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.VSIX\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Newell Clark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\LocalRepositories\\SUnit\\PackageSource": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-master/api/v3/index.json": {},
+          "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.VSSDK.BuildTools": {
+              "target": "Package",
+              "version": "[16.4.1057, )"
+            },
+            "Microsoft.VisualStudio.SDK": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[16.0.202, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

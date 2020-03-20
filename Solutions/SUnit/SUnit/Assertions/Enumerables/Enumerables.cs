@@ -28,7 +28,7 @@ namespace SUnit.Assertions
         }
     }
 
-
+    
     internal class EnumerableIsExpression<T> : IEnumerableIsExpression<T>
     {
         private readonly IEnumerableExpression<T> expression;
