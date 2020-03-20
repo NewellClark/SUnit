@@ -96,7 +96,7 @@ namespace SUnit.Discovery
         }
 
         [TestFixture]
-        public class PublicStaticNoParamMockReturningMethod : FixtureFactoryTests
+        public class NamedCtor : FixtureFactoryTests
         {
             private class Mock : MockBase
             {
@@ -127,6 +127,24 @@ namespace SUnit.Discovery
                 object instantiated = roundTripped.Build();
 
                 assert.That(instantiated, Is.InstanceOf<Mock>());
+            }
+        }
+
+        [TestFixture]
+        public class ThrowingNamedCtor : FixtureFactoryTests
+        {
+            private class Mock : MockBase
+            {
+                private Mock() { }
+                public static Mock ThrowingNamedCtor() => throw new ExpectedException();
+            }
+
+            protected override Type Type => typeof(Mock);
+
+            [Test]
+            public void UnwrapsTargetInvocationException()
+            {
+                assert.Throws<ExpectedException>(() => Factory.Build());
             }
         }
 
