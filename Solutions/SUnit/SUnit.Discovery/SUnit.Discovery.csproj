@@ -7,7 +7,7 @@
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <Configurations>Debug;Release;Debug Packages;SingleProjectPackage;Release Packages</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0.9</Version>
+    <Version>1.0.0.10</Version>
     <Authors>Newell Clark</Authors>
   </PropertyGroup>
 
@@ -33,7 +33,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.3" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="System.Reactive" Version="4.3.2" />
     <PackageReference Include="System.Reactive.Linq" Version="4.3.2" />
   </ItemGroup>

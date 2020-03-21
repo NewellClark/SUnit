@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SUnit.Discovery</id>
+    <version>1.0.0.9</version>
+    <authors>Newell Clark</authors>
+    <owners>Newell Clark</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE.md</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="SUnit" version="1.0.0.9" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="2.9.3" exclude="Build,Analyzers" />
+        <dependency id="System.Reactive" version="4.3.2" exclude="Build,Analyzers" />
+        <dependency id="System.Reactive.Linq" version="4.3.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\bin\Debug\netstandard2.1\SUnit.Discovery.dll" target="lib\netstandard2.1\SUnit.Discovery.dll" />
+    <file src="D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\bin\Debug\netstandard2.1\SUnit.Discovery.xml" target="lib\netstandard2.1\SUnit.Discovery.xml" />
+    <file src="D:\LocalRepositories\SUnit\LICENSE.md" target="LICENSE.md" />
+  </files>
+</package>

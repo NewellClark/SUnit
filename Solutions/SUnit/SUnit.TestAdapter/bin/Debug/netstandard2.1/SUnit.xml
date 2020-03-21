@@ -4,6 +4,594 @@
         <name>SUnit</name>
     </assembly>
     <members>
+        <member name="T:SUnit.BaseAssert">
+            <summary>
+            This class exists to get overload resolution to pick more specific types when possible.
+            </summary>
+        </member>
+        <member name="M:SUnit.BaseAssert.That``1(``0)">
+            <summary>
+            Specifies the actual value that is being tested.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="actual">The actual value that is being tested.</param>
+            <returns></returns>
+        </member>
+        <member name="T:SUnit.Assert">
+            <summary>
+            Contains methods for performing assertions.
+            </summary>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Nullable{System.Double})">
+            <summary>
+            Specifies the actual value that is being tested.
+            </summary>
+            <param name="actual">The actual value that is being tested.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Nullable{System.Int64})">
+            <summary>
+            Specifies the actual value that is being tested.
+            </summary>
+            <param name="actual">The actual value that is being tested.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Nullable{System.Decimal})">
+            <summary>
+            Specifies the actual value that is being tested.
+            </summary>
+            <param name="actual">The actual value that is being tested.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That(System.Nullable{System.Boolean})">
+            <summary>
+            Specifies the actual value that is being tested.
+            </summary>
+            <param name="actual">The actual value that is being tested.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.That``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Specifies the actual value that is being tested.
+            </summary>
+            <param name="actual">The actual value that is being tested.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.Throws``1(System.Action,System.Boolean)">
+            <summary>
+            Asserts that a delegate throws the specified exception.
+            </summary>
+            <typeparam name="TException">The type of exception that the action is expected to throw.</typeparam>
+            <param name="codeThatShouldThrow">The delegate that should throw.</param>
+            <param name="allowSubclasses">Whether to allow subclass exceptions to pass the test.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assert.Throws``1(System.Action)">
+            <summary>
+            Asserts that a delegate throws a specific exception. Subclass exceptions are not allowed.
+            </summary>
+            <typeparam name="TException">The exact type of exception that is expected. Subclass exceptions
+            will not match.</typeparam>
+            <param name="codeThatShouldThrow">The delegate that is expected to throw.</param>
+            <returns></returns>
+        </member>
+        <member name="T:SUnit.Assertions.IBoolExpression">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.IBoolIsExpression">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.IBoolIsExpression.True">
+            <summary>
+            Tests whether the value is true.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IBoolIsExpression.False">
+            <summary>
+            Tests whether the value is false.
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.BoolThat">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.BoolThat.Is">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.BoolTest">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.IDecimalExpression">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.IDecimalIsExpression">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.IDecimalIsExpression.Zero">
+            <summary>
+            Tests whether the value is zero.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IDecimalIsExpression.Positive">
+            <summary>
+            Tests whether the value is positive (zero is not positive).
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IDecimalIsExpression.Negative">
+            <summary>
+            Tests whether the value is negative (zero is not negative).
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.DecimalThat">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.DecimalThat.Is">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.DecimalTest">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.IIsExpression`1">
+            <summary>
+            The return value of <see cref="P:SUnit.Assertions.That`1.Is"/>.
+            </summary>
+            <typeparam name="T">The type of the value that is under test.</typeparam>
+        </member>
+        <member name="T:SUnit.Assertions.That`1">
+            <summary>
+            The type that lets you say <see cref="P:SUnit.Assertions.That`1.Is"/>.
+            </summary>
+            <typeparam name="T">The type of the value under test.</typeparam>
+        </member>
+        <member name="P:SUnit.Assertions.That`1.Is">
+            <summary>
+            Contains methods for performing assertions on the value under test.
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.IDoubleExpression">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.IDoubleIsExpression">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.IDoubleIsExpression.EqualTo(System.Nullable{System.Double})">
+            <summary>
+            Tests whether the actual value is equal to the expected value, within a dynamically-adjusted tolerance.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <returns>A test that passes if the value is almost equal to the expected value. </returns>
+        </member>
+        <member name="P:SUnit.Assertions.IDoubleIsExpression.Zero">
+            <summary>
+            Tests whether the actual value is zero.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IDoubleIsExpression.Positive">
+            <summary>
+            Tests whether the actual value is positive (zero is not positive).
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IDoubleIsExpression.Negative">
+            <summary>
+            Tests whether the actual value is negative (zero is not negative).
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.IDoubleIsExpression.NaN">
+            <summary>
+            Tests whether the actual value is NaN (Not a Number).
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.DoubleThat">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.DoubleThat.Is">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.DoubleTest">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.IEnumerableExpression`1">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.EnumerableTest`1">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.EnumerableThat`1">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.EnumerableThat`1.Is">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.EnumerableThat`1.Contains(`0)">
+            <summary>
+            Tests whether the sequence contains the specified item.
+            </summary>
+            <param name="expected">The item we expect to contain.</param>
+            <returns></returns>
+        </member>
+        <member name="T:SUnit.Assertions.IEnumerableIsExpression`1">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.SetEqualTo(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Determines if two sequences have the same elements. Order does not matter, and 
+            duplicates do not matter.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="comparer">The equality comparer to use to compare elements.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.SetEqualTo(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Determines if two sequences have the same elements. Order does not matter, and 
+            duplicates do not matter.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.SetEqualTo(`0[])">
+            <summary>
+            Determines if two sequences have the same elements. Order does not matter, and 
+            duplicates do not matter.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.SequenceEqualTo(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Determines whether two sequences have the same elements in the same order.
+            </summary>
+            <param name="expected">The sequence we expect.</param>
+            <param name="comparer">The equality comparer to use to compare elements.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.SequenceEqualTo(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Determines whether two sequences have the same elements in the same order.
+            </summary>
+            <param name="expected">The sequence we expect.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.SequenceEqualTo(`0[])">
+            <summary>
+            Tests whether two sequences have the same elements in the same order.
+            </summary>
+            <param name="expected">The sequence we expect.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.EquivalentTo(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Tests whether two sequences have all the same elements, but in any order. 
+            Duplicates do matter, but order does not.
+            </summary>
+            <param name="expected">The sequence we expect.</param>
+            <param name="comparer">The equality comparer to use to compare elements.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.EquivalentTo(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Tests whether two sequences have all the same elements, but in any order. 
+            Duplicates do matter, but order does not.
+            </summary>
+            <param name="expected">The sequence we expect.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.EquivalentTo(`0[])">
+            <summary>
+            Tests whether two sequences have all the same elements, but in any order. 
+            Duplicates do matter, but order does not.
+            </summary>
+            <param name="expected">The sequence we expect.</param>
+            <returns></returns>
+        </member>
+        <member name="P:SUnit.Assertions.IEnumerableIsExpression`1.Empty">
+            <summary>
+            Tests whether the sequence is empty.
+            </summary>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.SupersetOf(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Tests whether the sequence is a superset of another sequence.
+            </summary>
+            <param name="expected">The sequence we expect to be a superset of.</param>
+            <param name="comparer">The equality comparer to use for comparing items.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.SupersetOf(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Tests whether the sequence is a superset of another sequence.
+            </summary>
+            <param name="expected">The sequence we expect to be a superset of.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.SubsetOf(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Tests whether the sequence is a subset of another sequence.
+            </summary>
+            <param name="expected">The sequence we expect to be a subset of.</param>
+            <param name="comparer">The comparer to use to compare elements.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.SubsetOf(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Tests whether the sequence is a subset of another sequence.
+            </summary>
+            <param name="expected">The sequence we expect to be a subset of.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.ProperSupersetOf(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Tests whether the sequence is a proper superset of another sequence.
+            </summary>
+            <param name="expected">The sequence we expect to be a proper superset of.</param>
+            <param name="comparer">The equality comparer to use to compare elements.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.ProperSupersetOf(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Tests whether the sequence is a proper superset of another sequence.
+            </summary>
+            <param name="expected">The sequence we expect to be a proper superset of.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.ProperSubsetOf(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Tests whether the sequence is a proper subset of another sequence.
+            </summary>
+            <param name="expected">The sequence we expect to be a proper subset of.</param>
+            <param name="comparer">The equality comparer to use to compare elements.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.Assertions.IEnumerableIsExpression`1.ProperSubsetOf(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Tests whether the sequence is a proper subset of another sequence.
+            </summary>
+            <param name="expected">The sequence we expect to be a proper subset of.</param>
+            <returns></returns>
+        </member>
+        <member name="T:SUnit.Assertions.IIsExpression`3">
+            <summary>
+            The thing that gets returned whenever you say "is". That's all you need to know.
+            Don't be intimidated by the long type-names with many generic parameters. Just say "Is", 
+            and let your intellisense do the talking.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TExpression">The type of the current <see cref="T:SUnit.Assertions.IValueExpression`1"/>.</typeparam>
+            <typeparam name="TTest">The type of test created by applying constraints to the current expression.</typeparam>
+        </member>
+        <member name="M:SUnit.Assertions.IIsExpression`3.ApplyModifier(SUnit.Assertions.ConstraintModifier{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.IIsExpression`3.ApplyConstraint(SUnit.Constraints.IConstraint{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpression`3.Not">
+            <summary>
+            Inverts the next constraint.
+            </summary>
+        </member>
+        <member name="M:SUnit.Assertions.IIsExpression`3.EqualTo(`0)">
+            <summary>
+            Asserts that the value under test is equal to the specified expected value.
+            </summary>
+            <param name="expected">The value we expect to be equal to.</param>
+            <returns>A test that passes if the value under test is equal to the specified expected value.</returns>
+        </member>
+        <member name="P:SUnit.Assertions.IIsExpression`3.Null">
+            <summary>
+            Asserts that the value under test is null.
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.ConstraintModifier`1">
+            <summary>
+            Creates a new <see cref="T:SUnit.Constraints.IConstraint`1"/> by modifying an existing one.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="constraint">The constraint to modify.</param>
+            <returns>A new <see cref="T:SUnit.Constraints.IConstraint`1"/> created by applying the modifier function to
+            the specified constraint.</returns>
+        </member>
+        <member name="T:SUnit.Assertions.IValueExpression`1">
+            <summary>
+            An expression that contains a value under test.
+            </summary>
+            <typeparam name="T">Type of value under test.</typeparam>
+        </member>
+        <member name="M:SUnit.Assertions.IValueExpression`1.ApplyConstraint(SUnit.Constraints.IConstraint{`0})">
+            <summary>
+            Applies a <see cref="T:SUnit.Constraints.IConstraint`1"/> to the value under test, producing
+            a <see cref="T:SUnit.Assertions.ValueTest`1"/>.
+            </summary>
+            <param name="constraint">The <see cref="T:SUnit.Constraints.IConstraint`1"/> to apply.</param>
+            <returns>A <see cref="T:SUnit.Assertions.ValueTest`1"/> created from the value under test and the <see cref="T:SUnit.Constraints.IConstraint`1"/>.</returns>
+        </member>
+        <member name="M:SUnit.Assertions.IValueExpression`1.ApplyModifier(SUnit.Assertions.ConstraintModifier{`0})">
+            <summary>
+            Crates a new <see cref="T:SUnit.Assertions.IValueExpression`1"/> by applying a <see cref="T:SUnit.Assertions.ConstraintModifier`1"/> 
+            to the current <see cref="T:SUnit.Assertions.IValueExpression`1"/>.
+            Any <see cref="T:SUnit.Constraints.IConstraint`1"/>s that are applied will be modified by the constraint modifier.
+            </summary>
+            <param name="modifier">The modifier to apply to the current expression.</param>
+            <returns>A new <see cref="T:SUnit.Assertions.IValueExpression`1"/> created by applying the modifier to the current 
+            <see cref="T:SUnit.Assertions.IValueExpression`1"/>.</returns>
+        </member>
+        <member name="T:SUnit.Assertions.IValueExpression`3">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.IValueExpression`3.ApplyConstraint(SUnit.Constraints.IConstraint{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.IValueExpression`3.ApplyModifier(SUnit.Assertions.ConstraintModifier{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.ILongExpression">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.ILongIsExpression">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.ILongIsExpression.Zero">
+            <summary>
+            Tests whether the value is zero.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.ILongIsExpression.Positive">
+            <summary>
+            Tests whether the value is positive (zero is not positive).
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.ILongIsExpression.Negative">
+            <summary>
+            Tests whether the value is negative (zero is not negative).
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.LongThat">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.LongThat.Is">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.LongTest">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.Assertions.ValueTest`1">
+            <summary>
+            A test that is performed on a value that is under test.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:SUnit.Assertions.ValueTest`1.Passed">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.ValueTest`1.ApplyModifier(SUnit.Assertions.ConstraintModifier{`0})">
+            <summary>
+            Applies the specified modifier to the current <see cref="T:SUnit.Assertions.ValueTest`1"/>.
+            </summary>
+            <param name="modifier"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SUnit.Assertions.ValueTest`1.And">
+            <summary>
+            Boolean AND.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.ValueTest`1.Or">
+            <summary>
+            Boolean OR.
+            </summary>
+        </member>
+        <member name="P:SUnit.Assertions.ValueTest`1.Xor">
+            <summary>
+            Exclusive OR, or XOR.
+            </summary>
+        </member>
+        <member name="T:SUnit.Assertions.ValueTest`2">
+            <inheritdoc/>
+        </member>
+        <member name="M:SUnit.Assertions.ValueTest`2.ApplyModifier(SUnit.Assertions.ConstraintModifier{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.ValueTest`2.And">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.ValueTest`2.Or">
+            <inheritdoc/>
+        </member>
+        <member name="P:SUnit.Assertions.ValueTest`2.Xor">
+            <inheritdoc/>
+        </member>
+        <member name="T:SUnit.ComparableExtensions">
+            <summary>
+            Contains extension methods for objects that implement <see cref="T:System.IComparable`1"/>.
+            </summary>
+        </member>
+        <member name="M:SUnit.ComparableExtensions.LessThan``3(SUnit.Assertions.IIsExpression{``0,``1,``2},``0)">
+            <summary>
+            Tests whether the actual value is less than the expected value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <param name="this"></param>
+            <param name="expected">The value we expect to be less than.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.ComparableExtensions.LessThan``3(SUnit.Assertions.IIsExpression{System.Nullable{``0},``1,``2},System.Nullable{``0})">
+            <summary>
+            Tests whether the actual value is less than the expected value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <param name="this"></param>
+            <param name="expected">The value we expect to be less than.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.ComparableExtensions.GreaterThan``3(SUnit.Assertions.IIsExpression{``0,``1,``2},``0)">
+            <summary>
+            Tests whether the actual value is greater than the expected value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <param name="this"></param>
+            <param name="expected">The value we expect to be greater than.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.ComparableExtensions.GreaterThan``3(SUnit.Assertions.IIsExpression{System.Nullable{``0},``1,``2},System.Nullable{``0})">
+            <summary>
+            Tests whether the actual value is greater than the expected value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <param name="this"></param>
+            <param name="expected">The value we expect to be greater than.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.ComparableExtensions.LessThanOrEqualTo``3(SUnit.Assertions.IIsExpression{``0,``1,``2},``0)">
+            <summary>
+            Tests whether the actual value is less than or equal to the expected value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <param name="this"></param>
+            <param name="expected">The value we expect to be less than or equal to.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.ComparableExtensions.LessThanOrEqualTo``3(SUnit.Assertions.IIsExpression{System.Nullable{``0},``1,``2},System.Nullable{``0})">
+            <summary>
+            Tests whether the actual value is less than or equal to the expected value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <param name="this"></param>
+            <param name="expected">The value we expect to be less than or equal to.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.ComparableExtensions.GreaterThanOrEqualTo``3(SUnit.Assertions.IIsExpression{``0,``1,``2},``0)">
+            <summary>
+            Tests whether the actual value is greater than or equal to the expected value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <param name="this"></param>
+            <param name="expected">The value we expect to be greater than or equal to.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SUnit.ComparableExtensions.GreaterThanOrEqualTo``3(SUnit.Assertions.IIsExpression{System.Nullable{``0},``1,``2},System.Nullable{``0})">
+            <summary>
+            Tests whether the actual value is greater than or equal to the expected value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TIs"></typeparam>
+            <typeparam name="TTest"></typeparam>
+            <param name="this"></param>
+            <param name="expected">The value we expect to be greater than or equal to.</param>
+            <returns></returns>
+        </member>
         <member name="T:SUnit.Constraints.BinaryOperatorConstraint`1">
             <summary>
             A <see cref="T:SUnit.Constraints.IConstraint`1"/> that combines two <see cref="T:SUnit.Constraints.IConstraint`1"/>s using a binary operator.
