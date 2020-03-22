@@ -91,3 +91,4 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\obj\Release\netc
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\obj\Release\netcoreapp3.1\SUnitProjectTemplate.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\obj\Release\netcoreapp3.1\SUnitProjectTemplate.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\obj\Release\netcoreapp3.1\SUnitProjectTemplate.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\obj\Release\netcoreapp3.1\SUnitProjectTemplate.csprojAssemblyReference.cache

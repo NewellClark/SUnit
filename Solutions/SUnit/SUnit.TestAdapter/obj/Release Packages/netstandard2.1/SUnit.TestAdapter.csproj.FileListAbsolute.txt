@@ -7,3 +7,4 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Release Package
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Release Packages\netstandard2.1\SUnit.TestAdapter.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Release Packages\netstandard2.1\SUnit.TestAdapter.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Release Packages\netstandard2.1\SUnit.TestAdapter.pdb
+D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.TestAdapter.xml
