@@ -97,3 +97,4 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Release Packages\
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Release Packages\netcoreapp3.1\DogfoodingTests.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Release Packages\netcoreapp3.1\DogfoodingTests.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\obj\Release Packages\netcoreapp3.1\DogfoodingTests.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\DogfoodingTests\bin\Release Packages\netcoreapp3.1\SUnit.TestAdapter.xml

@@ -28,7 +28,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Packages|AnyCPU'">
-    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\SUnit.Discovery.xml</DocumentationFile>
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\PackageSource\SUnit.Discovery.xml</DocumentationFile>
     <OutputPath>D:\LocalRepositories\SUnit\PackageSource</OutputPath>
   </PropertyGroup>
 

@@ -31,7 +31,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Packages|AnyCPU'">
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\PackageSource\SUnit.xml</DocumentationFile>
     <OutputPath>D:\LocalRepositories\SUnit\PackageSource\</OutputPath>
   </PropertyGroup>
 

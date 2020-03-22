@@ -19,6 +19,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Packages|AnyCPU'">
     <OutputPath>D:\LocalRepositories\SUnit\PackageSource</OutputPath>
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\PackageSource\SUnit.TestAdapter.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
