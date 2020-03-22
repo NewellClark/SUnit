@@ -8,6 +8,7 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\SUnit.VSIX.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\extension.vsixmanifest
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\files.json
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\TemplateManifests\templateManifest0.noloc.vstman
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\ProjectTemplates\SUnitProjectTemplate\__TemplateIcon.ico
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\ProjectTemplates\SUnitProjectTemplate\MyTemplate.vstemplate
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\ProjectTemplates\SUnitProjectTemplate\MyTestFixture.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\ProjectTemplates\SUnitProjectTemplate\SUnitProjectTemplate.csproj

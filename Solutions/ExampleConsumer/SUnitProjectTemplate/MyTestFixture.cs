@@ -21,7 +21,7 @@ namespace SUnitProjectTemplate
         public IEnumerable<Test> TestAllMyData()
         {
             foreach (int n in Enumerable.Range(1, 7))
-                yield return Assert.That(n).Is.Positive.And.Not.Zero;
+                yield return Assert.That(n).Is.Positive.And.Is.Not.Zero;
         }
 
         //  Async tests are also supported.
