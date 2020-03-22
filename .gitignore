@@ -10,7 +10,33 @@
 *.testlog
 
 *.sqlite
-**/.vs/**
-**/bin/**
-**/obj/**
 
+.vs/slnx.sqlite-journal
+/Solutions/SUnit/.vs/SUnit/v16/Server/sqlite3
+/Solutions/SUnit/.vs/SUnit/v16/TestStore/1
+/Solutions/SUnit/.vs/slnx.sqlite-journal
+/Solutions/ExampleConsumer/.vs/ExampleConsumer/v16/Server/sqlite3
+/Solutions/ExampleConsumer/.vs/ExampleConsumer/v16/TestStore/0
+/Solutions/ExampleConsumer/.vs/ExampleConsumer/DesignTimeBuild
+/Solutions/AdapterDebugging/.vs/AdapterDebugging/v16/Server/sqlite3
+/Solutions/AdapterDebugging/.vs/AdapterDebugging/v16/TestStore/0
+
+Solutions/SUnit/.vs/
+Solutions/SUnit/SUnit/bin/
+Solutions/SUnit/SUnit.Discovery/bin/
+Solutions/SUnit/SUnit.TestAdapter/bin/
+
+Solutions/SUnit/SUnitTests/bin/
+Solutions/SUnit/DogfoodingTests/bin/
+
+Solutions/SUnit/SUnit.VSIX/bin/
+
+Solutions/AdapterDebugging/.vs/
+Solutions/AdapterDebugging/AdapterDebugging/bin/
+Solutions/AdapterDebugging/ActualLegitUnitTests/bin/
+
+Solutions/ExampleConsumer/.vs/
+Solutions/ExampleConsumer/ExampleConsumer/bin/
+
+Solutions/SUnitTestDrive/.vs/
+Solutions/SUnitTestDrive/NewellClark.Collections/bin/

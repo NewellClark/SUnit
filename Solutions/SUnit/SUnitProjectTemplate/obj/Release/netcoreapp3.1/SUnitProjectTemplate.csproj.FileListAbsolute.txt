@@ -1,5 +1,3 @@
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\SUnitProjectTemplate.deps.json
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\SUnitProjectTemplate.runtimeconfig.json
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\SUnitProjectTemplate.runtimeconfig.dev.json
@@ -8,12 +6,14 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netc
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\Microsoft.TestPlatform.CoreUtilities.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\Microsoft.TestPlatform.CommunicationUtilities.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\Microsoft.TestPlatform.CrossPlatEngine.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\Microsoft.TestPlatform.Utilities.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\testhost.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\MoreLinq.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\NuGet.Frameworks.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\SUnit.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\SUnit.Discovery.dll
@@ -86,9 +86,9 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netc
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\System.Reactive.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Release\netcoreapp3.1\System.Reactive.xml
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\obj\Release\netcoreapp3.1\SUnitProjectTemplate.csprojAssemblyReference.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\obj\Release\netcoreapp3.1\SUnitProjectTemplate.AssemblyInfoInputs.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\obj\Release\netcoreapp3.1\SUnitProjectTemplate.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\obj\Release\netcoreapp3.1\SUnitProjectTemplate.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\obj\Release\netcoreapp3.1\SUnitProjectTemplate.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\obj\Release\netcoreapp3.1\SUnitProjectTemplate.pdb
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\obj\Release\netcoreapp3.1\SUnitProjectTemplate.csprojAssemblyReference.cache
