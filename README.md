@@ -1,7 +1,4 @@
-# Welcome to SUnit 
-A .NET unit testing framework.
-
-## What is SUnit?
+# What is SUnit?
 SUnit is a .NET unit testing framework with a highly-fluent syntax.
 ```
     public Test MyUnitTest() 
