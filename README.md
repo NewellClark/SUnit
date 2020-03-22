@@ -1,4 +1,9 @@
-# What is SUnit?
+# Welcome to SUnit 
+Before writing unit tests in SUnit, you'll need to install the SUnit packages from Nuget. We recommend using our Visual Studio extension. It comes with Visual Studio project templates that take care of importing all the dependancies for you. You can [download the Visual Studio SUnit Extension](https://marketplace.visualstudio.com/items?itemName=NewellClark.SUnitTemplates).
+
+The extension includes project templates for creating SUnit projects. 
+
+## What is SUnit?
 SUnit is a .NET unit testing framework. SUnit does things somewhat differently than other unit testing frameworks. 
 ```
     public Test MyUnitTest() 
@@ -53,8 +58,3 @@ SUnit also supports async tests. Simply return a `Task<Test>` from your test met
         return Assert.That(result).Is.SetEqualTo("Alpha", "Charlie", "Hotel");
     }
 ```
-
-## Getting Started
-Before writing unit tests in SUnit, you'll need to install the SUnit packages from Nuget. We recommend using our Visual Studio extension. It comes with Visual Studio project templates that take care of importing all the dependancies for you. You can download the SUnit Visual Studio Extension [here](https://marketplace.visualstudio.com/items?itemName=NewellClark.SUnitTemplates).
-
-Once you've downloaded the extension, create a new project. In the project creation dialog, choose "test" from the project type dropdown menu. Select "SUnit Test Project". Now you're ready to write some unit tests; everybody's favorite part of this occupation. 
