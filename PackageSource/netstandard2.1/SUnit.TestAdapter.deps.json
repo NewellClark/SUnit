@@ -258,7 +258,6 @@
       },
       "SUnit.Discovery/1.0.0.10": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.6",
           "SUnit": "1.0.0.10",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"

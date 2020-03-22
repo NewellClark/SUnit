@@ -7,7 +7,7 @@ using SUnit;
 
 namespace SUnitProjectTemplate
 {
-    //  Any public class that contains unit tests is a "Test Fixture".
+    //  Any public class that contains unit tests is a Test Fixture.
     public class MyTestFixture
     {
         //  Any public instance method that returns a Test is a Unit Test.

@@ -12,7 +12,6 @@
     <dependencies>
       <group targetFramework=".NETStandard2.1">
         <dependency id="SUnit" version="1.0.0.10" exclude="Build,Analyzers" />
-        <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="2.9.3" exclude="Build,Analyzers" />
         <dependency id="System.Reactive" version="4.3.2" exclude="Build,Analyzers" />
         <dependency id="System.Reactive.Linq" version="4.3.2" exclude="Build,Analyzers" />
       </group>
