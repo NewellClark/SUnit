@@ -7,12 +7,12 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "SUnit.TestAdapter/1.0.0.9": {
+      "SUnit.TestAdapter/1.0.0.10": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.6",
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0.9",
-          "SUnit.Discovery": "1.0.0.9",
+          "SUnit": "1.0.0.10",
+          "SUnit.Discovery": "1.0.0.10",
           "System.Collections.Immutable": "1.7.0"
         },
         "runtime": {
@@ -248,7 +248,7 @@
           }
         }
       },
-      "SUnit/1.0.0.9": {
+      "SUnit/1.0.0.10": {
         "dependencies": {
           "morelinq": "3.3.2"
         },
@@ -256,10 +256,9 @@
           "SUnit.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0.9": {
+      "SUnit.Discovery/1.0.0.10": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.6",
-          "SUnit": "1.0.0.9",
+          "SUnit": "1.0.0.10",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -270,7 +269,7 @@
     }
   },
   "libraries": {
-    "SUnit.TestAdapter/1.0.0.9": {
+    "SUnit.TestAdapter/1.0.0.10": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -415,12 +414,12 @@
       "path": "system.threading.tasks.extensions/4.5.3",
       "hashPath": "system.threading.tasks.extensions.4.5.3.nupkg.sha512"
     },
-    "SUnit/1.0.0.9": {
+    "SUnit/1.0.0.10": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.Discovery/1.0.0.9": {
+    "SUnit.Discovery/1.0.0.10": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

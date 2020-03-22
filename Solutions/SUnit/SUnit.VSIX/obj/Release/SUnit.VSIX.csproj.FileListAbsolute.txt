@@ -1,0 +1,15 @@
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\bin\Release\ProjectTemplates\SUnitProjectTemplate.zip
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\bin\Release\SUnit.VSIX.vsix
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\bin\Release\extension.vsixmanifest
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\_EmptyResource.resources
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\SUnit.VSIX.csproj.GenerateResource.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\SUnit.VSIX.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\SUnit.VSIX.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\extension.vsixmanifest
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\files.json
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\TemplateManifests\templateManifest0.noloc.vstman
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\ProjectTemplates\SUnitProjectTemplate\MyTemplate.vstemplate
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\ProjectTemplates\SUnitProjectTemplate\MyTestFixture.cs
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\ProjectTemplates\SUnitProjectTemplate\SUnitProjectTemplate.csproj
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\templateFiles.json
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\SUnit.VSIX.csprojAssemblyReference.cache

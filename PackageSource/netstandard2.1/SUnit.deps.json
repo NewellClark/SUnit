@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "SUnit/1.0.0.9": {
+      "SUnit/1.0.0.10": {
         "dependencies": {
           "Microsoft.CodeQuality.Analyzers": "2.9.8",
           "morelinq": "3.3.2"
@@ -28,7 +28,7 @@
     }
   },
   "libraries": {
-    "SUnit/1.0.0.9": {
+    "SUnit/1.0.0.10": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

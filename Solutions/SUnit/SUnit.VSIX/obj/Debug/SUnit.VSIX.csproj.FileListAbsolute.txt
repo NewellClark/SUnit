@@ -18,4 +18,3 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\ItemTemplates\SU
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\ItemTemplates\SUnitTestFixture\__TemplateIcon.ico
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\ItemTemplates\SUnitTestFixture\MyTemplate.vstemplate
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\templateFiles.json
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\SUnit.VSIX.csprojAssemblyReference.cache
