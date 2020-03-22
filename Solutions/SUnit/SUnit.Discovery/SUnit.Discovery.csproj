@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
-    <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <Configurations>Debug;Release;Debug Packages;SingleProjectPackage;Release Packages</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

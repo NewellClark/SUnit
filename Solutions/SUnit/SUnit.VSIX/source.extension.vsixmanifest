@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="SUnit.VSIX.31cabe7a-e4a2-4a4f-8519-ba418a252053" Version="1.0.0.10" Language="en-US" Publisher="Newell-Clark" />
-        <DisplayName>SUnit Project Templates</DisplayName>
+        <Identity Id="SUnit.VSIX.31cabe7a-e4a2-4a4f-8519-ba418a252053" Version="1.0.0.10" Language="en-US" Publisher="Newell Clark" />
+        <DisplayName>SUnit Templates</DisplayName>
         <Description xml:space="preserve">Contains project templates for creating SUnit test projects.</Description>
     </Metadata>
     <Installation>

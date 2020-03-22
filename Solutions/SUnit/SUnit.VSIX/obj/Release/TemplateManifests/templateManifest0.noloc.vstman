@@ -1,5 +1,5 @@
 ﻿<VSTemplateManifest Version="1.0" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
-  <VSTemplateContainer TemplateType="ProjectGroup">
+  <VSTemplateContainer TemplateType="Project">
     <RelativePathOnDisk>SUnitProjectTemplate</RelativePathOnDisk>
     <TemplateFileName>MyTemplate.vstemplate</TemplateFileName>
     <VSTemplateHeader>

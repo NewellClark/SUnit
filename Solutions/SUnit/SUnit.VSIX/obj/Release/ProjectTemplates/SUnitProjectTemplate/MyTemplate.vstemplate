@@ -1,8 +1,6 @@
-<VSTemplate Version="3.0.0" Type="ProjectGroup" 
-            xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" 
-            xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-    <Name>SUnit Test Project (.NET Core)</Name>
+<Name>SUnit Test Project (.NET Core)</Name>
     <Description>A project that contains SUnit tests that can run on windows, mac, and linux.</Description>
     <Icon Package="{52CBD135-1F97-2580-011F-C7CD052E44DE}" ID="531" />
     <ProjectType>CSharp</ProjectType>

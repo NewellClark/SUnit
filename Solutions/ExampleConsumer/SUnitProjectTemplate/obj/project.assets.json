@@ -349,6 +349,15 @@
           "build/netcoreapp2.1/Microsoft.TestPlatform.TestHost.props": {}
         }
       },
+      "morelinq/3.3.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MoreLinq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MoreLinq.dll": {}
+        }
+      },
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "dependencies": {
@@ -391,8 +400,11 @@
           "lib/netstandard2.0/NuGet.Frameworks.dll": {}
         }
       },
-      "SUnit/1.0.0.8": {
+      "SUnit/1.0.0.10": {
         "type": "package",
+        "dependencies": {
+          "morelinq": "3.3.2"
+        },
         "compile": {
           "lib/netstandard2.1/SUnit.dll": {}
         },
@@ -400,11 +412,11 @@
           "lib/netstandard2.1/SUnit.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0.8": {
+      "SUnit.Discovery/1.0.0.10": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
-          "SUnit": "1.0.0.8",
+          "SUnit": "1.0.0.10",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -415,12 +427,12 @@
           "lib/netstandard2.1/SUnit.Discovery.dll": {}
         }
       },
-      "SUnit.TestAdapter/1.0.0.8": {
+      "SUnit.TestAdapter/1.0.0.10": {
         "type": "package",
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0.8",
-          "SUnit.Discovery": "1.0.0.8",
+          "SUnit": "1.0.0.10",
+          "SUnit.Discovery": "1.0.0.10",
           "System.Collections.Immutable": "1.7.0"
         },
         "compile": {
@@ -1469,6 +1481,27 @@
         "microsoft.testplatform.testhost.nuspec"
       ]
     },
+    "morelinq/3.3.2": {
+      "sha512": "MQc8GppZJLmjvcpEdf3EkC6ovsp7gRWt2e5mC7dcIOrgwSc+yjFd3JQ0iRqr3XrUT6rb/phv0IkEmBtbfVA7AQ==",
+      "type": "package",
+      "path": "morelinq/3.3.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "COPYING.txt",
+        "lib/net451/MoreLinq.dll",
+        "lib/net451/MoreLinq.pdb",
+        "lib/net451/MoreLinq.xml",
+        "lib/netstandard1.0/MoreLinq.dll",
+        "lib/netstandard1.0/MoreLinq.pdb",
+        "lib/netstandard1.0/MoreLinq.xml",
+        "lib/netstandard2.0/MoreLinq.dll",
+        "lib/netstandard2.0/MoreLinq.pdb",
+        "lib/netstandard2.0/MoreLinq.xml",
+        "morelinq.3.3.2.nupkg.sha512",
+        "morelinq.nuspec"
+      ]
+    },
     "Newtonsoft.Json/9.0.1": {
       "sha512": "U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
       "type": "package",
@@ -1512,41 +1545,40 @@
         "nuget.frameworks.nuspec"
       ]
     },
-    "SUnit/1.0.0.8": {
-      "sha512": "ZbSFbUVo4mZLJnkiJPFjaxe7hNIuUPp8c6yURb63yyYQ9bh9eQBXf3NY+zzXKLC2Hd/0le6GrMGje5Y/XeLurQ==",
+    "SUnit/1.0.0.10": {
+      "sha512": "k45jgqHhGZBqoZ7WLtlt39V1AruFexnwyBOpjOfHEwYOrcNXdyrOUx+bAIsg81G1x2eeTubevl1Tvm5sA2fE0A==",
       "type": "package",
-      "path": "sunit/1.0.0.8",
+      "path": "sunit/1.0.0.10",
       "files": [
         ".nupkg.metadata",
         "LICENSE.md",
         "lib/netstandard2.1/SUnit.dll",
-        "lib/netstandard2.1/SUnit.xml",
-        "sunit.1.0.0.8.nupkg.sha512",
+        "sunit.1.0.0.10.nupkg.sha512",
         "sunit.nuspec"
       ]
     },
-    "SUnit.Discovery/1.0.0.8": {
-      "sha512": "qtDTqMO47RsOezlw2ZVBLd+YzsDrjNhG+WGYIbdlpVYn/VwyWri5lcbNzR19r3g5LYzS5kJuUyE2xdXpDburzg==",
+    "SUnit.Discovery/1.0.0.10": {
+      "sha512": "9iN9wuRnskGRTGW2OoQfdmACwotuX4HKyo86NXmKtW8uhiNP3u60EzZbxd9ua2thpyTj36yvR89xaQMUIEEYGg==",
       "type": "package",
-      "path": "sunit.discovery/1.0.0.8",
+      "path": "sunit.discovery/1.0.0.10",
       "files": [
         ".nupkg.metadata",
         "LICENSE.md",
         "lib/netstandard2.1/SUnit.Discovery.dll",
         "lib/netstandard2.1/SUnit.Discovery.xml",
-        "sunit.discovery.1.0.0.8.nupkg.sha512",
+        "sunit.discovery.1.0.0.10.nupkg.sha512",
         "sunit.discovery.nuspec"
       ]
     },
-    "SUnit.TestAdapter/1.0.0.8": {
-      "sha512": "VXrsL0WEwT9Rp65Ac7u7PIeJ/I3cPms0/wJotMT/dX2UpyXSaPdDgFjia8iDuTr0ZAKRq7gVmRK7FSnAGf89bw==",
+    "SUnit.TestAdapter/1.0.0.10": {
+      "sha512": "Jg90JGlJ/a+PhY/wBZ5YplIUZ7Rm8dZm/sA7H/yAPqjIbcztgET8QAX1Ub7U1UVWEsroAbKqt00Be0kRVBOAUw==",
       "type": "package",
-      "path": "sunit.testadapter/1.0.0.8",
+      "path": "sunit.testadapter/1.0.0.10",
       "files": [
         ".nupkg.metadata",
         "LICENSE.md",
         "lib/netstandard2.1/SUnit.TestAdapter.dll",
-        "sunit.testadapter.1.0.0.8.nupkg.sha512",
+        "sunit.testadapter.1.0.0.10.nupkg.sha512",
         "sunit.testadapter.nuspec"
       ]
     },
@@ -3618,8 +3650,8 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Microsoft.TestPlatform.TestHost >= 16.5.0",
-      "SUnit >= 1.0.0.8",
-      "SUnit.TestAdapter >= 1.0.0.8"
+      "SUnit >= 1.0.0.10",
+      "SUnit.TestAdapter >= 1.0.0.10"
     ]
   },
   "packageFolders": {
@@ -3679,11 +3711,11 @@
           },
           "SUnit": {
             "target": "Package",
-            "version": "[1.0.0.8, )"
+            "version": "[1.0.0.10, )"
           },
           "SUnit.TestAdapter": {
             "target": "Package",
-            "version": "[1.0.0.8, )"
+            "version": "[1.0.0.10, )"
           }
         },
         "imports": [

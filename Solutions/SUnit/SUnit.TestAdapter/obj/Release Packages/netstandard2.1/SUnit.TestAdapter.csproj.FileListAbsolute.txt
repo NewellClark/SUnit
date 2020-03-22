@@ -1,10 +1,10 @@
 D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.TestAdapter.deps.json
 D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.TestAdapter.dll
 D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.TestAdapter.pdb
+D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.TestAdapter.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Release Packages\netstandard2.1\SUnit.TestAdapter.csprojAssemblyReference.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Release Packages\netstandard2.1\SUnit.TestAdapter.AssemblyInfoInputs.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Release Packages\netstandard2.1\SUnit.TestAdapter.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Release Packages\netstandard2.1\SUnit.TestAdapter.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Release Packages\netstandard2.1\SUnit.TestAdapter.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Release Packages\netstandard2.1\SUnit.TestAdapter.pdb
-D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.TestAdapter.xml
