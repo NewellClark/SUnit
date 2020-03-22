@@ -1,0 +1,3 @@
+D:\LocalRepositories\SUnit\SUnit.Discovery\obj\Debug\net472\SUnit.Discovery.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\SUnit.Discovery\obj\Debug\net472\SUnit.Discovery.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\SUnit.Discovery\obj\Debug\net472\SUnit.Discovery.AssemblyInfo.cs

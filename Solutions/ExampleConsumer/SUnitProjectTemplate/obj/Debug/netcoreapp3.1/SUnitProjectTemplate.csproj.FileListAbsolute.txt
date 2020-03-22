@@ -1,0 +1,11 @@
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\SUnitProjectTemplate.deps.json
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\SUnitProjectTemplate.dll
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\SUnitProjectTemplate.pdb
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\Debug\netcoreapp3.1\SUnitProjectTemplate.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\Debug\netcoreapp3.1\SUnitProjectTemplate.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\Debug\netcoreapp3.1\SUnitProjectTemplate.dll
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\Debug\netcoreapp3.1\SUnitProjectTemplate.pdb
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\Debug\netcoreapp3.1\SUnitProjectTemplate.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\System.Reactive.dll
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\System.Reactive.xml
+D:\LocalRepositories\SUnit\Solutions\ExampleConsumer\SUnitProjectTemplate\obj\Debug\netcoreapp3.1\SUnitProjectTemplate.csproj.CopyComplete

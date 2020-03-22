@@ -1,0 +1,3 @@
+D:\LocalRepositories\SUnit\SUnit\obj\Debug\netstandard2.0\SUnit.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\SUnit\obj\Debug\netstandard2.0\SUnit.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\SUnit\obj\Debug\netstandard2.0\SUnit.AssemblyInfo.cs

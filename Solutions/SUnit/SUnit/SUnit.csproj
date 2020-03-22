@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <Configurations>Debug;Release;Debug Packages;SingleProjectPackage;Release Packages</Configurations>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.0.10</AssemblyVersion>
+    <FileVersion>1.0.0.10</FileVersion>
+    <Version>1.0.0.10</Version>
+    <Authors>Newell Clark</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\SUnit.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SingleProjectPackage|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\SUnit.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Packages|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\SUnit.xml</DocumentationFile>
+    <OutputPath>D:\LocalRepositories\SUnit\PackageSource\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Packages|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\PackageSource\SUnit.xml</DocumentationFile>
+    <OutputPath>D:\LocalRepositories\SUnit\PackageSource\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeQuality.Analyzers" Version="2.9.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="morelinq" Version="3.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,16 @@
+User Stories:
+	- Who, What, Why
+
+Use case diagram
+	- Make sure arrow is correct.
+	- Extends use-case.
+
+Textual Use-cases
+	- Title
+	- Entry conditions
+	- 6 parts
+	
+Entity Boundry Controller
+	
+Strategy Pattern
+	

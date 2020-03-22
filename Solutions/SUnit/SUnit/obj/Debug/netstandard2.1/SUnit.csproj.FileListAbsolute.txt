@@ -1,0 +1,16 @@
+D:\LocalRepositories\SUnit\SUnit\bin\Debug\netstandard2.1\SUnit.deps.json
+D:\LocalRepositories\SUnit\SUnit\bin\Debug\netstandard2.1\SUnit.dll
+D:\LocalRepositories\SUnit\SUnit\bin\Debug\netstandard2.1\SUnit.pdb
+D:\LocalRepositories\SUnit\SUnit\bin\Debug\netstandard2.1\SUnit.xml
+D:\LocalRepositories\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.dll
+D:\LocalRepositories\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.pdb
+D:\LocalRepositories\SUnit\SUnit\SUnit\bin\Debug\netstandard2.1\SUnit.deps.json
+D:\LocalRepositories\SUnit\SUnit\SUnit\bin\Debug\netstandard2.1\SUnit.dll
+D:\LocalRepositories\SUnit\SUnit\SUnit\bin\Debug\netstandard2.1\SUnit.pdb
+D:\LocalRepositories\SUnit\SUnit\SUnit\bin\Debug\netstandard2.1\SUnit.xml
+D:\LocalRepositories\SUnit\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.dll
+D:\LocalRepositories\SUnit\SUnit\SUnit\obj\Debug\netstandard2.1\SUnit.pdb
