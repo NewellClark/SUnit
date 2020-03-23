@@ -1,3 +1,6 @@
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\NUnit3.TestAdapter.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\NUnit3.TestAdapter.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\nunit.engine.dll
@@ -96,9 +99,6 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netco
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\SUnit.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\SUnit.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netcoreapp3.0\System.Reactive.xml
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.csprojAssemblyReference.cache
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.AssemblyInfoInputs.cache
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.pdb
