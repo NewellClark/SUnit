@@ -18,7 +18,7 @@ namespace SUnit.Discovery
         {
             private class Mock
             {
-                private readonly TimeSpan longAsyncDuration = TimeSpan.FromMilliseconds(700);
+                private readonly TimeSpan longAsyncDuration = TimeSpan.FromMilliseconds(300);
 
                 public Task<Test> SyncPass() => Task.FromResult(Test.Pass);
 

@@ -15,7 +15,7 @@ namespace SUnit.Discovery
     public partial class TestRunnerTests
     {
         [TestFixture]
-        public class MultiTests
+        public class EnumerableTests
         {
             private class Mock
             {

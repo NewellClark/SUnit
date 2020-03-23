@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace SUnit.Discovery
 {
-    internal class MultiTestKind : ITestKind
+    internal class EnumerableTestKind : ITestKind
     {
         public bool IsReturnTypeValid(Type returnType)
         {
@@ -24,7 +24,7 @@ namespace SUnit.Discovery
             static void emptyAction() { }
 
 #pragma warning disable CA1031 // Do not catch general exception types
-            Action onSubscribe(IObserver<TestResult> observer)
+            Action subscribe(IObserver<TestResult> observer)
             {
                 try
                 {
@@ -60,7 +60,6 @@ namespace SUnit.Discovery
                         }
                         observer.OnNext(new RanSuccessfullyResult(unitTest, test));
                     }
-
                 }
                 catch (Exception ex)
                 {
@@ -73,7 +72,7 @@ namespace SUnit.Discovery
             }
 #pragma warning restore CA1031 // Do not catch general exception types
 
-            return Observable.Create<TestResult>(onSubscribe);
+            return Observable.Create<TestResult>(subscribe);
         }
     }
 }
