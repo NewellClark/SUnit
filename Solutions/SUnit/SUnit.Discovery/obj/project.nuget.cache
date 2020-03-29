@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "aBQ97B4kELQ9bKyIEgz6Z2m0i+IUmHQM2Sk3TCfzdHwioQCcNjXjsbjVeUPrTZCzLc//3O9zn2JunKqNlyG2qA==",
+  "success": true,
+  "projectFilePath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.codeanalysis.fxcopanalyzers\\2.9.8\\microsoft.codeanalysis.fxcopanalyzers.2.9.8.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.codeanalysis.versioncheckanalyzer\\2.9.8\\microsoft.codeanalysis.versioncheckanalyzer.2.9.8.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.codequality.analyzers\\2.9.8\\microsoft.codequality.analyzers.2.9.8.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.netcore.analyzers\\2.9.8\\microsoft.netcore.analyzers.2.9.8.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.netframework.analyzers\\2.9.8\\microsoft.netframework.analyzers.2.9.8.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\morelinq\\3.3.2\\morelinq.3.3.2.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\system.reactive\\4.3.2\\system.reactive.4.3.2.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\system.reactive.linq\\4.3.2\\system.reactive.linq.4.3.2.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.3\\system.threading.tasks.extensions.4.5.3.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit\\1.0.0.10\\sunit.1.0.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -30,6 +30,7 @@
           "D:\\LocalRepositories\\SUnit\\PackageSource": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://dotnet.myget.org/F/aspnetcore-master/api/v3/index.json": {},
+          "https://dotnet.myget.org/F/roslyn/api/v3/index.json": {},
           "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
         },
         "frameworks": {
@@ -80,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -110,6 +111,7 @@
           "D:\\LocalRepositories\\SUnit\\PackageSource": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://dotnet.myget.org/F/aspnetcore-master/api/v3/index.json": {},
+          "https://dotnet.myget.org/F/roslyn/api/v3/index.json": {},
           "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
         },
         "frameworks": {
@@ -152,7 +154,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

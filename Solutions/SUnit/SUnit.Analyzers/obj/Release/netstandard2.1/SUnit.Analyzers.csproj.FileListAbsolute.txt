@@ -1,0 +1,5 @@
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\bin\Release\netstandard2.1\SUnit.Analyzers.deps.json
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\bin\Release\netstandard2.1\SUnit.Analyzers.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\obj\Release\netstandard2.1\SUnit.Analyzers.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\obj\Release\netstandard2.1\SUnit.Analyzers.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\obj\Release\netstandard2.1\SUnit.Analyzers.csprojAssemblyReference.cache

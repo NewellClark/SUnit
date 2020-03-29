@@ -24,6 +24,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnitProjectTemplate", "SUn
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{84025A6C-BD61-47B4-A360-90B487F6C240}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SUnit.Analyzers", "SUnit.Analyzers\SUnit.Analyzers.csproj", "{3CE871A2-A88A-4BAE-8A1D-C62B7450EF29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug Packages|Any CPU = Debug Packages|Any CPU
@@ -103,6 +105,16 @@ Global
 		{D445ED07-297E-4F8C-BECA-B2B0768FC93E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D445ED07-297E-4F8C-BECA-B2B0768FC93E}.SingleProjectPackage|Any CPU.ActiveCfg = Debug|Any CPU
 		{D445ED07-297E-4F8C-BECA-B2B0768FC93E}.SingleProjectPackage|Any CPU.Build.0 = Debug|Any CPU
+		{3CE871A2-A88A-4BAE-8A1D-C62B7450EF29}.Debug Packages|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE871A2-A88A-4BAE-8A1D-C62B7450EF29}.Debug Packages|Any CPU.Build.0 = Debug|Any CPU
+		{3CE871A2-A88A-4BAE-8A1D-C62B7450EF29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE871A2-A88A-4BAE-8A1D-C62B7450EF29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE871A2-A88A-4BAE-8A1D-C62B7450EF29}.Release Packages|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE871A2-A88A-4BAE-8A1D-C62B7450EF29}.Release Packages|Any CPU.Build.0 = Release|Any CPU
+		{3CE871A2-A88A-4BAE-8A1D-C62B7450EF29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE871A2-A88A-4BAE-8A1D-C62B7450EF29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CE871A2-A88A-4BAE-8A1D-C62B7450EF29}.SingleProjectPackage|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE871A2-A88A-4BAE-8A1D-C62B7450EF29}.SingleProjectPackage|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,6 +122,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E3C13901-B579-43A9-91B0-16746815B036} = {84025A6C-BD61-47B4-A360-90B487F6C240}
 		{D445ED07-297E-4F8C-BECA-B2B0768FC93E} = {84025A6C-BD61-47B4-A360-90B487F6C240}
+		{3CE871A2-A88A-4BAE-8A1D-C62B7450EF29} = {84025A6C-BD61-47B4-A360-90B487F6C240}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F50EC397-DEE5-415B-8C1E-20585371E2B1}
