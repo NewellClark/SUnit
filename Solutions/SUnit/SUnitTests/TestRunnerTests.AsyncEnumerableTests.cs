@@ -98,13 +98,14 @@ namespace SUnit.Discovery
                 }
             }
 
-            private IObservable<TestResult> RunAsync(string name)
+            private IObservable<ResultKind> RunAsync(string name)
             {
                 var fixture = new Fixture(typeof(Mock));
                 var factory = fixture.Factories.Single();
                 var unitTest = factory.CreateTests().Single(u => u.Name == name);
 
-                return TestRunner.RunTest(unitTest);
+                return TestRunner.RunTest(unitTest)
+                    .Select(r => r.Kind);
             }
 
             [TestCase(nameof(Mock.ThrowsWithoutIteratingSync))]
@@ -124,7 +125,6 @@ namespace SUnit.Discovery
             public async Task DoesNotThrow(string name)
             {
                 var actual = await RunAsync(name)
-                    .Select(r => r.Kind)
                     .ToList();
 
                 var expected = new[] { ResultKind.Pass, ResultKind.Fail, ResultKind.Pass };
@@ -137,12 +137,17 @@ namespace SUnit.Discovery
             public async Task ThrowsAfterThree(string name)
             {
                 var actual = await RunAsync(name)
-                    .Select(r => r.Kind)
                     .ToList();
 
                 var expected = new[] { ResultKind.Pass, ResultKind.Fail, ResultKind.Pass, ResultKind.Error };
 
                 CollectionAssert.AreEqual(expected, actual);
+            }
+
+            public Test DoesAnalyzerWork()
+            {
+                Assert.That(2 + 2).Is.EqualTo(4);
+                return Test.Pass;
             }
         }
     }

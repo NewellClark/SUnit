@@ -102,3 +102,5 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Release Packages\netco
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.csproj.CoreCompileInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Release Packages\netcoreapp3.0\SUnitTests.genruntimeconfig.cache

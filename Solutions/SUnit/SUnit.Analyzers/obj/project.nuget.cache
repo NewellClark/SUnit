@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nKPxcAMFLRtt4L01PZBUd92H8Uir23RIJkvfbbjsX814+2TfXMeYbUSE/2SC+4p7C1K93GeVzhfME6CaF7qETQ==",
+  "dgSpecHash": "xvx+r2reys7o1y8OP92ivzFtJeoPpeg/LoOP1ReqiVCF6uo5vrtIk1ndo1Su2Wy0YaE4sxH/8XATA60ODyoHIg==",
   "success": true,
   "projectFilePath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\3.5.0\\microsoft.codeanalysis.workspaces.common.3.5.0.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\morelinq\\3.3.2\\morelinq.3.3.2.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
@@ -45,7 +46,8 @@
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
-    "C:\\Users\\Newell Clark\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.3\\system.threading.tasks.extensions.4.5.3.nupkg.sha512"
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.3\\system.threading.tasks.extensions.4.5.3.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit\\1.0.0.10\\sunit.1.0.0.10.nupkg.sha512"
   ],
   "logs": []
 }

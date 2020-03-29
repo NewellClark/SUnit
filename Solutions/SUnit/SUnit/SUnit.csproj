@@ -27,6 +27,8 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\SUnit.xml</DocumentationFile>
     <OutputPath>D:\LocalRepositories\SUnit\PackageSource\</OutputPath>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Packages|AnyCPU'">

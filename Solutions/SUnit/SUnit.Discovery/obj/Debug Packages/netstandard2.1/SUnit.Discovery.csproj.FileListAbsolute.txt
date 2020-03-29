@@ -15,3 +15,4 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\obj\Debug Packages\ne
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\obj\Debug Packages\netstandard2.1\SUnit.Discovery.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\obj\Debug Packages\netstandard2.1\SUnit.Discovery.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\obj\Debug Packages\netstandard2.1\SUnit.Discovery.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Discovery\obj\Debug Packages\netstandard2.1\SUnit.Discovery.csproj.CoreCompileInputs.cache
