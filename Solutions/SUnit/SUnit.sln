@@ -26,7 +26,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnit.Analyzers.Tests", "SUnit.Analyzers.Tests\SUnit.Analyzers.Tests.csproj", "{22739360-5E05-4394-B12B-2A219F4108DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SUnit.Analyzers", "SUnit.Analyzers\SUnit.Analyzers\SUnit.Analyzers.csproj", "{F41916AC-06DA-4C0F-98CC-F7ABDE5C1C8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUnit.Analyzers", "SUnit.Analyzers\SUnit.Analyzers\SUnit.Analyzers.csproj", "{F41916AC-06DA-4C0F-98CC-F7ABDE5C1C8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectWithAnalysis", "ProjectWithAnalysis\ProjectWithAnalysis.csproj", "{67AA43E1-92C5-4C0F-ABF4-68CD56A4E769}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -127,6 +129,16 @@ Global
 		{F41916AC-06DA-4C0F-98CC-F7ABDE5C1C8D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F41916AC-06DA-4C0F-98CC-F7ABDE5C1C8D}.SingleProjectPackage|Any CPU.ActiveCfg = Debug|Any CPU
 		{F41916AC-06DA-4C0F-98CC-F7ABDE5C1C8D}.SingleProjectPackage|Any CPU.Build.0 = Debug|Any CPU
+		{67AA43E1-92C5-4C0F-ABF4-68CD56A4E769}.Debug Packages|Any CPU.ActiveCfg = Debug|Any CPU
+		{67AA43E1-92C5-4C0F-ABF4-68CD56A4E769}.Debug Packages|Any CPU.Build.0 = Debug|Any CPU
+		{67AA43E1-92C5-4C0F-ABF4-68CD56A4E769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67AA43E1-92C5-4C0F-ABF4-68CD56A4E769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67AA43E1-92C5-4C0F-ABF4-68CD56A4E769}.Release Packages|Any CPU.ActiveCfg = Release|Any CPU
+		{67AA43E1-92C5-4C0F-ABF4-68CD56A4E769}.Release Packages|Any CPU.Build.0 = Release|Any CPU
+		{67AA43E1-92C5-4C0F-ABF4-68CD56A4E769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67AA43E1-92C5-4C0F-ABF4-68CD56A4E769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67AA43E1-92C5-4C0F-ABF4-68CD56A4E769}.SingleProjectPackage|Any CPU.ActiveCfg = Debug|Any CPU
+		{67AA43E1-92C5-4C0F-ABF4-68CD56A4E769}.SingleProjectPackage|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -136,6 +148,7 @@ Global
 		{D445ED07-297E-4F8C-BECA-B2B0768FC93E} = {84025A6C-BD61-47B4-A360-90B487F6C240}
 		{22739360-5E05-4394-B12B-2A219F4108DB} = {84025A6C-BD61-47B4-A360-90B487F6C240}
 		{F41916AC-06DA-4C0F-98CC-F7ABDE5C1C8D} = {84025A6C-BD61-47B4-A360-90B487F6C240}
+		{67AA43E1-92C5-4C0F-ABF4-68CD56A4E769} = {84025A6C-BD61-47B4-A360-90B487F6C240}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F50EC397-DEE5-415B-8C1E-20585371E2B1}

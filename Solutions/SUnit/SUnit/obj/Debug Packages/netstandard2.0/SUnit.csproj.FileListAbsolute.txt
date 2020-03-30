@@ -1,0 +1,4 @@
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Debug Packages\netstandard2.0\SUnit.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Debug Packages\netstandard2.0\SUnit.csproj.CoreCompileInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Debug Packages\netstandard2.0\SUnit.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\obj\Debug Packages\netstandard2.0\SUnit.AssemblyInfo.cs

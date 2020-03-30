@@ -160,6 +160,7 @@
       "packagesPath": "C:\\Users\\Newell Clark\\.nuget\\packages\\",
       "outputPath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit\\obj\\",
       "projectStyle": "PackageReference",
+      "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

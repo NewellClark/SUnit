@@ -934,6 +934,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "SUnit.Analyzers/1.0.0.23": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.3",
+        "compile": {
+          "bin/placeholder/SUnit.Analyzers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SUnit.Analyzers.dll": {}
+        }
       }
     }
   },
@@ -3644,6 +3654,11 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
       ]
+    },
+    "SUnit.Analyzers/1.0.0.23": {
+      "type": "project",
+      "path": "../SUnit.Analyzers/SUnit.Analyzers/SUnit.Analyzers.csproj",
+      "msbuildProject": "../SUnit.Analyzers/SUnit.Analyzers/SUnit.Analyzers.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3651,6 +3666,7 @@
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Microsoft.TestPlatform.TestHost >= 16.5.0",
       "SUnit >= 1.0.0.10",
+      "SUnit.Analyzers >= 1.0.0.23",
       "SUnit.TestAdapter >= 1.0.0.10"
     ]
   },
@@ -3690,7 +3706,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers\\SUnit.Analyzers.csproj": {
+              "projectPath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers\\SUnit.Analyzers.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

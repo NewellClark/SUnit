@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s1VwTgofWn4TBiwyVrZ3hFJ8xjsSSEjeLmjAmouZJWzu4bsj/xteKACKMsUkXEzAaw95RcQJJrxJLaeWMyXHBA==",
+  "dgSpecHash": "ZKfK1FU4mRpNnwsV8j87orNukDBPJ8axKr9LIHWlBJtlK82kSV7L93MVDsHXeYyoXenjWfBVpaTypeY7QseM8A==",
   "success": true,
   "projectFilePath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers.Tests\\SUnit.Analyzers.Tests.csproj",
   "expectedPackageFiles": [
@@ -65,7 +65,7 @@
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit\\1.0.0.10\\sunit.1.0.0.10.nupkg.sha512",
-    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.analyzers\\1.0.0.18\\sunit.analyzers.1.0.0.18.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.analyzers\\1.0.0.23\\sunit.analyzers.1.0.0.23.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.discovery\\1.0.0.10\\sunit.discovery.1.0.0.10.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.testadapter\\1.0.0.10\\sunit.testadapter.1.0.0.10.nupkg.sha512"
   ],

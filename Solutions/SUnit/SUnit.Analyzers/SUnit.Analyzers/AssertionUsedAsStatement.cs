@@ -32,18 +32,18 @@ namespace SUnit.Analyzers
 
         public override void Initialize(AnalysisContext context)
         {
-            static void syntaxNodeAction(SyntaxNodeAnalysisContext context)
-            {
-                if (IsNodeViolation(context.Compilation, context.SemanticModel, context.Node, context.CancellationToken))
-                {
-                    var operation = (IExpressionStatementOperation)context.SemanticModel.GetOperation(context.Node, context.CancellationToken);
-                    string syntaxText = operation.Operation.Syntax.WithoutTrivia().GetText().ToString();
-                    Diagnostic diagnostic = Diagnostic.Create(rule, context.Node.GetLocation(), syntaxText);
-                    context.ReportDiagnostic(diagnostic);
-                }
-            }
+            context.RegisterSyntaxNodeAction(AnalyzeSyntaxNode, SyntaxKind.ExpressionStatement);
+        }
 
-            context.RegisterSyntaxNodeAction(syntaxNodeAction, SyntaxKind.ExpressionStatement);
+        private static void AnalyzeSyntaxNode(SyntaxNodeAnalysisContext context)
+        {
+            if (IsNodeViolation(context.Compilation, context.SemanticModel, context.Node, context.CancellationToken))
+            {
+                var operation = (IExpressionStatementOperation)context.SemanticModel.GetOperation(context.Node, context.CancellationToken);
+                string syntaxText = operation.Operation.Syntax.WithoutTrivia().GetText().ToString();
+                Diagnostic diagnostic = Diagnostic.Create(rule, context.Node.GetLocation(), syntaxText);
+                context.ReportDiagnostic(diagnostic);
+            }
         }
 
         internal static bool IsNodeViolation(Compilation compilation, SemanticModel model, SyntaxNode node, CancellationToken cancellationToken)
@@ -56,7 +56,7 @@ namespace SUnit.Analyzers
             if (operation is null)
                 return false;
 
-            var testType = compilation.GetTypeByMetadataName(typeof(Test).FullName);
+            var testType = compilation.GetTypeByMetadataName(typeof(object).FullName);
 
             return compilation.HasImplicitConversion(operation.Operation.Type, testType);
         }

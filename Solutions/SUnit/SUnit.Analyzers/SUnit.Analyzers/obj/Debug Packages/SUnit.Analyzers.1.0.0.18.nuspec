@@ -13,9 +13,7 @@
     <copyright>Copyright</copyright>
     <tags>SUnit.Analyzers, analyzers</tags>
     <dependencies>
-      <group targetFramework=".NETStandard2.1">
-        <dependency id="SUnit" version="1.0.0.10" exclude="Build,Analyzers" />
-      </group>
+      <group targetFramework=".NETStandard2.1" />
     </dependencies>
   </metadata>
   <files>

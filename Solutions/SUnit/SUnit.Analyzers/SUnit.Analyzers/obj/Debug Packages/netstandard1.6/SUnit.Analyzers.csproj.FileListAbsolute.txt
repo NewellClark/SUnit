@@ -1,0 +1,6 @@
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\obj\Debug Packages\netstandard1.6\SUnit.Analyzers.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\obj\Debug Packages\netstandard1.6\SUnit.Analyzers.Resources.resources
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\obj\Debug Packages\netstandard1.6\SUnit.Analyzers.csproj.GenerateResource.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\obj\Debug Packages\netstandard1.6\SUnit.Analyzers.csproj.CoreCompileInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\obj\Debug Packages\netstandard1.6\SUnit.Analyzers.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\obj\Debug Packages\netstandard1.6\SUnit.Analyzers.AssemblyInfo.cs

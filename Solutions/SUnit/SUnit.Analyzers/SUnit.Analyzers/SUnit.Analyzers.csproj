@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard1.3</TargetFramework>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Configurations>Debug;Release;Debug Packages</Configurations>
@@ -18,9 +18,9 @@
     <Copyright>Copyright</Copyright>
     <PackageTags>SUnit.Analyzers, analyzers</PackageTags>
     <NoPackageAnalysis>true</NoPackageAnalysis>
-    <Version>1.0.0.18</Version>
-    <FileVersion>1.0.0.18</FileVersion>
-    <AssemblyVersion>1.0.0.18</AssemblyVersion>
+    <Version>1.0.0.23</Version>
+    <FileVersion>1.0.0.23</FileVersion>
+    <AssemblyVersion>1.0.0.23</AssemblyVersion>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
@@ -42,10 +42,6 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\SUnit\SUnit.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -29,4 +29,8 @@
     <PackageReference Include="SUnit.TestAdapter" Version="1.0.0.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SUnit.Analyzers\SUnit.Analyzers\SUnit.Analyzers.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,12 @@
+D:\LocalRepositories\SUnit\PackageSource\netstandard2.0\tools\install.ps1
+D:\LocalRepositories\SUnit\PackageSource\netstandard2.0\tools\uninstall.ps1
+D:\LocalRepositories\SUnit\PackageSource\netstandard2.0\SUnit.Analyzers.deps.json
+D:\LocalRepositories\SUnit\PackageSource\netstandard2.0\SUnit.Analyzers.dll
+D:\LocalRepositories\SUnit\PackageSource\netstandard2.0\SUnit.Analyzers.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\obj\Debug Packages\netstandard2.0\SUnit.Analyzers.Resources.resources
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\obj\Debug Packages\netstandard2.0\SUnit.Analyzers.csproj.GenerateResource.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\obj\Debug Packages\netstandard2.0\SUnit.Analyzers.csproj.CoreCompileInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\obj\Debug Packages\netstandard2.0\SUnit.Analyzers.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\obj\Debug Packages\netstandard2.0\SUnit.Analyzers.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\obj\Debug Packages\netstandard2.0\SUnit.Analyzers.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\obj\Debug Packages\netstandard2.0\SUnit.Analyzers.pdb
