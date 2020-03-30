@@ -97,10 +97,10 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcore
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\SUnit.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\System.Reactive.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug Packages\netcoreapp3.0\SUnitTests.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug Packages\netcoreapp3.0\SUnitTests.csproj.CoreCompileInputs.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug Packages\netcoreapp3.0\SUnitTests.AssemblyInfoInputs.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug Packages\netcoreapp3.0\SUnitTests.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug Packages\netcoreapp3.0\SUnitTests.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug Packages\netcoreapp3.0\SUnitTests.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug Packages\netcoreapp3.0\SUnitTests.pdb
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug Packages\netcoreapp3.0\SUnitTests.csproj.CoreCompileInputs.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\obj\Debug Packages\netcoreapp3.0\SUnitTests.genruntimeconfig.cache

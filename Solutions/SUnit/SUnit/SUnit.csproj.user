@@ -3,5 +3,6 @@
   <PropertyGroup>
     <ShowAllFiles>false</ShowAllFiles>
     <_LastSelectedProfileId>D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+    <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
   </PropertyGroup>
 </Project>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SUnit.Analyzers</id>
+    <version>1.0.0.13</version>
+    <authors>SUnit.Analyzers</authors>
+    <owners>SUnit.Analyzers</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="SUnit" version="1.0.0.10" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.CSharp.Workspaces" version="3.5.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.Analyzers.dll" target="lib\netstandard2.1\SUnit.Analyzers.dll" />
+    <file src="D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\tools\install.ps1" target="tools\tools\install.ps1" />
+    <file src="D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\tools\uninstall.ps1" target="tools\tools\uninstall.ps1" />
+    <file src="D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.Analyzers.dll" target="analyzers\dotnet\cs\SUnit.Analyzers.dll" />
+  </files>
+</package>

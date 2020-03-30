@@ -1,3 +1,5 @@
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers.Tests\bin\Debug\netcoreapp3.1\tools\install.ps1
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers.Tests\bin\Debug\netcoreapp3.1\tools\uninstall.ps1
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers.Tests\bin\Debug\netcoreapp3.1\SUnit.Analyzers.Tests.deps.json
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers.Tests\bin\Debug\netcoreapp3.1\SUnit.Analyzers.Tests.runtimeconfig.json
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers.Tests\bin\Debug\netcoreapp3.1\SUnit.Analyzers.Tests.runtimeconfig.dev.json
@@ -149,7 +151,6 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers.Tests\bin\Debug\netco
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers.Tests\bin\Debug\netcoreapp3.1\System.Reactive.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers.Tests\bin\Debug\netcoreapp3.1\SUnit.Analyzers.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers.Tests\bin\Debug\netcoreapp3.1\SUnit.TestAdapter.pdb
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers.Tests\bin\Debug\netcoreapp3.1\SUnit.TestAdapter.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers.Tests\bin\Debug\netcoreapp3.1\SUnit.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers.Tests\bin\Debug\netcoreapp3.1\SUnit.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers.Tests\bin\Debug\netcoreapp3.1\SUnit.Discovery.pdb
