@@ -412,7 +412,7 @@
           "lib/netstandard2.1/SUnit.dll": {}
         }
       },
-      "SUnit.Analyzers/1.0.0.23": {
+      "SUnit.Analyzers/1.0.0.38": {
         "type": "package"
       },
       "SUnit.Discovery/1.0.0.10": {
@@ -1560,16 +1560,16 @@
         "sunit.nuspec"
       ]
     },
-    "SUnit.Analyzers/1.0.0.23": {
-      "sha512": "Fieo1n/JzEJcdu+6Y4g1RiE5nK3gIt1NcpdCJt+QSGHucEs/DcZmrdRZBIF641grHYUWUAn4iXVjCpIz8fRu/g==",
+    "SUnit.Analyzers/1.0.0.38": {
+      "sha512": "HdStIDFNLxqf6f5OXq1M/A0LtlNroj1IfAmAyAZigZZvThH349nJY6NNPm+IR2s77NRDUGAQM6k4PwUph0Odmw==",
       "type": "package",
-      "path": "sunit.analyzers/1.0.0.23",
+      "path": "sunit.analyzers/1.0.0.38",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         "LICENSE.md",
         "analyzers/dotnet/cs/SUnit.Analyzers.dll",
-        "sunit.analyzers.1.0.0.23.nupkg.sha512",
+        "sunit.analyzers.1.0.0.38.nupkg.sha512",
         "sunit.analyzers.nuspec",
         "tools/install.ps1",
         "tools/uninstall.ps1"
@@ -3669,7 +3669,7 @@
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Microsoft.TestPlatform.TestHost >= 16.5.0",
       "SUnit >= 1.0.0.10",
-      "SUnit.Analyzers >= 1.0.0.23",
+      "SUnit.Analyzers >= 1.0.0.38",
       "SUnit.TestAdapter >= 1.0.0.10"
     ]
   },
@@ -3735,7 +3735,7 @@
           },
           "SUnit.Analyzers": {
             "target": "Package",
-            "version": "[1.0.0.23, )"
+            "version": "[1.0.0.38, )"
           },
           "SUnit.TestAdapter": {
             "target": "Package",

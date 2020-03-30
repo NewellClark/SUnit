@@ -11,7 +11,7 @@
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.TestHost": "16.5.0",
           "SUnit": "1.0.0.10",
-          "SUnit.Analyzers": "1.0.0.23",
+          "SUnit.Analyzers": "1.0.0.37",
           "SUnit.TestAdapter": "1.0.0.10",
           "System.Reactive.Reference": "4.3.0.0"
         },
@@ -372,7 +372,7 @@
           }
         }
       },
-      "SUnit.Analyzers/1.0.0.23": {},
+      "SUnit.Analyzers/1.0.0.37": {},
       "SUnit.Discovery/1.0.0.10": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
@@ -828,12 +828,12 @@
       "path": "sunit/1.0.0.10",
       "hashPath": "sunit.1.0.0.10.nupkg.sha512"
     },
-    "SUnit.Analyzers/1.0.0.23": {
+    "SUnit.Analyzers/1.0.0.37": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Fieo1n/JzEJcdu+6Y4g1RiE5nK3gIt1NcpdCJt+QSGHucEs/DcZmrdRZBIF641grHYUWUAn4iXVjCpIz8fRu/g==",
-      "path": "sunit.analyzers/1.0.0.23",
-      "hashPath": "sunit.analyzers.1.0.0.23.nupkg.sha512"
+      "sha512": "sha512-o05LtIpbhYciRxSLGajbc104p+55qsL6OFl5/TaNA/+d0x5CCu6XS073MG/yMi1ymwW522r/sruRv9Lfvxpkyw==",
+      "path": "sunit.analyzers/1.0.0.37",
+      "hashPath": "sunit.analyzers.1.0.0.37.nupkg.sha512"
     },
     "SUnit.Discovery/1.0.0.10": {
       "type": "package",

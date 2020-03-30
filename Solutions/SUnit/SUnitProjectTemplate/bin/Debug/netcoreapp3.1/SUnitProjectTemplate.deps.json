@@ -11,7 +11,7 @@
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.TestHost": "16.5.0",
           "SUnit": "1.0.0.10",
-          "SUnit.Analyzers": "1.0.0.23",
+          "SUnit.Analyzers": "1.0.0.38",
           "SUnit.TestAdapter": "1.0.0.10",
           "System.Reactive.Reference": "4.3.0.0"
         },
@@ -699,7 +699,7 @@
           "System.Xml.ReaderWriter": "4.0.11"
         }
       },
-      "SUnit.Analyzers/1.0.0.23": {
+      "SUnit.Analyzers/1.0.0.38": {
         "runtime": {
           "SUnit.Analyzers.dll": {}
         }
@@ -1091,7 +1091,7 @@
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
     },
-    "SUnit.Analyzers/1.0.0.23": {
+    "SUnit.Analyzers/1.0.0.38": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

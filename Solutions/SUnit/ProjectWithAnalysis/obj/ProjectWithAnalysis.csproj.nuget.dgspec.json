@@ -61,7 +61,7 @@
             },
             "SUnit.Analyzers": {
               "target": "Package",
-              "version": "[1.0.0.23, )"
+              "version": "[1.0.0.38, )"
             },
             "SUnit.TestAdapter": {
               "target": "Package",

@@ -7,10 +7,9 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "SUnit.Analyzers/1.0.0.18": {
+      "SUnit.Analyzers/1.0.0.37": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "2.10.0",
-          "SUnit": "1.0.0.10"
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "2.10.0"
         },
         "runtime": {
           "SUnit.Analyzers.dll": {}
@@ -273,14 +272,6 @@
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "morelinq/3.3.2": {
-        "runtime": {
-          "lib/netstandard2.0/MoreLinq.dll": {
-            "assemblyVersion": "3.3.2.0",
-            "fileVersion": "3.3.2.0"
-          }
-        }
-      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -1235,19 +1226,11 @@
             "fileVersion": "4.6.24705.1"
           }
         }
-      },
-      "SUnit/1.0.0.10": {
-        "dependencies": {
-          "morelinq": "3.3.2"
-        },
-        "runtime": {
-          "SUnit.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "SUnit.Analyzers/1.0.0.18": {
+    "SUnit.Analyzers/1.0.0.37": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1300,13 +1283,6 @@
       "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
-    },
-    "morelinq/3.3.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-MQc8GppZJLmjvcpEdf3EkC6ovsp7gRWt2e5mC7dcIOrgwSc+yjFd3JQ0iRqr3XrUT6rb/phv0IkEmBtbfVA7AQ==",
-      "path": "morelinq/3.3.2",
-      "hashPath": "morelinq.3.3.2.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
@@ -1874,11 +1850,6 @@
       "sha512": "sha512-jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
-    },
-    "SUnit/1.0.0.10": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

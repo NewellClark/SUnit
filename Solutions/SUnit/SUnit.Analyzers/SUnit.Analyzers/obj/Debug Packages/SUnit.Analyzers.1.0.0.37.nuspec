@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>SUnit.Analyzers</id>
-    <version>1.0.0.20</version>
+    <version>1.0.0.37</version>
     <authors>Newell Clark</authors>
     <owners>Newell Clark</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -13,13 +13,13 @@
     <copyright>Copyright</copyright>
     <tags>SUnit.Analyzers, analyzers</tags>
     <dependencies>
-      <group targetFramework=".NETStandard2.0" />
+      <group targetFramework=".NETStandard2.1" />
     </dependencies>
   </metadata>
   <files>
     <file src="D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\tools\install.ps1" target="tools\install.ps1" />
     <file src="D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers\tools\uninstall.ps1" target="tools\uninstall.ps1" />
-    <file src="D:\LocalRepositories\SUnit\PackageSource\netstandard2.0\SUnit.Analyzers.dll" target="analyzers\dotnet\cs\SUnit.Analyzers.dll" />
+    <file src="D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.Analyzers.dll" target="analyzers\dotnet\cs\SUnit.Analyzers.dll" />
     <file src="D:\LocalRepositories\SUnit\LICENSE.md" target="LICENSE.md" />
   </files>
 </package>

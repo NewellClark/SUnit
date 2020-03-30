@@ -1257,9 +1257,9 @@
           "bin/placeholder/SUnit.dll": {}
         }
       },
-      "SUnit.Analyzers/1.0.0.31": {
+      "SUnit.Analyzers/1.0.0.38": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.3",
+        "framework": ".NETStandard,Version=v2.0",
         "compile": {
           "bin/placeholder/SUnit.Analyzers.dll": {}
         },
@@ -4229,7 +4229,7 @@
       "path": "../SUnit/SUnit.csproj",
       "msbuildProject": "../SUnit/SUnit.csproj"
     },
-    "SUnit.Analyzers/1.0.0.31": {
+    "SUnit.Analyzers/1.0.0.38": {
       "type": "project",
       "path": "../SUnit.Analyzers/SUnit.Analyzers/SUnit.Analyzers.csproj",
       "msbuildProject": "../SUnit.Analyzers/SUnit.Analyzers/SUnit.Analyzers.csproj"
@@ -4251,7 +4251,7 @@
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Microsoft.TestPlatform.TestHost >= 16.5.0",
       "SUnit >= 1.0.0.10",
-      "SUnit.Analyzers >= 1.0.0.31",
+      "SUnit.Analyzers >= 1.0.0.38",
       "SUnit.TestAdapter >= 1.0.0.10"
     ]
   },
