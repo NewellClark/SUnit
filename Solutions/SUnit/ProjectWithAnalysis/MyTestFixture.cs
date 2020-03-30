@@ -13,7 +13,7 @@ namespace ProjectWithAnalysis
         //  Any public instance method that returns a Test is a Unit Test.
         public Test MyUnitTest()
         {
-            Assert.That(2 + 2).Is.EqualTo(4);
+            //Assert.That(2 + 2).Is.EqualTo(4);
 
             //  The Assert class contains properties and methods that return Test objects.
             return Assert.That("Hello, World!").Is.Not.Null;

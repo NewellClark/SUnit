@@ -18,9 +18,9 @@
     <Copyright>Copyright</Copyright>
     <PackageTags>SUnit.Analyzers, analyzers</PackageTags>
     <NoPackageAnalysis>true</NoPackageAnalysis>
-    <Version>1.0.0.23</Version>
-    <FileVersion>1.0.0.23</FileVersion>
-    <AssemblyVersion>1.0.0.23</AssemblyVersion>
+    <Version>1.0.0.31</Version>
+    <FileVersion>1.0.0.31</FileVersion>
+    <AssemblyVersion>1.0.0.31</AssemblyVersion>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
