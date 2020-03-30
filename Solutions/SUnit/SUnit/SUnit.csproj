@@ -7,9 +7,7 @@
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <Configurations>Debug;Release;Debug Packages;SingleProjectPackage;Release Packages</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.0.10</AssemblyVersion>
-    <FileVersion>1.0.0.10</FileVersion>
-    <Version>1.0.0.10</Version>
+    <Version>1.0.0.13</Version>
     <Authors>Newell Clark</Authors>
   </PropertyGroup>
 
@@ -51,6 +49,10 @@
       <PackagePath></PackagePath>
     </None>
     <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SUnit.Common\SUnit.Common.csproj" />
   </ItemGroup>
 
 </Project>

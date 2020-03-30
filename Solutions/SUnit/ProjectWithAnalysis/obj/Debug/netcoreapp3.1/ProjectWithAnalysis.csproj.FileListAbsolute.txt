@@ -16,6 +16,7 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcore
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcoreapp3.1\SUnit.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcoreapp3.1\SUnit.Common.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcoreapp3.1\SUnit.Discovery.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcoreapp3.1\SUnit.TestAdapter.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcoreapp3.1\System.Reactive.Linq.dll
@@ -87,10 +88,10 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcore
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcoreapp3.1\System.Reactive.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcoreapp3.1\System.Reactive.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.csproj.CoreCompileInputs.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.AssemblyInfoInputs.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.AssemblyInfo.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.genruntimeconfig.cache
-D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.csproj.CoreCompileInputs.cache

@@ -57,15 +57,15 @@
             },
             "SUnit": {
               "target": "Package",
-              "version": "[1.0.0.10, )"
+              "version": "[1.0.0.13, )"
             },
             "SUnit.Analyzers": {
               "target": "Package",
-              "version": "[1.0.0.38, )"
+              "version": "[1.0.0.40, )"
             },
             "SUnit.TestAdapter": {
               "target": "Package",
-              "version": "[1.0.0.10, )"
+              "version": "[1.0.0.13, )"
             }
           },
           "imports": [

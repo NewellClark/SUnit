@@ -11,6 +11,7 @@
     <description>Package Description</description>
     <dependencies>
       <group targetFramework=".NETStandard2.1">
+        <dependency id="SUnit.Common" version="1.0.0" exclude="Build,Analyzers" />
         <dependency id="morelinq" version="3.3.2" exclude="Build,Analyzers" />
       </group>
     </dependencies>

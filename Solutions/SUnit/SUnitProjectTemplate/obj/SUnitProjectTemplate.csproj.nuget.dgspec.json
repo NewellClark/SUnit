@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers\\SUnit.Analyzers.csproj": {
-      "version": "1.0.0.38",
+      "version": "1.0.0.40",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers\\SUnit.Analyzers.csproj",
         "projectName": "SUnit.Analyzers",
@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "SUnit.Common": {
+              "target": "Package",
+              "version": "[1.0.0.13, )"
             }
           },
           "imports": [
@@ -130,7 +134,7 @@
             },
             "SUnit": {
               "target": "Package",
-              "version": "[1.0.0.10, )"
+              "version": "[1.0.0.13, )"
             },
             "SUnit.TestAdapter": {
               "target": "Package",

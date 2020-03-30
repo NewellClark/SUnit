@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yO+ozJgauOdxFfDwyybS/0BrU0/1LXGlPaGmtRP/FPrLgmTxiPqo0HtuFy/wg13xY4zSP/uoSoe9YpUPtyqT3w==",
+  "dgSpecHash": "mPWve26H7VJjBNaWXZBigeXQ+e13XmMfl5M00NA3WYtRtWp+/S+XbQLeeiziwScHMXahM6B+WtmKkRR+9mfyGw==",
   "success": true,
   "projectFilePath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers\\SUnit.Analyzers.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "C:\\Users\\Newell Clark\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.common\\1.0.0.13\\sunit.common.1.0.0.13.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

@@ -7,7 +7,7 @@
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <Configurations>Debug;Release;Debug Packages;SingleProjectPackage;Release Packages</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0.10</Version>
+    <Version>1.0.0.13</Version>
     <Authors>Newell Clark</Authors>
   </PropertyGroup>
 

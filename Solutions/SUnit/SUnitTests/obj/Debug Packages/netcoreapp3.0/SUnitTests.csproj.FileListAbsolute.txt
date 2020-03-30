@@ -88,11 +88,13 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcore
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\SUnit.Common.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\SUnit.Discovery.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\SUnit.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\System.Reactive.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\SUnit.Discovery.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\SUnit.Discovery.xml
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\SUnit.Common.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\SUnit.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\SUnit.xml
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitTests\bin\Debug Packages\netcoreapp3.0\System.Reactive.xml

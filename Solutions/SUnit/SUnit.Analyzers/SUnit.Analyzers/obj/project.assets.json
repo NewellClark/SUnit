@@ -467,6 +467,15 @@
           }
         }
       },
+      "SUnit.Common/1.0.0.13": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SUnit.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SUnit.Common.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2137,6 +2146,18 @@
         "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
+      ]
+    },
+    "SUnit.Common/1.0.0.13": {
+      "sha512": "VAI17TD2bNDEk8mUfkRsN0jqVm8tjMRZcojZRPIMrnk85ZGlKfh72JaAGVIOTgJ29fXam/P0+3V+w0gySJaOlA==",
+      "type": "package",
+      "path": "sunit.common/1.0.0.13",
+      "files": [
+        ".nupkg.metadata",
+        "LICENSE.md",
+        "lib/netstandard2.0/SUnit.Common.dll",
+        "sunit.common.1.0.0.13.nupkg.sha512",
+        "sunit.common.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -5333,7 +5354,8 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "Microsoft.CodeAnalysis.CSharp.Workspaces >= 2.10.0",
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "SUnit.Common >= 1.0.0.13"
     ]
   },
   "packageFolders": {
@@ -5342,7 +5364,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0.38",
+    "version": "1.0.0.40",
     "restore": {
       "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers\\SUnit.Analyzers.csproj",
       "projectName": "SUnit.Analyzers",
@@ -5394,6 +5416,10 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "SUnit.Common": {
+            "target": "Package",
+            "version": "[1.0.0.13, )"
           }
         },
         "imports": [

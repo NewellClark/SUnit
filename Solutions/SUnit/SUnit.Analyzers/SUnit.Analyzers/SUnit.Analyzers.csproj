@@ -18,9 +18,7 @@
     <Copyright>Copyright</Copyright>
     <PackageTags>SUnit.Analyzers, analyzers</PackageTags>
     <NoPackageAnalysis>true</NoPackageAnalysis>
-    <Version>1.0.0.38</Version>
-    <FileVersion>1.0.0.38</FileVersion>
-    <AssemblyVersion>1.0.0.38</AssemblyVersion>
+    <Version>1.0.0.40</Version>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
@@ -32,7 +30,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="2.10" PrivateAssets="all" />
-    <PackageReference Update="NETStandard.Library.Ref" PrivateAssets="all" />
+    <PackageReference Include="SUnit.Common" Version="1.0.0.13" />
+    <PackageReference Update="NETStandard.Library" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>

@@ -857,10 +857,11 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "SUnit/1.0.0.10": {
+      "SUnit/1.0.0.13": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "SUnit.Common": "1.0.0.13",
           "morelinq": "3.3.2"
         },
         "compile": {
@@ -870,11 +871,21 @@
           "bin/placeholder/SUnit.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0.10": {
+      "SUnit.Common/1.0.0.13": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SUnit.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SUnit.Common.dll": {}
+        }
+      },
+      "SUnit.Discovery/1.0.0.13": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "SUnit": "1.0.0.10",
+          "SUnit": "1.0.0.13",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -885,13 +896,13 @@
           "bin/placeholder/SUnit.Discovery.dll": {}
         }
       },
-      "SUnit.TestAdapter/1.0.0.10": {
+      "SUnit.TestAdapter/1.0.0.13": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0.10",
-          "SUnit.Discovery": "1.0.0.10",
+          "SUnit": "1.0.0.13",
+          "SUnit.Discovery": "1.0.0.13",
           "System.Collections.Immutable": "1.7.0"
         },
         "compile": {
@@ -3394,17 +3405,22 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "SUnit/1.0.0.10": {
+    "SUnit/1.0.0.13": {
       "type": "project",
       "path": "../SUnit/SUnit.csproj",
       "msbuildProject": "../SUnit/SUnit.csproj"
     },
-    "SUnit.Discovery/1.0.0.10": {
+    "SUnit.Common/1.0.0.13": {
+      "type": "project",
+      "path": "../SUnit.Common/SUnit.Common.csproj",
+      "msbuildProject": "../SUnit.Common/SUnit.Common.csproj"
+    },
+    "SUnit.Discovery/1.0.0.13": {
       "type": "project",
       "path": "../SUnit.Discovery/SUnit.Discovery.csproj",
       "msbuildProject": "../SUnit.Discovery/SUnit.Discovery.csproj"
     },
-    "SUnit.TestAdapter/1.0.0.10": {
+    "SUnit.TestAdapter/1.0.0.13": {
       "type": "project",
       "path": "../SUnit.TestAdapter/SUnit.TestAdapter.csproj",
       "msbuildProject": "../SUnit.TestAdapter/SUnit.TestAdapter.csproj"
@@ -3414,8 +3430,8 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Microsoft.TestPlatform.TestHost >= 16.5.0",
-      "SUnit >= 1.0.0.10",
-      "SUnit.TestAdapter >= 1.0.0.10"
+      "SUnit >= 1.0.0.13",
+      "SUnit.TestAdapter >= 1.0.0.13"
     ]
   },
   "packageFolders": {

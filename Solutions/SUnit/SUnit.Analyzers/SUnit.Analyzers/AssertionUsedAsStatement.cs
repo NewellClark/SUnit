@@ -37,7 +37,7 @@ namespace SUnit.Analyzers
 
         private static void AnalyzeSyntaxNode(SyntaxNodeAnalysisContext context)
         {
-            if (IsNodeViolation(context.Compilation, context.SemanticModel, context.Node, context.CancellationToken))
+            if (IsViolation(context.Compilation, context.SemanticModel, context.Node, context.CancellationToken))
             {
                 var operation = (IExpressionStatementOperation)context.SemanticModel.GetOperation(context.Node, context.CancellationToken);
                 string syntaxText = operation.Operation.Syntax.WithoutTrivia().GetText().ToString();
@@ -46,7 +46,7 @@ namespace SUnit.Analyzers
             }
         }
 
-        internal static bool IsNodeViolation(Compilation compilation, SemanticModel model, SyntaxNode node, CancellationToken cancellationToken)
+        internal static bool IsViolation(Compilation compilation, SemanticModel model, SyntaxNode node, CancellationToken cancellationToken)
         {
             if (compilation is null) throw new ArgumentNullException(nameof(compilation));
             if (model is null) throw new ArgumentNullException(nameof(model));
@@ -56,7 +56,7 @@ namespace SUnit.Analyzers
             if (operation is null)
                 return false;
 
-            var testType = compilation.GetTypeByMetadataName(typeof(object).FullName);
+            var testType = compilation.GetTypeByMetadataName(typeof(Test).FullName);
 
             return compilation.HasImplicitConversion(operation.Operation.Type, testType);
         }
