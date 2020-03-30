@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9ee4Ops9nY5/Jr44jgb+DcabjrlaeBP5VfvZYQefB8xX9tspcjwfk9TOvzMBrlxuqbP7GDxopwisMwp2LpV+VQ==",
+  "dgSpecHash": "R+aKsYe2UsSkYjVaACQLjIefvILkgEMhOTAKqKOMPJvsPoOudlKQQH83LNa6OtERYAEOxA95kl9DOoIrDbp/IQ==",
   "success": true,
   "projectFilePath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnitProjectTemplate\\SUnitProjectTemplate.csproj",
   "expectedPackageFiles": [
@@ -19,8 +19,8 @@
     "C:\\Users\\Newell Clark\\.nuget\\packages\\morelinq\\3.3.2\\morelinq.3.3.2.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
-    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit\\1.0.0.13\\sunit.1.0.0.13.nupkg.sha512",
-    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.common\\1.0.0.13\\sunit.common.1.0.0.13.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit\\1.0.0.20\\sunit.1.0.0.20.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.common\\1.0.0.20\\sunit.common.1.0.0.20.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.discovery\\1.0.0.10\\sunit.discovery.1.0.0.10.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.testadapter\\1.0.0.10\\sunit.testadapter.1.0.0.10.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",
@@ -57,7 +57,19 @@
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.threading.tasks\\4.0.11\\system.threading.tasks.4.0.11.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.3\\system.threading.tasks.extensions.4.5.3.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
-    "C:\\Users\\Newell Clark\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512"
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.analyzers\\1.0.0.45\\sunit.analyzers.1.0.0.45.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "SUnitProjectTemplate depends on SUnit (>= 1.0.0.13) but SUnit 1.0.0.13 was not found. An approximate best match of SUnit 1.0.0.20 was resolved.",
+      "libraryId": "SUnit",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

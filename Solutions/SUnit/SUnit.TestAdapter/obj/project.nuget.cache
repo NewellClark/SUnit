@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8iRuNyUBY6fh1JgZlLgWzZlHloz8Cszl05kzLsYvEYbK1gpYH6luuO3wuiIU0tmJ2nOEPU9f72hFtwAhUcgFzA==",
+  "dgSpecHash": "7ZVLJhq8W4pGmVmKNhywMdpGjp3buahz4p/frDu+5m4wG3NYlzbxUts1Kbm03fclEYFXhi7Vgh424O1LbPaSAg==",
   "success": true,
   "projectFilePath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj",
   "expectedPackageFiles": [
@@ -24,9 +24,9 @@
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.3\\system.threading.tasks.extensions.4.5.3.nupkg.sha512",
-    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit\\1.0.0.13\\sunit.1.0.0.13.nupkg.sha512",
-    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.common\\1.0.0.13\\sunit.common.1.0.0.13.nupkg.sha512",
-    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.discovery\\1.0.0.13\\sunit.discovery.1.0.0.13.nupkg.sha512"
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit\\1.0.0.20\\sunit.1.0.0.20.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.common\\1.0.0.20\\sunit.common.1.0.0.20.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.discovery\\1.0.0.20\\sunit.discovery.1.0.0.20.nupkg.sha512"
   ],
   "logs": []
 }

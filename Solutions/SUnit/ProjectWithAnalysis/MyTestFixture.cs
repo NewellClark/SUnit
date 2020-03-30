@@ -15,6 +15,8 @@ namespace ProjectWithAnalysis
         {
             //Assert.That(2 + 2).Is.EqualTo(4);
 
+            //"hello world".ToUpper();
+
             //  The Assert class contains properties and methods that return Test objects.
             return Assert.That("Hello, World!").Is.Not.Null;
         }

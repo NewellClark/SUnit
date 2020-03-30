@@ -1,7 +1,6 @@
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\bin\Debug\ProjectTemplates\SUnitProjectTemplate.zip
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\bin\Debug\SUnit.VSIX.vsix
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\bin\Debug\extension.vsixmanifest
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\SUnit.VSIX.csprojAssemblyReference.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\_EmptyResource.resources
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\SUnit.VSIX.csproj.GenerateResource.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\SUnit.VSIX.csproj.CoreCompileInputs.cache

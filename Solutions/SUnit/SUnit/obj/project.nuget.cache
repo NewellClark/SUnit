@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "bIlOgR8qZyL9EkeiAEydL+NLzcfvHfGk9OKPN9Gwz71gpBwD9QrJD+g6NtVLeqXOE88n8oKTefWfWJ557xMA3w==",
+  "dgSpecHash": "wjpAHJHEckN21EwtSUVvU1TEKSlzht17EsCfXfIJ9ZFByspcPu0DjzE6ZvcL7SP3HDEfhfK2v+PTQ2+GwG9BMQ==",
   "success": true,
   "projectFilePath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit\\SUnit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.codequality.analyzers\\2.9.8\\microsoft.codequality.analyzers.2.9.8.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\morelinq\\3.3.2\\morelinq.3.3.2.nupkg.sha512",
-    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.common\\1.0.0.13\\sunit.common.1.0.0.13.nupkg.sha512"
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.common\\1.0.0.20\\sunit.common.1.0.0.20.nupkg.sha512"
   ],
   "logs": []
 }

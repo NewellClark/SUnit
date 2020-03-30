@@ -1,7 +1,3 @@
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\bin\Debug Packages\netstandard2.1\SUnit.deps.json
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\bin\Debug Packages\netstandard2.1\SUnit.dll
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\bin\Debug Packages\netstandard2.1\SUnit.pdb
-D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit\bin\Debug Packages\netstandard2.1\SUnit.xml
 D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.deps.json
 D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.dll
 D:\LocalRepositories\SUnit\PackageSource\netstandard2.1\SUnit.pdb

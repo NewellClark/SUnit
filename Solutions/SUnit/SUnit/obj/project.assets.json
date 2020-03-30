@@ -17,7 +17,7 @@
           "lib/netstandard2.0/MoreLinq.dll": {}
         }
       },
-      "SUnit.Common/1.0.0.13": {
+      "SUnit.Common/1.0.0.20": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
@@ -149,7 +149,7 @@
         "morelinq.nuspec"
       ]
     },
-    "SUnit.Common/1.0.0.13": {
+    "SUnit.Common/1.0.0.20": {
       "type": "project",
       "path": "../SUnit.Common/SUnit.Common.csproj",
       "msbuildProject": "../SUnit.Common/SUnit.Common.csproj"
@@ -158,7 +158,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "Microsoft.CodeQuality.Analyzers >= 2.9.8",
-      "SUnit.Common >= 1.0.0.13",
+      "SUnit.Common >= 1.0.0.20",
       "morelinq >= 3.3.2"
     ]
   },
@@ -168,7 +168,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0.13",
+    "version": "1.0.0.20",
     "restore": {
       "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit\\SUnit.csproj",
       "projectName": "SUnit",

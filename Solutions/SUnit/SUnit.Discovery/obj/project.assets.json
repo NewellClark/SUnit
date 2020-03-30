@@ -134,11 +134,11 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "SUnit/1.0.0.13": {
+      "SUnit/1.0.0.20": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "SUnit.Common": "1.0.0.13",
+          "SUnit.Common": "1.0.0.20",
           "morelinq": "3.3.2"
         },
         "compile": {
@@ -148,7 +148,7 @@
           "bin/placeholder/SUnit.dll": {}
         }
       },
-      "SUnit.Common/1.0.0.13": {
+      "SUnit.Common/1.0.0.20": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
@@ -859,12 +859,12 @@
         "version.txt"
       ]
     },
-    "SUnit/1.0.0.13": {
+    "SUnit/1.0.0.20": {
       "type": "project",
       "path": "../SUnit/SUnit.csproj",
       "msbuildProject": "../SUnit/SUnit.csproj"
     },
-    "SUnit.Common/1.0.0.13": {
+    "SUnit.Common/1.0.0.20": {
       "type": "project",
       "path": "../SUnit.Common/SUnit.Common.csproj",
       "msbuildProject": "../SUnit.Common/SUnit.Common.csproj"
@@ -873,7 +873,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.9.8",
-      "SUnit >= 1.0.0.13",
+      "SUnit >= 1.0.0.20",
       "System.Reactive >= 4.3.2",
       "System.Reactive.Linq >= 4.3.2"
     ]
@@ -884,7 +884,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0.13",
+    "version": "1.0.0.20",
     "restore": {
       "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj",
       "projectName": "SUnit.Discovery",

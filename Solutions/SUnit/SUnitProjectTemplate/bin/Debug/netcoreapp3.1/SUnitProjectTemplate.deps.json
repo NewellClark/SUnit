@@ -10,8 +10,8 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.TestHost": "16.5.0",
-          "SUnit": "1.0.0.13",
-          "SUnit.Analyzers": "1.0.0.40",
+          "SUnit": "1.0.0.20",
+          "SUnit.Analyzers": "1.0.0.45",
           "SUnit.TestAdapter": "1.0.0.10",
           "System.Reactive.Reference": "4.3.0.0"
         },
@@ -361,30 +361,30 @@
           }
         }
       },
-      "SUnit/1.0.0.13": {
+      "SUnit/1.0.0.20": {
         "dependencies": {
-          "SUnit.Common": "1.0.0.13",
+          "SUnit.Common": "1.0.0.20",
           "morelinq": "3.3.2"
         },
         "runtime": {
           "lib/netstandard2.1/SUnit.dll": {
-            "assemblyVersion": "1.0.0.13",
-            "fileVersion": "1.0.0.13"
+            "assemblyVersion": "1.0.0.20",
+            "fileVersion": "1.0.0.20"
           }
         }
       },
-      "SUnit.Common/1.0.0.13": {
+      "SUnit.Common/1.0.0.20": {
         "runtime": {
           "lib/netstandard2.0/SUnit.Common.dll": {
-            "assemblyVersion": "1.0.0.13",
-            "fileVersion": "1.0.0.13"
+            "assemblyVersion": "1.0.0.20",
+            "fileVersion": "1.0.0.20"
           }
         }
       },
       "SUnit.Discovery/1.0.0.10": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
-          "SUnit": "1.0.0.13",
+          "SUnit": "1.0.0.20",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -398,7 +398,7 @@
       "SUnit.TestAdapter/1.0.0.10": {
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0.13",
+          "SUnit": "1.0.0.20",
           "SUnit.Discovery": "1.0.0.10",
           "System.Collections.Immutable": "1.7.0"
         },
@@ -708,9 +708,9 @@
           "System.Xml.ReaderWriter": "4.0.11"
         }
       },
-      "SUnit.Analyzers/1.0.0.40": {
+      "SUnit.Analyzers/1.0.0.45": {
         "dependencies": {
-          "SUnit.Common": "1.0.0.13"
+          "SUnit.Common": "1.0.0.20"
         },
         "runtime": {
           "SUnit.Analyzers.dll": {}
@@ -837,19 +837,19 @@
       "path": "nuget.frameworks/5.0.0",
       "hashPath": "nuget.frameworks.5.0.0.nupkg.sha512"
     },
-    "SUnit/1.0.0.13": {
+    "SUnit/1.0.0.20": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-aq1OZLj+IpWaD/zNon2NDM0Smk30zqQUOOI/n0YPUYQq+ISG4jcNunnqUXfYGXR1qC6GWJiPbrFyNTJRxCTPBw==",
-      "path": "sunit/1.0.0.13",
-      "hashPath": "sunit.1.0.0.13.nupkg.sha512"
+      "sha512": "sha512-PJmvC2m9gRHn3ysdToYkQ5SlhQV3Ur9QW9BEfhcg1k5Nplq682zloeS2qNNwIOf9GQGEjzmB9NUS9Al37Kp/rA==",
+      "path": "sunit/1.0.0.20",
+      "hashPath": "sunit.1.0.0.20.nupkg.sha512"
     },
-    "SUnit.Common/1.0.0.13": {
+    "SUnit.Common/1.0.0.20": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VAI17TD2bNDEk8mUfkRsN0jqVm8tjMRZcojZRPIMrnk85ZGlKfh72JaAGVIOTgJ29fXam/P0+3V+w0gySJaOlA==",
-      "path": "sunit.common/1.0.0.13",
-      "hashPath": "sunit.common.1.0.0.13.nupkg.sha512"
+      "sha512": "sha512-cytK4wo9OaZhTUjPnI4Vs/FTzy2+nbKsEo+zvHXP6ahm5Uy4CWElaPrwB/mKQr5OLO2XxXLRn9bvCaU2KK1PFg==",
+      "path": "sunit.common/1.0.0.20",
+      "hashPath": "sunit.common.1.0.0.20.nupkg.sha512"
     },
     "SUnit.Discovery/1.0.0.10": {
       "type": "package",
@@ -1110,7 +1110,7 @@
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
     },
-    "SUnit.Analyzers/1.0.0.40": {
+    "SUnit.Analyzers/1.0.0.45": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

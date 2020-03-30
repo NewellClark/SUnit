@@ -283,11 +283,11 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "SUnit/1.0.0.13": {
+      "SUnit/1.0.0.20": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "SUnit.Common": "1.0.0.13",
+          "SUnit.Common": "1.0.0.20",
           "morelinq": "3.3.2"
         },
         "compile": {
@@ -297,7 +297,7 @@
           "bin/placeholder/SUnit.dll": {}
         }
       },
-      "SUnit.Common/1.0.0.13": {
+      "SUnit.Common/1.0.0.20": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
@@ -307,11 +307,11 @@
           "bin/placeholder/SUnit.Common.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0.13": {
+      "SUnit.Discovery/1.0.0.20": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "SUnit": "1.0.0.13",
+          "SUnit": "1.0.0.20",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -1221,17 +1221,17 @@
         "version.txt"
       ]
     },
-    "SUnit/1.0.0.13": {
+    "SUnit/1.0.0.20": {
       "type": "project",
       "path": "../SUnit/SUnit.csproj",
       "msbuildProject": "../SUnit/SUnit.csproj"
     },
-    "SUnit.Common/1.0.0.13": {
+    "SUnit.Common/1.0.0.20": {
       "type": "project",
       "path": "../SUnit.Common/SUnit.Common.csproj",
       "msbuildProject": "../SUnit.Common/SUnit.Common.csproj"
     },
-    "SUnit.Discovery/1.0.0.13": {
+    "SUnit.Discovery/1.0.0.20": {
       "type": "project",
       "path": "../SUnit.Discovery/SUnit.Discovery.csproj",
       "msbuildProject": "../SUnit.Discovery/SUnit.Discovery.csproj"
@@ -1241,8 +1241,8 @@
     ".NETStandard,Version=v2.1": [
       "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.9.6",
       "Microsoft.TestPlatform.ObjectModel >= 16.5.0",
-      "SUnit >= 1.0.0.13",
-      "SUnit.Discovery >= 1.0.0.13",
+      "SUnit >= 1.0.0.20",
+      "SUnit.Discovery >= 1.0.0.20",
       "System.Collections.Immutable >= 1.7.0"
     ]
   },
@@ -1252,7 +1252,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0.13",
+    "version": "1.0.0.20",
     "restore": {
       "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj",
       "projectName": "SUnit.TestAdapter",

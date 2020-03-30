@@ -1,3 +1,0 @@
-D:\LocalRepositories\SUnit\SUnit\obj\Debug\net472\SUnit.csprojAssemblyReference.cache
-D:\LocalRepositories\SUnit\SUnit\obj\Debug\net472\SUnit.AssemblyInfoInputs.cache
-D:\LocalRepositories\SUnit\SUnit\obj\Debug\net472\SUnit.AssemblyInfo.cs

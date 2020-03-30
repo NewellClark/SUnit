@@ -7,12 +7,12 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "SUnit.TestAdapter/1.0.0.13": {
+      "SUnit.TestAdapter/1.0.0.20": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.6",
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0.13",
-          "SUnit.Discovery": "1.0.0.13",
+          "SUnit": "1.0.0.20",
+          "SUnit.Discovery": "1.0.0.20",
           "System.Collections.Immutable": "1.7.0"
         },
         "runtime": {
@@ -248,23 +248,23 @@
           }
         }
       },
-      "SUnit/1.0.0.13": {
+      "SUnit/1.0.0.20": {
         "dependencies": {
-          "SUnit.Common": "1.0.0.13",
+          "SUnit.Common": "1.0.0.20",
           "morelinq": "3.3.2"
         },
         "runtime": {
           "SUnit.dll": {}
         }
       },
-      "SUnit.Common/1.0.0.13": {
+      "SUnit.Common/1.0.0.20": {
         "runtime": {
           "SUnit.Common.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0.13": {
+      "SUnit.Discovery/1.0.0.20": {
         "dependencies": {
-          "SUnit": "1.0.0.13",
+          "SUnit": "1.0.0.20",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -275,7 +275,7 @@
     }
   },
   "libraries": {
-    "SUnit.TestAdapter/1.0.0.13": {
+    "SUnit.TestAdapter/1.0.0.20": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -420,17 +420,17 @@
       "path": "system.threading.tasks.extensions/4.5.3",
       "hashPath": "system.threading.tasks.extensions.4.5.3.nupkg.sha512"
     },
-    "SUnit/1.0.0.13": {
+    "SUnit/1.0.0.20": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.Common/1.0.0.13": {
+    "SUnit.Common/1.0.0.20": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.Discovery/1.0.0.13": {
+    "SUnit.Discovery/1.0.0.20": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -7,11 +7,11 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "SUnit.Analyzers/1.0.0.40": {
+      "SUnit.Analyzers/1.0.0.52": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "2.10.0",
           "NETStandard.Library": "2.0.3",
-          "SUnit.Common": "1.0.0.13"
+          "SUnit.Common": "1.0.0.20"
         },
         "runtime": {
           "SUnit.Analyzers.dll": {}
@@ -327,11 +327,11 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
-      "SUnit.Common/1.0.0.13": {
+      "SUnit.Common/1.0.0.20": {
         "runtime": {
           "lib/netstandard2.0/SUnit.Common.dll": {
-            "assemblyVersion": "1.0.0.13",
-            "fileVersion": "1.0.0.13"
+            "assemblyVersion": "1.0.0.20",
+            "fileVersion": "1.0.0.20"
           }
         }
       },
@@ -1245,7 +1245,7 @@
     }
   },
   "libraries": {
-    "SUnit.Analyzers/1.0.0.40": {
+    "SUnit.Analyzers/1.0.0.52": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1418,12 +1418,12 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
-    "SUnit.Common/1.0.0.13": {
+    "SUnit.Common/1.0.0.20": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VAI17TD2bNDEk8mUfkRsN0jqVm8tjMRZcojZRPIMrnk85ZGlKfh72JaAGVIOTgJ29fXam/P0+3V+w0gySJaOlA==",
-      "path": "sunit.common/1.0.0.13",
-      "hashPath": "sunit.common.1.0.0.13.nupkg.sha512"
+      "sha512": "sha512-R/IIPPKCIvwlvtFjVBdtvAfIGD47l3cAnIfb8iVShkeQQG4u4r32jg2c96VCgGWxRZDyfGiWDUdLEfN9eRmKcw==",
+      "path": "sunit.common/1.0.0.20",
+      "hashPath": "sunit.common.1.0.0.20.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

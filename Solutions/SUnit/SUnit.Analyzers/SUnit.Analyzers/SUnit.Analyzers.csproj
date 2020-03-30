@@ -18,7 +18,7 @@
     <Copyright>Copyright</Copyright>
     <PackageTags>SUnit.Analyzers, analyzers</PackageTags>
     <NoPackageAnalysis>true</NoPackageAnalysis>
-    <Version>1.0.0.40</Version>
+    <Version>1.0.0.52</Version>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
@@ -30,7 +30,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="2.10" PrivateAssets="all" />
-    <PackageReference Include="SUnit.Common" Version="1.0.0.13" />
+    <PackageReference Include="SUnit.Common" Version="1.0.0.20" />
+    <Analyzer Include="D:\LocalRepositories\SUnit\PackageSource\netstandard2.0\SUnit.Common.dll" />
     <PackageReference Update="NETStandard.Library" PrivateAssets="all" />
   </ItemGroup>
 

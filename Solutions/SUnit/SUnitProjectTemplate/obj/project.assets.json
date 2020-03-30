@@ -400,10 +400,10 @@
           "lib/netstandard2.0/NuGet.Frameworks.dll": {}
         }
       },
-      "SUnit/1.0.0.13": {
+      "SUnit/1.0.0.20": {
         "type": "package",
         "dependencies": {
-          "SUnit.Common": "1.0.0.13",
+          "SUnit.Common": "1.0.0.20",
           "morelinq": "3.3.2"
         },
         "compile": {
@@ -413,7 +413,7 @@
           "lib/netstandard2.1/SUnit.dll": {}
         }
       },
-      "SUnit.Common/1.0.0.13": {
+      "SUnit.Common/1.0.0.20": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/SUnit.Common.dll": {}
@@ -945,11 +945,11 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "SUnit.Analyzers/1.0.0.40": {
+      "SUnit.Analyzers/1.0.0.45": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "SUnit.Common": "1.0.0.13"
+          "SUnit.Common": "1.0.0.20"
         },
         "compile": {
           "bin/placeholder/SUnit.Analyzers.dll": {}
@@ -1568,28 +1568,28 @@
         "nuget.frameworks.nuspec"
       ]
     },
-    "SUnit/1.0.0.13": {
-      "sha512": "aq1OZLj+IpWaD/zNon2NDM0Smk30zqQUOOI/n0YPUYQq+ISG4jcNunnqUXfYGXR1qC6GWJiPbrFyNTJRxCTPBw==",
+    "SUnit/1.0.0.20": {
+      "sha512": "PJmvC2m9gRHn3ysdToYkQ5SlhQV3Ur9QW9BEfhcg1k5Nplq682zloeS2qNNwIOf9GQGEjzmB9NUS9Al37Kp/rA==",
       "type": "package",
-      "path": "sunit/1.0.0.13",
+      "path": "sunit/1.0.0.20",
       "files": [
         ".nupkg.metadata",
         "LICENSE.md",
         "lib/netstandard2.1/SUnit.dll",
         "lib/netstandard2.1/SUnit.xml",
-        "sunit.1.0.0.13.nupkg.sha512",
+        "sunit.1.0.0.20.nupkg.sha512",
         "sunit.nuspec"
       ]
     },
-    "SUnit.Common/1.0.0.13": {
-      "sha512": "VAI17TD2bNDEk8mUfkRsN0jqVm8tjMRZcojZRPIMrnk85ZGlKfh72JaAGVIOTgJ29fXam/P0+3V+w0gySJaOlA==",
+    "SUnit.Common/1.0.0.20": {
+      "sha512": "cytK4wo9OaZhTUjPnI4Vs/FTzy2+nbKsEo+zvHXP6ahm5Uy4CWElaPrwB/mKQr5OLO2XxXLRn9bvCaU2KK1PFg==",
       "type": "package",
-      "path": "sunit.common/1.0.0.13",
+      "path": "sunit.common/1.0.0.20",
       "files": [
         ".nupkg.metadata",
         "LICENSE.md",
         "lib/netstandard2.0/SUnit.Common.dll",
-        "sunit.common.1.0.0.13.nupkg.sha512",
+        "sunit.common.1.0.0.20.nupkg.sha512",
         "sunit.common.nuspec"
       ]
     },
@@ -3681,7 +3681,7 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "SUnit.Analyzers/1.0.0.40": {
+    "SUnit.Analyzers/1.0.0.45": {
       "type": "project",
       "path": "../SUnit.Analyzers/SUnit.Analyzers/SUnit.Analyzers.csproj",
       "msbuildProject": "../SUnit.Analyzers/SUnit.Analyzers/SUnit.Analyzers.csproj"
@@ -3692,7 +3692,7 @@
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Microsoft.TestPlatform.TestHost >= 16.5.0",
       "SUnit >= 1.0.0.13",
-      "SUnit.Analyzers >= 1.0.0.40",
+      "SUnit.Analyzers >= 1.0.0.45",
       "SUnit.TestAdapter >= 1.0.0.10"
     ]
   },
@@ -3783,5 +3783,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "SUnitProjectTemplate depends on SUnit (>= 1.0.0.13) but SUnit 1.0.0.13 was not found. An approximate best match of SUnit 1.0.0.20 was resolved.",
+      "libraryId": "SUnit",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

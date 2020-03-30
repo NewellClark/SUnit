@@ -43,7 +43,8 @@ namespace MockNamespace
             Compilation = CSharpCompilation.Create("MockCompilation")
                 .AddReferences(
                     MetadataReference.CreateFromFile(typeof(string).Assembly.Location),
-                    MetadataReference.CreateFromFile(typeof(Test).Assembly.Location))
+                    MetadataReference.CreateFromFile(typeof(Test).Assembly.Location),
+                    MetadataReference.CreateFromFile(typeof(Assert).Assembly.Location))
                 .AddSyntaxTrees(SyntaxTree);
             SemanticModel = Compilation.GetSemanticModel(SyntaxTree);
             Root = SyntaxTree.GetCompilationUnitRoot();

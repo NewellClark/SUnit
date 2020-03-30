@@ -10,9 +10,9 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.TestHost": "16.5.0",
-          "SUnit": "1.0.0.13",
-          "SUnit.Analyzers": "1.0.0.39",
-          "SUnit.TestAdapter": "1.0.0.13",
+          "SUnit": "1.0.0.20",
+          "SUnit.Analyzers": "1.0.0.52",
+          "SUnit.TestAdapter": "1.0.0.20",
           "System.Reactive.Reference": "4.3.0.0"
         },
         "runtime": {
@@ -349,51 +349,55 @@
           }
         }
       },
-      "SUnit/1.0.0.13": {
+      "SUnit/1.0.0.20": {
         "dependencies": {
-          "SUnit.Common": "1.0.0.13",
+          "SUnit.Common": "1.0.0.20",
           "morelinq": "3.3.2"
         },
         "runtime": {
           "lib/netstandard2.1/SUnit.dll": {
-            "assemblyVersion": "1.0.0.13",
-            "fileVersion": "1.0.0.13"
+            "assemblyVersion": "1.0.0.20",
+            "fileVersion": "1.0.0.20"
           }
         }
       },
-      "SUnit.Analyzers/1.0.0.39": {},
-      "SUnit.Common/1.0.0.13": {
+      "SUnit.Analyzers/1.0.0.52": {
+        "dependencies": {
+          "SUnit.Common": "1.0.0.20"
+        }
+      },
+      "SUnit.Common/1.0.0.20": {
         "runtime": {
           "lib/netstandard2.0/SUnit.Common.dll": {
-            "assemblyVersion": "1.0.0.13",
-            "fileVersion": "1.0.0.13"
+            "assemblyVersion": "1.0.0.20",
+            "fileVersion": "1.0.0.20"
           }
         }
       },
-      "SUnit.Discovery/1.0.0.13": {
+      "SUnit.Discovery/1.0.0.20": {
         "dependencies": {
-          "SUnit": "1.0.0.13",
+          "SUnit": "1.0.0.20",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
         "runtime": {
           "lib/netstandard2.1/SUnit.Discovery.dll": {
-            "assemblyVersion": "1.0.0.13",
-            "fileVersion": "1.0.0.13"
+            "assemblyVersion": "1.0.0.20",
+            "fileVersion": "1.0.0.20"
           }
         }
       },
-      "SUnit.TestAdapter/1.0.0.13": {
+      "SUnit.TestAdapter/1.0.0.20": {
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0.13",
-          "SUnit.Discovery": "1.0.0.13",
+          "SUnit": "1.0.0.20",
+          "SUnit.Discovery": "1.0.0.20",
           "System.Collections.Immutable": "1.7.0"
         },
         "runtime": {
           "lib/netstandard2.1/SUnit.TestAdapter.dll": {
-            "assemblyVersion": "1.0.0.13",
-            "fileVersion": "1.0.0.13"
+            "assemblyVersion": "1.0.0.20",
+            "fileVersion": "1.0.0.20"
           }
         }
       },
@@ -782,40 +786,40 @@
       "path": "nuget.frameworks/5.0.0",
       "hashPath": "nuget.frameworks.5.0.0.nupkg.sha512"
     },
-    "SUnit/1.0.0.13": {
+    "SUnit/1.0.0.20": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-aq1OZLj+IpWaD/zNon2NDM0Smk30zqQUOOI/n0YPUYQq+ISG4jcNunnqUXfYGXR1qC6GWJiPbrFyNTJRxCTPBw==",
-      "path": "sunit/1.0.0.13",
-      "hashPath": "sunit.1.0.0.13.nupkg.sha512"
+      "sha512": "sha512-USk/4ggUIBglcgR7CS/3AxB9skl98flrlZuP7nQ7F0mNwiTLsUAb4BhG07sA/nhC5IydNcjYIKTlsNFpCKRPkw==",
+      "path": "sunit/1.0.0.20",
+      "hashPath": "sunit.1.0.0.20.nupkg.sha512"
     },
-    "SUnit.Analyzers/1.0.0.39": {
+    "SUnit.Analyzers/1.0.0.52": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-phcTmXujiQY/0Bjf3r/zZaRgaG5JU7w3h40AkkQzBLuNe2ytIcKqoAbwxTeYKZsVJS9mPb1WI2hlKthEjI3Zcg==",
-      "path": "sunit.analyzers/1.0.0.39",
-      "hashPath": "sunit.analyzers.1.0.0.39.nupkg.sha512"
+      "sha512": "sha512-32iFgmEEXk6nNcWJLijDiAWVmmYDvobCuPgqPxzlR1HqzJBiAcqwvPuD8UN/l/rK/pnkQfn6yZ9RPTMySXzMxg==",
+      "path": "sunit.analyzers/1.0.0.52",
+      "hashPath": "sunit.analyzers.1.0.0.52.nupkg.sha512"
     },
-    "SUnit.Common/1.0.0.13": {
+    "SUnit.Common/1.0.0.20": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VAI17TD2bNDEk8mUfkRsN0jqVm8tjMRZcojZRPIMrnk85ZGlKfh72JaAGVIOTgJ29fXam/P0+3V+w0gySJaOlA==",
-      "path": "sunit.common/1.0.0.13",
-      "hashPath": "sunit.common.1.0.0.13.nupkg.sha512"
+      "sha512": "sha512-R/IIPPKCIvwlvtFjVBdtvAfIGD47l3cAnIfb8iVShkeQQG4u4r32jg2c96VCgGWxRZDyfGiWDUdLEfN9eRmKcw==",
+      "path": "sunit.common/1.0.0.20",
+      "hashPath": "sunit.common.1.0.0.20.nupkg.sha512"
     },
-    "SUnit.Discovery/1.0.0.13": {
+    "SUnit.Discovery/1.0.0.20": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bTekWLuYGKbp28v+v+Yvfr1YYcb8b2nQHCj8NcwsSP9s6eft5LzJlnvK9rZDM5ocK04ZiVov1W4nmBBEZmhjLA==",
-      "path": "sunit.discovery/1.0.0.13",
-      "hashPath": "sunit.discovery.1.0.0.13.nupkg.sha512"
+      "sha512": "sha512-JUVGfAxsBLEH9TFitHu805p5cuBbtV7VKlR2MgM2nIMnDq3zGniFAeivCP8C+kh1cdp8i2ZxYJTLcAnx1c365g==",
+      "path": "sunit.discovery/1.0.0.20",
+      "hashPath": "sunit.discovery.1.0.0.20.nupkg.sha512"
     },
-    "SUnit.TestAdapter/1.0.0.13": {
+    "SUnit.TestAdapter/1.0.0.20": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/qV+IJttm2+sQyGveN/N4bhxx3MCzWF0BSunHwD6sktKoA3DYFbO+eYVkd4abhVy057Ya6yZshyAdQGdVV1n6A==",
-      "path": "sunit.testadapter/1.0.0.13",
-      "hashPath": "sunit.testadapter.1.0.0.13.nupkg.sha512"
+      "sha512": "sha512-JQ7YzSgFuyAw1QoUKwQezAxraeZDMDbRcuuxi9pJU1+hm9XAXc7SsHmndKLWlehUGQqWYJ2Vtbrd+K8Yzm068g==",
+      "path": "sunit.testadapter/1.0.0.20",
+      "hashPath": "sunit.testadapter.1.0.0.20.nupkg.sha512"
     },
     "System.Collections/4.0.11": {
       "type": "package",

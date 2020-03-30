@@ -467,7 +467,7 @@
           }
         }
       },
-      "SUnit.Common/1.0.0.13": {
+      "SUnit.Common/1.0.0.20": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/SUnit.Common.dll": {}
@@ -2148,15 +2148,15 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "SUnit.Common/1.0.0.13": {
-      "sha512": "VAI17TD2bNDEk8mUfkRsN0jqVm8tjMRZcojZRPIMrnk85ZGlKfh72JaAGVIOTgJ29fXam/P0+3V+w0gySJaOlA==",
+    "SUnit.Common/1.0.0.20": {
+      "sha512": "R/IIPPKCIvwlvtFjVBdtvAfIGD47l3cAnIfb8iVShkeQQG4u4r32jg2c96VCgGWxRZDyfGiWDUdLEfN9eRmKcw==",
       "type": "package",
-      "path": "sunit.common/1.0.0.13",
+      "path": "sunit.common/1.0.0.20",
       "files": [
         ".nupkg.metadata",
         "LICENSE.md",
         "lib/netstandard2.0/SUnit.Common.dll",
-        "sunit.common.1.0.0.13.nupkg.sha512",
+        "sunit.common.1.0.0.20.nupkg.sha512",
         "sunit.common.nuspec"
       ]
     },
@@ -5355,7 +5355,7 @@
     ".NETStandard,Version=v2.0": [
       "Microsoft.CodeAnalysis.CSharp.Workspaces >= 2.10.0",
       "NETStandard.Library >= 2.0.3",
-      "SUnit.Common >= 1.0.0.13"
+      "SUnit.Common >= 1.0.0.20"
     ]
   },
   "packageFolders": {
@@ -5364,7 +5364,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0.40",
+    "version": "1.0.0.52",
     "restore": {
       "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers\\SUnit.Analyzers.csproj",
       "projectName": "SUnit.Analyzers",
@@ -5419,7 +5419,7 @@
           },
           "SUnit.Common": {
             "target": "Package",
-            "version": "[1.0.0.13, )"
+            "version": "[1.0.0.20, )"
           }
         },
         "imports": [

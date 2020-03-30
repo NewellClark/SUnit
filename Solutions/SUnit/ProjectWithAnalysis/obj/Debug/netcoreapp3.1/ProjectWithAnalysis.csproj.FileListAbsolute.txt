@@ -87,7 +87,6 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcore
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcoreapp3.1\System.Reactive.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\bin\Debug\netcoreapp3.1\System.Reactive.xml
-D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.csprojAssemblyReference.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.csproj.CoreCompileInputs.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.AssemblyInfoInputs.cache
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.AssemblyInfo.cs

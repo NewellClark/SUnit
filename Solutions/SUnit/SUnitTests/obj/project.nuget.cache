@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xeEm5NO9UjrasfpW9VeGOid8Nl3t/QSP2Za1VsJpwdIfCPMUP99IymabwIQol4inx5ki402RvaJ3Kubd33Zggw==",
+  "dgSpecHash": "EQ7XtEZ4lL9nk2iyldTD6hU8qmxNgwt8IHDv4Mc1GoKgYL4c1h1IjansKA/hrxDEDxwZOFSQkBfVg+JOi2kOSQ==",
   "success": true,
   "projectFilePath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnitTests\\SUnitTests.csproj",
   "expectedPackageFiles": [
@@ -70,9 +70,9 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit\\1.0.0.13\\sunit.1.0.0.13.nupkg.sha512",
-    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.common\\1.0.0.13\\sunit.common.1.0.0.13.nupkg.sha512",
-    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.discovery\\1.0.0.13\\sunit.discovery.1.0.0.13.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit\\1.0.0.20\\sunit.1.0.0.20.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.common\\1.0.0.20\\sunit.common.1.0.0.20.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.discovery\\1.0.0.20\\sunit.discovery.1.0.0.20.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"

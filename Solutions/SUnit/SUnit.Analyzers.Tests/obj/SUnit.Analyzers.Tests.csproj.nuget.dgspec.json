@@ -90,7 +90,7 @@
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers\\SUnit.Analyzers.csproj": {
-      "version": "1.0.0.40",
+      "version": "1.0.0.52",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers\\SUnit.Analyzers.csproj",
         "projectName": "SUnit.Analyzers",
@@ -145,7 +145,7 @@
             },
             "SUnit.Common": {
               "target": "Package",
-              "version": "[1.0.0.13, )"
+              "version": "[1.0.0.20, )"
             }
           },
           "imports": [
@@ -163,7 +163,7 @@
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Common\\SUnit.Common.csproj": {
-      "version": "1.0.0.13",
+      "version": "1.0.0.20",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Common\\SUnit.Common.csproj",
         "projectName": "SUnit.Common",
@@ -227,7 +227,7 @@
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj": {
-      "version": "1.0.0.13",
+      "version": "1.0.0.20",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj",
         "projectName": "SUnit.Discovery",
@@ -308,7 +308,7 @@
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj": {
-      "version": "1.0.0.13",
+      "version": "1.0.0.20",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj",
         "projectName": "SUnit.TestAdapter",
@@ -392,7 +392,7 @@
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit\\SUnit.csproj": {
-      "version": "1.0.0.13",
+      "version": "1.0.0.20",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit\\SUnit.csproj",
         "projectName": "SUnit",

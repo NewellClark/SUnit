@@ -7,10 +7,10 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "SUnit/1.0.0.13": {
+      "SUnit/1.0.0.20": {
         "dependencies": {
           "Microsoft.CodeQuality.Analyzers": "2.9.8",
-          "SUnit.Common": "1.0.0.13",
+          "SUnit.Common": "1.0.0.20",
           "morelinq": "3.3.2"
         },
         "runtime": {
@@ -26,7 +26,7 @@
           }
         }
       },
-      "SUnit.Common/1.0.0.13": {
+      "SUnit.Common/1.0.0.20": {
         "runtime": {
           "SUnit.Common.dll": {}
         }
@@ -34,7 +34,7 @@
     }
   },
   "libraries": {
-    "SUnit/1.0.0.13": {
+    "SUnit/1.0.0.20": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -53,7 +53,7 @@
       "path": "morelinq/3.3.2",
       "hashPath": "morelinq.3.3.2.nupkg.sha512"
     },
-    "SUnit.Common/1.0.0.13": {
+    "SUnit.Common/1.0.0.20": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
