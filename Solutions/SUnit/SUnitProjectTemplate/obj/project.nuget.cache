@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7eIy5QEkkhBKPIcdwg9ca1eTyq/u3MCbi8vuWRu8GgmCAkiWDDM9wEQcX2bKQ+9lWQJ0lN2Fx4Pxd1Lr3YZ7sQ==",
+  "dgSpecHash": "9ee4Ops9nY5/Jr44jgb+DcabjrlaeBP5VfvZYQefB8xX9tspcjwfk9TOvzMBrlxuqbP7GDxopwisMwp2LpV+VQ==",
   "success": true,
   "projectFilePath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnitProjectTemplate\\SUnitProjectTemplate.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,8 @@
     "C:\\Users\\Newell Clark\\.nuget\\packages\\morelinq\\3.3.2\\morelinq.3.3.2.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
-    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit\\1.0.0.10\\sunit.1.0.0.10.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit\\1.0.0.13\\sunit.1.0.0.13.nupkg.sha512",
+    "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.common\\1.0.0.13\\sunit.common.1.0.0.13.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.discovery\\1.0.0.10\\sunit.discovery.1.0.0.10.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\sunit.testadapter\\1.0.0.10\\sunit.testadapter.1.0.0.10.nupkg.sha512",
     "C:\\Users\\Newell Clark\\.nuget\\packages\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",

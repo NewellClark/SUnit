@@ -1255,10 +1255,11 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "SUnit/1.0.0.10": {
+      "SUnit/1.0.0.13": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "SUnit.Common": "1.0.0.13",
           "morelinq": "3.3.2"
         },
         "compile": {
@@ -1268,11 +1269,21 @@
           "bin/placeholder/SUnit.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0.10": {
+      "SUnit.Common/1.0.0.13": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SUnit.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SUnit.Common.dll": {}
+        }
+      },
+      "SUnit.Discovery/1.0.0.13": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "SUnit": "1.0.0.10",
+          "SUnit": "1.0.0.13",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -4702,12 +4713,17 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "SUnit/1.0.0.10": {
+    "SUnit/1.0.0.13": {
       "type": "project",
       "path": "../SUnit/SUnit.csproj",
       "msbuildProject": "../SUnit/SUnit.csproj"
     },
-    "SUnit.Discovery/1.0.0.10": {
+    "SUnit.Common/1.0.0.13": {
+      "type": "project",
+      "path": "../SUnit.Common/SUnit.Common.csproj",
+      "msbuildProject": "../SUnit.Common/SUnit.Common.csproj"
+    },
+    "SUnit.Discovery/1.0.0.13": {
       "type": "project",
       "path": "../SUnit.Discovery/SUnit.Discovery.csproj",
       "msbuildProject": "../SUnit.Discovery/SUnit.Discovery.csproj"
@@ -4717,8 +4733,8 @@
     ".NETCoreApp,Version=v3.0": [
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit3TestAdapter >= 3.16.1",
-      "SUnit >= 1.0.0.10",
-      "SUnit.Discovery >= 1.0.0.10",
+      "SUnit >= 1.0.0.13",
+      "SUnit.Discovery >= 1.0.0.13",
       "nunit >= 3.12.0"
     ]
   },

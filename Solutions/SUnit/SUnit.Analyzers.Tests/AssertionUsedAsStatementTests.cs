@@ -49,7 +49,7 @@ namespace MockNamespace
             Root = SyntaxTree.GetCompilationUnitRoot();
             ReportedNodes = Root.DescendantNodes()
                 .OfType<ExpressionStatementSyntax>()
-                .Where(node => AssertionUsedAsStatement.IsNodeViolation(Compilation, SemanticModel, node, default));
+                .Where(node => AssertionUsedAsStatement.IsViolation(Compilation, SemanticModel, node, default));
         }
 
         protected string SourceCode { get; }

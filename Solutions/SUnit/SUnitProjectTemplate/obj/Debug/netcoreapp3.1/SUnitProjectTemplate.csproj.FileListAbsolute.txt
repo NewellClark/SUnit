@@ -18,6 +18,7 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Debug\netcor
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\SUnit.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\SUnit.Common.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\SUnit.Discovery.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\SUnit.TestAdapter.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnitProjectTemplate\bin\Debug\netcoreapp3.1\System.Reactive.Linq.dll

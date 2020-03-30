@@ -11,9 +11,9 @@
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "3.5.0",
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.TestHost": "16.5.0",
-          "SUnit": "1.0.0.10",
-          "SUnit.Analyzers": "1.0.0.23",
-          "SUnit.TestAdapter": "1.0.0.10",
+          "SUnit": "1.0.0.13",
+          "SUnit.Analyzers": "1.0.0.39",
+          "SUnit.TestAdapter": "1.0.0.13",
           "System.Reactive.Reference": "4.3.0.0"
         },
         "runtime": {
@@ -984,22 +984,28 @@
           "System.Xml.ReaderWriter": "4.0.11"
         }
       },
-      "SUnit/1.0.0.10": {
+      "SUnit/1.0.0.13": {
         "dependencies": {
+          "SUnit.Common": "1.0.0.13",
           "morelinq": "3.3.2"
         },
         "runtime": {
           "SUnit.dll": {}
         }
       },
-      "SUnit.Analyzers/1.0.0.23": {
+      "SUnit.Analyzers/1.0.0.39": {
         "runtime": {
           "SUnit.Analyzers.dll": {}
         }
       },
-      "SUnit.Discovery/1.0.0.10": {
+      "SUnit.Common/1.0.0.13": {
+        "runtime": {
+          "SUnit.Common.dll": {}
+        }
+      },
+      "SUnit.Discovery/1.0.0.13": {
         "dependencies": {
-          "SUnit": "1.0.0.10",
+          "SUnit": "1.0.0.13",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
         },
@@ -1007,11 +1013,11 @@
           "SUnit.Discovery.dll": {}
         }
       },
-      "SUnit.TestAdapter/1.0.0.10": {
+      "SUnit.TestAdapter/1.0.0.13": {
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "SUnit": "1.0.0.10",
-          "SUnit.Discovery": "1.0.0.10",
+          "SUnit": "1.0.0.13",
+          "SUnit.Discovery": "1.0.0.13",
           "System.Collections.Immutable": "1.7.0"
         },
         "runtime": {
@@ -1454,22 +1460,27 @@
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
     },
-    "SUnit/1.0.0.10": {
+    "SUnit/1.0.0.13": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.Analyzers/1.0.0.23": {
+    "SUnit.Analyzers/1.0.0.39": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.Discovery/1.0.0.10": {
+    "SUnit.Common/1.0.0.13": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SUnit.TestAdapter/1.0.0.10": {
+    "SUnit.Discovery/1.0.0.13": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SUnit.TestAdapter/1.0.0.13": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

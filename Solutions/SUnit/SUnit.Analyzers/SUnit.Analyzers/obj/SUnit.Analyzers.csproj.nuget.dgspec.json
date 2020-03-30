@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers\\SUnit.Analyzers.csproj": {
-      "version": "1.0.0.31",
+      "version": "1.0.0.40",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers\\SUnit.Analyzers.csproj",
         "projectName": "SUnit.Analyzers",
@@ -23,7 +23,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard1.3"
+          "netstandard2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -34,7 +34,7 @@
           "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard1.3": {
+          "netstandard2.0": {
             "projectReferences": {}
           }
         },
@@ -45,7 +45,7 @@
         }
       },
       "frameworks": {
-        "netstandard1.3": {
+        "netstandard2.0": {
           "dependencies": {
             "Microsoft.CodeAnalysis.CSharp.Workspaces": {
               "suppressParent": "All",
@@ -55,10 +55,24 @@
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.6.1, )",
+              "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "SUnit.Common": {
+              "target": "Package",
+              "version": "[1.0.0.13, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }

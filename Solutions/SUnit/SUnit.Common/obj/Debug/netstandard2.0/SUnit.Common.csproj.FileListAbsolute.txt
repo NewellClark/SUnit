@@ -1,0 +1,9 @@
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Common\bin\Debug\netstandard2.0\SUnit.Common.deps.json
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Common\bin\Debug\netstandard2.0\SUnit.Common.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Common\bin\Debug\netstandard2.0\SUnit.Common.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Common\obj\Debug\netstandard2.0\SUnit.Common.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Common\obj\Debug\netstandard2.0\SUnit.Common.csproj.CoreCompileInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Common\obj\Debug\netstandard2.0\SUnit.Common.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Common\obj\Debug\netstandard2.0\SUnit.Common.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Common\obj\Debug\netstandard2.0\SUnit.Common.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Common\obj\Debug\netstandard2.0\SUnit.Common.pdb

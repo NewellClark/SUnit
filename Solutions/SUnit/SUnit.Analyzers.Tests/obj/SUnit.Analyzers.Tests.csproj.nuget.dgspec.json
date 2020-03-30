@@ -90,7 +90,7 @@
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers\\SUnit.Analyzers.csproj": {
-      "version": "1.0.0.31",
+      "version": "1.0.0.40",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers\\SUnit.Analyzers.csproj",
         "projectName": "SUnit.Analyzers",
@@ -108,7 +108,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard1.3"
+          "netstandard2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -119,7 +119,7 @@
           "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard1.3": {
+          "netstandard2.0": {
             "projectReferences": {}
           }
         },
@@ -130,7 +130,7 @@
         }
       },
       "frameworks": {
-        "netstandard1.3": {
+        "netstandard2.0": {
           "dependencies": {
             "Microsoft.CodeAnalysis.CSharp.Workspaces": {
               "suppressParent": "All",
@@ -140,16 +140,94 @@
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.6.1, )",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "SUnit.Common": {
+              "target": "Package",
+              "version": "[1.0.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Common\\SUnit.Common.csproj": {
+      "version": "1.0.0.13",
+      "restore": {
+        "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Common\\SUnit.Common.csproj",
+        "projectName": "SUnit.Common",
+        "projectPath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Common\\SUnit.Common.csproj",
+        "packagesPath": "C:\\Users\\Newell Clark\\.nuget\\packages\\",
+        "outputPath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Newell Clark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\LocalRepositories\\SUnit\\PackageSource": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-master/api/v3/index.json": {},
+          "https://dotnet.myget.org/F/roslyn/api/v3/index.json": {},
+          "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
               "autoReferenced": true
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj": {
-      "version": "1.0.0.10",
+      "version": "1.0.0.13",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Discovery\\SUnit.Discovery.csproj",
         "projectName": "SUnit.Discovery",
@@ -230,7 +308,7 @@
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj": {
-      "version": "1.0.0.10",
+      "version": "1.0.0.13",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj",
         "projectName": "SUnit.TestAdapter",
@@ -314,7 +392,7 @@
       }
     },
     "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit\\SUnit.csproj": {
-      "version": "1.0.0.10",
+      "version": "1.0.0.13",
       "restore": {
         "projectUniqueName": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit\\SUnit.csproj",
         "projectName": "SUnit",
@@ -345,7 +423,11 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Common\\SUnit.Common.csproj": {
+                "projectPath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Common\\SUnit.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
