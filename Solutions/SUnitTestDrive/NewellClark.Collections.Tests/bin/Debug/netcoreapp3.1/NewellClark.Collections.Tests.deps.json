@@ -11,10 +11,12 @@
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.TestHost": "16.5.0",
           "NewellClark.Collections": "1.0.0",
+          "SUnit": "1.0.0.20",
+          "SUnit.Analyzers": "1.0.0.52",
+          "SUnit.Common": "1.0.0.20",
+          "SUnit.Discovery": "1.0.0.20",
+          "SUnit.TestAdapter": "1.0.0.20",
           "System.Reactive": "4.3.2",
-          "SUnit.Discovery": "1.0.0.8",
-          "SUnit": "1.0.0.8",
-          "SUnit.TestAdapter": "1.0.0.8",
           "System.Reactive.Reference": "4.3.0.0"
         },
         "runtime": {
@@ -303,6 +305,14 @@
           }
         }
       },
+      "morelinq/3.3.2": {
+        "runtime": {
+          "lib/netstandard2.0/MoreLinq.dll": {
+            "assemblyVersion": "3.3.2.0",
+            "fileVersion": "3.3.2.0"
+          }
+        }
+      },
       "Newtonsoft.Json/9.0.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.0.1",
@@ -343,6 +353,58 @@
           }
         }
       },
+      "SUnit/1.0.0.20": {
+        "dependencies": {
+          "SUnit.Common": "1.0.0.20",
+          "morelinq": "3.3.2"
+        },
+        "runtime": {
+          "lib/netstandard2.1/SUnit.dll": {
+            "assemblyVersion": "1.0.0.20",
+            "fileVersion": "1.0.0.20"
+          }
+        }
+      },
+      "SUnit.Analyzers/1.0.0.52": {
+        "dependencies": {
+          "SUnit.Common": "1.0.0.20"
+        }
+      },
+      "SUnit.Common/1.0.0.20": {
+        "runtime": {
+          "lib/netstandard2.0/SUnit.Common.dll": {
+            "assemblyVersion": "1.0.0.20",
+            "fileVersion": "1.0.0.20"
+          }
+        }
+      },
+      "SUnit.Discovery/1.0.0.20": {
+        "dependencies": {
+          "SUnit": "1.0.0.20",
+          "System.Reactive": "4.3.2",
+          "System.Reactive.Linq": "4.3.2"
+        },
+        "runtime": {
+          "lib/netstandard2.1/SUnit.Discovery.dll": {
+            "assemblyVersion": "1.0.0.20",
+            "fileVersion": "1.0.0.20"
+          }
+        }
+      },
+      "SUnit.TestAdapter/1.0.0.20": {
+        "dependencies": {
+          "Microsoft.TestPlatform.ObjectModel": "16.5.0",
+          "SUnit": "1.0.0.20",
+          "SUnit.Discovery": "1.0.0.20",
+          "System.Collections.Immutable": "1.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/SUnit.TestAdapter.dll": {
+            "assemblyVersion": "1.0.0.20",
+            "fileVersion": "1.0.0.20"
+          }
+        }
+      },
       "System.Collections/4.0.11": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.0.1",
@@ -350,6 +412,7 @@
           "System.Runtime": "4.1.0"
         }
       },
+      "System.Collections.Immutable/1.7.0": {},
       "System.Diagnostics.Debug/4.0.11": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.0.1",
@@ -456,6 +519,18 @@
         }
       },
       "System.Reactive/4.3.2": {},
+      "System.Reactive.Linq/4.3.2": {
+        "dependencies": {
+          "System.Reactive": "4.3.2",
+          "System.Threading.Tasks.Extensions": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.Linq.dll": {
+            "assemblyVersion": "3.0.6000.0",
+            "fileVersion": "3.0.6000.0"
+          }
+        }
+      },
       "System.Reflection/4.1.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.0.1",
@@ -593,13 +668,7 @@
           "System.Runtime": "4.1.0"
         }
       },
-      "System.Threading.Tasks.Extensions/4.0.0": {
-        "dependencies": {
-          "System.Collections": "4.0.11",
-          "System.Runtime": "4.1.0",
-          "System.Threading.Tasks": "4.0.11"
-        }
-      },
+      "System.Threading.Tasks.Extensions/4.5.3": {},
       "System.Xml.ReaderWriter/4.0.11": {
         "dependencies": {
           "System.Collections": "4.0.11",
@@ -616,7 +685,7 @@
           "System.Text.Encoding.Extensions": "4.0.11",
           "System.Text.RegularExpressions": "4.1.0",
           "System.Threading.Tasks": "4.0.11",
-          "System.Threading.Tasks.Extensions": "4.0.0"
+          "System.Threading.Tasks.Extensions": "4.5.3"
         }
       },
       "System.Xml.XDocument/4.0.11": {
@@ -638,30 +707,6 @@
       "NewellClark.Collections/1.0.0": {
         "runtime": {
           "NewellClark.Collections.dll": {}
-        }
-      },
-      "SUnit.Discovery/1.0.0.8": {
-        "runtime": {
-          "SUnit.Discovery.dll": {
-            "assemblyVersion": "1.0.0.8",
-            "fileVersion": "1.0.0.8"
-          }
-        }
-      },
-      "SUnit/1.0.0.8": {
-        "runtime": {
-          "SUnit.dll": {
-            "assemblyVersion": "1.0.0.8",
-            "fileVersion": "1.0.0.8"
-          }
-        }
-      },
-      "SUnit.TestAdapter/1.0.0.8": {
-        "runtime": {
-          "SUnit.TestAdapter.dll": {
-            "assemblyVersion": "1.0.0.8",
-            "fileVersion": "1.0.0.8"
-          }
         }
       },
       "System.Reactive.Reference/4.3.0.0": {
@@ -729,6 +774,13 @@
       "path": "microsoft.testplatform.testhost/16.5.0",
       "hashPath": "microsoft.testplatform.testhost.16.5.0.nupkg.sha512"
     },
+    "morelinq/3.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MQc8GppZJLmjvcpEdf3EkC6ovsp7gRWt2e5mC7dcIOrgwSc+yjFd3JQ0iRqr3XrUT6rb/phv0IkEmBtbfVA7AQ==",
+      "path": "morelinq/3.3.2",
+      "hashPath": "morelinq.3.3.2.nupkg.sha512"
+    },
     "Newtonsoft.Json/9.0.1": {
       "type": "package",
       "serviceable": true,
@@ -743,12 +795,54 @@
       "path": "nuget.frameworks/5.0.0",
       "hashPath": "nuget.frameworks.5.0.0.nupkg.sha512"
     },
+    "SUnit/1.0.0.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-USk/4ggUIBglcgR7CS/3AxB9skl98flrlZuP7nQ7F0mNwiTLsUAb4BhG07sA/nhC5IydNcjYIKTlsNFpCKRPkw==",
+      "path": "sunit/1.0.0.20",
+      "hashPath": "sunit.1.0.0.20.nupkg.sha512"
+    },
+    "SUnit.Analyzers/1.0.0.52": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-32iFgmEEXk6nNcWJLijDiAWVmmYDvobCuPgqPxzlR1HqzJBiAcqwvPuD8UN/l/rK/pnkQfn6yZ9RPTMySXzMxg==",
+      "path": "sunit.analyzers/1.0.0.52",
+      "hashPath": "sunit.analyzers.1.0.0.52.nupkg.sha512"
+    },
+    "SUnit.Common/1.0.0.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R/IIPPKCIvwlvtFjVBdtvAfIGD47l3cAnIfb8iVShkeQQG4u4r32jg2c96VCgGWxRZDyfGiWDUdLEfN9eRmKcw==",
+      "path": "sunit.common/1.0.0.20",
+      "hashPath": "sunit.common.1.0.0.20.nupkg.sha512"
+    },
+    "SUnit.Discovery/1.0.0.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JUVGfAxsBLEH9TFitHu805p5cuBbtV7VKlR2MgM2nIMnDq3zGniFAeivCP8C+kh1cdp8i2ZxYJTLcAnx1c365g==",
+      "path": "sunit.discovery/1.0.0.20",
+      "hashPath": "sunit.discovery.1.0.0.20.nupkg.sha512"
+    },
+    "SUnit.TestAdapter/1.0.0.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JQ7YzSgFuyAw1QoUKwQezAxraeZDMDbRcuuxi9pJU1+hm9XAXc7SsHmndKLWlehUGQqWYJ2Vtbrd+K8Yzm068g==",
+      "path": "sunit.testadapter/1.0.0.20",
+      "hashPath": "sunit.testadapter.1.0.0.20.nupkg.sha512"
+    },
     "System.Collections/4.0.11": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-YUJGz6eFKqS0V//mLt25vFGrrCvOnsXjlvFQs+KimpwNxug9x0Pzy4PlFMU3Q2IzqAa9G2L4LsK3+9vCBK7oTg==",
       "path": "system.collections/4.0.11",
       "hashPath": "system.collections.4.0.11.nupkg.sha512"
+    },
+    "System.Collections.Immutable/1.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RVSM6wZUo6L2y6P3vN6gjUtyJ2IF2RVtrepF3J7nrDKfFQd5u/SnSUFclchYQis8/k5scHy9E+fVeKVQLnnkzw==",
+      "path": "system.collections.immutable/1.7.0",
+      "hashPath": "system.collections.immutable.1.7.0.nupkg.sha512"
     },
     "System.Diagnostics.Debug/4.0.11": {
       "type": "package",
@@ -826,6 +920,13 @@
       "sha512": "sha512-WhGkScPWxw2pp7UwRW8M1OvYZ3WUDPC2wJ0aiuaB4KRD3bt4wLkgHgYnOUu87WRhsurvv5LN0E63iWOEza2o8g==",
       "path": "system.reactive/4.3.2",
       "hashPath": "system.reactive.4.3.2.nupkg.sha512"
+    },
+    "System.Reactive.Linq/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YDTHN/jSwFDxGjgOjTpiJiwbq5d2ggKCR+9c6LLPEmTYBOu1Q5TFSYbeZNPPGgGMzoxY1WRrEJ/bLej0s3jXhQ==",
+      "path": "system.reactive.linq/4.3.2",
+      "hashPath": "system.reactive.linq.4.3.2.nupkg.sha512"
     },
     "System.Reflection/4.1.0": {
       "type": "package",
@@ -953,12 +1054,12 @@
       "path": "system.threading.tasks/4.0.11",
       "hashPath": "system.threading.tasks.4.0.11.nupkg.sha512"
     },
-    "System.Threading.Tasks.Extensions/4.0.0": {
+    "System.Threading.Tasks.Extensions/4.5.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pH4FZDsZQ/WmgJtN4LWYmRdJAEeVkyriSwrv2Teoe5FOU0Yxlb6II6GL8dBPOfRmutHGATduj3ooMt7dJ2+i+w==",
-      "path": "system.threading.tasks.extensions/4.0.0",
-      "hashPath": "system.threading.tasks.extensions.4.0.0.nupkg.sha512"
+      "sha512": "sha512-+MvhNtcvIbqmhANyKu91jQnvIRVSTiaOiFNfKWwXGHG48YAb4I/TyH8spsySiPYla7gKal5ZnF3teJqZAximyQ==",
+      "path": "system.threading.tasks.extensions/4.5.3",
+      "hashPath": "system.threading.tasks.extensions.4.5.3.nupkg.sha512"
     },
     "System.Xml.ReaderWriter/4.0.11": {
       "type": "package",
@@ -976,21 +1077,6 @@
     },
     "NewellClark.Collections/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SUnit.Discovery/1.0.0.8": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SUnit/1.0.0.8": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SUnit.TestAdapter/1.0.0.8": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

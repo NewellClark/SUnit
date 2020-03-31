@@ -14,23 +14,16 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="16.5.0" />
+    <PackageReference Include="SUnit" Version="1.0.0.20" />
+    <PackageReference Include="SUnit.Analyzers" Version="1.0.0.52" />
+    <PackageReference Include="SUnit.Common" Version="1.0.0.20" />
+    <PackageReference Include="SUnit.Discovery" Version="1.0.0.20" />
+    <PackageReference Include="SUnit.TestAdapter" Version="1.0.0.20" />
     <PackageReference Include="System.Reactive" Version="4.3.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NewellClark.Collections\NewellClark.Collections.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="SUnit">
-      <HintPath>..\..\..\PackageSource\netstandard2.1\SUnit.dll</HintPath>
-    </Reference>
-    <Reference Include="SUnit.Discovery">
-      <HintPath>..\..\..\PackageSource\netstandard2.1\SUnit.Discovery.dll</HintPath>
-    </Reference>
-    <Reference Include="SUnit.TestAdapter">
-      <HintPath>..\..\..\PackageSource\netstandard2.1\SUnit.TestAdapter.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

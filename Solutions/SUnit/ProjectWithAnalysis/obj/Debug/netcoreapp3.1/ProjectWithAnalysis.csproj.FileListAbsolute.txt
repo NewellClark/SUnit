@@ -94,3 +94,4 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcore
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.genruntimeconfig.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\ProjectWithAnalysis\obj\Debug\netcoreapp3.1\ProjectWithAnalysis.csprojAssemblyReference.cache

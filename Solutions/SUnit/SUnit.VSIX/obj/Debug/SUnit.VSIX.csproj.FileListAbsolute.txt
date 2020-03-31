@@ -14,3 +14,4 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\ProjectTemplates
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\ProjectTemplates\SUnitProjectTemplate\MyTestFixture.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\ProjectTemplates\SUnitProjectTemplate\SUnitProjectTemplate.csproj
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\templateFiles.json
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Debug\SUnit.VSIX.csprojAssemblyReference.cache

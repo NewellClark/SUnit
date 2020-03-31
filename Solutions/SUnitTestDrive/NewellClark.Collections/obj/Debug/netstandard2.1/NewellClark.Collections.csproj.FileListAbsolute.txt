@@ -6,3 +6,4 @@ D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections\obj\
 D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections\obj\Debug\netstandard2.1\NewellClark.Collections.dll
 D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections\obj\Debug\netstandard2.1\NewellClark.Collections.pdb
 D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections\obj\Debug\netstandard2.1\NewellClark.Collections.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\SUnitTestDrive\NewellClark.Collections\obj\Debug\netstandard2.1\NewellClark.Collections.csproj.CoreCompileInputs.cache
