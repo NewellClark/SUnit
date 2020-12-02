@@ -2,24 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "[2.9.3]",
-          "Microsoft.CodeQuality.Analyzers": "[2.9.3]",
-          "Microsoft.NetCore.Analyzers": "[2.9.3]",
-          "Microsoft.NetFramework.Analyzers": "[2.9.3]"
-        },
-        "build": {
-          "build/_._": {}
-        }
-      },
-      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.3": {
-        "type": "package",
-        "build": {
-          "build/_._": {}
-        }
-      },
       "Microsoft.CodeCoverage/16.5.0": {
         "type": "package",
         "compile": {
@@ -31,12 +13,6 @@
         "build": {
           "build/netstandard1.0/Microsoft.CodeCoverage.props": {},
           "build/netstandard1.0/Microsoft.CodeCoverage.targets": {}
-        }
-      },
-      "Microsoft.CodeQuality.Analyzers/2.9.3": {
-        "type": "package",
-        "build": {
-          "build/_._": {}
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -80,12 +56,6 @@
           "buildMultiTargeting/Microsoft.NET.Test.Sdk.props": {}
         }
       },
-      "Microsoft.NetCore.Analyzers/2.9.3": {
-        "type": "package",
-        "build": {
-          "build/_._": {}
-        }
-      },
       "Microsoft.NETCore.Platforms/1.0.1": {
         "type": "package",
         "compile": {
@@ -102,12 +72,6 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
-        }
-      },
-      "Microsoft.NetFramework.Analyzers/2.9.3": {
-        "type": "package",
-        "build": {
-          "build/_._": {}
         }
       },
       "Microsoft.TestPlatform.ObjectModel/16.5.0": {
@@ -415,7 +379,6 @@
       "SUnit.Discovery/1.0.0.10": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.3",
           "SUnit": "1.0.0.10",
           "System.Reactive": "4.3.2",
           "System.Reactive.Linq": "4.3.2"
@@ -938,80 +901,6 @@
     }
   },
   "libraries": {
-    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.3": {
-      "sha512": "k8wrTEpm0BE16zxqOHJ4xXxsWTbx5oINrgkLrMc3US8H/LJAx0OyXmTGOuwGEM2Tqa6L5RU1MPgeiWKwAMVkuw==",
-      "type": "package",
-      "path": "microsoft.codeanalysis.fxcopanalyzers/2.9.3",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.rtf",
-        "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props",
-        "documentation/Microsoft.CodeAnalysis.FxCopAnalyzers.md",
-        "microsoft.codeanalysis.fxcopanalyzers.2.9.3.nupkg.sha512",
-        "microsoft.codeanalysis.fxcopanalyzers.nuspec",
-        "rulesets/AllRulesDefault.ruleset",
-        "rulesets/AllRulesDisabled.ruleset",
-        "rulesets/AllRulesEnabled.ruleset",
-        "rulesets/DesignRulesDefault.ruleset",
-        "rulesets/DesignRulesEnabled.ruleset",
-        "rulesets/DocumentationRulesDefault.ruleset",
-        "rulesets/DocumentationRulesEnabled.ruleset",
-        "rulesets/GlobalizationRulesDefault.ruleset",
-        "rulesets/GlobalizationRulesEnabled.ruleset",
-        "rulesets/InteroperabilityRulesDefault.ruleset",
-        "rulesets/InteroperabilityRulesEnabled.ruleset",
-        "rulesets/MaintainabilityRulesDefault.ruleset",
-        "rulesets/MaintainabilityRulesEnabled.ruleset",
-        "rulesets/NamingRulesDefault.ruleset",
-        "rulesets/NamingRulesEnabled.ruleset",
-        "rulesets/PerformanceRulesDefault.ruleset",
-        "rulesets/PerformanceRulesEnabled.ruleset",
-        "rulesets/ReliabilityRulesDefault.ruleset",
-        "rulesets/ReliabilityRulesEnabled.ruleset",
-        "rulesets/SecurityRulesDefault.ruleset",
-        "rulesets/SecurityRulesEnabled.ruleset",
-        "rulesets/UsageRulesDefault.ruleset",
-        "rulesets/UsageRulesEnabled.ruleset",
-        "rulesets/legacy/AllRules.ruleset",
-        "rulesets/legacy/BasicCorrectnessRules.ruleset",
-        "rulesets/legacy/BasicDesignGuidelineRules.ruleset",
-        "rulesets/legacy/ExtendedCorrectnessRules.ruleset",
-        "rulesets/legacy/ExtendedDesignGuidelineRules.ruleset",
-        "rulesets/legacy/GlobalizationRules.ruleset",
-        "rulesets/legacy/ManagedMinimumRules.ruleset",
-        "rulesets/legacy/MinimumRecommendedRules.ruleset",
-        "rulesets/legacy/Sdl-7.1.Recommended.ruleset",
-        "rulesets/legacy/Sdl-7.1.Required.ruleset",
-        "rulesets/legacy/SecurityRules.ruleset",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
-      ]
-    },
-    "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.3": {
-      "sha512": "jUQbGsWTF/x4a6ZiWfXvOL3f9LFS7L7QkrDhdv25BaYQg4K7yzBMYcElN3le5S6dk7JG8F3AjRnlXp9QTGcBNg==",
-      "type": "package",
-      "path": "microsoft.codeanalysis.versioncheckanalyzer/2.9.3",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.rtf",
-        "analyzers/dotnet/Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll",
-        "build/Microsoft.CodeAnalysis.VersionCheckAnalyzer.props",
-        "documentation/Microsoft.CodeAnalysis.VersionCheckAnalyzer.md",
-        "microsoft.codeanalysis.versioncheckanalyzer.2.9.3.nupkg.sha512",
-        "microsoft.codeanalysis.versioncheckanalyzer.nuspec",
-        "rulesets/AllRulesDefault.ruleset",
-        "rulesets/AllRulesDisabled.ruleset",
-        "rulesets/AllRulesEnabled.ruleset",
-        "rulesets/ReliabilityRulesDefault.ruleset",
-        "rulesets/ReliabilityRulesEnabled.ruleset",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
-      ]
-    },
     "Microsoft.CodeCoverage/16.5.0": {
       "sha512": "PM5YLtyN45EyUGePJpaNogndlaQPrMgQQXHKMhMESC6KfSVvt+j7+dxBi8NYC6X6dZVysf7ngwhSW3wwvPJRSQ==",
       "type": "package",
@@ -1046,48 +935,6 @@
         "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
         "microsoft.codecoverage.16.5.0.nupkg.sha512",
         "microsoft.codecoverage.nuspec"
-      ]
-    },
-    "Microsoft.CodeQuality.Analyzers/2.9.3": {
-      "sha512": "5KFSFcQjibITq33jojBITiGIZZkf2OMdggT7ZeNryMAUkT3VkPB/csRWaA8erItQlEvrBzgIwzYnW0531HFV7g==",
-      "type": "package",
-      "path": "microsoft.codequality.analyzers/2.9.3",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.rtf",
-        "analyzers/dotnet/cs/Humanizer.dll",
-        "analyzers/dotnet/cs/Microsoft.CodeQuality.Analyzers.dll",
-        "analyzers/dotnet/cs/Microsoft.CodeQuality.CSharp.Analyzers.dll",
-        "analyzers/dotnet/vb/Humanizer.dll",
-        "analyzers/dotnet/vb/Microsoft.CodeQuality.Analyzers.dll",
-        "analyzers/dotnet/vb/Microsoft.CodeQuality.VisualBasic.Analyzers.dll",
-        "build/Microsoft.CodeQuality.Analyzers.props",
-        "documentation/Microsoft.CodeQuality.Analyzers.md",
-        "microsoft.codequality.analyzers.2.9.3.nupkg.sha512",
-        "microsoft.codequality.analyzers.nuspec",
-        "rulesets/AllRulesDefault.ruleset",
-        "rulesets/AllRulesDisabled.ruleset",
-        "rulesets/AllRulesEnabled.ruleset",
-        "rulesets/DesignRulesDefault.ruleset",
-        "rulesets/DesignRulesEnabled.ruleset",
-        "rulesets/DocumentationRulesDefault.ruleset",
-        "rulesets/DocumentationRulesEnabled.ruleset",
-        "rulesets/MaintainabilityRulesDefault.ruleset",
-        "rulesets/MaintainabilityRulesEnabled.ruleset",
-        "rulesets/NamingRulesDefault.ruleset",
-        "rulesets/NamingRulesEnabled.ruleset",
-        "rulesets/PerformanceRulesDefault.ruleset",
-        "rulesets/PerformanceRulesEnabled.ruleset",
-        "rulesets/ReliabilityRulesDefault.ruleset",
-        "rulesets/ReliabilityRulesEnabled.ruleset",
-        "rulesets/SecurityRulesDefault.ruleset",
-        "rulesets/SecurityRulesEnabled.ruleset",
-        "rulesets/UsageRulesDefault.ruleset",
-        "rulesets/UsageRulesEnabled.ruleset",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
       ]
     },
     "Microsoft.CSharp/4.0.1": {
@@ -1168,42 +1015,6 @@
         "microsoft.net.test.sdk.nuspec"
       ]
     },
-    "Microsoft.NetCore.Analyzers/2.9.3": {
-      "sha512": "6QTU/GKuB/s4eX/VD9ZgiIpD8dhP+BuGMUpp2VRDPflrbka+1DmdnayqPO18epUa/79n1OR9uT9hpvd0jgdggg==",
-      "type": "package",
-      "path": "microsoft.netcore.analyzers/2.9.3",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.rtf",
-        "analyzers/dotnet/cs/Microsoft.NetCore.Analyzers.dll",
-        "analyzers/dotnet/cs/Microsoft.NetCore.CSharp.Analyzers.dll",
-        "analyzers/dotnet/vb/Microsoft.NetCore.Analyzers.dll",
-        "analyzers/dotnet/vb/Microsoft.NetCore.VisualBasic.Analyzers.dll",
-        "build/Microsoft.NetCore.Analyzers.props",
-        "documentation/Microsoft.NetCore.Analyzers.md",
-        "microsoft.netcore.analyzers.2.9.3.nupkg.sha512",
-        "microsoft.netcore.analyzers.nuspec",
-        "rulesets/AllRulesDefault.ruleset",
-        "rulesets/AllRulesDisabled.ruleset",
-        "rulesets/AllRulesEnabled.ruleset",
-        "rulesets/GlobalizationRulesDefault.ruleset",
-        "rulesets/GlobalizationRulesEnabled.ruleset",
-        "rulesets/InteroperabilityRulesDefault.ruleset",
-        "rulesets/InteroperabilityRulesEnabled.ruleset",
-        "rulesets/PerformanceRulesDefault.ruleset",
-        "rulesets/PerformanceRulesEnabled.ruleset",
-        "rulesets/ReliabilityRulesDefault.ruleset",
-        "rulesets/ReliabilityRulesEnabled.ruleset",
-        "rulesets/SecurityRulesDefault.ruleset",
-        "rulesets/SecurityRulesEnabled.ruleset",
-        "rulesets/UsageRulesDefault.ruleset",
-        "rulesets/UsageRulesEnabled.ruleset",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
-      ]
-    },
     "Microsoft.NETCore.Platforms/1.0.1": {
       "sha512": "2G6OjjJzwBfNOO8myRV/nFrbTw5iA+DEm0N+qUqhrOmaVtn4pC77h38I1jsXGw5VH55+dPfQsqHD0We9sCl9FQ==",
       "type": "package",
@@ -1230,34 +1041,6 @@
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
         "runtime.json"
-      ]
-    },
-    "Microsoft.NetFramework.Analyzers/2.9.3": {
-      "sha512": "umTMyEaz29EkSuTNJ3As2wrhomQqqQfkBURZHWh59d+LwAbA7YYveUwe6ZFSx1A83pJRQVnsqaSBPbfQ5+niaA==",
-      "type": "package",
-      "path": "microsoft.netframework.analyzers/2.9.3",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.rtf",
-        "analyzers/dotnet/cs/Microsoft.NetFramework.Analyzers.dll",
-        "analyzers/dotnet/cs/Microsoft.NetFramework.CSharp.Analyzers.dll",
-        "analyzers/dotnet/vb/Microsoft.NetFramework.Analyzers.dll",
-        "analyzers/dotnet/vb/Microsoft.NetFramework.VisualBasic.Analyzers.dll",
-        "build/Microsoft.NetFramework.Analyzers.props",
-        "documentation/Microsoft.NetFramework.Analyzers.md",
-        "microsoft.netframework.analyzers.2.9.3.nupkg.sha512",
-        "microsoft.netframework.analyzers.nuspec",
-        "rulesets/AllRulesDefault.ruleset",
-        "rulesets/AllRulesDisabled.ruleset",
-        "rulesets/AllRulesEnabled.ruleset",
-        "rulesets/DesignRulesDefault.ruleset",
-        "rulesets/DesignRulesEnabled.ruleset",
-        "rulesets/SecurityRulesDefault.ruleset",
-        "rulesets/SecurityRulesEnabled.ruleset",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
       ]
     },
     "Microsoft.TestPlatform.ObjectModel/16.5.0": {
@@ -1546,23 +1329,26 @@
       ]
     },
     "SUnit/1.0.0.10": {
-      "sha512": "k45jgqHhGZBqoZ7WLtlt39V1AruFexnwyBOpjOfHEwYOrcNXdyrOUx+bAIsg81G1x2eeTubevl1Tvm5sA2fE0A==",
+      "sha512": "7m913sa9aQ5Jddp9q4hc5uPHohgSZRsiLzuT7nLchP4TJfgKrEzeXwUiMipR3H6SWGwoY5Sd5vzlMkpe6oVPWg==",
       "type": "package",
       "path": "sunit/1.0.0.10",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.md",
         "lib/netstandard2.1/SUnit.dll",
+        "lib/netstandard2.1/SUnit.xml",
         "sunit.1.0.0.10.nupkg.sha512",
         "sunit.nuspec"
       ]
     },
     "SUnit.Discovery/1.0.0.10": {
-      "sha512": "9iN9wuRnskGRTGW2OoQfdmACwotuX4HKyo86NXmKtW8uhiNP3u60EzZbxd9ua2thpyTj36yvR89xaQMUIEEYGg==",
+      "sha512": "Q73OoUWNxJaV3HZHzogKTXGoQqAdgkG5ua74ZSjf875SIdZaUT6vYO0dv1jUavy7naY3ThYVFGs0AD80GaoapA==",
       "type": "package",
       "path": "sunit.discovery/1.0.0.10",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.md",
         "lib/netstandard2.1/SUnit.Discovery.dll",
         "lib/netstandard2.1/SUnit.Discovery.xml",
@@ -1571,13 +1357,15 @@
       ]
     },
     "SUnit.TestAdapter/1.0.0.10": {
-      "sha512": "Jg90JGlJ/a+PhY/wBZ5YplIUZ7Rm8dZm/sA7H/yAPqjIbcztgET8QAX1Ub7U1UVWEsroAbKqt00Be0kRVBOAUw==",
+      "sha512": "UZ8ToXrSN8+fNb9Y6ZirANb2PiM1gE5gMk2hH6lWzljCmCpz1wh0keBhq0dmoEPNJ4P8re6KSWwsndBqqVs9uw==",
       "type": "package",
       "path": "sunit.testadapter/1.0.0.10",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.md",
         "lib/netstandard2.1/SUnit.TestAdapter.dll",
+        "lib/netstandard2.1/SUnit.TestAdapter.xml",
         "sunit.testadapter.1.0.0.10.nupkg.sha512",
         "sunit.testadapter.nuspec"
       ]
@@ -3685,10 +3473,12 @@
         "D:\\LocalRepositories\\SUnit\\PackageSource": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://dotnet.myget.org/F/aspnetcore-master/api/v3/index.json": {},
+        "https://dotnet.myget.org/F/roslyn/api/v3/index.json": {},
         "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -3700,6 +3490,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -3733,7 +3524,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

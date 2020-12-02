@@ -20,7 +20,8 @@ namespace SUnit.Discovery
         {
             if (unitTest is null) throw new ArgumentNullException(nameof(unitTest));
             if (!IsReturnTypeValid(unitTest.ReturnType))
-                throw new ArgumentException($"Invalid return type. Got {unitTest.ReturnType.FullName}", nameof(unitTest));
+                throw new ArgumentException(
+                    $"Invalid return type. Got {unitTest.ReturnType.FullName}, expected implimentation of {typeof(IAsyncEnumerable<Test>).Name}", nameof(unitTest));
 
             async Task subscribeAsync(IObserver<TestResult> observer)
             {

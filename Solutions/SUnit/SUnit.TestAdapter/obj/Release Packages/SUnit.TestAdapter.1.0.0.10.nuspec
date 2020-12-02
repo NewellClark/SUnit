@@ -4,7 +4,6 @@
     <id>SUnit.TestAdapter</id>
     <version>1.0.0.10</version>
     <authors>Newell Clark</authors>
-    <owners>Newell Clark</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="file">LICENSE.md</license>
     <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>

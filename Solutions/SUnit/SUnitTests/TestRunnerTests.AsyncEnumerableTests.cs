@@ -113,6 +113,7 @@ namespace SUnit.Discovery
             public async Task ThrowsWithoutIterating(string name)
             {
                 var result = await RunAsync(name)
+                    .Select(x => x.Kind)
                     .ToList();
 
                 CollectionAssert.AreEqual(Enumerable.Repeat(ResultKind.Error, 1), result);

@@ -13,3 +13,5 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\ProjectTemplat
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\ProjectTemplates\SUnitProjectTemplate\MyTestFixture.cs
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\ProjectTemplates\SUnitProjectTemplate\SUnitProjectTemplate.csproj
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\templateFiles.json
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\SUnit.VSIX.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.VSIX\obj\Release\SUnit.VSIX.csproj.CoreCompileInputs.cache

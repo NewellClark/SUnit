@@ -3449,10 +3449,12 @@
         "D:\\LocalRepositories\\SUnit\\PackageSource": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://dotnet.myget.org/F/aspnetcore-master/api/v3/index.json": {},
+        "https://dotnet.myget.org/F/roslyn/api/v3/index.json": {},
         "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj": {
               "projectPath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj"
@@ -3471,6 +3473,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -3496,7 +3499,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
