@@ -6,7 +6,7 @@ namespace SUnit.Constraints
 {
 #pragma warning disable CA2225
     /// <summary>
-    /// A constraint that can be applied to value. 
+    /// A constraint that can be applied to a value. 
     /// </summary>
     /// <typeparam name="T">The type of value the constraint can be applied to.</typeparam>
     public interface IConstraint<T>
