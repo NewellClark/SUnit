@@ -16,3 +16,4 @@ D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Debug Packages\
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Debug Packages\netstandard2.1\SUnit.TestAdapter.csproj.CopyComplete
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Debug Packages\netstandard2.1\SUnit.TestAdapter.dll
 D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Debug Packages\netstandard2.1\SUnit.TestAdapter.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.TestAdapter\obj\Debug Packages\netstandard2.1\SUnit.TestAdapter.csproj.CoreCompileInputs.cache

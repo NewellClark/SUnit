@@ -1,0 +1,14 @@
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\bin\Debug\netstandard2.0\SUnit.Analyzers.CodeFixes.deps.json
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\bin\Debug\netstandard2.0\SUnit.Analyzers.CodeFixes.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\bin\Debug\netstandard2.0\SUnit.Analyzers.CodeFixes.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\bin\Debug\netstandard2.0\SUnit.Analyzers.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\bin\Debug\netstandard2.0\SUnit.Analyzers.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\obj\Debug\netstandard2.0\SUnit.Analyzers.CodeFixes.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\obj\Debug\netstandard2.0\SUnit.Analyzers.CodeFixResources.resources
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\obj\Debug\netstandard2.0\SUnit.Analyzers.CodeFixes.csproj.GenerateResource.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\obj\Debug\netstandard2.0\SUnit.Analyzers.CodeFixes.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\obj\Debug\netstandard2.0\SUnit.Analyzers.CodeFixes.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\obj\Debug\netstandard2.0\SUnit.Analyzers.CodeFixes.csproj.CoreCompileInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\obj\Debug\netstandard2.0\SUnit.Analyzers.CodeFixes.csproj.CopyComplete
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\obj\Debug\netstandard2.0\SUnit.Analyzers.CodeFixes.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.CodeFixes\obj\Debug\netstandard2.0\SUnit.Analyzers.CodeFixes.pdb

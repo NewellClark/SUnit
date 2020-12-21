@@ -29,14 +29,20 @@ namespace SUnit.Discovery
                 {
                     await Task.Yield();
                     throw new ExpectedException();
+                    
+#pragma warning disable CS0162 // Unreachable code detected
                     yield return null;
+#pragma warning restore CS0162 // Unreachable code detected
                 }
 
                 public async IAsyncEnumerable<Test> ThrowsWithoutIteratingLongAsync()
                 {
                     await Task.Delay(longDelay);
                     throw new ExpectedException();
+
+#pragma warning disable CS0162 // Unreachable code detected
                     yield return null;
+#pragma warning restore CS0162 // Unreachable code detected
                 }
 
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously

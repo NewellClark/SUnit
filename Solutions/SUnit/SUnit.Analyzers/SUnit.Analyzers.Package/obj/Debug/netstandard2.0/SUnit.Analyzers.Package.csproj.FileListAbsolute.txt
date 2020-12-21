@@ -1,0 +1,16 @@
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\bin\Debug\netstandard2.0\tools\install.ps1
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\bin\Debug\netstandard2.0\tools\uninstall.ps1
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\bin\Debug\netstandard2.0\SUnit.Analyzers.Package.deps.json
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\bin\Debug\netstandard2.0\SUnit.Analyzers.Package.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\bin\Debug\netstandard2.0\SUnit.Analyzers.Package.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\bin\Debug\netstandard2.0\SUnit.Analyzers.CodeFixes.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\bin\Debug\netstandard2.0\SUnit.Analyzers.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\bin\Debug\netstandard2.0\SUnit.Analyzers.CodeFixes.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\bin\Debug\netstandard2.0\SUnit.Analyzers.pdb
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\obj\Debug\netstandard2.0\SUnit.Analyzers.Package.csprojAssemblyReference.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\obj\Debug\netstandard2.0\SUnit.Analyzers.Package.AssemblyInfoInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\obj\Debug\netstandard2.0\SUnit.Analyzers.Package.AssemblyInfo.cs
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\obj\Debug\netstandard2.0\SUnit.Analyzers.Package.csproj.CoreCompileInputs.cache
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\obj\Debug\netstandard2.0\SUnit.Analyzers.Package.csproj.CopyComplete
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\obj\Debug\netstandard2.0\SUnit.Analyzers.Package.dll
+D:\LocalRepositories\SUnit\Solutions\SUnit\SUnit.Analyzers\SUnit.Analyzers.Package\obj\Debug\netstandard2.0\SUnit.Analyzers.Package.pdb

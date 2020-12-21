@@ -3437,6 +3437,7 @@
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
+        "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\NuGet.Config",
         "C:\\Users\\Newell Clark\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -3445,14 +3446,13 @@
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\LocalRepositories\\SUnit\\PackageSource": {},
+        "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.Analyzers\\SUnit.Analyzers.Package\\bin\\Debug": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://dotnet.myget.org/F/aspnetcore-master/api/v3/index.json": {},
-        "https://www.myget.org/F/aspnetvnext/api/v3/index.json": {}
+        "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj": {
               "projectPath": "D:\\LocalRepositories\\SUnit\\Solutions\\SUnit\\SUnit.TestAdapter\\SUnit.TestAdapter.csproj"
@@ -3471,6 +3471,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -3496,7 +3497,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
